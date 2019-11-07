@@ -5,7 +5,6 @@ Contents
 .. toctree::
   :maxdepth: 1
 
-  requirements
   Module Contents <modules>
   notebooks/first_notebook
 

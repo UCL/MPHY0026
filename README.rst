@@ -27,6 +27,32 @@ This is the homepage of the Computer Assisted Surgery and Therapy (MPHY0026) cou
 developed at the `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_,
 part of `University College London (UCL)`_.
 
+Course Details
+--------------
+
+For those of you taking this course for university credit at UCL, these
+are the essential details:
+
+ * Moodle code: MPHY0026. All format announcements come via Moodle.
+ * Assessment:
+   * 2 pieces of coursework, worth 25% each
+   * 1 exam of 2 hours in the exam period after Easter
+
+Course Contents
+---------------
+
+ 1. What is Computer Assisted Surgery and Therapy?
+ 1. History of Computer Assisted Surgery and Therapy
+ 1. A Systems Approach
+ 1. Imaging
+ 1. Segmentation
+ 1. Registration
+ 1. Tracking
+ 1. Calibration
+ 1. Visualisation
+ 1. User Interface
+ 1. Evaluation
+
 Developing
 ----------
 
@@ -54,24 +80,14 @@ This code conforms to the PEP8 standard. Pylint is used to analyse the code.
 Again, follow the `SNAPPYTutorial`_ instructions and run via tox.
 
 
-Installing
-----------
-
-You can pip install directly from the repository as follows:
-
-::
-
-    pip install git+https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026
-
-
 Contributing
-^^^^^^^^^^^^
+------------
 
 Please see the `contributing guidelines`_.
 
 
 Useful links
-^^^^^^^^^^^^
+------------
 
 * `Source code repository`_
 * `Documentation`_
