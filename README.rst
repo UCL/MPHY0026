@@ -1,5 +1,5 @@
-MPHY0026
-===============================
+MPHY0026: Computer Assisted Surgery and Therapy course
+======================================================
 
 .. image:: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026/raw/master/project-icon.png
    :height: 128px
@@ -21,20 +21,11 @@ MPHY0026
 
 
 
-Author: Matt Clarkson
+Author: Matt Clarkson, Steve Thompson, Ester Bonmati
 
-MPHY0026 is part of the `SNAPPY`_ software project, developed at the `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_, part of `University College London (UCL)`_.
-
-MPHY0026 supports Python 2.7 and Python 3.6.
-
-MPHY0026 is currently a demo project, which will add/multiply two numbers. Example usage:
-
-::
-
-    python mphy0026.py 5 8
-    python mphy0026.py 3 6 --multiply
-
-Please explore the project structure, and implement your own functionality.
+This is the homepage of the Computer Assisted Surgery and Therapy (MPHY0026) course
+developed at the `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_,
+part of `University College London (UCL)`_.
 
 Developing
 ----------
@@ -51,22 +42,16 @@ You can clone the repository using the following command:
 
 Running tests
 ^^^^^^^^^^^^^
-Pytest is used for running unit tests:
-::
 
-    pip install pytest
-    python -m pytest
+Pytest is used for running unit tests, but you should run using tox,
+as per the `PythonTemplate`_ instructions and described in the `SNAPPYTutorial`_.
 
 
 Linting
 ^^^^^^^
 
-This code conforms to the PEP8 standard. Pylint can be used to analyse the code:
-
-::
-
-    pip install pylint
-    pylint --rcfile=tests/pylintrc mphy0026
+This code conforms to the PEP8 standard. Pylint is used to analyse the code.
+Again, follow the `SNAPPYTutorial`_ instructions and run via tox.
 
 
 Installing
@@ -77,7 +62,6 @@ You can pip install directly from the repository as follows:
 ::
 
     pip install git+https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026
-
 
 
 Contributing
@@ -115,4 +99,4 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`EPSRC`: https://www.epsrc.ac.uk/
 .. _`contributing guidelines`: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026/blob/master/CONTRIBUTING.rst
 .. _`license file`: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026/blob/master/LICENSE
-
+.. _`SNAPPYTutorial`: https://snappytutorial02.readthedocs.io/en/latest/
