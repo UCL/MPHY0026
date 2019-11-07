@@ -34,23 +34,36 @@ For those of you taking this course for university credit at UCL, these
 are the essential details:
 
  * Moodle code: MPHY0026. All format announcements come via Moodle.
+
  * Assessment:
+
    * 2 pieces of coursework, worth 25% each
+
    * 1 exam of 2 hours in the exam period after Easter
 
 Course Contents
 ---------------
 
  1. What is Computer Assisted Surgery and Therapy?
+
  1. History of Computer Assisted Surgery and Therapy
+
  1. A Systems Approach
+
  1. Imaging
+
  1. Segmentation
+
  1. Registration
+
  1. Tracking
+
  1. Calibration
+
  1. Visualisation
+
  1. User Interface
+
  1. Evaluation
 
 Developing
