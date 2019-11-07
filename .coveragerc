@@ -1,0 +1,6 @@
+[run]
+omit = 
+        ./mphy0026/_version.py
+        ./mphy0026/__init__.py
+        ./mphy0026/__main__.py
+        ./mphy0026/ui/mphy0026_command_line.py
