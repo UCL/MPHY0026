@@ -3,7 +3,7 @@ Computer Assisted Surgery and Therapy
 
 * MPHY0026 at `University College London (UCL)`_.
 * Authors: `Matt Clarkson`_, `Steve Thompson`_, `Ester Bonmati`_.
-
+* `Source code`_.
 
 Course Details
 --------------
@@ -36,3 +36,4 @@ Contents
 .. _`Matt Clarkson`: https://iris.ucl.ac.uk/iris/browse/profile?upi=MJCLA42
 .. _`Steve Thompson`: https://iris.ucl.ac.uk/iris/browse/profile?upi=SATHO57
 .. _`Ester Bonmati`: https://iris.ucl.ac.uk/iris/browse/profile?upi=EBONM94
+-- __`Source code`: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026
