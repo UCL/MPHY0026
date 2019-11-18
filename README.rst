@@ -1,5 +1,5 @@
-MPHY0026: Computer Assisted Surgery and Therapy course
-======================================================
+MPHY0026: Computer Assisted Surgery and Therapy
+===============================================
 
 .. image:: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026/raw/master/project-icon.png
    :height: 128px
@@ -21,40 +21,14 @@ MPHY0026: Computer Assisted Surgery and Therapy course
 
 
 
-Author: Matt Clarkson, Steve Thompson, Ester Bonmati
+Authors: Matt Clarkson, Steve Thompson, Ester Bonmati
 
-This is the homepage of the Computer Assisted Surgery and Therapy (MPHY0026) course
+This is the git repository of the Computer Assisted Surgery and Therapy (MPHY0026) course
 developed at the `Wellcome EPSRC Centre for Interventional and Surgical Sciences`_,
 part of `University College London (UCL)`_.
 
-Course Details
---------------
+The generated documentation lives on `Read The Docs`_.
 
-For those of you taking this course for university credit at UCL, these
-are the essential details:
-
- * Moodle code: MPHY0026. All formal announcements come via Moodle.
-
- * Assessment:
-
-   * 2 pieces of coursework, worth 25% each
-
-   * 1 exam of 2 hours in the exam period after Easter
-
-Course Contents
----------------
-
-  1. What is Computer Assisted Surgery and Therapy?
-  #. History of Computer Assisted Surgery and Therapy
-  #. A Systems Approach
-  #. Imaging
-  #. Segmentation
-  #. Registration
-  #. Tracking
-  #. Calibration
-  #. Visualisation
-  #. User Interface
-  #. Evaluation
 
 Developing
 ----------
@@ -73,14 +47,14 @@ Running tests
 ^^^^^^^^^^^^^
 
 Pytest is used for running unit tests, but you should run using tox,
-as per the `PythonTemplate`_ instructions and described in the `SNAPPYTutorial`_.
+as per the `Python Template`_ instructions and described in the `SNAPPY Tutorial`_.
 
 
 Linting
 ^^^^^^^
 
 This code conforms to the PEP8 standard. Pylint is used to analyse the code.
-Again, follow the `SNAPPYTutorial`_ instructions and run via tox.
+Again, follow the `SNAPPY Tutorial`_ instructions and run via tox.
 
 
 Contributing
@@ -112,10 +86,12 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`Wellcome EPSRC Centre for Interventional and Surgical Sciences`: http://www.ucl.ac.uk/weiss
 .. _`source code repository`: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026
 .. _`Documentation`: https://MPHY0026.readthedocs.io
+.. _`Read The Docs`: https://MPHY0026.readthedocs.io
 .. _`SNAPPY`: https://weisslab.cs.ucl.ac.uk/WEISS/PlatformManagement/SNAPPY/wikis/home
 .. _`University College London (UCL)`: http://www.ucl.ac.uk/
 .. _`Wellcome`: https://wellcome.ac.uk/
 .. _`EPSRC`: https://www.epsrc.ac.uk/
 .. _`contributing guidelines`: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026/blob/master/CONTRIBUTING.rst
 .. _`license file`: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026/blob/master/LICENSE
-.. _`SNAPPYTutorial`: https://snappytutorial02.readthedocs.io/en/latest/
+.. _`SNAPPY Tutorial`: https://snappytutorial02.readthedocs.io/en/latest/
+.. _`Python Template`: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate
