@@ -15,6 +15,13 @@ Optional Reading
 Additional Resources
 --------------------
 
-To be subdivided into useful subsections. Aim is to make this a go-to webpage for all things IGI.
+Before making another list of resources relevant to Image Guided Interventions,
+first take a look at Ziv Yaniv's compilation.
 
 .. [ZivYaniv] Ziv Yaniv's homepage: http://yanivresearch.info/
+
+Other resources include:
+
+* Something
+* Something
+* More things
