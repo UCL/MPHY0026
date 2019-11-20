@@ -50,7 +50,7 @@ Contents
   registration/registration.rst
   tracking/tracking.rst
   calibration/calibration.rst
-  visualsiation/visualisation.rst
+  visualisation/visualisation.rst
   ui/ui.rst
   evaluation/evaluation.rst
   references.rst
