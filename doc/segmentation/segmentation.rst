@@ -1,5 +1,5 @@
-3. Segmentation and Modelling
-=============================
+Segmentation and Modelling
+==========================
 
 Overview
 --------

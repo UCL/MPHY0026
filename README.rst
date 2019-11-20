@@ -20,7 +20,6 @@ MPHY0026: Computer Assisted Surgery and Therapy
     :alt: Documentation Status
 
 
-
 Authors: Matt Clarkson, Steve Thompson, Ester Bonmati
 
 This is the git repository of the Computer Assisted Surgery and Therapy (MPHY0026) course
