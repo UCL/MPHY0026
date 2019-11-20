@@ -1,5 +1,5 @@
-6. Calibration
-==============
+Calibration
+===========
 
 Overview
 --------

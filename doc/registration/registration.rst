@@ -1,5 +1,5 @@
-4. Registration
-===============
+Registration
+============
 
 Overview
 --------

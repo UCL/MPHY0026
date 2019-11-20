@@ -1,5 +1,5 @@
-7. Visualisation
-================
+Visualisation
+=============
 
 Overview
 --------

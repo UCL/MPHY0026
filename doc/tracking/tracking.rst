@@ -1,5 +1,5 @@
-5. Tracking
-===========
+Tracking
+========
 
 Overview
 --------

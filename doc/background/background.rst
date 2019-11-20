@@ -1,5 +1,5 @@
-1. Background
-=============
+Background
+==========
 
 Overview
 --------
@@ -18,4 +18,34 @@ Overview
   #. PLUS+Slicer Examples
   #. MITK Examples
 3. A systems approach
+  #. What is the clinical objective?
   #. The sum of all parts
+  #. Error propagation
+
+
+Learning Objectives
+-------------------
+
+
+Before The Lecture
+------------------
+
+References should all go in references.rst, and can be referred to throughout course,
+without text duplication.
+
+* [ClearyPeters2010]_ - Specify why the student is reading this paper, what is the learning objective.
+
+After The Lecture
+-----------------
+
+
+Optional Reading
+----------------
+
+
+* [Yaniv2006]_ - Specify why the student is reading this paper, what is the take-home message.
+
+
+Additional Resources
+--------------------
+

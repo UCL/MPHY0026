@@ -1,5 +1,5 @@
-2. Imaging
-==========
+Imaging
+=======
 
 Overview
 --------
@@ -9,3 +9,5 @@ Overview
   #. Intra-operative CT
   #. Ultrasound
   #. Photo-accoustics
+
+Another reference to same paper [ClearyPeters2010]_.
