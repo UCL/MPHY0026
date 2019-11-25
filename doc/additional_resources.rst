@@ -11,7 +11,8 @@ first take a look at:
 
 .. [ZivYaniv] Ziv Yaniv's homepage: http://yanivresearch.info/
 
-
+The additional resources below are ones that we have found personally helpful while
+developing this course.
 
 
 Books
@@ -44,11 +45,16 @@ Papers
 
 .. [Morgan2017] Isabella Morgan, Uditha Jayarathne, Adam Rankin, Terry M. Peters and Elvis C. S. Chen, "Hand-eye calibration for surgical cameras: a Procrustean Perspective-n-Point solution", http://dx.doi.org/10.1007/s11548-017-1590-9
 
-.. [Colchester1996] Alan C. F. Colchester, Jason Zhao, Kerrie S. Holton-Tainter, Christopher J. Henri, Neil Maitland, Patricia T. E. Roberts, Christopher G. Harris, Richard J.Evans, "Development and preliminary evaluation of VISLAN, a surgical planning and guidance system using intra-operative video imaging", http://dx.doi.org/10.1016/S1361-8415(01)80006-2
-
 .. [SomogyiGanss2014] Eszter Somogyi-Ganss, Howard I. Holmes and Asbjørn Jokstad, "Accuracy of a novel prototype dynamic computer-assisted surgery system", http://dx.doi.org/10.1109/10.1111/clr.12414
 
 .. [Noble2011] J. Alison Noble, Nassir Navab and H. Becher, "Ultrasonic image analysis and image-guided interventions", http://dx.doi.org/10.1098/rsfs.2011.0025
+
+.. [Edwards1995] P. J. Edwards, D. J. Hawkes, D.L.G. Hill, D. Jewell, R. Spink, A. Strong and M. Gleeson, "Augmentation of Reality Using an Operating Microscope for Otolaryngology and Neurosurgical Guidance",  http://dx.doi.org/10.3109/10929089509105692
+
+.. [Colchester1996] Alan C. F. Colchester, Jason Zhao, Kerrie S. Holton-Tainter, Christopher J. Henri, Neil Maitland, Patricia T. E. Roberts, Christopher G. Harris, Richard J.Evans, "Development and preliminary evaluation of VISLAN, a surgical planning and guidance system using intra-operative video imaging", http://dx.doi.org/10.1016/S1361-8415(01)80006-2
+
+.. [Grimson1996] W. E. L. Grimson, G. J. Ettinger, S. J. White, T. Lozano-Perez, W. M. Wells and R. Kikinis, "An Automatic Registration Method for Frameless Stereotaxy, Image Guided Surgery, and Enhanced Reality Visualization", http://dx.doi.org/10.1109/42.491415
+
 
 
 Videos
