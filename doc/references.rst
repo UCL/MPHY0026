@@ -47,7 +47,7 @@ Segmentation
 
 There is a large body of literature, and many reviews, such as [Sharma2010]_. In this course, we cover some
 classical methods [Sharma2010]_, statistical shape models [Heimann2009]_, and an example of
-a more modern machine learning method [Ronneberger]_, which led to [Isensee2018]_ which won the
+a more modern machine learning method [Ronneberger2015]_, which led to [Isensee2018]_ which won the
 medical image decathlon challenge [Simpson2019]_.
 
 .. [Heimann2009] Tobias Heimann, Hans-Peter Meinzer, "Statistical shape models for 3D medical image segmentation", http://dx.doi.org/10.1016/j.media.2009.05.004
@@ -155,7 +155,6 @@ Visualisation
 .. [KerstenOertel2013] Marta Kersten-Oertel, Pierre Jannin and D. Louis Collins, "The state of the art of visualization in mixed reality image-guided surgery", http://dx.doi.org/10.1016/j.compmedimag.2013.01.009
 
 .. [KerstenOertel2015] Marta Kersten-Oertel, Ian Gerard, Simon Drouin, Kelvin Mok, Denis Sirhan, David S. Sinclair, D. Louis Collins, "Augmented reality in neurovascular surgery: feasibility and first uses in the operating room", http://dx.doi.org/10.1007/s11548-015-1163-8
-
 
 
 User Interface

@@ -6,8 +6,7 @@ Additional Resources
 This page shows additional resources, that add to the overall experience of this
 course, but are not strictly necessary for summative assessment.
 
-Before making another list of resources relevant to Image Guided Interventions,
-first take a look at:
+Also, take a look at:
 
 .. [ZivYaniv] Ziv Yaniv's homepage: http://yanivresearch.info/
 
