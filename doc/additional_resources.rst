@@ -11,12 +11,7 @@ first take a look at:
 
 .. [ZivYaniv] Ziv Yaniv's homepage: http://yanivresearch.info/
 
-Videos
-------
 
-https://www.youtube.com/watch?v=KrGkGPR5hs0&feature=youtu.be
-
-https://www.youtube.com/watch?v=XPN8nkUylj8&feature=youtu.be
 
 
 Books
@@ -52,3 +47,18 @@ Papers
 .. [Colchester1996] Alan C. F. Colchester, Jason Zhao, Kerrie S. Holton-Tainter, Christopher J. Henri, Neil Maitland, Patricia T. E. Roberts, Christopher G. Harris, Richard J.Evans, "Development and preliminary evaluation of VISLAN, a surgical planning and guidance system using intra-operative video imaging", http://dx.doi.org/10.1016/S1361-8415(01)80006-2
 
 .. [SomogyiGanss2014] Eszter Somogyi-Ganss, Howard I. Holmes and Asbjørn Jokstad, "Accuracy of a novel prototype dynamic computer-assisted surgery system", http://dx.doi.org/10.1109/10.1111/clr.12414
+
+.. [Noble2011] J. Alison Noble, Nassir Navab and H. Becher, "Ultrasonic image analysis and image-guided interventions", http://dx.doi.org/10.1098/rsfs.2011.0025
+
+
+Videos
+------
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XPN8nkUylj8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/KrGkGPR5hs0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
