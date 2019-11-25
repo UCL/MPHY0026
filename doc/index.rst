@@ -54,6 +54,7 @@ Contents
   ui/ui.rst
   evaluation/evaluation.rst
   references.rst
+  additional_resources.rst
 
 .. _`University College London (UCL)`: http://www.ucl.ac.uk/
 .. _`UCL`: http://www.ucl.ac.uk/
