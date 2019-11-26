@@ -160,4 +160,10 @@ Visualisation
 
 User Interface
 --------------
+These are some user recent user interface papers I am aware of. This needs to be expanded and improved.
 
+.. [Dilley2019] Dilley, James W. R. MRCOG; Hughes-Hallett, Archie PhD; Pratt, Philip J. PhD; Pucher, Philip H. PhD; Camara, Mafalda MSc; Darzi, Ara W. FRS; Mayer, Erik K. PhD, **"Perfect Registration Leads to Imperfect Performance A Randomized Trial of Multimodal Intraoperative Image Guidance"**. http://dx.doi.org//10.1097/SLA.0000000000002793
+
+.. [Wheeler2019] Gavin Wheeler, Shujie Deng, Kuberan Pushparajah, Julia Schnabel, John Simpson, Alberto Gomez Herrero, **"A Virtual Linear Measurement System for Accurate Quantification of Medical Images"**, http://doi.org/10.1049/HTL.2019.0074
+
+.. [Hatscher2019] Hatscher, B., Mewes, A., Pannicke, E. et al., **"Touchless scanner control to support MRI-guided interventions"**, https://doi.org/10.1007/s11548-019-02058-1
