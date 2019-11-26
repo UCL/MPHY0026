@@ -124,7 +124,7 @@ Hand-Eye Calibration
 
 .. [Tsai1989] Roger Y. Tsai and Reimar K. Lenz, **"A New Technique for Fully Autonomous and Efficient 3D Robotics Hand/Eye Calibration"**, http://dx.doi.org/10.1109/70.34770
 
-.. [Malti2013] Abed Malti, Joao Pedro Barreto, **"Hand-eye and radial distortion calibration for rigid endoscopes" http://dx.doi.org/10.1002/rcs.1478
+.. [Malti2013] Abed Malti, Joao Pedro Barreto, **"Hand-eye and radial distortion calibration for rigid endoscopes"**, http://dx.doi.org/10.1002/rcs.1478
 
 .. [Thompson2016] Stephen Thompson, Danail Stoyanov, Crispin Schneider, Kurinchi Gurusamy, Sébastien Ourselin, Brian Davidson, David Hawkes and Matthew J. Clarkson, **"Hand–eye calibration for rigid laparoscopes using an invariant point"**, http://dx.doi.org/10.1007/s11548-016-1364-9
 
