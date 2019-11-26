@@ -73,6 +73,7 @@ Students need to understand terms and acronyms like FLE, FRE and TRE [Fitzpatric
 
 .. [West2004] Jay B. West, Calvin R. Maurer, Jr., **"Designing Optically Tracked Instruments for Image-Guided Surgery"**, http://dx.doi.org/10.1109/TMI.2004.825614
 
+The above papers all assume isotropic, independent fiducial localisation error. There is a body of work looking at error propagation in cased where this is not valid, see :ref:`AdditionalResources`.
 
 Surface-Based Registration
 --------------------------
