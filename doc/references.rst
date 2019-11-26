@@ -97,6 +97,7 @@ These are the main accuracy assessment papers, from authors at NDI.
 
 .. [Wiles2004] Andrew D. Wiles, David G. Thompson and Donald D. Frantz, **"Accuracy assessment and interpretation for optical tracking systems"**, http://dx.doi.org/10.1117/12.536128
 
+.. [Xiao2018] Guofang Xiao, Ester Bonmati, Stephen Thompson, Joe Evans, John Hipwell, Daniil Nikitichev, Kurinchi Gurusamy, Sébastien Ourselin, David J Hawkes, Brian Davidson, Matthew J Clarkson **"Electromagnetic tracking in image‐guided laparoscopic surgery: Comparison with optical tracking and feasibility study of a combined laparoscope and laparoscopic ultrasound system"**, https://doi.org/10.1002/mp.13210
 
 Calibration
 -----------
