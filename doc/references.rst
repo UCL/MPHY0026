@@ -155,6 +155,7 @@ Visualisation
 
 .. [KerstenOertel2015] Marta Kersten-Oertel, Ian Gerard, Simon Drouin, Kelvin Mok, Denis Sirhan, David S. Sinclair, D. Louis Collins, **"Augmented reality in neurovascular surgery: feasibility and first uses in the operating room"**, http://dx.doi.org/10.1007/s11548-015-1163-8
 
+.. [Thompson2018] Stephen Thompson, Crispin Schneider, Michele Bosi, Kurinchi Gurusamy, Sébastien Ourselin, Brian Davidson, David Hawkes, Matthew J Clarkson, **"In vivo estimation of target registration errors during augmented reality laparoscopic surgery"**, https://doi.org/10.1007/s11548-018-1761-3
 
 User Interface
 --------------
