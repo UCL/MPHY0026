@@ -58,7 +58,7 @@ medical image decathlon challenge [Simpson2019]_.
 Point-Based Registration
 ------------------------
 
-There are two popular methods [Arun1987]_, [Horn1987]_ and obviously others, but not much between them [Eggert1998]_.
+There are two popular methods [Arun1987]_, [Horn1987]_ and obviously others, but functionally there is little difference between them [Eggert1998]_.
 Students need to understand terms and acronyms like FLE, FRE and TRE [Fitzpatrick1998]_ and crucially, that FRE and TRE are uncorrelated [Fitzpatrick2001]_.
 
 .. [Arun1987] K. S. Arun, T. S. Huang, S. D. Blostein, **"Least-Squares Fitting of Two 3-D Point Sets"**, http://dx.doi.org/10.1109/TPAMI.1987.4767965
