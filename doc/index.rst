@@ -27,6 +27,8 @@ How This Course Is Run
 
 * *Reading*: which must be completed before each session.
 
+* *Lectures*: lectures and in-class discussion groups.
+
 * *Practical Exercises*: exercises during and between sessions.
 
 * *Formative Assessment*: (not part of final mark) on `Moodle`_ for those at `UCL`_.
@@ -55,6 +57,33 @@ Contents
   evaluation/evaluation.rst
   references.rst
   additional_resources.rst
+
+Sessions
+--------
+
++------------+-----------------------------------------+-----------+----------+
+| Date       | Location                                | Leader    | Topic(s) |
++============+=========================================+===========+==========+
+| 27/02/2020 | Student Central, 2nd floor, Malet Suite | ?         | ?        |
++------------+-----------------------------------------+-----------+----------+
+| 27/02/2020 | Charles Bell House G10                  | ?         | ?        |
++------------+-----------------------------------------+-----------+----------+
+| 05/03/2020 | Student Central, 2nd floor, Malet Suite | ?         | ?        |
++------------+-----------------------------------------+-----------+----------+
+| 05/03/2020 | Charles Bell House G10                  | ?         | ?        |
++------------+-----------------------------------------+-----------+----------+
+| 12/03/2020 | Student Central, 2nd floor, Malet Suite | ?         | ?        |
++------------+-----------------------------------------+-----------+----------+
+| 12/03/2020 | Charles Bell House G10                  | ?         | ?        |
++------------+-----------------------------------------+-----------+----------+
+| 19/03/2020 | Student Central, 2nd floor, Malet Suite | ?         | ?        |
++------------+-----------------------------------------+-----------+----------+
+| 19/03/2020 | Charles Bell House G10                  | ?         | ?        |
++------------+-----------------------------------------+-----------+----------+
+| 26/03/2020 | Student Central, 2nd floor, Malet Suite | ?         | ?        |
++------------+-----------------------------------------+-----------+----------+
+| 26/03/2020 | Charles Bell House G10                  | ?         | ?        |
++------------+-----------------------------------------+-----------+----------+
 
 .. _`University College London (UCL)`: http://www.ucl.ac.uk/
 .. _`UCL`: http://www.ucl.ac.uk/
