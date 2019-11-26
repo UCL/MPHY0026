@@ -54,6 +54,18 @@ Papers
 
 .. [Grimson1996] W. E. L. Grimson, G. J. Ettinger, S. J. White, T. Lozano-Perez, W. M. Wells and R. Kikinis, **"An Automatic Registration Method for Frameless Stereotaxy, Image Guided Surgery, and Enhanced Reality Visualization"**, http://dx.doi.org/10.1109/42.491415
 
+Point Based Registration with Anisotropic or non independent FLE
+----------------------------------------------------------------
+
+.. [Batchelor2000] P. Batchelor ; J.M. Fitzpatrick, **"A study of the anisotropically weighted procrustes problem [optical image-guided surgery application]"**, https://doi.org/10.1109/MMBIA.2000.852380
+
+.. [Wiles2008] Wiles AD1, Likholyot A, Frantz DD, Peters TM., **"A statistical model for point-based target registration error with anisotropic fiducial localizer error"**, https://dx.doi.org/10.1109/TMI.2007.908124
+
+.. [Moghari2009] MH Moghari, P Abolmaesumi, **"Distribution of target registration error for anisotropic and inhomogeneous fiducial localization error"**, https://doi.org/10.1109/TMI.2009.2020751
+
+.. [Danilchenko2010] A Danilchenko, JM Fitzpatrick, **"General approach to first-order error prediction in rigid point registration"** , https://doi.org/10.1109/TMI.2010.2091513
+
+.. [Thompson2013]  Stephen Thompson,Graeme Penney, Prokar Dasgupta, David Hawkes, **"Improved Modelling of Tool Tracking Errors by Modelling Dependent Marker Errors"**, https://doi.org/10.1109/TMI.2012.2216890
 
 
 Videos

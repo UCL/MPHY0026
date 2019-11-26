@@ -58,7 +58,7 @@ medical image decathlon challenge [Simpson2019]_.
 Point-Based Registration
 ------------------------
 
-There are two popular methods [Arun1987]_, [Horn1987]_ and obviously others, but not much between them [Eggert1998]_.
+There are two popular methods [Arun1987]_, [Horn1987]_ and obviously others, but functionally there is little difference between them [Eggert1998]_.
 Students need to understand terms and acronyms like FLE, FRE and TRE [Fitzpatrick1998]_ and crucially, that FRE and TRE are uncorrelated [Fitzpatrick2001]_.
 
 .. [Arun1987] K. S. Arun, T. S. Huang, S. D. Blostein, **"Least-Squares Fitting of Two 3-D Point Sets"**, http://dx.doi.org/10.1109/TPAMI.1987.4767965
@@ -73,6 +73,7 @@ Students need to understand terms and acronyms like FLE, FRE and TRE [Fitzpatric
 
 .. [West2004] Jay B. West, Calvin R. Maurer, Jr., **"Designing Optically Tracked Instruments for Image-Guided Surgery"**, http://dx.doi.org/10.1109/TMI.2004.825614
 
+The above papers all assume isotropic, independent fiducial localisation error. There is a body of work looking at error propagation in cased where this is not valid, see :ref:`AdditionalResources`.
 
 Surface-Based Registration
 --------------------------
@@ -97,6 +98,7 @@ These are the main accuracy assessment papers, from authors at NDI.
 
 .. [Wiles2004] Andrew D. Wiles, David G. Thompson and Donald D. Frantz, **"Accuracy assessment and interpretation for optical tracking systems"**, http://dx.doi.org/10.1117/12.536128
 
+.. [Xiao2018] Guofang Xiao, Ester Bonmati, Stephen Thompson, Joe Evans, John Hipwell, Daniil Nikitichev, Kurinchi Gurusamy, Sébastien Ourselin, David J Hawkes, Brian Davidson, Matthew J Clarkson **"Electromagnetic tracking in image‐guided laparoscopic surgery: Comparison with optical tracking and feasibility study of a combined laparoscope and laparoscopic ultrasound system"**, https://doi.org/10.1002/mp.13210
 
 Calibration
 -----------
@@ -124,7 +126,7 @@ Hand-Eye Calibration
 
 .. [Tsai1989] Roger Y. Tsai and Reimar K. Lenz, **"A New Technique for Fully Autonomous and Efficient 3D Robotics Hand/Eye Calibration"**, http://dx.doi.org/10.1109/70.34770
 
-.. [Malti2013] Abed Malti, Joao Pedro Barreto, **"Hand-eye and radial distortion calibration for rigid endoscopes" http://dx.doi.org/10.1002/rcs.1478
+.. [Malti2013] Abed Malti, Joao Pedro Barreto, **"Hand-eye and radial distortion calibration for rigid endoscopes"**, http://dx.doi.org/10.1002/rcs.1478
 
 .. [Thompson2016] Stephen Thompson, Danail Stoyanov, Crispin Schneider, Kurinchi Gurusamy, Sébastien Ourselin, Brian Davidson, David Hawkes and Matthew J. Clarkson, **"Hand–eye calibration for rigid laparoscopes using an invariant point"**, http://dx.doi.org/10.1007/s11548-016-1364-9
 
@@ -154,7 +156,14 @@ Visualisation
 
 .. [KerstenOertel2015] Marta Kersten-Oertel, Ian Gerard, Simon Drouin, Kelvin Mok, Denis Sirhan, David S. Sinclair, D. Louis Collins, **"Augmented reality in neurovascular surgery: feasibility and first uses in the operating room"**, http://dx.doi.org/10.1007/s11548-015-1163-8
 
+.. [Thompson2018] Stephen Thompson, Crispin Schneider, Michele Bosi, Kurinchi Gurusamy, Sébastien Ourselin, Brian Davidson, David Hawkes, Matthew J Clarkson, **"In vivo estimation of target registration errors during augmented reality laparoscopic surgery"**, https://doi.org/10.1007/s11548-018-1761-3
 
 User Interface
 --------------
+These are some user recent user interface papers I am aware of. This needs to be expanded and improved.
 
+.. [Dilley2019] Dilley, James W. R. MRCOG; Hughes-Hallett, Archie PhD; Pratt, Philip J. PhD; Pucher, Philip H. PhD; Camara, Mafalda MSc; Darzi, Ara W. FRS; Mayer, Erik K. PhD, **"Perfect Registration Leads to Imperfect Performance A Randomized Trial of Multimodal Intraoperative Image Guidance"**. http://dx.doi.org//10.1097/SLA.0000000000002793
+
+.. [Wheeler2019] Gavin Wheeler, Shujie Deng, Kuberan Pushparajah, Julia Schnabel, John Simpson, Alberto Gomez Herrero, **"A Virtual Linear Measurement System for Accurate Quantification of Medical Images"**, http://doi.org/10.1049/HTL.2019.0074
+
+.. [Hatscher2019] Hatscher, B., Mewes, A., Pannicke, E. et al., **"Touchless scanner control to support MRI-guided interventions"**, https://doi.org/10.1007/s11548-019-02058-1
