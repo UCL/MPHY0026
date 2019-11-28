@@ -11,8 +11,6 @@ Course Details
 For those of you taking this course for university credit at `UCL`_, these
 are the essential details:
 
- * Room locations in the UCL Common Timetable.
-
  * All formal announcements come via `Moodle`_.
 
  * Assessment:
@@ -57,6 +55,7 @@ Contents
   evaluation/evaluation.rst
   references.rst
   additional_resources.rst
+  coursework/system_simulation.rst
 
 Sessions
 --------
