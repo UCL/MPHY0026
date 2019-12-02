@@ -33,20 +33,34 @@ notebooks used in class, or indeed your own code, in any language.
 |            |       |   - Ensure transformation direction is correct                                                            |
 |            |       |   - Indicate which transformations are static versus dynamic                                              |
 +------------+-------+-----------------------------------------------------------------------------------------------------------+
-| 5          |       | Create a simulation environment to estimate spatial errors                                                |
-|            |  - 1  |   - It can be 3D or 2D. Justify your choice.                                                              |
+| 5          |       | Create a simulation environment to estimate Target Registration Error (TRE)                               |
+|            |  - 1  |   - It should use 3D coordinates                                                                          |
+|            |  - 1  |   - Produce clear system diagram                                                                          |
 |            |  - 2  |   - State assumptions/simplifications                                                                     |
-|            |  - 1  |   - State which parameters you interested in simulating                                                   |
+|            |  - 1  |   - State which parameters you are interested in simulating                                               |
 |            |  - 4  |   - State what noise model you are using for each parameter and why                                       |
 |            |  - 2  |   - State how many spacial locations you are studying. Justify.                                           |
 |            |  - 8  |   - Estimate system TRE                                                                                   |
-|            |  - 1  |   - Produce clear diagram                                                                                 |
-|            |  - 1  |   - Discuss, is TRE reasonable?                                                                           |
+|            |  - 1  |   - Discuss, does your simulation of TRE look reasonable?                                                 |
 +------------+-------+-----------------------------------------------------------------------------------------------------------+
 | 6          | 5     | Analyse visualisation                                                                                     |
+|            |       |   - Describe visualisation method used                                                                    |
+|            |       |   - Is visualisation multimodal? If so, is it easy to interpret?                                          |
+|            |       |   - Does visualisation show alignment uncertainty?                                                        |
+|            |       |   - Is it easy to see when system is wrong? e.g. not tracking?                                            |
+|            |       |   - How could visualisation be improved?                                                                  |
 +------------+-------+-----------------------------------------------------------------------------------------------------------+
-| 7          | 5     | Analyse Evaluation                                                                                        |
+| 7          | 5     | Analyse User Interface                                                                                    |
+|            |       |   - Who are the users?                                                                                    |
+|            |       |   - What training would they need to use the system?                                                      |
+|            |       |   - Are there usability constraints, specific for the OR?                                                 |
+|            |       |   - How many steps can you identify?                                                                      |
+|            |       |   - How much of an interruption to the normal workflow iw is?                                             |
 +------------+-------+-----------------------------------------------------------------------------------------------------------+
-| 8          | 5     | Determine next steps                                                                                      |
+| 8          | 5     | Analyse Evaluation Methodology                                                                            |
+|            |       |   - Describe how system was evaluated, e.g. accuracy?                                                     |
+|            |       |   - Discuss limitations of e.g. phantom, animal study etc?                                                |
+|            |       |   - Does evaluation use FLE, FRE, TRE? Is methodology sufficient?                                         |
+|            |       |   - How would evaluation transfer to the OR?                                                              |
 +------------+-------+-----------------------------------------------------------------------------------------------------------+
 
