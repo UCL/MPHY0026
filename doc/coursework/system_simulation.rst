@@ -1,19 +1,27 @@
 Coursework 1 (2020)
 ===================
 
+Dates
+-----
+
+Refer to Moodle.
+
 System Simulation
 -----------------
 
 In this coursework, you will provide a single report, containing
-an overview of an image-guided surgery system of your choice.
+an overview of an image-guided interventional system of your choice.
 
 The marking scheme is below. Feel free to use any of the jupyter
 notebooks used in class, or indeed your own code, in any language.
 
+Tasks
+-----
+
 +------------+-------+-----------------------------------------------------------------------------------------------------------+
 | Section    | Marks | Task                                                                                                      |
 +============+=======+===========================================================================================================+
-| 1          | 0     | Identify an image-guided surgery system in the research literature.                                       |
+| 1          | 0     | Identify an image-guided interventional system in the research literature.                                |
 |            |       |   - Discuss suitability with Module Lead.                                                                 |
 +------------+-------+-----------------------------------------------------------------------------------------------------------+
 | 2          | 5     | Describe the clinical procedure.                                                                          |
@@ -32,6 +40,7 @@ notebooks used in class, or indeed your own code, in any language.
 |            |       |   - Label each coordinate system                                                                          |
 |            |       |   - Ensure transformation direction is correct                                                            |
 |            |       |   - Indicate which transformations are static versus dynamic                                              |
+|            |       |   - Indicate which transforms are rigid/affine/non-linear                                                 |
 +------------+-------+-----------------------------------------------------------------------------------------------------------+
 | 5          |       | Create a simulation environment to estimate Target Registration Error (TRE)                               |
 |            |  - 1  |   - It should use 3D coordinates                                                                          |
