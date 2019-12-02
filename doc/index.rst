@@ -15,7 +15,7 @@ are the essential details:
 
  * Assessment:
 
-   * 2 pieces of coursework, worth 25% each.
+   * 1 pieces of coursework, worth 50%.
 
    * 1 exam of 2 hours in the exam period after Easter, worth 50%.
 
