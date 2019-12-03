@@ -54,6 +54,9 @@ Papers
 
 .. [Grimson1996] W. E. L. Grimson, G. J. Ettinger, S. J. White, T. Lozano-Perez, W. M. Wells and R. Kikinis, **"An Automatic Registration Method for Frameless Stereotaxy, Image Guided Surgery, and Enhanced Reality Visualization"**, http://dx.doi.org/10.1109/42.491415
 
+.. [Bonmati2017] Ester Bonmati, Yipeng Hu, Kurinchi Gurusamy, Brian Davidson, Stephen P. Pereira, Matthew J. Clarkson, Dean C. Barratt, **"Assessment of Electromagnetic Tracking Accuracy for Endoscopic Ultrasound"** http://dx.doi.org/10.1007/978-3-319-54057-3_4
+
+
 Point Based Registration with Anisotropic or non independent FLE
 ----------------------------------------------------------------
 
