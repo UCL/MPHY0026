@@ -4,8 +4,8 @@ References
 This page shows a list of essential papers that will be covered during the course.
 Those under the subheading "Essential" are in fact, essential.
 The reader does not need to memorise all of each of these essential papers,
-but the reader should know of each papers existence, memorise the key message from
-each essential paper and understand how to apply the main findings.
+but the reader should know of the papers existence, memorise the key message from
+that paper and understand how to apply the main findings.
 
 Also, the interested reader should take a look at:
 
