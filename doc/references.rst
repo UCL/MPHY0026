@@ -29,11 +29,11 @@ Extras
 
 .. [Yaniv2006] Ziv Yaniv and Kevin Cleary, **"Image-Guided Procedures: A Review"**, http://yanivresearch.info/writtenMaterial/CAIMR-TR-2006-3.pdf
 
+.. [Noble2011] J. Alison Noble, Nassir Navab and H. Becher, **"Ultrasonic image analysis and image-guided interventions"**, http://dx.doi.org/10.1098/rsfs.2011.0025
+
 .. [Franz2014] Alfred M. Franz, Tamas Haidegger, Wolfgang Birkfellner, Kevin Cleary, Terry M. Peters and Lena Maier-Hein, **"Electromagnetic Tracking in Medicine – a Review of Technology, Validation and Applications"**, http://dx.doi.org/10.1109/TMI.2014.2321777
 
 .. [Bernhardt2017] Sylvain Bernhardt, Stéphane A. Nicolau, Luc Soler, Christophe Doignon, **"The status of augmented reality in laparoscopic surgery as of 2016"**, http://dx.doi.org/10.1016/j.media.2017.01.007
-
-.. [Noble2011] J. Alison Noble, Nassir Navab and H. Becher, **"Ultrasonic image analysis and image-guided interventions"**, http://dx.doi.org/10.1098/rsfs.2011.0025
 
 
 Application Examples
