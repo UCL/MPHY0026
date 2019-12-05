@@ -230,6 +230,8 @@ Essential
 Extras
 ^^^^^^
 
+.. [Dilley2019] Dilley, James W. R. MRCOG; Hughes-Hallett, Archie PhD; Pratt, Philip J. PhD; Pucher, Philip H. PhD; Camara, Mafalda MSc; Darzi, Ara W. FRS; Mayer, Erik K. PhD, **"Perfect Registration Leads to Imperfect Performance A Randomized Trial of Multimodal Intraoperative Image Guidance"**. http://dx.doi.org//10.1097/SLA.0000000000002793
+
 .. [Thompson2018] Stephen Thompson, Crispin Schneider, Michele Bosi, Kurinchi Gurusamy, Sébastien Ourselin, Brian Davidson, David Hawkes, Matthew J Clarkson, **"In vivo estimation of target registration errors during augmented reality laparoscopic surgery"**, https://doi.org/10.1007/s11548-018-1761-3
 
 
@@ -239,25 +241,42 @@ User Interface
 Essential
 ^^^^^^^^^
 
-These are some user recent user interface papers I am aware of. This needs to be expanded and improved.
+.. [Mewes2016] Mewes A, Hensen B, Wacker F, Hansen C. **"Touchless interaction with software in interventional radiology and surgery: a systematic literature review."**, https://doi.org/10.1007/s11548-016-1480-6
 
-.. [Dilley2019] Dilley, James W. R. MRCOG; Hughes-Hallett, Archie PhD; Pratt, Philip J. PhD; Pucher, Philip H. PhD; Camara, Mafalda MSc; Darzi, Ara W. FRS; Mayer, Erik K. PhD, **"Perfect Registration Leads to Imperfect Performance A Randomized Trial of Multimodal Intraoperative Image Guidance"**. http://dx.doi.org//10.1097/SLA.0000000000002793
+
+Extras
+^^^^^^
 
 .. [Wheeler2019] Gavin Wheeler, Shujie Deng, Kuberan Pushparajah, Julia Schnabel, John Simpson, Alberto Gomez Herrero, **"A Virtual Linear Measurement System for Accurate Quantification of Medical Images"**, http://doi.org/10.1049/HTL.2019.0074
 
 .. [Hatscher2019] Hatscher, B., Mewes, A., Pannicke, E. et al., **"Touchless scanner control to support MRI-guided interventions"**, https://doi.org/10.1007/s11548-019-02058-1
 
 
-Extras
-^^^^^^
+
 
 Evaluation
 ----------
 
+Essential
+^^^^^^^^^
+
+.. [McCulloch2009] P. McCulloch et. al, **"No surgical innovation without evaluation: the IDEAL recommendations"**, https://doi.org/10.1016/S0140-6736(09)61116-8
+
 .. [SomogyiGanss2014] Eszter Somogyi-Ganss, Howard I. Holmes and Asbjørn Jokstad, **"Accuracy of a novel prototype dynamic computer-assisted surgery system"**, http://dx.doi.org/10.1109/10.1111/clr.12414
+
+.. [Thompson2013] Stephen Thompson, Graeme Penney, Michele Billia, Ben Challacombe, David Hawkes, Prokar Dasgupta, **"Design and evaluation of an image‐guidance system for robot‐assisted radical prostatectomy"**, https://doi.org/10.1111/j.1464-410X.2012.11692.x
+
+Extras
+^^^^^^
+
 
 Others
 ------
+
+Extras
+^^^^^^
+Here's a reminder that anatomy is variable and that there is not necessarily consensus on what's what.
+.. [Schnelldorfer2012] Schnelldorfer T1, Sarr MG, Adams DB. **"What is the duct of Luschka?--A systematic review."**, https://doi.org/10.1007/s11605-011-1802-5
 
 
 
