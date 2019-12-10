@@ -226,14 +226,18 @@ Essential
 
 .. [KerstenOertel2015] Marta Kersten-Oertel, Ian Gerard, Simon Drouin, Kelvin Mok, Denis Sirhan, David S. Sinclair, D. Louis Collins, **"Augmented reality in neurovascular surgery: feasibility and first uses in the operating room"**, http://dx.doi.org/10.1007/s11548-015-1163-8
 
+.. [Marcus2015] Hani J Marcus, Philip Pratt, Archie Hughes-Hallett, Thomas P Cundy, Adam P Marcus, Guang-Zhong Yang, Ara Darzi, Dipankar Nandi, **"Comparative Effectiveness and Safety of Image Guidance Systems in Neurosurgery: A Preclinical Randomized Study"**, http://dx.doi.org/10.3171/2014.10.JNS141662
 
 Extras
 ^^^^^^
 
-.. [Dilley2019] Dilley, James W. R. MRCOG; Hughes-Hallett, Archie PhD; Pratt, Philip J. PhD; Pucher, Philip H. PhD; Camara, Mafalda MSc; Darzi, Ara W. FRS; Mayer, Erik K. PhD, **"Perfect Registration Leads to Imperfect Performance A Randomized Trial of Multimodal Intraoperative Image Guidance"**. http://dx.doi.org//10.1097/SLA.0000000000002793
+.. [Dilley2019] Dilley, James W. R. MRCOG; Hughes-Hallett, Archie PhD; Pratt, Philip J. PhD; Pucher, Philip H. PhD; Camara, Mafalda MSc; Darzi, Ara W. FRS; Mayer, Erik K. PhD, **"Perfect Registration Leads to Imperfect Performance A Randomized Trial of Multimodal Intraoperative Image Guidance"**. http://dx.doi.org/10.1097/SLA.0000000000002793
 
-.. [Thompson2018] Stephen Thompson, Crispin Schneider, Michele Bosi, Kurinchi Gurusamy, Sébastien Ourselin, Brian Davidson, David Hawkes, Matthew J Clarkson, **"In vivo estimation of target registration errors during augmented reality laparoscopic surgery"**, https://doi.org/10.1007/s11548-018-1761-3
+.. [Thompson2018] Stephen Thompson, Crispin Schneider, Michele Bosi, Kurinchi Gurusamy, Sébastien Ourselin, Brian Davidson, David Hawkes, Matthew J Clarkson, **"In vivo estimation of target registration errors during augmented reality laparoscopic surgery"**, https://dx.doi.org/10.1007/s11548-018-1761-3
 
+.. [Dixon2012] Benjamin J. Dixon, Michael J. Daly, Harley Chan, Allan D. Vescan, Ian J. Witterick, Jonathan C. Irish **"Surgeons blinded by enhanced navigation: the effect of augmented reality on attention"**, https://dx.doi.org/10.1007/s00464-012-2457-3
+
+.. [Sielforst2008] Tobias Sielhorst, Marco Feuerstein, Nassir Navab **"Advanced Medical Displays: A Literature Review of Augmented Reality"**, http://dx.doi.org/10.1109/JDT.2008.2001575
 
 User Interface
 --------------
@@ -241,18 +245,19 @@ User Interface
 Essential
 ^^^^^^^^^
 
-.. [Mewes2016] Mewes A, Hensen B, Wacker F, Hansen C. **"Touchless interaction with software in interventional radiology and surgery: a systematic literature review."**, https://doi.org/10.1007/s11548-016-1480-6
+.. [Cronin2019] Sean, Cronin, Gavin Doherty. **"Touchless Computer Interfaces in Hospitals: A Review."**, http://dx.doi.org/10.1177/1460458217748342
+
+.. [Mewes2016] Mewes A, Hensen B, Wacker F, Hansen C. **"Touchless interaction with software in interventional radiology and surgery: a systematic literature review."**, https://dx.doi.org/10.1007/s11548-016-1480-6
 
 
 Extras
 ^^^^^^
 
-.. [Wheeler2019] Gavin Wheeler, Shujie Deng, Kuberan Pushparajah, Julia Schnabel, John Simpson, Alberto Gomez Herrero, **"A Virtual Linear Measurement System for Accurate Quantification of Medical Images"**, http://doi.org/10.1049/HTL.2019.0074
+.. [Wheeler2019] Gavin Wheeler, Shujie Deng, Kuberan Pushparajah, Julia Schnabel, John Simpson, Alberto Gomez Herrero, **"A Virtual Linear Measurement System for Accurate Quantification of Medical Images"**, http://dx.doi.org/10.1049/HTL.2019.0074
 
-.. [Hatscher2019] Hatscher, B., Mewes, A., Pannicke, E. et al., **"Touchless scanner control to support MRI-guided interventions"**, https://doi.org/10.1007/s11548-019-02058-1
+.. [Hatscher2019] Hatscher, B., Mewes, A., Pannicke, E. et al., **"Touchless scanner control to support MRI-guided interventions"**, https://dx.doi.org/10.1007/s11548-019-02058-1
 
-
-
+.. [Hart2006] Sandra G. Hart, **"NASA-Task Load Index (NASA-TLX); 20 Years Later"**, https://doi.org/10.1177/154193120605000909
 
 Evaluation
 ----------
@@ -275,8 +280,12 @@ Others
 
 Extras
 ^^^^^^
+
+This study shows that the majority of bile duct injuries are due to the inability to identify anatomy. Can image guidance fix this?
+.. [Way2002] Lawrence W. Way, Lygia Stewart, Walter Gantert, Kingsway Liu, Crystine M. Lee, Karen Whang, John G. Hunter, **"Causes and Prevention of Laparoscopic Bile Duct Injuries Analysis of 252 Cases From a Human Factors and Cognitive Psychology Perspective"**, https://doi.org/10.1097/01.SLA.0000060680.92690.E9
+
 Here's a reminder that anatomy is variable and that there is not necessarily consensus on what's what.
-.. [Schnelldorfer2012] Schnelldorfer T1, Sarr MG, Adams DB. **"What is the duct of Luschka?--A systematic review."**, https://doi.org/10.1007/s11605-011-1802-5
+.. [Schnelldorfer2012] Schnelldorfer T1, Sarr MG, Adams DB. **"What is the duct of Luschka?--A systematic review."**, https://dx.doi.org/10.1007/s11605-011-1802-5
 
 
 
