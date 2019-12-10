@@ -282,9 +282,11 @@ Extras
 ^^^^^^
 
 This study shows that the majority of bile duct injuries are due to the inability to identify anatomy. Can image guidance fix this?
+
 .. [Way2002] Lawrence W. Way, Lygia Stewart, Walter Gantert, Kingsway Liu, Crystine M. Lee, Karen Whang, John G. Hunter, **"Causes and Prevention of Laparoscopic Bile Duct Injuries Analysis of 252 Cases From a Human Factors and Cognitive Psychology Perspective"**, https://doi.org/10.1097/01.SLA.0000060680.92690.E9
 
 Here's a reminder that anatomy is variable and that there is not necessarily consensus on what's what.
+
 .. [Schnelldorfer2012] Schnelldorfer T1, Sarr MG, Adams DB. **"What is the duct of Luschka?--A systematic review."**, https://dx.doi.org/10.1007/s11605-011-1802-5
 
 
