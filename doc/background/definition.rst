@@ -51,8 +51,8 @@ Surgery can be defined as
 `a procedure involving cutting, or joining together a persons tissues`_
 for the purpose of diagnosis or treatment (`Wikipedia`_).
 Surgeon's do surgery in an operating room or operating theatre. They typically
-do not have large imaging devices in. If needed, portable ultrasound machines
-are brought in as necessary.
+do not have large imaging devices in. They may have a C-arm X-ray, endoscopy,
+or if needed, portable ultrasound machines are brought in as necessary.
 
 
 Interventional Radiologists
@@ -64,7 +64,7 @@ Interventional Radiologists
 
   Figure: "An electric current produced by radiofrequency ablates the tumor", by https://www.scientificanimations.com/, is licensed under `CC BY-SA 4.0`_.
 
-Interventional Radiologists, or Vascular and Interventional Radiologists peform
+Interventional Radiologists, or Vascular and Interventional Radiologists perform
 their procedures in an Interventional Radiology Suite, or Vascular Suite, that is
 equiped with built-in large imaging devices.
 
@@ -90,6 +90,13 @@ at the Ferenc Jolesz National Centre for Image-Guided Therapy, where
 Ferenc Jolesz is the author of :ref:`bookJolesz`.
 
 
+.. figure:: https://upload.wikimedia.org/wikipedia/commons/0/07/Hybrid_operating_theatre_gemelli_rome.jpg
+  :alt: Hybrid operating room for cardiovascular surgery at Agostino Gemelli University Polyclinic in Rome
+  :width: 400
+
+  Figure: "Hybrid operating room for cardiovascular surgery at Agostino Gemelli University Polyclinic in Rome", by Pfree2014, is licensed under `CC0`_.
+
+
 Definitions
 ------------
 
@@ -111,6 +118,7 @@ Caveats
 
 .. _`Wikipedia`: https://en.wikipedia.org/
 .. _`CC BY-SA 4.0`: https://creativecommons.org/licenses/by-sa/4.0)
+.. _`CC0`: https://creativecommons.org/publicdomain/zero/1.0/deed.en
 .. _`Cardiac surgery operating room`: https://upload.wikimedia.org/wikipedia/commons/2/2e/Cardiac_surgery_operating_room.jpg
 .. _`a procedure involving cutting, or joining together a persons tissues`: https://en.wikipedia.org/wiki/Surgery
 .. _`interventional procedures`: https://en.wikipedia.org/wiki/Interventional_radiology
