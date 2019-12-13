@@ -37,6 +37,12 @@ If you find problems with either the notes, or the code, raise Issues in
 the Gitlab `Issue Tracker`_. Your help and feedback will make this a better course. Thank you.
 
 
+Course Principles
+-----------------
+
+* *Research led*: Closely linked to academic literature, and research at UCL and world-wide
+* *A systems approach*: A researcher may only work on one component, but to achieve the clinical goal, we must understand the total system performance.
+
 Contents
 --------
 
@@ -45,6 +51,10 @@ Contents
   :numbered:
 
   background/background.rst
+  background/definition.rst
+  background/history.rst
+  background/systems.rst
+  background/components.rst
   imaging/imaging.rst
   segmentation/segmentation.rst
   registration/registration.rst
@@ -85,6 +95,13 @@ All at Charles Bell House.
 +------------+--------------+-----------+-------------------------------------------------------------------------------------+
 | 26/03/2020 | G10 + Lab    | ?         | Wrap up                                                                             |
 +------------+--------------+-----------+-------------------------------------------------------------------------------------+
+
+
+.. raw:: html
+
+    <embed>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </embed>
 
 .. _`University College London (UCL)`: http://www.ucl.ac.uk/
 .. _`UCL`: http://www.ucl.ac.uk/

@@ -1,51 +1,44 @@
 Background
 ==========
 
-Overview
---------
+Learning Goals
+--------------
 
-1. What is Computer Assisted Surgery and Therapy?
-  #. Nomenclature
-  #. Image-guidance
-  #. Computer Assisted Surgery
-  #. Computer Assisted Therapy
-  #. Pre-operative Planning
-2. Current research examples
-  #. SmartTarget
-  #. SmartLiver
-  #. EpiNav
-  #. Pancreatic biopsy
-  #. PLUS+Slicer Examples
-  #. MITK Examples
-3. A systems approach
-  #. What is the clinical objective?
-  #. The sum of all parts
-  #. Error propagation
+Upon completion of this section, the student will
 
-
-Learning Objectives
--------------------
+1. know what the course "Computer Assisted Surgery and Therapy" is about, and understand that there are a variety of similar names in the literature.
+2. be able to give examples of key characteristics of the field
+3. remember some landmark examples from the research literature
+4. be able to identify key components of a system and discuss pro's and con's
 
 
 Before The Lecture
 ------------------
 
-References should all go in references.rst, and can be referred to throughout course,
-without text duplication.
+Before the lecture please read:
 
-* [ClearyPeters2010]_ - Specify why the student is reading this paper, what is the learning objective.
+* [PetersCleary2010]_ - All of it.
+
+
+The Lecture
+-----------
+
+The main topics are:
+
+1. :ref:`Definitions`
+2. :ref:`History`
+3. :ref:`SystemExamples`
+4. :ref:`Components`
+
 
 After The Lecture
 -----------------
+
+* Skim read some examples
+* Identify: clinical objective, components used, measure of accuracy, future work
 
 
 Optional Reading
 ----------------
 
-
-* [Yaniv2006]_ - Specify why the student is reading this paper, what is the take-home message.
-
-
-Additional Resources
---------------------
-
+* [Bernhardt2017]_ - Overview of laparoscopic image-guidance

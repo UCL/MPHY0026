@@ -7,12 +7,6 @@ The reader does not need to memorise all of each of these essential papers,
 but the reader should know of the papers existence, memorise the key message from
 that paper and understand how to apply the main findings.
 
-Also, the interested reader should take a look at:
-
-.. [ZivYaniv] Ziv Yaniv's homepage: http://yanivresearch.info/
-
-and of course, see :ref:`AdditionalResources`.
-
 
 Reviews and Background
 ----------------------
@@ -20,7 +14,7 @@ Reviews and Background
 Essential
 ^^^^^^^^^
 
-.. [ClearyPeters2010] Kevin Cleary and Terry Peters, **"Image-Guided Interventions: Technology Review and Clinical Applications"**, http://dx.doi.org/10.1146/annurev-bioeng-070909-105249
+.. [PetersCleary2010] Terry Peters and Kevin Cleary, **"Image-Guided Interventions: Technology Review and Clinical Applications"**, http://dx.doi.org/10.1146/annurev-bioeng-070909-105249
 
 Extras
 ^^^^^^
