@@ -3,6 +3,9 @@
 History
 =======
 
+Learning Objectives
+-------------------
+
 
 First X-ray image:
 
