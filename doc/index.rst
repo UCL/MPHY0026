@@ -37,6 +37,12 @@ If you find problems with either the notes, or the code, raise Issues in
 the Gitlab `Issue Tracker`_. Your help and feedback will make this a better course. Thank you.
 
 
+Course Principles
+-----------------
+
+* *Research led*: Closely linked to academic literature, and research at UCL and world-wide
+* *A systems approach*: A researcher may only work on one component, but to achieve the clinical goal, we must understand the total system performance.
+
 Contents
 --------
 
@@ -45,6 +51,10 @@ Contents
   :numbered:
 
   background/background.rst
+  background/definition.rst
+  background/history.rst
+  background/systems.rst
+  background/components.rst
   imaging/imaging.rst
   segmentation/segmentation.rst
   registration/registration.rst
