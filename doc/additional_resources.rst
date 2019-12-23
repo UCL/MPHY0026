@@ -55,14 +55,9 @@ Websites
 Videos
 ------
 
-.. _cydarPromo:
+Dr Tara Mastracci at UCL talks about http://cydarmedical.com for vascular surgery: https://www.youtube.com/embed/vmPTcf8VowE
 
-.. raw:: html
-
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/vmPTcf8VowE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-Dr Tara Mastracci at UCL talks about http://cydarmedical.com for vascular surgery.
+Other videos:
 
 .. raw:: html
 
