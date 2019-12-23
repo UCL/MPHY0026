@@ -50,9 +50,11 @@ Surgeons
 Surgery can be defined as
 `a procedure involving cutting, or joining together a persons tissues`_
 for the purpose of diagnosis or treatment (`Wikipedia`_).
-Surgeon's do surgery in an operating room or operating theatre. They typically
-do not have large imaging devices in. They may have a C-arm X-ray, endoscopy,
-or if needed, portable ultrasound machines are brought in as necessary.
+Surgeon's do surgery in an operating room or operating theatre.
+Most operating theatres do not have large imaging devices in.
+Some operating theatres may have a C-arm X-ray machine. Portable
+imaging devices such as endoscopy or laparoscopy stacks or ultrasound machines
+are brought in as necessary.
 
 
 Interventional Radiologists
