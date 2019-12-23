@@ -36,9 +36,3 @@ After The Lecture
 
 * Skim read some examples
 * Identify: clinical objective, components used, measure of accuracy, future work
-
-
-Optional Reading
-----------------
-
-* [Bernhardt2017]_ - Overview of laparoscopic image-guidance
