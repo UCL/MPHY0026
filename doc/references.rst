@@ -284,11 +284,31 @@ Here's a reminder that anatomy is variable and that there is not necessarily con
 .. [Schnelldorfer2012] Schnelldorfer T1, Sarr MG, Adams DB. **"What is the duct of Luschka?--A systematic review."**, https://dx.doi.org/10.1007/s11605-011-1802-5
 
 
+First X-rays:
 
+.. [Roentgen1896] W. Roentgen, **"On A New Kind Of Rays"**, https://www.jstor.org/stable/1623595
 
+First surgery:
 
+.. [Cox1896] J. Cox and R. C. Kirkpatrick, **"The New Photography With A Report Of A Case In Which A Bullet Was Photographed In The Leg"**, http://www.canadiana.ca/view/oocihm.8_05178_93/3?r=0&s=1
 
+Stereotactic frame:
 
+.. [HorsleyClarke1908] V. Horsley, R. H. Clarke, **"The structure and functions of the cerebellum examined by a new method"**, https://doi.org/10.1093/brain/31.1.45
+
+Frameless stereotaxy in microscope:
+
+.. [Roberts1986] D. W. Roberts, J. W. Strohbehn, J. F. Hatch, W. Murray and H. Kettenberger, **"A frameless stereotaxic integration of computerized tomographic imaging and the operating microscope"**, https://doi.org/10.3171/jns.1986.65.4.0545
+
+First surgical planning:
+
+.. [Peters1987] Peters T.M., Clark J., Pike B., Drangova M., Olivier A., **"Stereotactic Surgical Planning with Magnetic Resonance Imaging, Digital Subtraction Angiography and Computed Tomography"**, https://doi.org/10.1159/000100679
+
+.. [Peters1989] T. M. Peters, J. A. Clark, G. B. Pike, C. Henri, L. Collins, D. Leksell and O. Jeppsson, **"Stereotactic neurosurgery planning on a personal-computer-based work station"**, https://doi.org/10.1007/BF03168023
+
+First 4-quadrant view:
+
+.. [Galloway1993] R. Galloway, C. A. Edwards, J. T. Lewis and R. J. Maciunas, **"Image display and surgical visualization in interactive image-guided neurosurgery"**, https://doi.org/10.1117/12.143712
 
 
 

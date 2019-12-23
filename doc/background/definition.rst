@@ -9,13 +9,7 @@ Learning Objectives
 Upon completion of this section, the student will be able to
 
 * explain commonly used acronyms in the field
-* identiy suitable terminology for specific audiences
-
-
-Discussion
-----------
-
-Refer to paper: [PetersCleary2010]_
+* identify suitable terminology for specific audiences
 
 
 Nomenclature
@@ -43,13 +37,13 @@ Surgeons
 
 .. figure:: https://upload.wikimedia.org/wikipedia/commons/2/2e/Cardiac_surgery_operating_room.jpg
   :alt: Cardiac surgery operating room
-  :width: 400
+  :width: 600
 
   Figure: "`Cardiac surgery operating room`_", by Pfree2014, is licensed under `CC BY-SA 4.0`_.
 
 Surgery can be defined as
 `a procedure involving cutting, or joining together a persons tissues`_
-for the purpose of diagnosis or treatment (`Wikipedia`_).
+for the purpose of diagnosis or treatment (Wikipedia).
 Surgeon's do surgery in an operating room or operating theatre.
 Most operating theatres do not have large imaging devices in.
 Some operating theatres may have a C-arm X-ray machine. Portable
@@ -62,7 +56,7 @@ Interventional Radiologists
 
 .. figure:: https://upload.wikimedia.org/wikipedia/commons/e/e6/Radiofrequency_ablation.jpg
   :alt: An electric current produced by radiofrequency ablates the tumor
-  :width: 400
+  :width: 600
 
   Figure: "An electric current produced by radiofrequency ablates the tumor", by https://www.scientificanimations.com/, is licensed under `CC BY-SA 4.0`_.
 
@@ -73,7 +67,7 @@ equiped with built-in large imaging devices.
 The :ref:`bookMauro` book, comes from the perspective of Interventional Radiology.
 Interventional Radiologists have been using image-guidance for decades to perform
 a wide variety of `interventional procedures`_. These suite's typically
-have X-ray, flouroscopy, Cone Beam CT.
+have X-ray flouroscopy, Cone Beam CT etc.
 
 Interventional Radiologists routinely do image-guided procedures, but
 we (engineers) would not typically call them "Computer Assisted Interventions".
@@ -88,13 +82,13 @@ is the Siemens AMIGO suite.
 
 See: https://ncigt.org/amigo
 
-at the Ferenc Jolesz National Centre for Image-Guided Therapy, where
-Ferenc Jolesz is the author of :ref:`bookJolesz`.
+at the Ferenc Jolesz National Centre for Image-Guided Therapy.
+Ferenc Jolesz is also the author of :ref:`bookJolesz`.
 
 
 .. figure:: https://upload.wikimedia.org/wikipedia/commons/0/07/Hybrid_operating_theatre_gemelli_rome.jpg
   :alt: Hybrid operating room for cardiovascular surgery at Agostino Gemelli University Polyclinic in Rome
-  :width: 400
+  :width: 600
 
   Figure: "Hybrid operating room for cardiovascular surgery at Agostino Gemelli University Polyclinic in Rome", by Pfree2014, is licensed under `CC0`_.
 
@@ -104,7 +98,7 @@ Definitions
 
 Therefore, we define:
 
-* Surgery - `a procedure involving cutting, or joining together a persons tissues`_, from `Wikipedia`_
+* Surgery - `a procedure involving cutting, or joining together a persons tissues`_ (Wikipedia).
 * Therapy - treating a medical condition, e.g. radio-frequency ablation
 * Interventions - broader term, encapsulating both surgical procedures and therapies
 * Computer Assisted - using an additional computational system, above and beyond that provided by the manufacturer of an imaging device
@@ -116,7 +110,6 @@ Caveats
 -------
 
 * Prototype CAS systems may eventually become embeded in clinical practice and indistinguishable from imaging devices.
-* We could rename this module "Computer Assisted Interventions" (CAI).
 
 .. _`Wikipedia`: https://en.wikipedia.org/
 .. _`CC BY-SA 4.0`: https://creativecommons.org/licenses/by-sa/4.0)
