@@ -34,13 +34,13 @@ First X-ray Guidance
 
 11th Jan **1896** - the first clinical use of X-rays by `John Hall-Edwards`_, Birmingham, UK, to remove a needle from a hand (Wikipedia).
 
-7th February **1896** - the first surgical use of X-rays by Professor John Cox, Montreal, Canada, where `X-rays were used to remove a bullet`_ from a patients leg [Cox1896]_.
+7th February **1896** - the first surgical use of X-rays by Professor John Cox, Montreal, Canada, where X-rays were used to remove a bullet from a patients leg [Cox1896]_.
 
 
 Stereotactic Surgery
 --------------------
 
-**1908** - `Horsley and Clarke`_ - described the stereotactic frame [HorsleyClarke1908]_, defining anatomical coordinates, leading to stereotactic surgery.
+**1908** - Horsley and Clarke described the stereotactic frame [HorsleyClarke1908]_, defining anatomical coordinates, leading to stereotactic surgery.
 "Stereo" - meaning *solid*, and "taxis" meaning *ordered*.
 
 

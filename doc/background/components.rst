@@ -6,10 +6,10 @@ System Components
 Learning Objectives
 -------------------
 
-Basic Components
-^^^^^^^^^^^^^^^^
+Introduction
+------------
 
-A computer assisted surgery (CAS) system normally comprises
+A CAS system normally comprises
 
 * Imaging
 * Tracking / Calibration
@@ -17,8 +17,24 @@ A computer assisted surgery (CAS) system normally comprises
 * Segmentation
 * Visualisation
 * User interface
-* Evaluation
 
-So, this course is more about CAS than just using interventional imaging.
+Imaging
+-------
 
+Tracking / Calibration
+----------------------
 
+Registration
+------------
+
+Segmentation
+------------
+
+Visualisation
+-------------
+
+User Interface
+--------------
+
+A System-Wide Approach
+----------------------
