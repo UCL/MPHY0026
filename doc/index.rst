@@ -67,6 +67,8 @@ Contents
   references.rst
   additional_resources.rst
   coursework/system_simulation.rst
+  notebooks.rst
+
 
 Sessions
 --------
