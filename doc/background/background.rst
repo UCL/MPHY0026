@@ -7,9 +7,9 @@ Learning Goals
 Upon completion of this section, the student will
 
 1. know what the course "Computer Assisted Surgery and Therapy" is about, and understand that there are a variety of similar names in the literature.
-2. be able to give examples of key characteristics of the field
 3. remember some landmark examples from the research literature
 4. be able to identify key components of a system and discuss pro's and con's
+2. be able to give examples of key characteristics of the field
 
 
 Before The Lecture
@@ -29,6 +29,7 @@ The main topics are:
 2. :ref:`History`
 3. :ref:`SystemExamples`
 4. :ref:`Components`
+5. :ref:`Characteristics`
 
 
 After The Lecture

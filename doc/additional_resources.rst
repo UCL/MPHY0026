@@ -55,17 +55,40 @@ Websites
 Videos
 ------
 
-Dr Tara Mastracci at UCL talks about http://cydarmedical.com for vascular surgery: https://www.youtube.com/embed/vmPTcf8VowE
 
-Other videos:
+What is Image-Guided Surgery?
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Prof Terry Peters gives examples from the Image-Guided Surgery Lab:
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FQEluqyR-SY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+Examples - Liver Ablation
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Swiss company `CASCination <https://www.cascination.com/>`_ have a system to assist
+in image-guided ablation of liver tumours.
 
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/XPN8nkUylj8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-For now, just testing if I can embed videos.
+
+Examples - Neurosurgery
+^^^^^^^^^^^^^^^^^^^^^^^
+
+An example of using Slicer to display diffusion imaging tracts during image-guided, frameless, stereo-tactic neurosurgery.
 
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/KrGkGPR5hs0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+Examples - Vascular Surgery
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Dr Tara Mastracci at UCL talks about `Cydar Medical <http://cydarmedical.com>`_ for `vascular surgery <https://www.youtube.com/watch?v=vmPTcf8VowE&feature=emb_err_watch_on_yt>`_.
 

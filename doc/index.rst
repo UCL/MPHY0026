@@ -55,6 +55,7 @@ Contents
   background/history.rst
   background/systems.rst
   background/components.rst
+  background/characteristics.rst
   imaging/imaging.rst
   segmentation/segmentation.rst
   registration/registration.rst
@@ -66,6 +67,8 @@ Contents
   references.rst
   additional_resources.rst
   coursework/system_simulation.rst
+  notebooks.rst
+
 
 Sessions
 --------
