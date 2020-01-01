@@ -26,6 +26,31 @@ identify
 Neurosurgery - Microscope
 -------------------------
 
+`Edwards2000`_: The MAGI system.
+
+Laparoscopic surgery
+--------------------
+
+`Thompson2015`_: The SmartLiver system.
+
+
+Ultrasound Guidance
+-------------------
+
+`Kang2014`_: Washington ultrasound system.
+
+
+Freehand Ultrasound
+-------------------
+
+`Hu2016`_: FreeTarget system
+
+
+Calibration Based Registration
+------------------------------
+
+`Feuerstein2008`_: X-ray, CT
+
 
 Neurosurgery - ENT
 ------------------
@@ -35,21 +60,12 @@ Orthopedic surgery
 ------------------
 
 
-Laparoscopic surgery
---------------------
-
-
-Ultrasound Guidance
--------------------
-
-
-Freehand Ultrasound
--------------------
-
-
 Robotic Surgery
 ---------------
 
+
+Augmented Reality
+-----------------
 
 
 
