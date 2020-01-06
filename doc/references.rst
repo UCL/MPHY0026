@@ -137,7 +137,6 @@ The above papers all assume isotropic, independent fiducial localisation error. 
 
 .. [Thompson2013]  Stephen Thompson,Graeme Penney, Prokar Dasgupta, David Hawkes, **"Improved Modelling of Tool Tracking Errors by Modelling Dependent Marker Errors"**, https://doi.org/10.1109/TMI.2012.2216890
 
-Examples
 
 Surface-Based Registration
 --------------------------
@@ -277,6 +276,7 @@ Essential
 Extras
 ^^^^^^
 
+.. [Balachandran2009] Ramya Balachandran, J. Michael Fitzpatrick, and Robert F. Labadie, **"Accuracy of Image-guided Surgical Systems at the Lateral Skull Base as Clinically Assessed Using Bone-Anchored Hearing Aid Posts as Surgical Targets"**, https://dx.doi.org/10.1097%2FMAO.0b013e3181859a08
 
 Others
 ------
