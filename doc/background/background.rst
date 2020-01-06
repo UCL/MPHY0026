@@ -2,7 +2,6 @@ Background
 ==========
 
 .. toctree::
-  :numbered:
 
   definition.rst
   history.rst
