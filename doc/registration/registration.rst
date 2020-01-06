@@ -1,11 +1,7 @@
 Registration
 ============
 
-Overview
---------
+.. toctree::
+  :numbered:
 
-1. Registration
-  #. Point based
-  #. FRE, TRE
-  #. Iterative Closest Point
-  #. PnP
+  registration_methods.rst

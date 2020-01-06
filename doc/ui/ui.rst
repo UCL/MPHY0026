@@ -1,11 +1,7 @@
 User-Interface
 ==============
 
-Overview
---------
+.. toctree::
+  :numbered:
 
-1. User interface
-  #. Ergonomic challenges
-  #. Workflow analysis - who's doing which job?
-  #. Minimal approach
-  #. Examples from literature
+  ui_overview.rst
