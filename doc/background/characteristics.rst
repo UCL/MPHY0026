@@ -30,8 +30,3 @@ Characteristics
 * Safety critical
 * Integration with workflow
 * Multiple users and perspectives
-
-
-
-
-
