@@ -14,13 +14,24 @@ Before the lecture please read:
 The Lecture
 -----------
 
+* 15 mins - Intro, course admin
+* 30 mins - background/history
+* 60 mins - some systems,
+* 15 mins - point-based registration
+* 15 mins - surface-based registration
+* 15 mins - calibration-based registration
+* 30 mins - FLE/FRE/TRE
 
-Intro, background, some systems, point-based registration
 
 After The Lecture
 -----------------
 
-* Skim read some examples
-* Identify: clinical objective, components used, measure of accuracy, future work
+Skim read some system examples. For each paper, identify:
+
+* clinical objective,
+* components used,
+* registration method
+* measure of accuracy,
+* identify some future work
 
 

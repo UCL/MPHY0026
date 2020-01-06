@@ -53,11 +53,13 @@ setup(
     install_requires=[
         'six>=1.10',
         'numpy>=1.11',
+        'scikit-surgerycore',
+        'scikit-surgeryvtk'
     ],
 
     entry_points={
         'console_scripts': [
-            'mphy0026=mphy0026.__main__:main',
+            'mphy0026_manual_registration=mphy0026.__main__:main',
         ],
     },
 )

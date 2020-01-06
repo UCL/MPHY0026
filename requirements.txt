@@ -7,3 +7,4 @@ ipykernel
 nbsphinx
 matplotlib
 scikit-surgerycore
+scikit-surgeryvtk

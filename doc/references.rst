@@ -95,6 +95,14 @@ Extras
 .. [Simpson2019] Amber L. Simpson et. al., **"A large annotated medical image dataset for the development and evaluation of segmentation algorithms"**, https://arxiv.org/abs/1902.09063
 
 
+Manual Registration
+-------------------
+
+Examples
+^^^^^^^^
+
+.. [Pratt2012] Philip Pratt, Erik Mayer, Justin Vale, Daniel Cohen, Eddie Edwards, Ara Darzi and Guang-Zhong Yang, **"An effective visualisation and registration system for image-guided robotic partial nephrectomy"**, https://doi.org/10.1007/s11701-011-0334-z
+
 Point-Based Registration
 ------------------------
 
@@ -268,6 +276,7 @@ Essential
 Extras
 ^^^^^^
 
+.. [Balachandran2009] Ramya Balachandran, J. Michael Fitzpatrick, and Robert F. Labadie, **"Accuracy of Image-guided Surgical Systems at the Lateral Skull Base as Clinically Assessed Using Bone-Anchored Hearing Aid Posts as Surgical Targets"**, https://dx.doi.org/10.1097%2FMAO.0b013e3181859a08
 
 Others
 ------
