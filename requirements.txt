@@ -5,3 +5,5 @@
 numpy
 ipykernel
 nbsphinx
+matplotlib
+scikit-surgerycore
