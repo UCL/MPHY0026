@@ -35,7 +35,7 @@ so that it aligns with the intra-operative scene, e.g. live video.
     -m doc/registration/liver.vtp \
     -c doc/registration/liver_camera.txt
 
-in the root of the git repo.
+in the root of the MPHY0026 (i.e. this course) git repo.
 
 * *To Do*: record video of SmartLiver on LiverPhantom
 

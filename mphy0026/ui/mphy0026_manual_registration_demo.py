@@ -3,15 +3,11 @@
 """ manual registration demo app. """
 
 import sys
-import os
 from PySide2 import QtWidgets, QtGui
-from PySide2.QtCore import Slot, QObject, QDir
 from PySide2.QtWidgets import QSizePolicy
-from PySide2.QtWidgets import QFileDialog
 import cv2
 import vtk
 import numpy as np
-import sksurgeryvtk.camera.vtk_camera_model as vcm
 import sksurgeryvtk.models.vtk_surface_model as sm
 import sksurgeryvtk.widgets.vtk_overlay_window as ow
 
