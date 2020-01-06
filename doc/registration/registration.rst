@@ -3,4 +3,6 @@ Registration
 
 .. toctree::
 
-  registration_methods.rst
+  intro.rst
+  methods.rst
+  metrics.rst

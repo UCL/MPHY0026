@@ -95,6 +95,14 @@ Extras
 .. [Simpson2019] Amber L. Simpson et. al., **"A large annotated medical image dataset for the development and evaluation of segmentation algorithms"**, https://arxiv.org/abs/1902.09063
 
 
+Manual Registration
+-------------------
+
+Examples
+^^^^^^^^
+
+.. [Pratt2012] Philip Pratt, Erik Mayer, Justin Vale, Daniel Cohen, Eddie Edwards, Ara Darzi and Guang-Zhong Yang, **"An effective visualisation and registration system for image-guided robotic partial nephrectomy"**, https://doi.org/10.1007/s11701-011-0334-z
+
 Point-Based Registration
 ------------------------
 
@@ -129,6 +137,7 @@ The above papers all assume isotropic, independent fiducial localisation error. 
 
 .. [Thompson2013]  Stephen Thompson,Graeme Penney, Prokar Dasgupta, David Hawkes, **"Improved Modelling of Tool Tracking Errors by Modelling Dependent Marker Errors"**, https://doi.org/10.1109/TMI.2012.2216890
 
+Examples
 
 Surface-Based Registration
 --------------------------
