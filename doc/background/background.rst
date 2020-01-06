@@ -23,14 +23,15 @@ Before the lecture please read:
 The Lecture
 -----------
 
-The main topics are:
+.. toctree::
+  :numbered:
+  :titlesonly:
 
-1. :ref:`Definitions`
-2. :ref:`History`
-3. :ref:`SystemExamples`
-4. :ref:`Components`
-5. :ref:`Characteristics`
-
+  definition.rst
+  history.rst
+  systems.rst
+  components.rst
+  characteristics.rst
 
 After The Lecture
 -----------------

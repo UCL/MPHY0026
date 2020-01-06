@@ -41,21 +41,16 @@ Course Principles
 -----------------
 
 * *Research led*: Closely linked to academic literature, and research at UCL and world-wide
-* *A systems approach*: A researcher may only work on one component, but to achieve the clinical goal, we must understand the total system performance.
+* *A systems approach*: A researcher may only work on one component, but to achieve the clinical goal, we must understand the total system performance
 
 Contents
 --------
 
 .. toctree::
-  :maxdepth: 1
   :numbered:
+  :maxdepth: 2
 
   background/background.rst
-  background/definition.rst
-  background/history.rst
-  background/systems.rst
-  background/components.rst
-  background/characteristics.rst
   imaging/imaging.rst
   segmentation/segmentation.rst
   registration/registration.rst
