@@ -1,9 +1,7 @@
 Visualisation
 =============
 
-Overview
---------
+.. toctree::
+  :numbered:
 
-1. Visualisation
-  #. Examples from literature
-  #. Context-aware visualisation
+  visualisation_overview.rst

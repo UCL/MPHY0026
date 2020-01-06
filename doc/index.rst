@@ -41,21 +41,16 @@ Course Principles
 -----------------
 
 * *Research led*: Closely linked to academic literature, and research at UCL and world-wide
-* *A systems approach*: A researcher may only work on one component, but to achieve the clinical goal, we must understand the total system performance.
+* *A systems approach*: A researcher may only work on one component, but to achieve the clinical goal, we must understand the total system performance
 
 Contents
 --------
 
 .. toctree::
-  :maxdepth: 1
   :numbered:
+  :maxdepth: 2
 
   background/background.rst
-  background/definition.rst
-  background/history.rst
-  background/systems.rst
-  background/components.rst
-  background/characteristics.rst
   imaging/imaging.rst
   segmentation/segmentation.rst
   registration/registration.rst
@@ -69,36 +64,34 @@ Contents
   coursework/system_simulation.rst
   notebooks.rst
 
-
 Sessions
 --------
 
 All at Charles Bell House.
 
-+------------+--------------+-----------+-------------------------------------------------------------------------------------+
-| Date       | Location     | Leader    | Topic(s)                                                                            |
-+============+==============+===========+=====================================================================================+
-| 27/02/2020 | G11          | Matt      | Intro, background, some systems, point-based registration                           |
-+------------+--------------+-----------+-------------------------------------------------------------------------------------+
-| 27/02/2020 | G10 + Lab    | ?         | Optical tracking, EM tracking, pivot-based calibration                              |
-+------------+--------------+-----------+-------------------------------------------------------------------------------------+
-| 05/03/2020 | G11          | ?         | Video calibration, ultrasound calibration, hand-eye calibration, timing calibration |
-+------------+--------------+-----------+-------------------------------------------------------------------------------------+
-| 05/03/2020 | G10 + Lab    | ?         | Calibration workshop                                                                |
-+------------+--------------+-----------+-------------------------------------------------------------------------------------+
-| 12/03/2020 | G11          | ?         | Segmentation, modelling, surface-based registration                                 |
-+------------+--------------+-----------+-------------------------------------------------------------------------------------+
-| 12/03/2020 | G10 + Lab    | ?         | PCA, surface based registration (if time)                                           |
-+------------+--------------+-----------+-------------------------------------------------------------------------------------+
-| 19/03/2020 | G11          | ?         | Visualisation, user interface                                                       |
-+------------+--------------+-----------+-------------------------------------------------------------------------------------+
-| 19/03/2020 | G10 + Lab    | ?         | Visualisation and user interface workshop.                                          |
-+------------+--------------+-----------+-------------------------------------------------------------------------------------+
-| 26/03/2020 | 1.07         | ?         | Evaluation of IGI systems. Image-guided Therapy.                                    |
-+------------+--------------+-----------+-------------------------------------------------------------------------------------+
-| 26/03/2020 | G10 + Lab    | ?         | Wrap up                                                                             |
-+------------+--------------+-----------+-------------------------------------------------------------------------------------+
-
++------------+--------------+-----------+-----------------+
+| Date       | Location     | Leader    | Topic(s)        |
++============+==============+===========+=================+
+| 27/02/2020 | G11          | Matt      | :ref:`Lecture1` |
++------------+--------------+-----------+-----------------+
+| 27/02/2020 | G10 + Lab    | ?         | :ref:`Workshop1`|
++------------+--------------+-----------+-----------------+
+| 05/03/2020 | G11          | ?         | :ref:`Lecture2` |
++------------+--------------+-----------+-----------------+
+| 05/03/2020 | G10 + Lab    | ?         | :ref:`Workshop2`|
++------------+--------------+-----------+-----------------+
+| 12/03/2020 | G11          | ?         | :ref:`Lecture3` |
++------------+--------------+-----------+-----------------+
+| 12/03/2020 | G10 + Lab    | ?         | :ref:`Workshop3`|
++------------+--------------+-----------+-----------------+
+| 19/03/2020 | G11          | ?         | :ref:`Lecture4` |
++------------+--------------+-----------+-----------------+
+| 19/03/2020 | G10 + Lab    | ?         | :ref:`Workshop4`|
++------------+--------------+-----------+-----------------+
+| 26/03/2020 | 1.07         | ?         | :ref:`Lecture5` |
++------------+--------------+-----------+-----------------+
+| 26/03/2020 | G10 + Lab    | ?         | :ref:`Workshop5`|
++------------+--------------+-----------+-----------------+
 
 .. raw:: html
 

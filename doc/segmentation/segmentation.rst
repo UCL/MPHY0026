@@ -1,12 +1,7 @@
-Segmentation and Modelling
-==========================
+Segmentation
+============
 
-Overview
---------
+.. toctree::
+  :numbered:
 
-1. Segmentation and Modelling
-  #. Manual contouring
-  #. Statistical methods
-  #. PCA
-  #. Machine learning
-  #. Marching cubes and filtering
+  segmentation_methods.rst

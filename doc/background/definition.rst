@@ -93,7 +93,7 @@ Ferenc Jolesz is also the author of :ref:`bookJolesz`.
   Figure: "Hybrid operating room for cardiovascular surgery at Agostino Gemelli University Polyclinic in Rome", by Pfree2014, is licensed under `CC0`_.
 
 
-Definitions
+Summary
 ------------
 
 Therefore, we define:

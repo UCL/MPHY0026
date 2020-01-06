@@ -1,9 +1,7 @@
 Evaluation
 ==========
 
-Overview
---------
+.. toctree::
+  :numbered:
 
-1. Evaluation
-  #. Error analysis techniques
-  #. Error visualisation
+  evaluation_overview.rst

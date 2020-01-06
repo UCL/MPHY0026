@@ -1,10 +1,7 @@
 Calibration
 ===========
 
-Overview
---------
+.. toctree::
+  :numbered:
 
-1. Calibration
-  #. Pivot
-  #. Image-to-Marker, ultrasound probe
-  #. Hand-eye, video camera
+  calibration_overview.rst
