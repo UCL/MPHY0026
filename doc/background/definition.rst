@@ -42,9 +42,9 @@ Surgeons
   Figure: "`Cardiac surgery operating room`_", by Pfree2014, is licensed under `CC BY-SA 4.0`_.
 
 Surgery can be defined as
-`a procedure involving cutting, or joining together a persons tissues`_
+`a procedure involving cutting, or joining together a person's tissues`_
 for the purpose of diagnosis or treatment (Wikipedia).
-Surgeon's do surgery in an operating room or operating theatre.
+Surgeons do surgery in an operating room or operating theatre.
 Most operating theatres do not have large imaging devices in.
 Some operating theatres may have a C-arm X-ray machine. Portable
 imaging devices such as endoscopy or laparoscopy stacks or ultrasound machines
@@ -115,5 +115,5 @@ Caveats
 .. _`CC BY-SA 4.0`: https://creativecommons.org/licenses/by-sa/4.0)
 .. _`CC0`: https://creativecommons.org/publicdomain/zero/1.0/deed.en
 .. _`Cardiac surgery operating room`: https://upload.wikimedia.org/wikipedia/commons/2/2e/Cardiac_surgery_operating_room.jpg
-.. _`a procedure involving cutting, or joining together a persons tissues`: https://en.wikipedia.org/wiki/Surgery
+.. _`a procedure involving cutting, or joining together a person's tissues`: https://en.wikipedia.org/wiki/Surgery
 .. _`interventional procedures`: https://en.wikipedia.org/wiki/Interventional_radiology
