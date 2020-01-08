@@ -23,7 +23,7 @@ You may see:
 * IGT - Image-Guided Therapy
 * IGI - Image-Guided Interventions
 
-[ZivYaniv]_ has a few more!
+[ZivYaniv]_ has a few more! [I couldn't find them on this link though]
 
 
 Communities
