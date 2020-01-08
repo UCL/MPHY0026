@@ -70,7 +70,8 @@ a wide variety of `interventional procedures`_. These suite's typically
 have X-ray flouroscopy, Cone Beam CT etc.
 
 Interventional Radiologists routinely do image-guided procedures, but
-we (engineers) would not typically call them "Computer Assisted Interventions".
+we (engineers) would not typically call them "Computer Assisted Interventions".[why not, 
+what is missing? - segmentation, registration, tracking?]
 
 
 Surgery + Imaging
