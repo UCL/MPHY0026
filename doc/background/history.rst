@@ -8,7 +8,7 @@ Learning Objectives
 
 Upon completion of this section, the student will be able to
 
-* recall landmark events that launched the field of CAS
+* describe landmark events that launched the field of CAS
 
 
 Discussion
