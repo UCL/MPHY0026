@@ -57,7 +57,7 @@ Cons:
   * How to interact with the device? who? is the user sterile?
   * Hard to re-register, due to time and user variability for instance
 
-Examples: [Pratt2012]_
+Examples: [Pratt2012]_ [Thompson2013a]_
 
 Point-Based Registration
 ^^^^^^^^^^^^^^^^^^^^^^^^
