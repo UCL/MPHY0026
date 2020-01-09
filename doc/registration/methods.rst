@@ -28,6 +28,9 @@ so that it aligns with the intra-operative scene, e.g. live video.
 * To get a feel for this `try manipulating this model, provided on-line by Kitware <https://kitware.github.io/vtk-js/examples/VolumeContour.html>`_.
 * To overlay a 3D liver CT model over a 2D video image, giving an augmented reality feel, try:
 
+ST - this doesn't work for me, because opacity is set at 0.5 in the code. There's something wrong with
+my graphics card setup on both machines (gentoo and ubuntu) but I've not had this problem when using c++ vtk.
+
 .. code-block:: language
 
     python mphy0026_manual_registration.py \
