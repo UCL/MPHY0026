@@ -103,6 +103,7 @@ Examples
 
 .. [Pratt2012] Philip Pratt, Erik Mayer, Justin Vale, Daniel Cohen, Eddie Edwards, Ara Darzi and Guang-Zhong Yang, **"An effective visualisation and registration system for image-guided robotic partial nephrectomy"**, https://doi.org/10.1007/s11701-011-0334-z
 
+.. [Thompson2013] 
 Point-Based Registration
 ------------------------
 
@@ -271,7 +272,7 @@ Essential
 
 .. [SomogyiGanss2014] Eszter Somogyi-Ganss, Howard I. Holmes and Asbjørn Jokstad, **"Accuracy of a novel prototype dynamic computer-assisted surgery system"**, http://dx.doi.org/10.1109/10.1111/clr.12414
 
-.. [Thompson2013] Stephen Thompson, Graeme Penney, Michele Billia, Ben Challacombe, David Hawkes, Prokar Dasgupta, **"Design and evaluation of an image‐guidance system for robot‐assisted radical prostatectomy"**, https://doi.org/10.1111/j.1464-410X.2012.11692.x
+.. [Thompson2013a] Stephen Thompson, Graeme Penney, Michele Billia, Ben Challacombe, David Hawkes, Prokar Dasgupta, **"Design and evaluation of an image‐guidance system for robot‐assisted radical prostatectomy"**, https://doi.org/10.1111/j.1464-410X.2012.11692.x
 
 Extras
 ^^^^^^

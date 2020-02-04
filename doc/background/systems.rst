@@ -22,6 +22,10 @@ identify
 * the component parts
 * coordinate systems
 
+What do the papers say about system accuracy, and how is accuracy measured.
+Other considerations should include the types of images used for guidance, 
+how the images are displayed to the surgeon, and how the user/surgeon 
+interacts with the system.
 
 Neurosurgery - Microscope
 -------------------------
