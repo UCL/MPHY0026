@@ -3,12 +3,27 @@
 History
 =======
 
+I think this needs a bit more context? What's the benefit of
+imaging in surgery. What does a stereotatic frame bring to 
+patient benefit.
+1: Before the advent of interventional imaging the only way to 
+determine what was inside the human body was to cut it open and
+use your eyes / hands. Thus surgery is both the diagnostic and 
+theraputic tool. The advent of xray imaging in 1895 created the 
+possibility of non invasive diagnosis. The field of image guided 
+surgery was created and moved at rapid speed, presumably because there
+was significant clinical need.
+
+2: A stereotactic frame enables the registration of patient and image
+coordinates. This is registration, and let's you know where your instruments
+are in the image coordinates.
+
 Learning Objectives
 -------------------
 
 Upon completion of this section, the student will be able to
 
-* recall landmark events that launched the field of CAS
+* describe landmark events that launched the field of CAS
 
 
 Discussion
