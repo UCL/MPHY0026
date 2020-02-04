@@ -16,7 +16,7 @@ The Lecture
 
 * 15 mins - Intro, course admin
 * 30 mins - background/history
-* 60 mins - some systems,
+* 60 mins - discuss some systems
 * 15 mins - point-based registration
 * 15 mins - surface-based registration
 * 15 mins - calibration-based registration
