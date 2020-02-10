@@ -88,6 +88,11 @@ A Note on VTK Coordinate Systems
 * vtkProp3D therefore suggests that VTK uses *"Tait–Bryan angles"*, specifically the z-x-y option, which are therefore **intrinsic** rotations meaning, they move with the object being moved.
 * In `vtkTransform <https://gitlab.kitware.com/vtk/vtk/blob/master/Common/Transforms/vtkTransform.h#L92>, there is a method ``RotateWXYZ()`` which sets the rotation as an angle about a world axis. Internally, this uses quaternions and converts the world axis to a homogeneous matrix. This is an **extrinsic** rotation.
 
+This has been implemented in the `SNAPPY`_ platform, specifically:
+
+* This matrix construction has been implemented in `scikit-surgerycore <https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/scikit-surgerycore/blob/master/sksurgerycore/transforms/matrix.py>`_
+* The *standard* VTK ordering has been implemented in `scikit-surgeryvtk <https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/scikit-surgeryvtk/blob/master/sksurgeryvtk/utils/matrix_utils.py#L47>`_.
+
 
 A Note on Homogeneous Coordinate Conventions
 --------------------------------------------
