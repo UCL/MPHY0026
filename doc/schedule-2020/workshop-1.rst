@@ -11,7 +11,7 @@ Workshop 1
 * X mins - attach liver phantom to base, assure its firmly fixed
 * X mins - 5 students, do 3 manual alignment each
 * X mins - 5 students, do 3 point-based registration each
-* X mins - 5 students, do 3 surface-based registrations each
+* X mins - 5 students, do 3 surface-based, pointer dragging registrations each
 * X mins - build your own Pelvis Phantom system - test BARD functionality
 * X mins - build your own LEGO system - test Ziv's demo
 * X mins - Analysis of results

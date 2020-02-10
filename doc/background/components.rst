@@ -29,6 +29,7 @@ Imaging
 
 To Do: fill, once we have written imaging lecture.
 
+
 Segmentation
 ------------
 
@@ -46,10 +47,24 @@ In this course we will cover:
 Tracking / Calibration
 ----------------------
 
+.. figure:: smart_liver_vis_1.png
+  :width: 50%
+
+  Figure 2: Atracsys (top) and NDI Polaris Veiga (bottom) optical trackers.
+
+In this course we will cover:
+
+* Optical tracking
+* Electro-magnetic (EM) tracking
+
+in depth. See: :ref:`Tracking`.
+
+
 Registration
 ------------
 
 To Do: Need a decent picture.
+
 
 Visualisation
 -------------
@@ -59,7 +74,7 @@ Visualisation
 .. figure:: smart_liver_vis_2.png
   :width: 50%
 
-  Figure 2: Examples of Visualisations from the SmartLiver project. (top) Wireframe and too many meshes is confusing. (bottom) We experimented with depth fogging and outlines.
+  Figure 3: Examples of Visualisations from the SmartLiver project. (top) Wireframe and too many meshes is confusing. (bottom) We experimented with depth fogging and outlines.
 
 
 User Interface
@@ -70,7 +85,7 @@ User Interface
 .. figure:: smart_liver_gui_v2.png
   :width: 50%
 
-  Figure 3: Examples of User Interfaces from the SmartLiver project. (top) Desktop application was not very suitable for the OR. (bottom) Complexity was reduced over time to improve usability, and to work on a touchscreen.
+  Figure 4: Examples of User Interfaces from the SmartLiver project. (top) Desktop application was not very suitable for the OR. (bottom) Complexity was reduced over time to improve usability, and to work on a touchscreen.
 
 
 A System-Wide Approach
