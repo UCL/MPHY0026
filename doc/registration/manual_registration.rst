@@ -1,6 +1,6 @@
-.. _RegistrationMethods:
+.. _ManualRegistration:
 
-Registration Methods
+Manual Registration
 ====================
 
 Learning Objectives

@@ -11,9 +11,16 @@ Introduction
 
 Registration is the process of aligning two `Coordinate systems <notebooks/coordinate_systems.html>`_.
 
-To Do: Figure 1. same thing, 2 camera viewpoints
+In medical imaging terms, this is often done to match image-volumes, e.g. MR/CT
 
-To Do: Figure 2. same thing, 2 devices
+.. raw:: html
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/PDgBxvi1GdQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+The problem exists in intra-device or inter-device terms:
+
+* **intra-device**: registering 2 poses of a camera in time
+* **inter-device**: registering a camera coordinate system to a tracker
 
 For example, aligning pre-operative data (CT/MR) scans to patient (tracker/world) space, to:
 
@@ -24,7 +31,6 @@ For example, aligning pre-operative data (CT/MR) scans to patient (tracker/world
 Course Requirements
 -------------------
 
-It is essential to understand the key methods,
+It is essential to understand the key methods for CAS,
 and also have an understanding of some of the large body of work done
-in quantifying the error of registration.
-
+in quantifying the likely error of registration.
