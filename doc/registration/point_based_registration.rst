@@ -1,7 +1,7 @@
-.. _RegistrationMethods:
+.. _PointBasedRegistration:
 
-Registration Methods
-====================
+Point-Based Registration
+========================
 
 Learning Objectives
 -------------------
