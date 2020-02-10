@@ -75,9 +75,9 @@ However:
 * Euler angles get confusing when you consider `extrinsic or intrinsic`_ rotation.
 * Euler angles, Quaternions, Rodrigues (axis-angle) representation (see above links), can be converted between each other, and to a 3x3 rotation matrix.
 * Rotation matrices are not commutative
-* The definition and ordering of rotation matrices and especially Euler Angles, is software/community/culture/application specific.
+* The preferences around ordering of rotation matrices and especially Euler Angles, is software/community/culture/application specific.
 * Note that the underlying graphics system may use a different convention to a higher level software API.
-* Assume NOTHING
+* Assume NOTHING. Everytime you implement these things, start with a very clear definition of what you are meant to be implementing.
 
 
 A Note on VTK Coordinate Systems
