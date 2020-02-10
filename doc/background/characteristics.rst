@@ -1,11 +1,10 @@
 .. _Characteristics:
 
-Characteristics of the field
+Characteristics Of The Field
 ============================
 
 Learning Objectives
 -------------------
-
 
 Mental Exercise / Discussion
 ----------------------------
