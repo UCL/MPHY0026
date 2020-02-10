@@ -29,6 +29,8 @@ Extras
 
 .. [Bernhardt2017] Sylvain Bernhardt, Stéphane A. Nicolau, Luc Soler, Christophe Doignon, **"The status of augmented reality in laparoscopic surgery as of 2016"**, http://dx.doi.org/10.1016/j.media.2017.01.007
 
+.. [Qian2019] Long Qian, Jie Yin Wu, Simon DiMaio, Nassir Navab, Peter Kazanzides, **"A Review of Augmented Reality in Robotic-Assisted Surgery"**, http://dx.doi.org/10.1109/TMRB.2019.2957061
+
 
 Application Examples
 --------------------
