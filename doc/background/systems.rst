@@ -8,7 +8,7 @@ Learning Objectives
 
 Upon completion of this section, the student will
 
-* Understand some of the current clinical and future research usages of CAS
+* Understand the system topology of several CAS systems
 
 
 Introduction
@@ -27,50 +27,47 @@ Other considerations should include the types of images used for guidance,
 how the images are displayed to the surgeon, and how the user/surgeon 
 interacts with the system.
 
-Neurosurgery - Microscope
--------------------------
+See `Terry Peters <http://www.robarts.ca/terry-peters>`_ explaining :ref:`additional_resources:What is Image-Guided Surgery?`,
+by way of some examples.
 
-`Edwards2000`_: The MAGI system.
+Pointer-Based 4 Quadrant View
+-----------------------------
 
-Laparoscopic surgery
+See classic papers such as [Galloway1993]_.
+For an up-to-date example, see: :ref:`additional_resources:Examples - Image-Guided Surgery for Brain Tumours`.
+
+
+Ultrasound On Video
+-------------------
+
+[Kang2014]_: Ultrasound Augmented Reality (AR) system for laparoscopic liver surgery.
+
+
+Pre-op data In The Operating Microscope
+---------------------------------------
+
+[Edwards2000]_: The MAGI system, augmented reality in the operating microscope, for brain surgery.
+
+See also: :ref:`additional_resources:Examples - Leica ARVeo`, :ref:`additional_resources:Leica ARVeo with Brainlab`
+
+
+Pre-op data On Video
 --------------------
 
-`Thompson2015`_: The SmartLiver system.
+[Prevost2019]_: The CASCination system. Similarly, [Thompson2015]_, with the UCL SmartLiver system, for laparoscopic liver surgery.
+
+See also: :ref:`additional_resources:Examples - Liver Ablation`
 
 
-Ultrasound Guidance
--------------------
+X-ray, CT guidance in the OR
+----------------------------
 
-`Kang2014`_: Washington ultrasound system.
+[Feuerstein2008]_: TUM X-ray, CT system.
 
-
-Freehand Ultrasound
--------------------
-
-`Hu2016`_: FreeTarget system
+See also: :ref:`additional_resources:Examples - Vascular Surgery`
 
 
-Calibration Based Registration
-------------------------------
+Freehand Ultrasound with MR
+---------------------------
 
-`Feuerstein2008`_: X-ray, CT
-
-
-Neurosurgery - ENT
-------------------
-
-
-Orthopedic surgery
-------------------
-
-
-Robotic Surgery
----------------
-
-
-Augmented Reality
------------------
-
-
-
-
+[Hu2016]_: Freehand ultrasound system for prostate biopsy.

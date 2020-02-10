@@ -48,6 +48,8 @@ Essential
 
 .. [Hu2016] Yipeng Hu, Veeru Kasivisvanathan, Lucy A. M. Simmons, Matthew J. Clarkson, Stephen A. Thompson, Taimur T. Shah, Hashim U. Ahmed, Shonit Punwani, David J. Hawkes, Mark Emberton, Caroline M. Moore, Dean C. Barratt, **"Development and Phantom Validation of a 3-D-Ultrasound-Guided System for Targeting MRI-Visible Lesions During Transrectal Prostate Biopsy"**, http://dx.doi.org/10.1109/TBME.2016.2582734
 
+.. [Prevost2019] Gian Andrea Prevost, Benjamin Eigl, Iwan Paolucci, Tobias Rudolph, Matthias Peterhans, Stefan Weber, Guido Beldi, Daniel Candinas, Anja Lachenmayer, **"Efficiency, Accuracy and Clinical Applicability of a New Image-Guided Surgery System in 3D Laparoscopic Liver Surgery"**, https://doi.org/10.1007/s11605-019-04395-7
+
 Extras
 ^^^^^^
 
