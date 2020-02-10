@@ -37,46 +37,5 @@ Cons:
 
 Examples: [Pratt2012]_ [Thompson2013a]_
 
-Point-Based Registration
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-* Arun, Horn
-* Fiducial marker types
-* Typical accuracy?
-* Systems?
-
-Exercise
-* Pelvis Phantom
-* LEGO example
-* Matt, MRI example
-
-Surface-Based Registration
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-* ICP
-* ICP variants
-* Typical accuracy?
-
-
-Exercise
-* Matt, MRI example, drag pointer
-* SmartLiver example
-
-Volume-Based Registration
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-Calibration-Based Registration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-* Intra-op CT, Lap video, a la Nassir, Feuerstein
-* Intra-op US, Lap video, a la Washington
-
-
-
-
-
-
-
 
 
