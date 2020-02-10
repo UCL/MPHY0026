@@ -16,7 +16,7 @@ The Lecture
 
 * 15 mins - :ref:`index:Course Details`
 * 30 mins - :ref:`Definitions`, :ref:`History`
-* 60 mins - discuss some systems
+* 60 mins - :ref:`SystemExamples`, :ref:`Components`, :ref:`Characteristics`
 * 15 mins - point-based registration
 * 15 mins - surface-based registration
 * 15 mins - calibration-based registration
