@@ -42,7 +42,7 @@ Course Principles
 
 * *Research led*: Closely linked to academic literature, and research at UCL and world-wide
 * *A systems approach*: A researcher may only work on one component, but to achieve the clinical goal, we must understand the total system performance
-* Learn by doing: Code examples, often using the `SNAPPY`_ libraries.
+* *Learn by doing*: Code examples, often using the `SNAPPY`_ libraries.
 
 Contents
 --------

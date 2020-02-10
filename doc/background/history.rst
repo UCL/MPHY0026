@@ -18,7 +18,7 @@ A review paper by Terry Peters and Kevin Cleary gives a good
 introduction to the field of Image-guided Interventions [PetersCleary2010]_.
 
 In this section here, we just cover a few key events, before delving more deeply into
-a selection of :ref:`SystemExamples` for more detailed study, of what makes up a CAS system.
+a selection of :ref:`SystemExamples` for a more detailed study, of what makes up a CAS system.
 
 
 Pre X-ray Guidance
