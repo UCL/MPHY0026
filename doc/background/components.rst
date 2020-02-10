@@ -9,7 +9,7 @@ Learning Objectives
 Upon completion of this section, the student will be able to:
 
 * Recall the main components
-* Understand that the system performace is the sum of each part
+* Understand that the system performance is the sum of each part
 
 
 Introduction
@@ -37,7 +37,7 @@ Segmentation
 
   Figure 1: Data from CT scans can be converted to triangle meshes and rendered. This example produced by `Visible Patient <https://www.visiblepatient.com/en/>`_.
 
-In this course we will cover
+In this course we will cover:
 
 * Segmentation methods, e.g. manual, automatic.
 * Conversion to a mesh, smoothing, decimation.
@@ -70,7 +70,7 @@ User Interface
 .. figure:: smart_liver_gui_v2.png
   :width: 50%
 
-  Figure 3: Examples of User Interfaces from the SmartLiver project. (top) Desktop application was not very suitable for the OR. (bottom) Complexity was reduced over time to improve usability.
+  Figure 3: Examples of User Interfaces from the SmartLiver project. (top) Desktop application was not very suitable for the OR. (bottom) Complexity was reduced over time to improve usability, and to work on a touchscreen.
 
 
 A System-Wide Approach
