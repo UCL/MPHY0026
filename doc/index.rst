@@ -54,9 +54,9 @@ Contents
   background/background.rst
   imaging/imaging.rst
   segmentation/segmentation.rst
-  registration/registration.rst
   tracking/tracking.rst
   calibration/calibration.rst
+  registration/registration.rst
   visualisation/visualisation.rst
   ui/ui.rst
   evaluation/evaluation.rst
