@@ -17,10 +17,12 @@ The Lecture
 * 15 mins - :ref:`index:Course Details`
 * 30 mins - :ref:`Definitions`, :ref:`History`
 * 60 mins - :ref:`SystemExamples`, :ref:`Components`, :ref:`Characteristics`
-* 15 mins - point-based registration
-* 15 mins - surface-based registration
-* 15 mins - calibration-based registration
-* 30 mins - FLE/FRE/TRE
+*  5 mins - :ref:`RegistrationIntro`
+*  5 mins - :ref:`ManualRegistration`
+* 15 mins - :ref:`PointBasedRegistration`
+* 15 mins - :ref:`SurfaceBasedRegistration`
+* 15 mins - :ref:`CalibrationBasedRegistration`
+* 15 mins - :ref:`RegistrationMetrics`, i.e. FLE/FRE/TRE
 
 
 After The Lecture

@@ -3,25 +3,6 @@
 Manual Registration
 ====================
 
-Learning Objectives
--------------------
-
-
-Methods
--------
-
-Typically, methods in IGS, are sub-divided (e.g. in :ref:`bookPeters`) into:
-
-* Manual
-* Point-based
-* Surface-based (also called Shape-based)
-* Volume-based
-* Calibration-based
-
-
-Manual Registration
-^^^^^^^^^^^^^^^^^^^
-
 Use a mouse or gesture device to manually rotate/translate/scale a pre-operative CT dataset
 so that it aligns with the intra-operative scene, e.g. live video.
 
