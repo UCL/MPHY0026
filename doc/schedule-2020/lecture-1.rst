@@ -26,7 +26,7 @@ The Lecture
 After The Lecture
 -----------------
 
-Skim read some further system examples. For each paper, identify:
+Read the examples covered in class. For each paper, identify:
 
 * clinical objective,
 * components used,
