@@ -42,6 +42,7 @@ Course Principles
 
 * *Research led*: Closely linked to academic literature, and research at UCL and world-wide
 * *A systems approach*: A researcher may only work on one component, but to achieve the clinical goal, we must understand the total system performance
+* *Learn by doing*: Code examples, often using the `SNAPPY`_ libraries.
 
 Contents
 --------
@@ -105,3 +106,4 @@ Sessions
 .. _`Moodle`: https://moodle.ucl.ac.uk/
 .. _`Source code`: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026
 .. _`Issue Tracker`: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026
+.. _`SNAPPY`: https://weisslab.cs.ucl.ac.uk/WEISS/PlatformManagement/SNAPPY

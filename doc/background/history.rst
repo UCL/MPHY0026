@@ -3,21 +3,6 @@
 History
 =======
 
-I think this needs a bit more context? What's the benefit of
-imaging in surgery. What does a stereotatic frame bring to 
-patient benefit.
-1: Before the advent of interventional imaging the only way to 
-determine what was inside the human body was to cut it open and
-use your eyes / hands. Thus surgery is both the diagnostic and 
-theraputic tool. The advent of xray imaging in 1895 created the 
-possibility of non invasive diagnosis. The field of image guided 
-surgery was created and moved at rapid speed, presumably because there
-was significant clinical need.
-
-2: A stereotactic frame enables the registration of patient and image
-coordinates. This is registration, and let's you know where your instruments
-are in the image coordinates.
-
 Learning Objectives
 -------------------
 
@@ -33,8 +18,16 @@ A review paper by Terry Peters and Kevin Cleary gives a good
 introduction to the field of Image-guided Interventions [PetersCleary2010]_.
 
 In this section here, we just cover a few key events, before delving more deeply into
-a selection of :ref:`SystemExamples` for more detailed study, of what makes up a CAS system.
+a selection of :ref:`SystemExamples` for a more detailed study, of what makes up a CAS system.
 
+
+Pre X-ray Guidance
+------------------
+
+* Before the advent of interventional imaging the only physical way to
+determine what was inside the human body was to cut it open and
+use your eyes / hands. Thus surgery is both the diagnostic and
+theraputic tool.
 
 First X-ray Guidance
 --------------------
@@ -74,7 +67,8 @@ This led to other frames, using for example spherical coordinates:
   Figure Arc for Leksell Stereotactic System, c1997. Frame for Leksell Stereotactic System, c1997. from sciencemuseumgroup.org.uk, licensed under `CC BY-NC 4.0`_.
 
 and with the advent of CT imaging in the 1970's, to frames that could be imaged, to more easily map from
-image coordinates to physical coordinates.
+image coordinates to physical coordinates. This means, you can understand where your physical tools are
+in relation to pre-operative imaging, or vice-versa.
 
 
 .. figure:: https://upload.wikimedia.org/wikipedia/en/e/ef/Photograph_of_Stereotactic_Frame_With_3_N-localizers.jpg

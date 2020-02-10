@@ -14,9 +14,9 @@ Before the lecture please read:
 The Lecture
 -----------
 
-* 15 mins - Intro, course admin
-* 30 mins - background/history
-* 60 mins - some systems,
+* 15 mins - :ref:`index:Course Details`
+* 30 mins - :ref:`Definitions`, :ref:`History`
+* 60 mins - discuss some systems
 * 15 mins - point-based registration
 * 15 mins - surface-based registration
 * 15 mins - calibration-based registration
@@ -26,12 +26,12 @@ The Lecture
 After The Lecture
 -----------------
 
-Skim read some system examples. For each paper, identify:
+Skim read some further system examples. For each paper, identify:
 
 * clinical objective,
 * components used,
 * registration method
 * measure of accuracy,
-* identify some future work
+* identify some future research work.
 
 

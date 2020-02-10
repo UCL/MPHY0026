@@ -15,7 +15,7 @@ Introduction
 ------------
 
 In this section, we walk through some specifically chosen papers, and
-identify
+identify:
 
 * the clinical need
 * the engineering solution
