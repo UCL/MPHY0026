@@ -3,10 +3,16 @@
 Workshop 1
 ==========
 
-* 15 mins - Overview of SmartLiver system
-* 15 mins - Point Based Registration on pelvis phantom
-* 15 mins - Manual Registration on a Cube Phantom
-* 15 mins - Manual Registration on a Liver Phantom
-* 30 mins - Surface Registration on Liver Phantom
-* 30 mins - Analysis of results
+* 10 mins - Overview of SmartTarget system
+* 10 mins - Overview of SmartLiver system
+* 10 mins - Overview of Skull Base Navigation system
+
+* X mins - measure location of reference pins on liver phantom. NDI pointer? ArUco marker?
+* X mins - attach liver phantom to base, assure its firmly fixed
+* X mins - 5 students, do 3 manual alignment each
+* X mins - 5 students, do 3 point-based registration each
+* X mins - 5 students, do 3 surface-based registrations each
+* X mins - build your own Pelvis Phantom system - test BARD functionality
+* X mins - build your own LEGO system - test Ziv's demo
+* X mins - Analysis of results
 
