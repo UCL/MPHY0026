@@ -27,6 +27,10 @@ Within the research literature, most people reference:
 
 and [Eggert1998]_ suggests there is not much difference between them.
 
+The above papers all assume isotropic, independent fiducial localisation error.
+There is a body of work looking at error propagation in cased where this is not valid,
+e.g. [Batchelor2000]_, [Wiles2008]_, [Moghari2009]_, [Danilchenko2010]_, [Thompson2013]_.
+
 
 Fiducial marker types
 ^^^^^^^^^^^^^^^^^^^^^
