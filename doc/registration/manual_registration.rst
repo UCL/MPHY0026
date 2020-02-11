@@ -24,7 +24,11 @@ in the root of the MPHY0026 (i.e. this course) git repo.
 * Or see: :ref:`additional_resources:Examples: Manual Alignment, CT to Tracker`
 
 
-Examples from the literature:
+Papers
+^^^^^^
+
+No algorithm to speak of, so these are examples
+of how it's used:
 
 * [Pratt2012]_ : Manually align on iPad, using gestures, for image-guided partial nephrectomy
 * [Thompson2013a]_ : Manually align, keyboard controls, for radical prostatectomy
@@ -35,13 +39,13 @@ Typical Performance
 
 Pros:
 
-* Easy to implement for rigid/scaling
 * Robust (no algorithm to fail)
-* Easy to validate, and get approved
+* Easy to implement for rigid/scaling
+* Easy to validate, on a phantom, and get approved
 
 Cons:
 
-* Hard to implement for non-rigid cases
+* Not suitable for non-rigid alignment
 * Normally inaccurate
 * Time consuming
 * Highly user dependent

@@ -165,7 +165,7 @@ Essential
 Extras
 ^^^^^^
 
-
+.. [Fusaglia2016] Matteo Fusaglia, Hanspeter Hess, Marius Schwalbe, Matthias Peterhans, Pascale Tinguely, Stefan Weber, Huanxiang Lu, **"A clinically applicable laser-based image-guided system for laparoscopic liver procedures"**, https://doi.org/10.1007/s11548-015-1309-8
 Tracking Systems
 ----------------
 
