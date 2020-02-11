@@ -16,7 +16,7 @@ Surface Reconstruction Methods:
 * Dragging a pointer
 * :ref:`additional_resources:Examples - Surface Registration with Brainlab Z-touch`
 * Stereo vision, surface reconstruction, stitching [Thompson2015]_
-
+* Laser pointer [Fusaglia2016]_
 
 Papers
 ^^^^^^
