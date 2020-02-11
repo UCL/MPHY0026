@@ -35,19 +35,20 @@ Typical Performance
 
 Pros:
 
-  * Easy to implement for rigid/scaling
-  * Robust (no algorithm to fail)
-  * Easy to validate, and get approved
+* Easy to implement for rigid/scaling
+* Robust (no algorithm to fail)
+* Easy to validate, and get approved
 
 Cons:
 
-  * Hard to implement for non-rigid cases
-  * Normally inaccurate
-  * Time consuming
-  * Highly user dependent
-  * How to interact with the device? who? is the user sterile?
-  * Hard to re-register, due to time and user variability for instance
+* Hard to implement for non-rigid cases
+* Normally inaccurate
+* Time consuming
+* Highly user dependent
+* How to interact with the device? who? is the user sterile?
+* Hard to re-register, due to time and user variability for instance
 
+Accuracy:
 
-
-
+* Depends on anatomy and user interface, and user
+* e.g. 10-20mm is not uncommon
