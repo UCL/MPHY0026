@@ -37,8 +37,10 @@ class QuadViewMainWidget(QtWidgets.QWidget):
             self.tracker.start_tracking()
         elif os.path.isfile(config):
             tracker_config = dict
-            tracker_config['tracker type'] = 'polaris'
+            tracker_config['tracker type'] = 'vega'
             tracker_config['use quaternions'] = False
+            tracker_config['ip address'] = '169.254.59.34'
+            tracker_config['port'] = 8765
             tracker_config['romfiles'] = config
             self.tracker = nt.NDITracker(tracker_config)
         elif isinstance(int(config), int):
