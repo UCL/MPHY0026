@@ -26,16 +26,16 @@ def main(args=None):
                              'transformation'
                         )
 
-    parser.add_argument("-c",
-                        "--config",
-                        required=True,
-                        help='Config for your tracked pointer'
-                        )
-
     parser.add_argument("-o",
                         "--offset",
                         required=True,
                         help='Comma separated x,y,z of tracker offset'
+                        )
+
+    parser.add_argument("-c",
+                        "--config",
+                        required=False,
+                        help='Config for your tracked pointer'
                         )
 
     version_string = __version__
@@ -49,6 +49,6 @@ def main(args=None):
 
     run_quadview(args.volume,
                  args.registration,
-                 args.config,
-                 args.offset
+                 args.offset,
+                 args.config
                  )
