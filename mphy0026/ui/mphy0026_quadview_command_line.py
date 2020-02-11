@@ -26,16 +26,23 @@ def main(args=None):
                              'transformation'
                         )
 
-    parser.add_argument("-o",
-                        "--offset",
+    parser.add_argument("-t",
+                        "--tracker",
                         required=True,
-                        help='Comma separated x,y,z of tracker offset'
+                        help='Tracker name [vega|aurora|aruco]'
                         )
 
     parser.add_argument("-c",
                         "--config",
-                        required=False,
-                        help='Config for your tracked pointer'
+                        required=True,
+                        help='Comma separated .romfiles (polaris), '
+                             'port numbers (aurora) or tag numbers (ArUco)'
+                        )
+
+    parser.add_argument("-o",
+                        "--offset",
+                        required=True,
+                        help='Comma separated x,y,z of tracker offset'
                         )
 
     version_string = __version__
@@ -49,6 +56,7 @@ def main(args=None):
 
     run_quadview(args.volume,
                  args.registration,
-                 args.offset,
-                 args.config
+                 args.tracker,
+                 args.config,
+                 args.offset
                  )
