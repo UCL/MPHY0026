@@ -18,7 +18,7 @@ so that it aligns with the intra-operative scene, e.g. live video.
 
 in the root of the MPHY0026 (i.e. this course) git repo.
 
-* *To Do*: record video of SmartLiver on LiverPhantom
+* Or see: :ref:`additional_resources:Examples: Manual Alignment, CT to Tracker`
 
 Pros:
 
@@ -35,48 +35,10 @@ Cons:
   * How to interact with the device? who? is the user sterile?
   * Hard to re-register, due to time and user variability for instance
 
-Examples: [Pratt2012]_ [Thompson2013a]_
+Examples:
 
-Point-Based Registration
-^^^^^^^^^^^^^^^^^^^^^^^^
-
-* Arun, Horn
-* Fiducial marker types
-* Typical accuracy?
-* Systems?
-
-Exercise
-* Pelvis Phantom
-* LEGO example
-* Matt, MRI example
-
-Surface-Based Registration
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-* ICP
-* ICP variants
-* Typical accuracy?
-
-
-Exercise
-* Matt, MRI example, drag pointer
-* SmartLiver example
-
-Volume-Based Registration
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-Calibration-Based Registration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-* Intra-op CT, Lap video, a la Nassir, Feuerstein
-* Intra-op US, Lap video, a la Washington
-
-
-
-
-
-
+* [Pratt2012]_ : Manually align on iPad, using gestures, for image-guided partial nephrectomy
+* [Thompson2013a]_ : Manually align, keyboard controls, for radical prostatectomy
 
 
 

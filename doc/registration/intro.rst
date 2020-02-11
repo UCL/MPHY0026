@@ -19,22 +19,23 @@ Introduction
 Registration is the process of aligning two Coordinate systems. See :ref:`Notebooks`.
 
 
-Medical Image Computing (MIC)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Medical Image Computing
+^^^^^^^^^^^^^^^^^^^^^^^
 
-In medical imaging terms, this is often done to match image-volumes, e.g. MR/CT
+This example may be more familiar to you if you have done the `IPMI`_ course.
+In medical imaging terms, registration is often done to align image-volumes, e.g. MR/CT
 
 .. raw:: html
 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/PDgBxvi1GdQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-Computer Assisted Interventions (CAI)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Computer Assisted Surgery
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In CAS/IGI/CAI terms, the problem also exists in intra-device or inter-device terms:
+In CAS, the problem also exists in intra-device or inter-device terms:
 
-* **intra-device**: registering 2 poses of a camera in time
+* **intra-device**: registering 2 poses of a camera at subsequent time points
 * **inter-device**: registering a camera coordinate system to a tracker
 
 For example, aligning pre-operative data (CT/MR) scans to patient (tracker/world) space, to:
@@ -75,9 +76,9 @@ However:
 * Euler angles get confusing when you consider `extrinsic or intrinsic`_ rotation.
 * Euler angles, Quaternions, Rodrigues (axis-angle) representation (see above links), can be converted between each other, and to a 3x3 rotation matrix.
 * Rotation matrices are not commutative
-* The preferences around ordering of rotation matrices and especially Euler Angles, is software/community/culture/application specific.
+* The preferences around ordering of rotation matrices and especially when discussing Euler Angles, is software/application/community/culture specific.
 * Note that the underlying graphics system may use a different convention to a higher level software API.
-* Assume NOTHING. Everytime you implement these things, start with a very clear definition of what you are meant to be implementing.
+* Assume NOTHING. Every time you implement these things, start with a very clear definition of what you are meant to be implementing.
 
 
 A Note on VTK Coordinate Systems
@@ -102,7 +103,7 @@ As is common (e.g. `euclideanspace.com`_, `brainvoyager`_, `opengl`_) we represe
 * rotations as the upper-left 3x3 matrix in a 4x4 homogeneous transformation matrix.
 * translation as the right-most 3x1 vector in a 4x4 homogeneous transformation matrix.
 
-Note the comment on the `opengl`_ website: *"This is the single most important
+Note the comment on the tutorial on the `opengl`_ website: *"This is the single most important
 tutorial in the whole set. Be sure to read it at least 8 times"*.
 
 This is not being facetious. It is good advice.
@@ -118,3 +119,4 @@ This is not being facetious. It is good advice.
 .. _`PLUS`: https://plustoolkit.github.io/
 .. _`NifTK`: http://www.niftk.org
 .. _`SNAPPY`: https://weisslab.cs.ucl.ac.uk/WEISS/PlatformManagement/SNAPPY
+.. _`IPMI`: https://ucl.reportlab.com/modules/MPHY0025/pdf/
