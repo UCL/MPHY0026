@@ -102,7 +102,7 @@ As is common (e.g. `euclideanspace.com`_, `brainvoyager`_, `opengl`_) we represe
 * rotations as the upper-left 3x3 matrix in a 4x4 homogeneous transformation matrix.
 * translation as the right-most 3x1 vector in a 4x4 homogeneous transformation matrix.
 
-Note the comment on the `opengl`_ website: *"This is the single most important
+Note the comment on the tutorial on the `opengl`_ website: *"This is the single most important
 tutorial in the whole set. Be sure to read it at least 8 times"*.
 
 This is not being facetious. It is good advice.
