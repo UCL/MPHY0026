@@ -161,3 +161,19 @@ Examples: Manual Alignment, CT to Tracker
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/-12OjjU2i9E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+
+Examples - Surface Registration with Pathfinder
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/vxd145vVknk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+Examples - Surface Registration with Brainlab Z-touch
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/C9ngfY97Bkg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
