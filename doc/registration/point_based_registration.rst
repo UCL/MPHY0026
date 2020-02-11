@@ -42,6 +42,6 @@ Accuracy is determined by the fiducial marker type, and the ability to accuratel
 Typical Performance
 ^^^^^^^^^^^^^^^^^^^
 
-* Neurosurgery: 
+* Neurosurgery:
 * Liver surgery: Time was median 8:50 min. Accuracy (FRE), 14.0mm to 9.2mm, mean 12.8mm [Prevost2019].
 
