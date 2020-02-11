@@ -3,13 +3,6 @@
 Surface-Based Registration
 ==========================
 
-Papers
-^^^^^^
-
-* [BeslMcKay1992]_: ICP Algorithm
-* Variations for anisotropic noise, e.g. [LenaMaierHein2011]_
-* Extensions to global alignment, e.g. [Yang2015]_
-
 Examples
 ^^^^^^^^
 
@@ -24,6 +17,13 @@ Surface Reconstruction Methods:
 * :ref:`additional_resources:Examples - Surface Registration with Brainlab Z-touch`
 * Stereo vision, surface reconstruction, stitching [Thompson2015]_
 
+
+Papers
+^^^^^^
+
+* [BeslMcKay1992]_: ICP Algorithm
+* Variations for anisotropic noise, e.g. [LenaMaierHein2011]_
+* Extensions to global alignment, e.g. [Yang2015]_
 
 
 
