@@ -80,11 +80,6 @@ Segmentation
 Essential
 ^^^^^^^^^
 
-There is a large body of literature, and many reviews, such as [Sharma2010]_. In this course, we cover some
-classical methods [Sharma2010]_, statistical shape models [Heimann2009]_, and an example of
-a more modern machine learning method [Ronneberger2015]_, which led to [Isensee2018]_ which won the
-medical image decathlon challenge [Simpson2019]_.
-
 .. [Heimann2009] Tobias Heimann, Hans-Peter Meinzer, **"Statistical shape models for 3D medical image segmentation"**, http://dx.doi.org/10.1016/j.media.2009.05.004
 
 .. [Sharma2010] Neeraj Sharma and Lalit M. Aggarwal, **"Automated medical image segmentation techniques."**, http://dx.doi.org/10.4103/0971-6203.58777
@@ -115,9 +110,6 @@ Point-Based Registration
 Essential
 ^^^^^^^^^
 
-There are two popular methods [Arun1987]_, [Horn1987]_ and obviously others, but functionally there is little difference between them [Eggert1998]_.
-Students need to understand terms and acronyms like FLE, FRE and TRE [Fitzpatrick1998]_ and crucially, that FRE and TRE are uncorrelated [Fitzpatrick2001]_.
-
 .. [Arun1987] K. S. Arun, T. S. Huang, S. D. Blostein, **"Least-Squares Fitting of Two 3-D Point Sets"**, http://dx.doi.org/10.1109/TPAMI.1987.4767965
 
 .. [Horn1987] Berthold K. P. Horn, **"Closed-form solution of absolute orientation using unit quaternions"**, http://dx.doi.org/10.1364/JOSAA.4.000629
@@ -133,8 +125,6 @@ Students need to understand terms and acronyms like FLE, FRE and TRE [Fitzpatric
 Extras
 ^^^^^^
 
-The above papers all assume isotropic, independent fiducial localisation error. There is a body of work looking at error propagation in cased where this is not valid.
-
 .. [Batchelor2000] P. Batchelor, J.M. Fitzpatrick, **"A study of the anisotropically weighted procrustes problem [optical image-guided surgery application]"**, https://doi.org/10.1109/MMBIA.2000.852380
 
 .. [Wiles2008] Wiles AD, Likholyot A, Frantz DD, Peters TM., **"A statistical model for point-based target registration error with anisotropic fiducial localizer error"**, https://doi.org/10.1109/TMI.2007.908124
@@ -149,10 +139,6 @@ The above papers all assume isotropic, independent fiducial localisation error. 
 Surface-Based Registration
 --------------------------
 
-An essential reference is the Iterative Closest Point algorithm (ICP) [BeslMcKay1992]_, which has 8000+ citations.
-It has been extended and tweaked in many fields, but in Image-Guided Surgery, perhaps the most relevant is
-the anisotropic adaptation [LenaMaierHein2011]_, followed by global optimisation [Yang2015]_.
-
 Essential
 ^^^^^^^^^
 
@@ -166,6 +152,7 @@ Extras
 ^^^^^^
 
 .. [Fusaglia2016] Matteo Fusaglia, Hanspeter Hess, Marius Schwalbe, Matthias Peterhans, Pascale Tinguely, Stefan Weber, Huanxiang Lu, **"A clinically applicable laser-based image-guided system for laparoscopic liver procedures"**, https://doi.org/10.1007/s11548-015-1309-8
+
 Tracking Systems
 ----------------
 
