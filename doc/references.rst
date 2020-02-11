@@ -107,7 +107,8 @@ Examples
 
 .. [Pratt2012] Philip Pratt, Erik Mayer, Justin Vale, Daniel Cohen, Eddie Edwards, Ara Darzi and Guang-Zhong Yang, **"An effective visualisation and registration system for image-guided robotic partial nephrectomy"**, https://doi.org/10.1007/s11701-011-0334-z
 
-.. [Thompson2013] 
+[Thompson2013a]_
+
 Point-Based Registration
 ------------------------
 
@@ -122,6 +123,8 @@ Students need to understand terms and acronyms like FLE, FRE and TRE [Fitzpatric
 .. [Horn1987] Berthold K. P. Horn, **"Closed-form solution of absolute orientation using unit quaternions"**, http://dx.doi.org/10.1364/JOSAA.4.000629
 
 .. [Eggert1998] D. W. Eggert, A. Lorusso, R. B. Fisher, **"Estimating 3-D rigid body transformations: a comparison of four major algorithms"**, http://dx.doi.org/10.1007/s001380050048
+
+.. [Conrad2016] Claudius Conrad, Matteo Fusaglia, Matthias Peterhans, Huanxiang Lu, Stefan Weber, Brice Gayet, **"Augmented Reality Navigation Surgery Facilitates Laparoscopic Rescue of Failed Portal Vein Embolization"** https://doi.org/10.1016/j.jamcollsurg.2016.06.392
 
 .. [Fitzpatrick1998] J. Michael Fitzpatrick, Jay B. West, Calvin R. Maurer, Jr., **"Predicting Error in Rigid-Body Point-Based Registration"**, http://dx.doi.org/10.1109/42.736021
 

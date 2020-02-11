@@ -25,9 +25,8 @@ Examples
   Figure 1: (top) At least 3 points are selected in pre-operative data such as MR/CT. (bottom) The same 3 points are measured in physical space, using a coordinate measuring device, such as a tracker.
 
 * :ref:`additional_resources:Examples - Image-Guided Surgery for Brain Tumours`
-* [Prevost2019]_: CASCination system uses long pointer, 4 points on liver.
+* [Prevost2019]_: CASCination system uses long pointer, 4 points on liver - see `supplementary material <https://www.journalacs.org/cms/10.1016/j.jamcollsurg.2016.06.392/attachment/a000fb26-217c-481e-a7e6-4b0a2e826b5c/mmc1.mp4>`_ in [Conrad2016]_, namely left/middle hepatic vein drainage, main portcal vein drainage, insertion of fulsiform ligament, insertion of gallbladder dome.
 
-(find video, linked in Prevost paper)
 
 Fiducial marker types
 ^^^^^^^^^^^^^^^^^^^^^
