@@ -33,14 +33,14 @@ Fiducial marker types
 
 Accuracy is determined by the fiducial marker type, and the ability to accurately measure it in the OR.
 
-* Bone implanted screws, detachable heads
-* Stick on markers
-* Bite-blocks
+* Bone implanted screws, detachable heads. Need picture.
+* Stick on markers - e.g. `IZI Medical <https://izimed.com/products/multi-modality-markers>`_
+* Bite-blocks - e.g. [Edwards2000]_
 
 
 Typical Performance
 ^^^^^^^^^^^^^^^^^^^
 
-* Neurosurgery:
+* Neurosurgery: Approx 1mm, e.g. [Edwards2000]_
 * Liver surgery: Time was median 8:50 min. Accuracy (FRE), 14.0mm to 9.2mm, mean 12.8mm [Prevost2019].
 
