@@ -29,6 +29,24 @@ part of `University College London (UCL)`_.
 The generated documentation lives on `Read The Docs`_.
 
 
+Running
+-------
+
+For examples demonstrated in class, you must be "inside" the environment created
+by tox. Please work through the whole of the `SNAPPY Tutorial`_ to understand
+more about Python development, tox and virtualenvs. For those in a hurry,
+you can do this to run examples:
+
+```
+pip install tox
+tox
+source .tox/py36/bin/activate
+<run whatever example>
+```
+If you are on Windows, the ```activate``` script is in ```.tox\y36\Scripts\activate```
+but the same principle applies.
+
+
 Developing
 ----------
 
