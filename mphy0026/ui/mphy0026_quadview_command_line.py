@@ -29,7 +29,7 @@ def main(args=None):
     parser.add_argument("-t",
                         "--tracker",
                         required=True,
-                        help='Tracker name [vega|aurora|aruco]'
+                        help='Tracker type [vega|aurora|aruco]'
                         )
 
     parser.add_argument("-c",
@@ -42,7 +42,7 @@ def main(args=None):
     parser.add_argument("-o",
                         "--offset",
                         required=True,
-                        help='Comma separated x,y,z of tracker offset'
+                        help='Comma separated x,y,z of pointer offset'
                         )
 
     version_string = __version__
