@@ -59,12 +59,18 @@ def run_grab_pointer(tracker,
     while counter < number_of_samples:
         start = datetime.now()
         tracker_frame = tracker.get_frame()
+
+        anything_tracked = False if tracker_frame[3] == None else True
+        if not anything_tracked:
+            continue
+
         if len(tracker_frame[3]) == 1:
             if not np.isnan(tracker_frame[4][0]):
                 pointer_to_world = tracker_frame[3][0]
                 world_point = np.multiply(pointer_to_world, pointer_offset)
                 np.append(samples, (np.transpose(world_point))[0, 0:3])
                 counter = counter + 1
+
         elif len(tracker_frame[3]) == 2:
             if not np.isnan(tracker_frame[4][0]) and not \
                     np.isnan(tracker_frame[4][1]):
