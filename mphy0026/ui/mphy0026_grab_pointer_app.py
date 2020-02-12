@@ -91,7 +91,9 @@ def run_grab_pointer(tracker,
         end = datetime.now()
         elapsed = end - start
         sleeptime_ms = ms_per_loop - (elapsed.total_seconds() * 1000.0)
-        time.sleep(sleeptime_ms / 1000)
+
+        if sleeptime_ms > 0:
+            time.sleep(sleeptime_ms / 1000)
 
     if dump:
         np.savetxt(dump, samples)
