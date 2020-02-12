@@ -3,9 +3,9 @@
 Workshop 1
 ==========
 
-* 10 mins - Overview of SmartTarget system
-* 10 mins - Overview of SmartLiver system
-* 10 mins - Overview of Skull Base Navigation system
+* 10 mins - Overview of SmartTarget system (Rachael Rodell, Mock OR)
+* 10 mins - Overview of Medtronic, point/surface based registration (Jonathan Shapey, Mock OR)
+* 10 mins - Overview of SmartLiver (Matt, if time)
 * X mins - measure location of reference pins on liver phantom. NDI pointer? ArUco marker?
 * X mins - attach liver phantom to base, assure its firmly fixed
 * X mins - 5 students, do 3 manual alignment each

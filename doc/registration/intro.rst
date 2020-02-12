@@ -52,8 +52,8 @@ Typically, methods in CAS, are sub-divided (e.g. in :ref:`bookPeters`) into:
 * Manual
 * Point-based
 * Surface-based (also called Shape-based)
-* Volume-based
-* Calibration-based
+* Volume-based, (i.e. intra-op CT to pre-op CT, not covered, see [Octya2013]_.)
+* Calibration-based, covered earlier as examples [Feuerstein2008]_, [Kang2014]_.
 
 These are covered in the next sections. Coordinate transformations are covered more in the workshops
 and their accompanying :ref:`Notebooks`.
@@ -87,7 +87,7 @@ A Note on VTK Coordinate Systems
 * Several pieces of software, including `Slicer`_, `MITK`_, `PLUS`_, `NifTK`_, `SNAPPY`_ all use VTK.
 * Look in `vtkProp3D <https://gitlab.kitware.com/vtk/vtk/blob/master/Rendering/Core/vtkProp3D.cxx#L163>`_, and at ``SetOrientation()`` which says *"Orientation is specified as X,Y and Z rotations in that order, but they are performed as RotateZ, RotateX, and finally RotateY"*.
 * vtkProp3D therefore suggests that VTK uses *"Tait–Bryan angles"*, specifically the z-x-y option, which are therefore **intrinsic** rotations meaning, they move with the object being moved.
-* In `vtkTransform <https://gitlab.kitware.com/vtk/vtk/blob/master/Common/Transforms/vtkTransform.h#L92>, there is a method ``RotateWXYZ()`` which sets the rotation as an angle about a world axis. Internally, this uses quaternions and converts the world axis to a homogeneous matrix. This is an **extrinsic** rotation.
+* In `vtkTransform <https://gitlab.kitware.com/vtk/vtk/blob/master/Common/Transforms/vtkTransform.h#L92>`_, there is a method ``RotateWXYZ()`` which sets the rotation as an angle about a world axis. Internally, this uses quaternions and converts the world axis to a homogeneous matrix. This is an **extrinsic** rotation.
 
 This has been implemented in the `SNAPPY`_ platform, specifically:
 

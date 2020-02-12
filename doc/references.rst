@@ -116,6 +116,8 @@ Essential
 
 .. [Eggert1998] D. W. Eggert, A. Lorusso, R. B. Fisher, **"Estimating 3-D rigid body transformations: a comparison of four major algorithms"**, http://dx.doi.org/10.1007/s001380050048
 
+.. [Shamir2009] Reuben R. Shamir, Leo Joskowicz, Sergey Spektor and Yigal Shoshan, **"Localization and registration accuracy in image guided neurosurgery: a clinical study"**, http://dx.doi.org/10.1007/s11548-008-0268-8
+
 .. [Conrad2016] Claudius Conrad, Matteo Fusaglia, Matthias Peterhans, Huanxiang Lu, Stefan Weber, Brice Gayet, **"Augmented Reality Navigation Surgery Facilitates Laparoscopic Rescue of Failed Portal Vein Embolization"** https://doi.org/10.1016/j.jamcollsurg.2016.06.392
 
 .. [Fitzpatrick1998] J. Michael Fitzpatrick, Jay B. West, Calvin R. Maurer, Jr., **"Predicting Error in Rigid-Body Point-Based Registration"**, http://dx.doi.org/10.1109/42.736021
@@ -152,6 +154,11 @@ Extras
 ^^^^^^
 
 .. [Fusaglia2016] Matteo Fusaglia, Hanspeter Hess, Marius Schwalbe, Matthias Peterhans, Pascale Tinguely, Stefan Weber, Huanxiang Lu, **"A clinically applicable laser-based image-guided system for laparoscopic liver procedures"**, https://doi.org/10.1007/s11548-015-1309-8
+
+.. [Zhang1994] Zhengyou Zhang, **"Iterative Point Matching for Registration of Free-Form Curves and Surfaces "**, https://doi.org/10.1007/BF01427149
+
+.. [Oktay2013] Ozan Oktay, Li Zhang, Tommaso Mansi, Peter Mountney, Philip Mewes, Stéphane Nicolau, Luc Soler, Christophe Chef d’hotel, **"Biomechanically Driven Registration of Pre- to Intra-Operative 3D Images for Laparoscopic Surgery"**, https://doi.org/10.1007/978-3-642-40763-5_1
+
 
 Tracking Systems
 ----------------
