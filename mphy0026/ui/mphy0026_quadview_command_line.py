@@ -19,24 +19,30 @@ def main(args=None):
                         help='Volume image'
                         )
 
-    parser.add_argument("-r",
+    parser.add_argument("-reg",
                         "--registration",
                         required=True,
                         help='Text (.txt) file of volume-to-tracker '
                              'transformation'
                         )
 
+    parser.add_argument("-p",
+                        "--pointer",
+                        required=True,
+                        help='Pointer .rom file, port number, '
+                             'or ArUco tag number.')
+
+    parser.add_argument("-ref",
+                        "--reference",
+                        required=False,
+                        help='Reference .rom file, port number, '
+                             'or ArUco tag number.'
+                        )
+
     parser.add_argument("-t",
                         "--tracker",
                         required=True,
                         help='Tracker type [vega|aurora|aruco]'
-                        )
-
-    parser.add_argument("-c",
-                        "--config",
-                        required=True,
-                        help='Comma separated .romfiles (polaris), '
-                             'port numbers (aurora) or tag numbers (ArUco)'
                         )
 
     parser.add_argument("-o",
@@ -57,6 +63,7 @@ def main(args=None):
     run_quadview(args.volume,
                  args.registration,
                  args.tracker,
-                 args.config,
+                 args.pointer,
+                 args.reference,
                  args.offset
                  )

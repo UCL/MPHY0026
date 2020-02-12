@@ -20,11 +20,17 @@ def main(args=None):
                         help='Tracker type [vega|aurora|aruco]'
                         )
 
-    parser.add_argument("-c",
-                        "--config",
+    parser.add_argument("-p",
+                        "--pointer",
                         required=True,
-                        help='Comma separated .romfiles (polaris), '
-                             'port numbers (aurora) or tag numbers (ArUco).'
+                        help='Pointer .rom file, port number, '
+                             'or ArUco tag number.')
+
+    parser.add_argument("-r",
+                        "--reference",
+                        required=False,
+                        help='Reference .rom file, port number, '
+                             'or ArUco tag number.'
                         )
 
     parser.add_argument("-o",
@@ -63,7 +69,8 @@ def main(args=None):
     args = parser.parse_args(args)
 
     run_grab_pointer(args.tracker,
-                     args.config,
+                     args.pointer,
+                     args.reference,
                      args.offset,
                      args.fps,
                      args.number,

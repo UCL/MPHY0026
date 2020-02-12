@@ -3,10 +3,49 @@
 """ Harness to run QuadView application. """
 
 import sys
+import numpy as np
 from PySide2 import QtWidgets, QtGui
 from PySide2.QtWidgets import QSizePolicy
 import sksurgeryvtk.widgets.vtk_reslice_widget as rw
 import mphy0026.factory.tracker_factory as tf
+import mphy0026.algorithms.compute_tracked_pointer_posn as pp
+
+
+class PointerDrivenQuadViewer(rw.TrackedSliceViewer):
+    """
+    Overrides the TrackedSliceViewer to correctly check tracking data
+    and update according to the position of a tracked pointer and
+    optionally a tracked reference marker.
+    """
+    def __init__(self,
+                 dicom_dir,
+                 tracker_device,
+                 tracker_type,
+                 pointer,
+                 reference,
+                 pointer_offset
+                 ):
+        super(PointerDrivenQuadViewer, self).__init__(dicom_dir, tracker_device)
+        self.tracker_type = tracker_type
+        self.pointer = pointer
+        self.reference = reference
+        self.pointer_offset = pointer_offset
+
+    def update_position(self):
+        """
+        Retrives tracking data, and computes pointer position.
+        """
+        tracker_frame = self.tracker.get_frame()
+        pointer_posn = pp.compute_tracked_pointer_posn(tracker_frame,
+                                                       self.tracker_type,
+                                                       self.pointer,
+                                                       self.reference,
+                                                       self.pointer_offset
+                                                       )
+        if pointer_posn is not None:
+            self.update_slice_positions(pointer_posn[0][0],
+                                        pointer_posn[1][0],
+                                        pointer_posn[2][0])
 
 
 class QuadViewMainWidget(QtWidgets.QWidget):
@@ -16,8 +55,9 @@ class QuadViewMainWidget(QtWidgets.QWidget):
     def __init__(self,
                  volume,
                  registration,
-                 tracker,
-                 config,
+                 tracker_type,
+                 pointer,
+                 reference,
                  offset
                  ):
         super(QuadViewMainWidget, self).__init__()
@@ -31,11 +71,23 @@ class QuadViewMainWidget(QtWidgets.QWidget):
         tmp = offset.split(',')
         if len(tmp) != 3:
             raise ValueError("Pointer offset must be 3 comma separated values")
-        self.pointer_offset = (float(tmp[0]), float(tmp[1]), float(tmp[2]))
+        pointer_offset = np.zeros((4, 1))
+        pointer_offset[0][0] = float(tmp[0])
+        pointer_offset[1][0] = float(tmp[1])
+        pointer_offset[2][0] = float(tmp[2])
+        pointer_offset[3][0] = 1.0
 
-        self.tracker = tf.create_tracker(tracker, config)
+        self.tracker_device = tf.create_tracker(tracker_type,
+                                                pointer,
+                                                reference)
 
-        self.viewer = rw.TrackedSliceViewer(volume, self.tracker)
+        self.viewer = PointerDrivenQuadViewer(volume,
+                                              self.tracker_device,
+                                              tracker_type,
+                                              pointer,
+                                              reference,
+                                              pointer_offset
+                                              )
 
         self.setContentsMargins(0, 0, 0, 0)
         self.viewer_size_policy = \
@@ -57,7 +109,8 @@ class QuadViewMainWindow(QtWidgets.QMainWindow):
                  volume,
                  registration,
                  tracker,
-                 config,
+                 pointer,
+                 reference,
                  offset
                  ):
         """
@@ -67,7 +120,8 @@ class QuadViewMainWindow(QtWidgets.QMainWindow):
         self.main_widget = QuadViewMainWidget(volume,
                                               registration,
                                               tracker,
-                                              config,
+                                              pointer,
+                                              reference,
                                               offset
                                               )
 
@@ -78,7 +132,8 @@ class QuadViewMainWindow(QtWidgets.QMainWindow):
 def run_quadview(volume,
                  registration,
                  tracker,
-                 config,
+                 pointer,
+                 reference,
                  offset):
     """
     Runs a basic 4 quadrant view with a tracked pointer.
@@ -86,7 +141,8 @@ def run_quadview(volume,
     :param volume: filename/directory containing a volume (eg. CT) image
     :param registration: .txt file containing volume-to-tracker transformation
     :param tracker: string [vega|aurora|aruco]
-    :param config: tracker config (e.g. rom file, ArUco file, EM tracker port)
+    :param pointer: .rom file, port number or ArUco tag number for pointer
+    :param reference: .rom file, port number or ArUco tag number for reference
     :param offset: string containing x,y,z of pointer offset.
     :return:
     """
@@ -95,7 +151,8 @@ def run_quadview(volume,
     print("  volume = ", volume)
     print("  registration = ", registration)
     print("  tracker = ", tracker)
-    print("  config = ", config)
+    print("  pointer = ", pointer)
+    print("  reference = ", reference)
     print("  offset = ", offset)
 
     # Need this for all the Qt magic.
@@ -110,7 +167,8 @@ def run_quadview(volume,
     window = QuadViewMainWindow(volume,
                                 registration,
                                 tracker,
-                                config,
+                                pointer,
+                                reference,
                                 offset)
     window.setContentsMargins(0, 0, 0, 0)
     window.show()

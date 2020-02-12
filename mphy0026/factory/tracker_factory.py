@@ -2,29 +2,25 @@
 
 """ Module for factory methods. """
 
-import os
 import sksurgeryarucotracker.arucotracker as at
 import sksurgerynditracker.nditracker as nt
 
 
-def create_tracker(tracker_type, config):
+def create_tracker(tracker_type, pointer, reference):
     """
     Logic for creating a tracker.
 
     :param tracker_type: string, must be one of [vega|aurora|aruco]
-    :param config: comma separated list of rom files, ports, or tag numbers
+    :param pointer: .rom file, port number or ArUco tag number for pointer
+    :param reference: .rom file, port number or ArUco tag number for reference
     :return: tracker object
     """
     if not tracker_type:
         raise ValueError("Tracker type must be specified")
     if tracker_type not in ('vega', 'aurora', 'aruco'):
         raise ValueError("Tracker type must be [vega|aurora|aruco]")
-    if not config:
-        raise ValueError("Config must be specified")
-
-    items = config.split(',')
-    if len(items) == 0:
-        raise ValueError("Config doesn't contain items. Programming bug??")
+    if not pointer:
+        raise ValueError("Pointer must be specified")
 
     tracker = None
 
@@ -45,10 +41,9 @@ def create_tracker(tracker_type, config):
             config_name = 'ports to use'
 
         things_to_track = []
-        for item in items:
-            if tracker_type != 'aurora':
-                item = os.path.abspath(item)
-            things_to_track.append(item)
+        things_to_track.append(pointer)
+        if reference is not None:
+            things_to_track.append(reference)
         tracker_config[config_name] = things_to_track
 
         print("Initialising NDI Tracker with:" + str(tracker_config))
