@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-""" Module for factory methods. """
+""" Module for tracker factory methods. """
 
 import sksurgeryarucotracker.arucotracker as at
 import sksurgerynditracker.nditracker as nt

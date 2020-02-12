@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+""" Module to point pointer computations. """
+
 import numpy as np
 
 
