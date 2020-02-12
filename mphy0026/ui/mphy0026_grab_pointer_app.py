@@ -69,8 +69,10 @@ def run_grab_pointer(tracker,
             if not np.isnan(tracker_frame[4][0]):
                 pointer_to_world = tracker_frame[3][0]
                 world_point = np.matmul(pointer_to_world, pointer_offset)
-                samples[counter, :] = (np.transpose(world_point))[0, 0:3]
+                world_point_transposed = (np.transpose(world_point))[0, 0:3]
+                samples[counter, :] = world_point_transposed
                 counter = counter + 1
+                print(str(counter) + ":" + str(world_point_transposed))
         elif len(tracker_frame[3]) == 2:
             if not np.isnan(tracker_frame[4][0]) and not \
                     np.isnan(tracker_frame[4][1]):
@@ -81,8 +83,10 @@ def run_grab_pointer(tracker,
                                              pointer_offset)
                 pointer_in_ref = np.matmul(world_to_reference,
                                            pointer_in_world)
-                samples[counter, :] = (np.transpose(pointer_in_ref))[0, 0:3]
+                pointer_in_ref_transposed = (np.transpose(pointer_in_ref))[0, 0:3]
+                samples[counter, :] = pointer_in_ref_transposed
                 counter = counter + 1
+                print(str(counter) + ":" + str(pointer_in_ref_transposed))
         else:
             raise ValueError("We should only be tracking 2 objects")
         end = datetime.now()
@@ -92,6 +96,5 @@ def run_grab_pointer(tracker,
         if sleeptime_ms > 0:
             time.sleep(sleeptime_ms / 1000)
 
-    print(str(samples))
     if dump:
         np.savetxt(dump, samples)

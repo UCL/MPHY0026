@@ -50,7 +50,7 @@ def create_tracker(tracker_type, config):
                 item = os.path.abspath(item)
             things_to_track.append(item)
         tracker_config[config_name] = things_to_track
-        
+
         print("Initialising NDI Tracker with:" + str(tracker_config))
         tracker = nt.NDITracker(tracker_config)
         tracker.start_tracking()
