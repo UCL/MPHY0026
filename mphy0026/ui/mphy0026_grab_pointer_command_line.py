@@ -59,6 +59,11 @@ def main(args=None):
                         help='Dump data to file.'
                         )
 
+    parser.add_argument("-m",
+                        "--mean",
+                        dest='mean',
+                        action='store_true')
+
     version_string = __version__
     friendly_version_string = version_string if version_string else 'unknown'
     parser.add_argument(
@@ -74,5 +79,6 @@ def main(args=None):
                      args.offset,
                      args.fps,
                      args.number,
-                     args.dump
+                     args.dump,
+                     args.mean
                      )

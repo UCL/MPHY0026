@@ -15,7 +15,8 @@ def run_grab_pointer(tracker_type,
                      offset,
                      fps,
                      number,
-                     dump
+                     dump,
+                     mean
                      ):
     """
     Runs a simple grabbing loop, to sample data from a tracked pointer.
@@ -27,6 +28,7 @@ def run_grab_pointer(tracker_type,
     :param fps: number of frames per second
     :param number: number of samples
     :param dump: if specified, file to dump data to
+    :param mean: if True will grab points and compute mean average
     :return:
     """
 
@@ -38,6 +40,7 @@ def run_grab_pointer(tracker_type,
     print("  fps = ", fps)
     print("  number = ", number)
     print("  dump = ", dump)
+    print("  mean = ", mean)
 
     if int(number) < 1:
         raise ValueError("The number of samples must be >=1")
@@ -74,7 +77,8 @@ def run_grab_pointer(tracker_type,
         if pointer_posn is not None:
             samples[counter, :] = pointer_posn
             counter = counter + 1
-            print(str(counter) + ":" + str(pointer_posn))
+            if not mean:
+                print(str(counter) + ":" + str(pointer_posn))
 
         end = datetime.now()
         elapsed = end - start
@@ -82,6 +86,10 @@ def run_grab_pointer(tracker_type,
 
         if sleeptime_ms > 0:
             time.sleep(sleeptime_ms / 1000)
+
+    if mean:
+        samples = np.mean(samples, axis=0)
+        print(str(samples))
 
     if dump:
         np.savetxt(dump, samples)
