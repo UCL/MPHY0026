@@ -69,7 +69,6 @@ def run_grab_pointer(tracker,
             if not np.isnan(tracker_frame[4][0]):
                 pointer_to_world = tracker_frame[3][0]
                 world_point = np.multiply(pointer_to_world, pointer_offset)
-                print(world_point)
                 print(np.transpose(world_point))
                 samples[counter,:] = (np.transpose(world_point))[3, 0:3]
                 counter = counter + 1
