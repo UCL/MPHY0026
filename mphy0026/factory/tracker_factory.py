@@ -49,6 +49,7 @@ def create_tracker(tracker_type, config):
             else:
                 tracker_config[config_name] = [item]
         tracker = nt.NDITracker(tracker_config)
+        tracker.start_tracking()
 
     if tracker is None:
         raise ValueError("Failed to instantiate tracker")
