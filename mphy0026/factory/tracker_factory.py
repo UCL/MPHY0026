@@ -2,6 +2,7 @@
 
 """ Module for factory methods. """
 
+import os
 import sksurgeryarucotracker.arucotracker as at
 import sksurgerynditracker.nditracker as nt
 
@@ -39,15 +40,18 @@ def create_tracker(tracker_type, config):
             tracker_config['ip address'] = '169.254.59.34'
             tracker_config['port'] = 8765
 
-        for item in items:
-            config_name = 'romfiles'
-            if tracker_type == 'aurora':
-                config_name = 'ports to use'
+        config_name = 'romfiles'
+        if tracker_type == 'aurora':
+            config_name = 'ports to use'
 
-            if config_name in tracker_config.keys():
-                tracker_config[config_name].append(item)
-            else:
-                tracker_config[config_name] = [item]
+        things_to_track = []
+        for item in items:
+            if tracker_type != 'aurora':
+                item = os.path.abspath(item)
+            things_to_track.append(item)
+        tracker_config[config_name] = things_to_track
+        
+        print("Initialising NDI Tracker with:" + str(tracker_config))
         tracker = nt.NDITracker(tracker_config)
         tracker.start_tracking()
 

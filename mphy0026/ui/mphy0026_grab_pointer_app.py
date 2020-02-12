@@ -61,29 +61,27 @@ def run_grab_pointer(tracker,
         tracker_frame = tracker.get_frame()
 
         # Aruco returns empty list if nothing tracker, NDI returns 'NaN' (I think)
-        anything_tracked = False if tracker_frame[3] == None or tracker_frame == 'NaN' else True
+        anything_tracked = False if tracker_frame[3] is None or tracker_frame == 'NaN' else True
         if not anything_tracked:
             continue
 
         if len(tracker_frame[3]) == 1:
             if not np.isnan(tracker_frame[4][0]):
                 pointer_to_world = tracker_frame[3][0]
-                world_point = np.multiply(pointer_to_world, pointer_offset)
-                print(np.transpose(world_point))
-                samples[counter,:] = (np.transpose(world_point))[3, 0:3]
+                world_point = np.matmul(pointer_to_world, pointer_offset)
+                samples[counter, :] = (np.transpose(world_point))[0, 0:3]
                 counter = counter + 1
-                time.sleep(1)
         elif len(tracker_frame[3]) == 2:
             if not np.isnan(tracker_frame[4][0]) and not \
                     np.isnan(tracker_frame[4][1]):
                 pointer_to_world = tracker_frame[3][0]
                 reference_to_world = tracker_frame[3][1]
                 world_to_reference = np.linalg.inv(reference_to_world)
-                pointer_in_world = np.multiply(pointer_to_world,
-                                               pointer_offset)
-                pointer_in_ref = np.multiply(world_to_reference,
-                                             pointer_in_world)
-                samples[counter,:] = (np.transpose(world_point))[3, 0:3]
+                pointer_in_world = np.matmul(pointer_to_world,
+                                             pointer_offset)
+                pointer_in_ref = np.matmul(world_to_reference,
+                                           pointer_in_world)
+                samples[counter, :] = (np.transpose(pointer_in_ref))[0, 0:3]
                 counter = counter + 1
         else:
             raise ValueError("We should only be tracking 2 objects")
@@ -94,5 +92,6 @@ def run_grab_pointer(tracker,
         if sleeptime_ms > 0:
             time.sleep(sleeptime_ms / 1000)
 
+    print(str(samples))
     if dump:
         np.savetxt(dump, samples)
