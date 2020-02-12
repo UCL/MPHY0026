@@ -44,8 +44,8 @@ def run_grab_pointer(tracker,
         raise ValueError("Pointer offset must be 3 comma separated values")
     pointer_offset = np.zeros((4, 1))
     pointer_offset[0][0] = float(tmp[0])
-    pointer_offset[1][0] = float(tmp[2])
-    pointer_offset[2][0] = float(tmp[3])
+    pointer_offset[1][0] = float(tmp[1])
+    pointer_offset[2][0] = float(tmp[2])
     pointer_offset[3][0] = 1.0
 
     tracker = tf.create_tracker(tracker, config)
