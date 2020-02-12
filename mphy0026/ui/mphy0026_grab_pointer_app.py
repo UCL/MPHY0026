@@ -87,7 +87,8 @@ def run_grab_pointer(tracker,
             raise ValueError("We should only be tracking 2 objects")
         end = datetime.now()
         elapsed = end - start
-        time.sleep(ms_per_loop - (elapsed.total_seconds() * 1000.0))
+        sleeptime_ms = ms_per_loop - (elapsed.total_seconds() * 1000.0)
+        time.sleep(sleeptime_ms / 1000)
 
     if dump:
         np.savetxt(dump, samples)
