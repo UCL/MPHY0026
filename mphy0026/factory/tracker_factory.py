@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+""" Module for factory methods. """
+
 import sksurgeryarucotracker.arucotracker as at
 import sksurgerynditracker.nditracker as nt
 
@@ -29,7 +31,7 @@ def create_tracker(tracker_type, config):
         tracker = at.ArUcoTracker({})
         tracker.start_tracking()
     else:
-        tracker_config = dict
+        tracker_config = dict()
         tracker_config['tracker type'] = tracker_type
         tracker_config['use quaternions'] = False
 

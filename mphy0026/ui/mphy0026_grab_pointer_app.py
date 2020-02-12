@@ -2,6 +2,11 @@
 
 """ Harness to run grab pointer application. """
 
+import time
+from datetime import datetime
+import numpy as np
+import mphy0026.factory.tracker_factory as tf
+
 
 def run_grab_pointer(tracker,
                      config,
@@ -29,3 +34,54 @@ def run_grab_pointer(tracker,
     print("  fps = ", fps)
     print("  number = ", number)
     print("  dump = ", dump)
+
+    if int(number) < 1:
+        raise ValueError("The number of samples must be >=1")
+    if int(fps) > 500:
+        raise ValueError("The number of frames per second must be <= 500")
+    tmp = offset.split(',')
+    if len(tmp) != 3:
+        raise ValueError("Pointer offset must be 3 comma separated values")
+    pointer_offset = np.zeros((4, 1))
+    pointer_offset[0][0] = float(tmp[0])
+    pointer_offset[1][0] = float(tmp[2])
+    pointer_offset[2][0] = float(tmp[3])
+    pointer_offset[3][0] = 1.0
+
+    tracker = tf.create_tracker(tracker, config)
+
+    frames_per_second = int(fps)
+    ms_per_loop = 1000.0/float(frames_per_second)
+    number_of_samples = int(number)
+
+    counter = 0
+    samples = np.ndarray((0, 3))
+    while counter < number_of_samples:
+        start = datetime.now()
+        tracker_frame = tracker.get_frame()
+        if len(tracker_frame[3]) == 1:
+            if not np.isnan(tracker_frame[4][0]):
+                pointer_to_world = tracker_frame[3][0]
+                world_point = np.multiply(pointer_to_world, pointer_offset)
+                np.append(samples, (np.transpose(world_point))[0, 0:3])
+                counter = counter + 1
+        elif len(tracker_frame[3]) == 2:
+            if not np.isnan(tracker_frame[4][0]) and not \
+                    np.isnan(tracker_frame[4][1]):
+                pointer_to_world = tracker_frame[3][0]
+                reference_to_world = tracker_frame[3][1]
+                world_to_reference = np.linalg.inv(reference_to_world)
+                pointer_in_world = np.multiply(pointer_to_world,
+                                               pointer_offset)
+                pointer_in_ref = np.multiply(world_to_reference,
+                                             pointer_in_world)
+                np.append(samples, (np.transpose(pointer_in_ref))[0, 0:3])
+                counter = counter + 1
+        else:
+            raise ValueError("We should only be tracking 2 objects")
+        end = datetime.now()
+        elapsed = end - start
+        time.sleep(ms_per_loop - (elapsed.total_seconds() * 1000.0))
+
+    if dump:
+        np.savetxt(dump, samples)
