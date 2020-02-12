@@ -32,14 +32,20 @@ There is a body of work looking at error propagation in cased where this is not 
 e.g. [Batchelor2000]_, [Wiles2008]_, [Moghari2009]_, [Danilchenko2010]_, [Thompson2013]_.
 
 
+Algorithm
+^^^^^^^^^
+
+See above paper for the maths. To my mind, `best seen in code in SNAPPY <https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/scikit-surgerycore/blob/master/sksurgerycore/algorithms/procrustes.py>`.
+
+
 Fiducial marker types
 ^^^^^^^^^^^^^^^^^^^^^
 
 Accuracy is determined by the fiducial marker type, and the ability to accurately measure it in the OR.
 
 * Bone implanted screws, detachable heads
-* Stick on markers
-* Bite-blocks
+* `Stick on markers <https://izimed.com/products/multi-modality-markers>`
+* Bite-blocks [Edwards2000]_
 
 
 Typical Performance
@@ -61,6 +67,7 @@ Cons:
 
 Accuracy:
 
-* Neurosurgery: Approx 1mm, e.g. [Edwards2000]_
-* Liver surgery: Time was median 8:50 min. Accuracy (FRE), 14.0mm to 9.2mm, mean 12.8mm [Prevost2019].
+* Neurosurgery: 0.5-1mm on Fiducials, 0.5-4mm on Targets, e.g. [Edwards2000]_
+* Neurosurgery: Similar range of errors, and a good explanation of FLE, FRE, TRE etc. [Shamir2009]_
+* Liver surgery: Time was median 8:50 min. Accuracy (FRE), 14.0mm to 9.2mm, mean 12.8mm [Prevost2019]_.
 

@@ -177,3 +177,10 @@ Examples - Surface Registration with Brainlab Z-touch
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/C9ngfY97Bkg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+
+Algorithm - K-D Tree
+^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/TLxWtXEbtFE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

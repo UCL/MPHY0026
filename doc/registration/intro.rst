@@ -52,8 +52,8 @@ Typically, methods in CAS, are sub-divided (e.g. in :ref:`bookPeters`) into:
 * Manual
 * Point-based
 * Surface-based (also called Shape-based)
-* Volume-based
-* Calibration-based
+* Volume-based, (i.e. intra-op CT to pre-op CT, not covered, see [Octya2013]_.)
+* Calibration-based, covered earlier as examples [Feuerstein2008]_, [Kang2014]_.
 
 These are covered in the next sections. Coordinate transformations are covered more in the workshops
 and their accompanying :ref:`Notebooks`.
