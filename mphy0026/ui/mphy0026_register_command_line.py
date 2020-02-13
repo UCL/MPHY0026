@@ -30,6 +30,13 @@ def main(args=None):
                         help='Output .txt file containing 4x4 transformation'
                         )
 
+    parser.add_argument("-i",
+                        "--initialise",
+                        required=False,
+                        help='Input .txt file containing 4x4 '
+                             'transformation to initialise ICP'
+                        )
+
     version_string = __version__
     friendly_version_string = version_string if version_string else 'unknown'
     parser.add_argument(
@@ -39,4 +46,8 @@ def main(args=None):
 
     args = parser.parse_args(args)
 
-    run_registration(args.fixed, args.moving, args.output)
+    run_registration(args.fixed,
+                     args.moving,
+                     args.output,
+                     args.initialise
+                     )

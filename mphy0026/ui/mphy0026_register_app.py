@@ -5,6 +5,7 @@
 import os
 import numpy as np
 import sksurgerycore.io.load_mps as lmps
+import sksurgerypclpython as sks
 import mphy0026.algorithms.registration as reg
 
 
@@ -24,7 +25,8 @@ def load_file_of_points(file_name):
 
 def run_registration(fixed_points_file,
                      moving_points_file,
-                     output_file):
+                     output_file,
+                     initialise=None):
     """
     Registers point sets, optionally saves the 4x4 transform to file
     and returns the 4x4 transformation and FRE.
@@ -32,18 +34,40 @@ def run_registration(fixed_points_file,
     :param fixed_points_file: .mps or .txt file of fixed points
     :param moving_points_file: .mps or .txt file of moving points
     :param output_file: .txt file of 4x4 transformation
-    :return: 4x4 transform, FRE
+    :param initialise: .txt file containing a 4x4 transformation to init ICP.
+    :return: 4x4 transform, FRE from point based, or residual from ICP.
     """
 
     fixed_points = load_file_of_points(fixed_points_file)
     moving_points = load_file_of_points(moving_points_file)
-    transform, fre = reg.register_point_sets(fixed_points, moving_points)
+
+    if initialise is not None:
+        initialise_transform = np.loadtxt(initialise)
+        print("Initialising with:" + str(initialise_transform))
+        homogenous_moving_points = np.ones((moving_points.shape[0],
+                                            moving_points.shape[1] + 1,
+                                            ))
+        homogenous_moving_points[:, :-1] = moving_points
+        transposed_moving_points = np.transpose(homogenous_moving_points)
+        moving_points = np.matmul(initialise_transform,
+                                  transposed_moving_points)
+        moving_points = np.transpose(moving_points)
+
+    transform = np.eye(4)
+    if fixed_points.shape[0] == moving_points.shape[0]:
+        transform, error = reg.register_point_sets(fixed_points, moving_points)
+        print("Orthogonal Procrustes: ")
+        print("  Transform = ", transform)
+        print("  Fiducial Registration Error = ", error)
+    else:
+        error = sks.iterative_closest_point(fixed_points,
+                                            moving_points,
+                                            transform)
+        print("Iterative Closest Point: ")
+        print("  Transform = ", transform)
+        print("  Residual = ", error)
 
     if output_file:
         np.savetxt(output_file, transform)
 
-    print("Orthogonal Procrustes: ")
-    print("  Transform = ", transform)
-    print("  Fiducial Registration Error = ", fre)
-
-    return transform, fre
+    return transform, error

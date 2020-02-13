@@ -10,3 +10,4 @@ scikit-surgerycore
 scikit-surgeryvtk
 scikit-surgerynditracker
 scikit-surgeryarucotracker
+scikit-surgerypclcpp
