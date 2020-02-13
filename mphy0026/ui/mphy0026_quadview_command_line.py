@@ -16,14 +16,20 @@ def main(args=None):
 
     parser.add_argument("-v", "--volume",
                         required=True,
-                        help='Volume image'
+                        help='Volume image. Directory containing DICOM.'
                         )
 
     parser.add_argument("-reg",
                         "--registration",
-                        required=True,
-                        help='Text (.txt) file of volume-to-tracker '
+                        required=False,
+                        help='Text (.txt) file of tracker-to-image '
                              'transformation'
+                        )
+
+    parser.add_argument("-t",
+                        "--tracker",
+                        required=True,
+                        help='Tracker type [vega|aurora|aruco]'
                         )
 
     parser.add_argument("-p",
@@ -37,12 +43,6 @@ def main(args=None):
                         required=False,
                         help='Reference .rom file, port number, '
                              'or ArUco tag number.'
-                        )
-
-    parser.add_argument("-t",
-                        "--tracker",
-                        required=True,
-                        help='Tracker type [vega|aurora|aruco]'
                         )
 
     parser.add_argument("-o",

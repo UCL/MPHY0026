@@ -22,14 +22,18 @@ class PointerDrivenQuadViewer(rw.TrackedSliceViewer):
                  tracker_device,
                  tracker_type,
                  pointer,
-                 reference,
-                 pointer_offset
+                 pointer_offset,
+                 reference=None,
+                 registration=None
                  ):
         super(PointerDrivenQuadViewer, self).__init__(dicom_dir, tracker_device)
         self.tracker_type = tracker_type
         self.pointer = pointer
-        self.reference = reference
         self.pointer_offset = pointer_offset
+        self.reference = reference
+        self.registration = np.eye(4)
+        if registration is not None:
+            self.registration = registration
 
     def update_position(self):
         """
@@ -42,10 +46,21 @@ class PointerDrivenQuadViewer(rw.TrackedSliceViewer):
                                                        self.reference,
                                                        self.pointer_offset
                                                        )
+
+        point = np.ndarray((4, 1))
+        point[0][0] = pointer_posn[0]
+        point[1][0] = pointer_posn[1]
+        point[2][0] = pointer_posn[2]
+        point[3][0] = 1
+
+        # Converts tracker point to image.
+        point_in_image_coords = np.matmul(self.registration, point)
+
+        # Updates quad view to correct point in image.
         if pointer_posn is not None:
-            self.update_slice_positions(pointer_posn[0],
-                                        pointer_posn[1],
-                                        pointer_posn[2])
+            self.update_slice_positions(point_in_image_coords[0][0],
+                                        point_in_image_coords[1][0],
+                                        point_in_image_coords[2][0])
 
 
 class QuadViewMainWidget(QtWidgets.QWidget):
@@ -64,8 +79,7 @@ class QuadViewMainWidget(QtWidgets.QWidget):
 
         if not volume:
             raise ValueError("Volume image must be specified")
-        if not registration:
-            raise ValueError("Registration transform must be specified")
+
         pointer_offset = pp.extract_pointer_offset(offset)
 
         self.tracker_device = tf.create_tracker(tracker_type,
@@ -76,8 +90,9 @@ class QuadViewMainWidget(QtWidgets.QWidget):
                                               self.tracker_device,
                                               tracker_type,
                                               pointer,
+                                              pointer_offset,
                                               reference,
-                                              pointer_offset
+                                              registration
                                               )
 
         self.setContentsMargins(0, 0, 0, 0)
