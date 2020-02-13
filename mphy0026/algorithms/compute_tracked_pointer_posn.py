@@ -29,9 +29,10 @@ def extract_pointer_offset(offset_as_string):
     """
     if not offset_as_string:
         raise ValueError("Pointer offset must be specified")
-    tmp = offset_as_string.split(',')
-    if len(tmp) != 3:
-        raise ValueError("Pointer offset must be 3 comma separated values")
+    tmp = np.loadtxt(offset_as_string)
+    #tmp = offset_as_string.split(',')
+    #if len(tmp) != 3:
+       # raise ValueError("Pointer offset must be 3 comma separated values")
     pointer_offset = np.zeros((4, 1))
     pointer_offset[0][0] = float(tmp[0])
     pointer_offset[1][0] = float(tmp[1])

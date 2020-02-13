@@ -33,7 +33,8 @@ class PointerDrivenQuadViewer(rw.TrackedSliceViewer):
         self.reference = reference
         self.registration = np.eye(4)
         if registration is not None:
-            self.registration = registration
+            matrix = np.loadtxt(registration)
+            self.registration = matrix
 
     def update_position(self):
         """
@@ -47,17 +48,17 @@ class PointerDrivenQuadViewer(rw.TrackedSliceViewer):
                                                        self.pointer_offset
                                                        )
 
-        point = np.ndarray((4, 1))
-        point[0][0] = pointer_posn[0]
-        point[1][0] = pointer_posn[1]
-        point[2][0] = pointer_posn[2]
-        point[3][0] = 1
-
-        # Converts tracker point to image.
-        point_in_image_coords = np.matmul(self.registration, point)
-
-        # Updates quad view to correct point in image.
         if pointer_posn is not None:
+            point = np.ndarray((4, 1))
+            point[0][0] = pointer_posn[0]
+            point[1][0] = pointer_posn[1]
+            point[2][0] = pointer_posn[2]
+            point[3][0] = 1
+
+            # Converts tracker point to image.
+            point_in_image_coords = np.matmul(self.registration, point)
+
+            # Updates quad view to correct point in image.
             self.update_slice_positions(point_in_image_coords[0][0],
                                         point_in_image_coords[1][0],
                                         point_in_image_coords[2][0])
