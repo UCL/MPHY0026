@@ -66,16 +66,7 @@ class QuadViewMainWidget(QtWidgets.QWidget):
             raise ValueError("Volume image must be specified")
         if not registration:
             raise ValueError("Registration transform must be specified")
-        if not offset:
-            raise ValueError("Pointer offset must be specified")
-        tmp = offset.split(',')
-        if len(tmp) != 3:
-            raise ValueError("Pointer offset must be 3 comma separated values")
-        pointer_offset = np.zeros((4, 1))
-        pointer_offset[0][0] = float(tmp[0])
-        pointer_offset[1][0] = float(tmp[1])
-        pointer_offset[2][0] = float(tmp[2])
-        pointer_offset[3][0] = 1.0
+        pointer_offset = pp.extract_pointer_offset(offset)
 
         self.tracker_device = tf.create_tracker(tracker_type,
                                                 pointer,

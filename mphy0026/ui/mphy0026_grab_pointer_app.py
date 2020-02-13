@@ -46,14 +46,7 @@ def run_grab_pointer(tracker_type,
         raise ValueError("The number of samples must be >=1")
     if int(fps) > 500:
         raise ValueError("The number of frames per second must be <= 500")
-    tmp = offset.split(',')
-    if len(tmp) != 3:
-        raise ValueError("Pointer offset must be 3 comma separated values")
-    pointer_offset = np.zeros((4, 1))
-    pointer_offset[0][0] = float(tmp[0])
-    pointer_offset[1][0] = float(tmp[1])
-    pointer_offset[2][0] = float(tmp[2])
-    pointer_offset[3][0] = 1.0
+    pointer_offset = pp.extract_pointer_offset(offset)
 
     tracker = tf.create_tracker(tracker_type, pointer, reference)
 
