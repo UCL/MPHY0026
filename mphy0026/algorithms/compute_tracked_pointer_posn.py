@@ -23,16 +23,14 @@ def _get_aruco_item_index(handles, value):
     return index_of_item[0]
 
 
-def extract_pointer_offset(offset_as_string):
+def extract_pointer_offset(offset_as_filename):
     """
-    Given a comma separated list of x,y,z, returns 4x1 point as ndarray.
+    Given a filename containing a pointer tip offset,
+    returns 4x1 point as ndarray.
     """
-    if not offset_as_string:
-        raise ValueError("Pointer offset must be specified")
-    tmp = np.loadtxt(offset_as_string)
-    #tmp = offset_as_string.split(',')
-    #if len(tmp) != 3:
-       # raise ValueError("Pointer offset must be 3 comma separated values")
+    if not offset_as_filename:
+        raise ValueError("Pointer offset filename must be specified")
+    tmp = np.loadtxt(offset_as_filename)
     pointer_offset = np.zeros((4, 1))
     pointer_offset[0][0] = float(tmp[0])
     pointer_offset[1][0] = float(tmp[1])
