@@ -77,8 +77,7 @@ def run_grab_pointer(tracker_type,
         if pointer_posn is not None:
             samples[counter, :] = pointer_posn
             counter = counter + 1
-            if not mean:
-                print(str(counter) + ":" + str(pointer_posn))
+            print(str(counter) + ":" + str(pointer_posn))
 
         end = datetime.now()
         elapsed = end - start
@@ -89,7 +88,7 @@ def run_grab_pointer(tracker_type,
 
     if mean:
         samples = np.mean(samples, axis=0)
-        print(str(samples))
+        print("Mean is:" + str(samples))
 
     if dump:
         np.savetxt(dump, samples)
