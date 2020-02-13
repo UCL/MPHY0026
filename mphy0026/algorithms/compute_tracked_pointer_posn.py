@@ -60,12 +60,13 @@ def compute_tracked_pointer_posn(tracker_frame,
             and not np.isnan(tracker_frame[4][reference_index]):
         tracking_reference = True
 
-    if tracking_pointer:
+    # i.e. if we didn't intend to use a reference, and we are tracking pointer.
+    if reference is None and tracking_pointer:
         pointer_to_world = tracker_frame[3][pointer_index]
         world_point = np.matmul(pointer_to_world, offset)
         world_point_transposed = (np.transpose(world_point))[0, 0:3]
         pointer_posn = world_point_transposed
-    elif tracking_reference:
+    elif tracking_pointer and tracking_reference:
         pointer_to_world = tracker_frame[3][pointer_index]
         reference_to_world = tracker_frame[3][reference_index]
         world_to_reference = np.linalg.inv(reference_to_world)
