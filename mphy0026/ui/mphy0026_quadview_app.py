@@ -43,9 +43,9 @@ class PointerDrivenQuadViewer(rw.TrackedSliceViewer):
                                                        self.pointer_offset
                                                        )
         if pointer_posn is not None:
-            self.update_slice_positions(pointer_posn[0][0],
-                                        pointer_posn[1][0],
-                                        pointer_posn[2][0])
+            self.update_slice_positions(pointer_posn[0],
+                                        pointer_posn[1],
+                                        pointer_posn[2])
 
 
 class QuadViewMainWidget(QtWidgets.QWidget):
