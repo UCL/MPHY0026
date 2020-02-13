@@ -87,7 +87,7 @@ def run_grab_pointer(tracker_type,
             time.sleep(sleeptime_ms / 1000)
 
     if mean:
-        samples = np.mean(samples, axis=0)
+        samples = np.mean(samples, axis=0, keepdims=True)
         print("Mean is:" + str(samples))
 
     if dump:
