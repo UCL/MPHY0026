@@ -16,6 +16,7 @@ def test_register_pointset_to_self():
                                          )
     assert np.allclose(transform, np.eye(4))
 
+
 def test_register_pelvis_gipl():
 
     transform1, fre1 = ra.run_registration('tests/data/pelvis/pelvis_cropped_ct_fiducial_markers.mps',
