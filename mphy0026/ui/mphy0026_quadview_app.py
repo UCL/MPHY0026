@@ -77,6 +77,8 @@ class QuadViewMainWidget(QtWidgets.QWidget):
                  registration,
                  tracker_type,
                  pointer,
+                 minimum,
+                 maximum,
                  reference,
                  offset
                  ):
@@ -99,6 +101,8 @@ class QuadViewMainWidget(QtWidgets.QWidget):
                                               reference,
                                               registration
                                               )
+        
+        self.viewer.set_lookup_table_min_max(minimum, maximum)
 
         self.setContentsMargins(0, 0, 0, 0)
         self.viewer_size_policy = \
@@ -121,6 +125,8 @@ class QuadViewMainWindow(QtWidgets.QMainWindow):
                  registration,
                  tracker,
                  pointer,
+                 minimum,
+                 maximum,
                  reference,
                  offset
                  ):
@@ -132,6 +138,8 @@ class QuadViewMainWindow(QtWidgets.QMainWindow):
                                               registration,
                                               tracker,
                                               pointer,
+                                              minimum,
+                                              maximum,
                                               reference,
                                               offset
                                               )
@@ -144,6 +152,8 @@ def run_quadview(volume,
                  registration,
                  tracker,
                  pointer,
+                 minimum,
+                 maximum,
                  reference,
                  offset):
     """
@@ -153,6 +163,8 @@ def run_quadview(volume,
     :param registration: .txt file containing volume-to-tracker transformation
     :param tracker: string [vega|aurora|aruco]
     :param pointer: .rom file, port number or ArUco tag number for pointer
+    :param minimum: Minimum intensity for LUT
+    :param maximum: Maximum intensity for LUT
     :param reference: .rom file, port number or ArUco tag number for reference
     :param offset: string containing x,y,z of pointer offset.
     :return:
@@ -165,6 +177,8 @@ def run_quadview(volume,
     print("  pointer = ", pointer)
     print("  reference = ", reference)
     print("  offset = ", offset)
+    print("  min = ", minimum)
+    print("  max = ", maximum)
 
     # Need this for all the Qt magic.
     app = QtWidgets.QApplication([])
@@ -179,6 +193,8 @@ def run_quadview(volume,
                                 registration,
                                 tracker,
                                 pointer,
+                                minimum,
+                                maximum,
                                 reference,
                                 offset)
     window.setContentsMargins(0, 0, 0, 0)

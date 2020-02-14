@@ -39,6 +39,20 @@ def main(args=None):
                         help='Pointer .rom file, port number, '
                              'or ArUco tag number.')
 
+    parser.add_argument("-mi",
+                        "--minimum",
+                        required=False,
+                        default=-1000,
+                        help='Minimum intensity'
+                        )
+
+    parser.add_argument("-ma",
+                        "--maximum",
+                        required=False,
+                        default=1000,
+                        help='Maximum intensity'
+                        )
+
     parser.add_argument("-ref",
                         "--reference",
                         required=False,
@@ -65,6 +79,8 @@ def main(args=None):
                  args.registration,
                  args.tracker,
                  args.pointer,
+                 args.minimum,
+                 args.maximum,
                  args.reference,
-                 args.offset
+                 args.offset,
                  )
