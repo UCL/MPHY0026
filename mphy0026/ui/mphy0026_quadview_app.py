@@ -16,9 +16,11 @@ class PointerDrivenQuadViewer(rw.TrackedSliceViewer):
     Overrides the TrackedSliceViewer to correctly check tracking data
     and update according to the position of a tracked pointer and
     optionally a tracked reference marker.
+
+    :param volume: DICOM directory name, or path to a NifTI image.
     """
     def __init__(self,
-                 dicom_dir,
+                 volume,
                  tracker_device,
                  tracker_type,
                  pointer,
@@ -26,7 +28,7 @@ class PointerDrivenQuadViewer(rw.TrackedSliceViewer):
                  reference=None,
                  registration=None
                  ):
-        super(PointerDrivenQuadViewer, self).__init__(dicom_dir, tracker_device)
+        super(PointerDrivenQuadViewer, self).__init__(volume, tracker_device)
         self.tracker_type = tracker_type
         self.pointer = pointer
         self.pointer_offset = pointer_offset
@@ -41,6 +43,8 @@ class PointerDrivenQuadViewer(rw.TrackedSliceViewer):
         Retrives tracking data, and computes pointer position.
         """
         tracker_frame = self.tracker.get_frame()
+
+        # Get pointer tip position in millimetres, in tracker space.
         pointer_posn = pp.compute_tracked_pointer_posn(tracker_frame,
                                                        self.tracker_type,
                                                        self.pointer,
@@ -55,13 +59,13 @@ class PointerDrivenQuadViewer(rw.TrackedSliceViewer):
             point[2][0] = pointer_posn[2]
             point[3][0] = 1
 
-            # Converts tracker point to image.
+            # Converts tracker point to image coordinates in millimetres.
             point_in_image_coords = np.matmul(self.registration, point)
 
             # Updates quad view to correct point in image.
-            self.update_slice_positions(point_in_image_coords[0][0],
-                                        point_in_image_coords[1][0],
-                                        point_in_image_coords[2][0])
+            self.update_slice_positions_mm(point_in_image_coords[0][0],
+                                           point_in_image_coords[1][0],
+                                           point_in_image_coords[2][0])
 
 
 class QuadViewMainWidget(QtWidgets.QWidget):

@@ -16,7 +16,8 @@ def main(args=None):
 
     parser.add_argument("-v", "--volume",
                         required=True,
-                        help='Volume image. Directory containing DICOM.'
+                        help='Volume image. DICOM directory path '
+                             'or NifTI image. file name.'
                         )
 
     parser.add_argument("-reg",
