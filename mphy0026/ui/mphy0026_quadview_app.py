@@ -102,7 +102,8 @@ class QuadViewMainWidget(QtWidgets.QWidget):
                                               registration
                                               )
 
-        self.viewer.set_lookup_table_min_max(minimum, maximum)
+        self.viewer.set_lookup_table_min_max(int(minimum),
+                                             int(maximum))
 
         self.setContentsMargins(0, 0, 0, 0)
         self.viewer_size_policy = \
