@@ -4,6 +4,7 @@
 
 import os
 import numpy as np
+import sksurgeryvtk.models.vtk_surface_model as sm
 import sksurgerycore.io.load_mps as lmps
 import sksurgerypclpython as sks
 import mphy0026.algorithms.registration as reg
@@ -18,6 +19,9 @@ def load_file_of_points(file_name):
     extension = os.path.splitext(file_name)[1]
     if extension == '.mps':
         _, points = lmps.load_mps(file_name)
+    elif extension == '.vtk':
+        model = sm.VTKSurfaceModel(file_name, (1.0, 1.0, 1.0))
+        points = model.get_points_as_numpy()
     else:
         points = np.loadtxt(file_name)
     return points
