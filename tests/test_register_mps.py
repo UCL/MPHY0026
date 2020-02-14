@@ -16,3 +16,16 @@ def test_register_pointset_to_self():
                                          )
     assert np.allclose(transform, np.eye(4))
 
+def test_register_pelvis_gipl():
+
+    transform1, fre1 = ra.run_registration('tests/data/pelvis/pelvis_cropped_ct_fiducial_markers.mps',
+                                           'tests/data/pelvis/Tracker_Fiducial_Markers.txt',
+                                           None
+                                           )
+
+    transform2, fre2 = ra.run_registration('tests/data/pelvis/pelvis_cropped_ct_fiducial_markers.txt',
+                                           'tests/data/pelvis/Tracker_Fiducial_Markers.txt',
+                                           None
+                                           )
+
+    assert np.allclose(transform1, transform2)
