@@ -39,14 +39,14 @@ def main(args=None):
                         help='Pointer .rom file, port number, '
                              'or ArUco tag number.')
 
-    parser.add_argument("-mi",
+    parser.add_argument("-min",
                         "--minimum",
                         required=False,
                         default=-1000,
                         help='Minimum intensity'
                         )
 
-    parser.add_argument("-ma",
+    parser.add_argument("-max",
                         "--maximum",
                         required=False,
                         default=1000,
