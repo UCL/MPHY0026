@@ -22,6 +22,7 @@ Nomenclature
 ------------
 
 * CAS - Computer Assisted Surgery
+* DOF - Degrees-of-freedom
 
 (previous)
 * CAI - Computer Assisted Interventions
