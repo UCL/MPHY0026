@@ -1,4 +1,4 @@
-.. _Components:
+.. _Errors:
 
 Errors
 ======
