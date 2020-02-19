@@ -22,6 +22,8 @@ Nomenclature
 ------------
 
 * CAS - Computer Assisted Surgery
+
+(previous)
 * CAI - Computer Assisted Interventions
 * IGS - Image-Guided Surgery
 * IGT - Image-Guided Therapy
