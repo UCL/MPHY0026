@@ -11,16 +11,19 @@ This system is the most popular so far in surgical interventions mainly due to i
 
 Types of systems
 ----------------
+
 The main optical tracking systems used in surgery can be divided in to main groups: video tracking and IR-based tracking. The following sections describe these types of optical tracking.
 
 Video tracking systems
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
+
 Video tracking systems track a fiducial marker with a printed pattern on it (e.g., white/black squares) from video images taken from one or multiple calibrated cameras.
 
 (TODO: Picture of markers here)
 
 Infra-red-based tracking systems
-^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Infra-red cameras are used as optical markers can be tracked easier due to the elimination of ambient light. There systems can be divided in two types:
 
 * **Active optical trackers**: Markers (usually LEDs) emit infra-reds using different firing sequences that are activated by an electrical current (including wireless). The system has a central unit that detects the markers from each camera and employs triangulation in order to find a 6 DOF position.
@@ -30,12 +33,12 @@ Infra-red cameras are used as optical markers can be tracked easier due to the e
 System components
 -----------------
 
-The system components of an optical tracking are: 
+The system components of an optical tracking system are: 
 
-* One or multiple cameras
-* A system unit which may be comprised of other units (for infra-red-based systems only)
-* Markers
-* A computer
+* One or multiple cameras: The camera capture range defines the tracking volume where the markers can move and be tracked
+* A system unit which may be comprised of other units (for infra-red-based systems only): The system units performs all the processing of the images captures by the camera and provides the 3D position of the markers.
+* Markers: Will be fixed to the tools that need to be tracked. Each tool must have a different marker.
+* A computer: Takes the processed tracked data from the system unit in order to provide assistance to the surgical procedure.
 
 The following picture show how the different components are connected.
 
