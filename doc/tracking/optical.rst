@@ -12,7 +12,7 @@ This system is the most popular so far in surgical interventions mainly due to i
 Types of systems
 ----------------
 
-The main optical tracking systems used in surgery can be divided in to main groups: video tracking and IR-based tracking. The following sections describe these types of optical tracking.
+Optical tracking systems used in surgery can be divided in to main groups: video tracking and IR-based tracking. The following sections describe these types of optical tracking.
 
 Video tracking systems
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -29,6 +29,7 @@ Infra-red cameras are used as optical markers can be tracked easier due to the e
 * **Active optical trackers**: Markers (usually LEDs) emit infra-reds using different firing sequences that are activated by an electrical current (including wireless). The system has a central unit that detects the markers from each camera and employs triangulation in order to find a 6 DOF position.
 
 * **Passive optical trackers**: Retro-reflective spheres are illuminated and detected by the infra-red cameras. The spheres are attached to a rigid body with a unique geometry for each tracked device.
+
 
 System components
 -----------------
@@ -48,3 +49,15 @@ The following picture show how the different components are connected.
   
   Main system components of an infra-red optical tracking system
 
+
+Errors of optical trackers: depth reconstruction error
+------------------------------------------------------
+
+Similar to the human eye, 2 stereo cameras are used to image the markers, which are then detected from the images and matched from the left and right images. The 3D position of the markers is found by doing triangulation as the position of the two cameras is known.
+By comparing the two images, and doing a triangulation the 3D position of the marker can be obtained. However depth calculation can have errors, due to the so-called disparity (difference between the same point projected on the two images).
+Errors in disparity are inversely proportional to the depth, meaning that errors in disparity calculation will increase quadratically the depth measurement from the camera. 
+
+Limitations of optical trackers
+-------------------------------
+The main limitation of optical trackers is the requirement to keep a line-of-sight between cameras and markers. In an operating room, where multiple devices and several people are working and moving at the same time, it may be difficult to keep a line-of-sight at all times.
+Optical tracking is usually not the best option to track flexible or small instruments (e.g., needles).
