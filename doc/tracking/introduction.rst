@@ -28,7 +28,7 @@ Tracking systems can be grouped as follows:
 
 * **Fiber-optic ultrasound**: Used in ultrasound interventions for research mainly. A fiber-optic ultrasound receiver communicates with a external ultrasound probe and allows to localise needles during ultrasound interventions (e.g., . 
 
-
+* **Accelerometers and gyroscopes**: Measure acceleration and angular velocity to determine the position. Is the same system used in mobile phones. Ultrasound probes from Clarius employ this system to reconstruct 2D ultrasound planes to 3D models.
 
 
 
