@@ -76,6 +76,8 @@ def load_points_and_register(fixed_points_file,
     fixed_points = load_file_of_points(fixed_points_file)
     moving_points = load_file_of_points(moving_points_file)
 
+    initialise_transform = None
+
     if initialise_4x4_file is not None:
         # ToDo: Can simplify this, but its OK for teaching purposes.
         initialise_transform = np.loadtxt(initialise_4x4_file)
@@ -91,6 +93,9 @@ def load_points_and_register(fixed_points_file,
         moving_points = moving_points[:, 0:3]
 
     transform, error = register_points(fixed_points, moving_points)
+
+    if initialise_transform is not None:
+        transform = np.matmul(transform, initialise_transform)
 
     if output_4x4_file is not None:
         np.savetxt(output_4x4_file, transform)
