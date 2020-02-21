@@ -44,14 +44,14 @@ def run_grab_pointer(tracker_type,
 
     if int(number) < 1:
         raise ValueError("The number of samples must be >=1")
-    if int(fps) > 500:
+    if float(fps) > 500:
         raise ValueError("The number of frames per second must be <= 500")
     pointer_offset = pp.extract_pointer_offset(offset)
 
     tracker = tf.create_tracker(tracker_type, pointer, reference)
 
-    frames_per_second = int(fps)
-    ms_per_loop = 1000.0/float(frames_per_second)
+    frames_per_second = float(fps)
+    ms_per_loop = 1000.0/frames_per_second
     number_of_samples = int(number)
 
     counter = 0
