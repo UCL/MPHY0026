@@ -15,12 +15,13 @@ def _get_aruco_item_index(handles, value):
     if handles is None or not handles:
         return None
 
-    index_of_item = np.where(handles == value)
+    index_of_item = np.where(np.array(handles) == int(value))
 
     if index_of_item is None or not index_of_item:
         return None
 
-    return index_of_item[0]
+
+    return index_of_item[0][0]
 
 
 def extract_pointer_offset(offset_as_filename):
@@ -57,16 +58,16 @@ def compute_tracked_pointer_posn(tracker_frame,
         raise ValueError("Failed to get data from tracker.")
     if not tracker_frame[4]: # ArUco returns empty list
         return None
-
     pointer_posn = None
     pointer_index = 0
     reference_index = 1
     tracking_pointer = False
     tracking_reference = False
-
     if tracker_type == 'aruco':
         pointer_index = _get_aruco_item_index(tracker_frame[0], pointer)
-        reference_index = _get_aruco_item_index(tracker_frame[0], reference)
+
+        if reference:
+            reference_index = _get_aruco_item_index(tracker_frame[0], reference)
 
     if not np.isnan(tracker_frame[4][pointer_index]):
         tracking_pointer = True
