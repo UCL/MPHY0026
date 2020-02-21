@@ -79,7 +79,7 @@ def load_points_and_register(fixed_points_file,
     initialise_transform = None
 
     if initialise_4x4_file is not None:
-        # ToDo: Can simplify this, but its OK for teaching purposes.
+        # Can be simplified - exercise for the student ;-)
         initialise_transform = np.loadtxt(initialise_4x4_file)
         print("Initialising with:" + str(initialise_transform))
         homogenous_moving_points = np.ones((moving_points.shape[0],
