@@ -16,13 +16,14 @@ def main(args=None):
 
     parser.add_argument("-v", "--volume",
                         required=True,
-                        help='Volume image'
+                        help='Volume image. DICOM directory path '
+                             'or NifTI image. file name.'
                         )
 
-    parser.add_argument("-r",
+    parser.add_argument("-reg",
                         "--registration",
-                        required=True,
-                        help='Text (.txt) file of volume-to-tracker '
+                        required=False,
+                        help='Text (.txt) file of tracker-to-image '
                              'transformation'
                         )
 
@@ -32,11 +33,31 @@ def main(args=None):
                         help='Tracker type [vega|aurora|aruco]'
                         )
 
-    parser.add_argument("-c",
-                        "--config",
+    parser.add_argument("-p",
+                        "--pointer",
                         required=True,
-                        help='Comma separated .romfiles (polaris), '
-                             'port numbers (aurora) or tag numbers (ArUco)'
+                        help='Pointer .rom file, port number, '
+                             'or ArUco tag number.')
+
+    parser.add_argument("-min",
+                        "--minimum",
+                        required=False,
+                        default=-1000,
+                        help='Minimum intensity'
+                        )
+
+    parser.add_argument("-max",
+                        "--maximum",
+                        required=False,
+                        default=1000,
+                        help='Maximum intensity'
+                        )
+
+    parser.add_argument("-ref",
+                        "--reference",
+                        required=False,
+                        help='Reference .rom file, port number, '
+                             'or ArUco tag number.'
                         )
 
     parser.add_argument("-o",
@@ -57,6 +78,9 @@ def main(args=None):
     run_quadview(args.volume,
                  args.registration,
                  args.tracker,
-                 args.config,
-                 args.offset
+                 args.pointer,
+                 args.minimum,
+                 args.maximum,
+                 args.reference,
+                 args.offset,
                  )
