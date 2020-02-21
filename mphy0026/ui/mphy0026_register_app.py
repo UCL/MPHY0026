@@ -31,6 +31,9 @@ def register_points(fixed_points,
                     moving_points):
     """
     Registers point sets and returns the 4x4 transformation and error measure.
+    If the number of points is the same, will do Arun 1987, else, PCL's ICP.
+    The output transform transforms moving points into the coordinate space of
+    the fixed points.
 
     :param fixed_points: Nx3 ndarray of fixed points
     :param moving_points: Mx3 ndarray of moving points
@@ -62,6 +65,7 @@ def load_points_and_register(fixed_points_file,
                              ):
     """
     Loads points from file, registers, and optionally outputs transform.
+
     :param fixed_points_file: .vtk, .mps or .txt file of fixed points.
     :param moving_points_file: .vtk, .mps or .txt file of moving points.
     :param output_4x4_file: output file, to write 4x4 transform to.
