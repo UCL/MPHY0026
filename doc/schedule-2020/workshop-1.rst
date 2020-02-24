@@ -47,3 +47,5 @@ Then more specific instructions are given for
 
 The main reason for providing 3 setups is to reduce waiting time.
 The workshop can also be repeated for each setup, and compared between groups.
+
+Note: all command line tools respond to the ```--help``` argument to describe available options
