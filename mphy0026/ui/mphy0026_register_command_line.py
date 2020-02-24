@@ -5,7 +5,7 @@
 import argparse
 
 from mphy0026 import __version__
-from mphy0026.ui.mphy0026_register_app import run_registration
+import mphy0026.ui.mphy0026_register_app as ra
 
 
 def main(args=None):
@@ -46,8 +46,8 @@ def main(args=None):
 
     args = parser.parse_args(args)
 
-    run_registration(args.fixed,
-                     args.moving,
-                     args.output,
-                     args.initialise
-                     )
+    ra.load_points_and_register(args.fixed,
+                                args.moving,
+                                args.output,
+                                args.initialise
+                                )

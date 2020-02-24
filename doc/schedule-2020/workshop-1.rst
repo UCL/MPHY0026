@@ -3,15 +3,49 @@
 Workshop 1
 ==========
 
+Learning Objectives
+^^^^^^^^^^^^^^^^^^^
+
+On completion of this workshop, the student will be able to:
+
+* Appreciate several systems in action, or through demonstrations
+* Understand practical issues of layout and setup
+* Compute FLE, FRE, Residual Error, TRE
+
+
+System Demos
+^^^^^^^^^^^^
+
 * 10 mins - Overview of SmartTarget system (Rachael Rodell, Mock OR)
 * 10 mins - Overview of Medtronic, point/surface based registration (Jonathan Shapey, Mock OR)
 * 10 mins - Overview of SmartLiver (Matt, if time)
-* X mins - measure location of reference pins on liver phantom. NDI pointer? ArUco marker?
-* X mins - attach liver phantom to base, assure its firmly fixed
-* X mins - 5 students, do 3 manual alignment each
-* X mins - 5 students, do 3 point-based registration each
-* X mins - 5 students, do 3 surface-based, pointer dragging registrations each
-* X mins - build your own Pelvis Phantom system - test BARD functionality
-* X mins - build your own LEGO system - test Ziv's demo
-* X mins - Analysis of results
 
+
+Overview
+^^^^^^^^
+
+The general principles of the workshop are listed below.
+
+* X mins - Use 4-quadrant viewer (e.g. NiftyIGI, MITK, Slicer), to locate fiducials in CT scan. Measure time, FLE. Compare inter-user variability.
+* X mins - Identify a suitable Window/Level for CT image, convert to Min/Max intensity value.
+* X mins - Grab pointer locations. Measure FLE of tracker. Investigate variance with angle (optical tracker), jitter, location in tracking volume.
+* X mins - Compute Point-Based Registration mapping from Tracker to Image space
+* X mins - Visualise tracked pointer in 4 quadrant view
+* X mins - Collect data for ICP
+* X mins - Run ICP without initialisation - should fail
+* X mins - Run ICP with initialisation - should succeed
+* X mins - Compare matrices for PBR and ICP - should be similar
+* X mins - Compare visualisation for PBR and ICP - which is best?
+* X mins - Analyse partial surfaces for ICP - can we see how it fails?
+* X mins - Report back results
+
+Then more specific instructions are given for
+
+* :ref:`Workshop1Pelvis`.
+* :ref:`Workshop1Lego`.
+* :ref:`Workshop1Head`.
+
+The main reason for providing 3 setups is to reduce waiting time.
+The workshop can also be repeated for each setup, and compared between groups.
+
+Note: all command line tools respond to the ```--help``` argument to describe available options
