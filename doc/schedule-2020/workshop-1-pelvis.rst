@@ -27,6 +27,11 @@ Note: all command line tools below respond to the ``--help`` argument to describ
 4. Adjust the window/level (right hand, vertical slider), to get a good contrast, write these numbers for later, e.g. 962, 122. Remember this is Level/Window, convert to Min/Max.
 5. Write down the 3D location (look on bottom status bar), of each of 4 points in order.
 
+.. figure:: workshop-1-pelvis-NiftyIGI.png
+  :width: 100%
+
+  Figure 2: Illustration, of NiftyIGI, showing CT volume at a fiducial point.
+
 6. Save the 4 points as 4 rows of x y z (space separated) into a text file of your choice
 7. Compare with ``tests\data\pelvis\pelvis_cropped_ct_fiducial_markers.txt``
 8. If you didn't achieve this first step, continue using ``tests\data\pelvis\pelvis_cropped_ct_fiducial_markers.txt``
