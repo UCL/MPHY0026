@@ -10,6 +10,8 @@ course, but are not strictly necessary for summative assessment.
 Books
 -----
 
+.. _bookClearyPeters:
+
 .. figure:: https://m.media-amazon.com/images/I/61cFgn0z-4L._AC_UY218_ML3_.jpg
   :alt: Terry Peters and Kevin Cleary's Image-Guided interventions book
   :target: https://www.amazon.co.uk/Image-Guided-Interventions-Applications-Terry-Peters/dp/1489997334/ref=sr_1_1?keywords=peters+cleary+image-guided&qid=1575965815&sr=8-1

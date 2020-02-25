@@ -16,7 +16,9 @@ def run_grab_pointer(tracker_type,
                      fps,
                      number,
                      dump,
-                     mean
+                     mean,
+                     registration,
+                     fiducials
                      ):
     """
     Runs a simple grabbing loop, to sample data from a tracked pointer.
@@ -29,6 +31,8 @@ def run_grab_pointer(tracker_type,
     :param number: number of samples
     :param dump: if specified, file to dump data to
     :param mean: if True will grab points and compute mean average
+    :param registration: if this and fiducials supplied, will work out FLE
+    :param fiducials: if this and registration supplied, will work out FLE
     :return:
     """
 
@@ -41,21 +45,27 @@ def run_grab_pointer(tracker_type,
     print("  number = ", number)
     print("  dump = ", dump)
     print("  mean = ", mean)
+    print("  registration = ", registration)
+    print("  fiducials = ", fiducials)
 
     if int(number) < 1:
         raise ValueError("The number of samples must be >=1")
-    if int(fps) > 500:
+    if float(fps) > 500:
         raise ValueError("The number of frames per second must be <= 500")
     pointer_offset = pp.extract_pointer_offset(offset)
 
     tracker = tf.create_tracker(tracker_type, pointer, reference)
 
-    frames_per_second = int(fps)
-    ms_per_loop = 1000.0/float(frames_per_second)
+    frames_per_second = float(fps)
+    ms_per_loop = 1000.0/frames_per_second
     number_of_samples = int(number)
 
     counter = 0
     samples = np.ndarray((number_of_samples, 3))
+
+    print(f'Starting acquisition of {number_of_samples} \
+          points in {ms_per_loop / 1000} seconds...')
+
     while counter < number_of_samples:
         start = datetime.now()
 
@@ -85,3 +95,29 @@ def run_grab_pointer(tracker_type,
 
     if dump:
         np.savetxt(dump, samples)
+
+    if registration and fiducials:
+        registration_matrix = np.loadtxt(registration)
+        fiducials = np.loadtxt
+        pointer_posn = np.mean(samples, axis=0, keepdims=True)
+        pointer = np.ones((4, 1))
+        pointer[0][0] = pointer_posn[0][0]
+        pointer[1][0] = pointer_posn[0][1]
+        pointer[2][0] = pointer_posn[0][2]
+        pointer[3][0] = 1
+        transformed_point = np.matmul(registration_matrix, pointer)
+        transformed_point = (np.transpose(transformed_point))[:, 0:3]
+        print("Point:" + str(transformed_point))
+
+        for i in range(fiducials.shape[0]):
+            squared = (fiducials[i][0] - transformed_point[0][0]) \
+                    * (fiducials[i][0] - transformed_point[0][0]) \
+                    + (fiducials[i][1] - transformed_point[0][1]) \
+                    * (fiducials[i][1] - transformed_point[0][1]) \
+                    + (fiducials[i][2] - transformed_point[0][2]) \
+                    * (fiducials[i][2] - transformed_point[0][2])
+            distance = np.sqrt(squared)
+            print("Point:" + str(i)
+                  + ", fiducial=" + str(fiducials[i])
+                  + ", distance=" + str(distance)
+                  )
