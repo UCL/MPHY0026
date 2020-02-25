@@ -69,7 +69,7 @@ def main(args=None):
                         required=False,
                         help='Registration transformation.')
 
-    parser.add_argument("-f",
+    parser.add_argument("-fid",
                         "--fiducials",
                         required=False,
                         help='Fiducials.')
