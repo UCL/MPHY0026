@@ -119,6 +119,26 @@ the errors at a distance from a tool, e.g. endoscope [Shahidi2002]_.
 FRE And TRE Are Uncorrelated
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+* In [Fitzpatrick2009]_ Mike Fitzpatrick shows that FRE and TRE are uncorrelated
+* Proven mathematically, assuming independent Gaussian noise
+* Demonstrated in simulation
+
+Strong advice: Do not use FRE as an indicator of accuracy
+
+
+FRE And TRE Can Underestimate
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The above papers assume independent, Gaussian noise on fiducials.
+There is a body of work analysing PBR when the noise is not so:
+[Batchelor2000]_, [Wiles2008]_, [Moghari2009]_, [Danilchenko2010]_
+and also for tracking [Fitzpatrick2009]_ which is covered next week.
+
+* Nice illustration of clinical evaluation: [Shamir2009]_ from 2009.
+* Possibly underestimated due to non-Guassian effects
+* Illustrates how much work (15 years) done on PBR, and validation.
+
+
 Do Not Claim FRE as TRE
 ^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -126,11 +146,3 @@ Do Not Claim FRE as TRE
 * So, in practice you only have FLE and then FRE.
 * So you must report it as FRE. Not anything that sounds like TRE.
 * Don't say "The accuracy of my system is X" where X is in fact FRE.
-
-
-FRE And TRE Can Underestimate
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
-
-
