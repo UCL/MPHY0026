@@ -23,7 +23,7 @@ You may see:
 * IGT - Image-Guided Therapy
 * IGI - Image-Guided Interventions
 
-[ZivYaniv]_ has a few more! [I couldn't find them on this link though]
+`Ziv Yaniv`_ has a few more!
 
 
 Communities
@@ -69,9 +69,10 @@ Interventional Radiologists have been using image-guidance for decades to perfor
 a wide variety of `interventional procedures`_. These suite's typically
 have X-ray flouroscopy, Cone Beam CT etc.
 
-Interventional Radiologists routinely do image-guided procedures, but
-we (engineers) would not typically call them "Computer Assisted Interventions".[why not, 
-what is missing? - segmentation, registration, tracking?]
+Interventional Radiologists routinely do image-guided procedures, and
+they would call them "Image-Guided Interventions". However, engineers in
+the field of CAS/CAI may not call them "Computer Assisted Surgery"
+or "Computer Assisted Interventions", as there is no additional computer.
 
 
 Surgery + Imaging
@@ -118,3 +119,4 @@ Caveats
 .. _`Cardiac surgery operating room`: https://upload.wikimedia.org/wikipedia/commons/2/2e/Cardiac_surgery_operating_room.jpg
 .. _`a procedure involving cutting, or joining together a person's tissues`: https://en.wikipedia.org/wiki/Surgery
 .. _`interventional procedures`: https://en.wikipedia.org/wiki/Interventional_radiology
+.. _`Ziv Yaniv`: https://www.yanivresearch.info/casResearch.html
