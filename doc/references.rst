@@ -120,9 +120,14 @@ Essential
 
 .. [Conrad2016] Claudius Conrad, Matteo Fusaglia, Matthias Peterhans, Huanxiang Lu, Stefan Weber, Brice Gayet, **"Augmented Reality Navigation Surgery Facilitates Laparoscopic Rescue of Failed Portal Vein Embolization"** https://doi.org/10.1016/j.jamcollsurg.2016.06.392
 
+.. [Maurer1993] Maurer, Calvin, McCrory, Jennifer, Fitzpatrick, J. Michael, **"Estimation of accuracy in localizing externally attached markers in multimodal volume head images"**, http://dx.doi.org/10.1117/12.154535
+
+.. [Maurer1998] Calvin R. Maurer, Jr., J. Michael Fitzpatrick, Matthew Y. Wang, Robert L. Galloway, Jr., Robert J. Maciunas and George S. Allen, **"Registration of Head Volume Images Using Implantable Fiducial Markers"**, http://dx.doi.org/10.1109/42.611354
+
 .. [Fitzpatrick1998] J. Michael Fitzpatrick, Jay B. West, Calvin R. Maurer, Jr., **"Predicting Error in Rigid-Body Point-Based Registration"**, http://dx.doi.org/10.1109/42.736021
 
 .. [Fitzpatrick2001] J. Michael Fitzpatrick, Jay B. West, **"The Distribution of Target Registration Error in Rigid-Body Point-Based Registration"**, http://dx.doi.org/10.1109/42.952729
+
 
 Extras
 ^^^^^^
@@ -135,8 +140,9 @@ Extras
 
 .. [Danilchenko2010] A Danilchenko, JM Fitzpatrick, **"General approach to first-order error prediction in rigid point registration"** , https://doi.org/10.1109/TMI.2010.2091513
 
-.. [Thompson2013]  Stephen Thompson,Graeme Penney, Prokar Dasgupta, David Hawkes, **"Improved Modelling of Tool Tracking Errors by Modelling Dependent Marker Errors"**, https://doi.org/10.1109/TMI.2012.2216890
+.. [Thompson2013]  Stephen Thompson, Graeme Penney, Prokar Dasgupta, David Hawkes, **"Improved Modelling of Tool Tracking Errors by Modelling Dependent Marker Errors"**, https://doi.org/10.1109/TMI.2012.2216890
 
+.. [Fitzpatrick2009] Fitzpatrick, J. Michael, **"Fiducial registration error and target registration error are uncorrelated"**, http://dx.doi.org/10.1117/12.813601
 
 Surface-Based Registration
 --------------------------
@@ -178,6 +184,10 @@ Extras
 .. [Xiao2018] Guofang Xiao, Ester Bonmati, Stephen Thompson, Joe Evans, John Hipwell, Daniil Nikitichev, Kurinchi Gurusamy, Sébastien Ourselin, David J Hawkes, Brian Davidson, Matthew J Clarkson **"Electromagnetic tracking in image‐guided laparoscopic surgery: Comparison with optical tracking and feasibility study of a combined laparoscope and laparoscopic ultrasound system"**, https://doi.org/10.1002/mp.13210
 
 .. [Bonmati2017] Ester Bonmati, Yipeng Hu, Kurinchi Gurusamy, Brian Davidson, Stephen P. Pereira, Matthew J. Clarkson, Dean C. Barratt, **"Assessment of Electromagnetic Tracking Accuracy for Endoscopic Ultrasound"** http://dx.doi.org/10.1007/978-3-319-54057-3_4
+
+.. [West2004] Jay B. West and Calvin R. Maurer, Jr., **"Designing Optically Tracked Instruments for Image-Guided Surgery"**, http://dx.doi.org/10.1109/TMI.2004.825614
+
+.. [Shahidi2002] Ramin Shahidi, Michael R. Bax, Calvin R. Maurer, Jr., Jeremy A. Johnson, Eric P. Wilkinson, Bai Wang, Jay B. West, Martin J. Citardi, Kim H. Manwaring, and Rasool Khadem, **"Implementation, Calibration and Accuracy Testing of an Image-Enhanced Endoscopy System", http://dx.doi.org/10.1109/TMI.2002.806597
 
 
 Calibration
