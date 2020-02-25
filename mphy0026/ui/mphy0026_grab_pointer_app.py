@@ -62,6 +62,10 @@ def run_grab_pointer(tracker_type,
 
     counter = 0
     samples = np.ndarray((number_of_samples, 3))
+
+    print(f'Starting acquisition of {number_of_samples} \
+          points in {ms_per_loop / 1000} seconds...')
+
     while counter < number_of_samples:
         start = datetime.now()
 
