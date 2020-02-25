@@ -107,10 +107,10 @@ The main result of the paper was a formula to predict TRE from TRE:
 
 .. math::
 
-    E(TRE^2({\bf p}) = \frac{E(FRE^2)}{(n-2} \left 1 + \frac{1}{3} \sum_{i=1}^3 \frac{d_k^2}{f_k^2} \right
+    E(TRE^2({\bf p})) \approx \frac{E(FRE^2)}{(n-2)} \left( (1 + \frac{1}{3}) \sum_{i=1}^3 \frac{d_k^2}{f_k^2} \right)
 
-where :math:`{\bf p}` is a target point, :math:`d_k^2} the squared distance between the target
-and the :math:`k`th principal axis and :math:`f_k^2` is the mean squared distance between the fiducial
+where :math:`{\bf p}` is a target point, :math:`d_k^2` the squared distance between the target
+and the :math:`k` th principal axis and :math:`f_k^2` is the mean squared distance between the fiducial
 points and the same axis.
 
 The last formula is often used in designing optically tracked tools [West2004]_, and for estimating
