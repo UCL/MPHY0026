@@ -1,9 +1,16 @@
-#Python functions to support MedPhys Taught Module workshop on calibration and tracking
+"""Functions to support MedPhys Taught Module workshop on
+calibration and tracking
+"""
 
 import csv
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
+
+def _read_csv_text(csvfile):
+    skip_comments = lambda row: row[0] != '#'
+    return csv.reader(filter(skip_comments, csvfile), delimiter=" ")
+
 
 def load_intrinsic(filein):
     """
@@ -15,24 +22,25 @@ def load_intrinsic(filein):
     projection = np.zeros((1, 3))
     distortion = np.zeros((1, 5))
     with open(filein, 'rt') as csvfile:
-        reader = csv.reader(filter(lambda row: row[0]!='#', csvfile), delimiter=" ")
+        reader = _read_csv_test(csvfile)
         rownumber = 1
         for row in reader:
             #some files have blanks at the end of each line
             length = len(row)
-            if (rownumber < 4):
-                while(len(row) > 3):
+            if rownumber < 4:
+                while len(row) > 3:
                     row.pop()
             else:
-                while(len(row) > 5):
+                while len(row) > 5:
                     row.pop()
 
-            parsed_row = np.array([float (col) for col in row])
-            if (rownumber == 1):
+            parsed_row = np.array([float(col) for col in row])
+            if rownumber == 1:
                 projection = parsed_row
             else:
-                if ( rownumber < 4 ):
-                    projection = np.concatenate((projection, parsed_row), axis = 0)
+                if rownumber < 4:
+                    projection = np.concatenate((projection, parsed_row),
+                                                axis=0)
                 else:
                     distortion = parsed_row
             rownumber += 1
@@ -43,59 +51,65 @@ def load_intrinsic(filein):
     return (projection, distortion)
 
 
-def load_model_points(filein, offset = np.zeros((1,4))):
+def load_model_points(filein, offset=np.zeros((1, 4))):
     """
     loads a four column text file
     :params: filename, optional offset, which is subtracted from
     each row
     :return: array of points
     """
-    m = np.zeros((4))
-    with open(filein,'rt') as csvfile:
-        reader = csv.reader(filter(lambda row: row[0]!='#', csvfile), delimiter=" ")
+    model_points = np.zeros((4))
+    with open(filein, 'rt') as csvfile:
+        reader = _read_csv_text(csvfile)
         rownumber = 1
         for row in reader:
-            n = np.array([float (col) for col in row])
-            if ( n.shape[0] == offset.shape[0]):
-                n=np.subtract(n, offset)
-            if (rownumber == 1):
-                m = n
+            point = np.array([float(col) for col in row])
+            if point.shape[0] == offset.shape[0]:
+                point = np.subtract(point, offset)
+            if rownumber == 1:
+                model_points = point
             else:
-                m = np.concatenate((m, n), axis = 0)
+                model_points = np.concatenate((model_points, point), axis=0)
             rownumber += 1
 
-    cols = int(m.shape[0]/(rownumber -1 ))
+    cols = int(model_points.shape[0]/(rownumber - 1))
 
-    m = np.reshape(m, (rownumber-1, cols))
-    return m
+    model_points = np.reshape(model_points, (rownumber-1, cols))
+    return model_points
+
 
 def load_4x4_Matrix(filein):
-    m = np.zeros(( 1, 4))
+    """
+    matrix loader
+    :param: filename
+    :return: matrix
+    """
+    matrix = np.zeros((1, 4))
     with open(filein, 'rt') as csvfile:
-        reader = csv.reader(filter(lambda row: row[0]!='#', csvfile),
-			    delimiter=" ", skipinitialspace=True)
+        reader = _read_csv_text(csvfile)
         rownumber = 1
         for row in reader:
             #some files have blanks at the end of each line
-            while (len(row) > 4):
+            while len(row) > 4:
                 row.pop()
 
-            n = np.array([float (col) for col in row])
-            if (rownumber == 1):
-                m = n
+            mat_row = np.array([float(col) for col in row])
+            if rownumber == 1:
+                matrix = mat_row
             else:
-                m = np.concatenate((m, n), axis = 0)
+                matrix = np.concatenate((matrix, mat_row), axis=0)
             rownumber += 1
 
-    cols = int(m.shape[0]/(rownumber -1))
+    cols = int(matrix.shape[0]/(rownumber - 1))
 
-    m = np.reshape (m, (rownumber-1, cols))
-    return m
+    matrix = np.reshape(matrix, (rownumber - 1, cols))
+    return matrix
 
-def multiply_points_by_4x4 (points_in, matrix):
-    """Multiply a matrix of point vectors by 
+
+def multiply_points_by_4x4(points_in, matrix):
+    """Multiply a matrix of point vectors by
     a 4x4 matrix
-    :param: An n by 4 matrix of n points, the first 
+    :param: An n by 4 matrix of n points, the first
             column is the point ID
     :param: A 4x4 matrix
     :return: An n by 4 matrix of n transformed points
@@ -107,26 +121,33 @@ def multiply_points_by_4x4 (points_in, matrix):
     homegenous_pts = np.transpose(np.concatenate((points, ones), axis=1))
 
     hom_pts_out = np.transpose(np.matmul(matrix, homogenous_pts))
-    pts_out = hom_pts_out[:,0:3]
+    pts_out = hom_pts_out[:, 0:3]
     pts_out_with_id = np.concatenate((ids, pts_out), axis=1)
     return pts_out_with_id
 
 def project (lens3D, intrinsic):
-    #does the projection from 3D points relative to the lens to screen points
-    m = lens3D[:, 1:4]
-    rows = m.shape[0]
+    """
+    Projects 3D points relative to the lens to screen points
+    :param: n by 4 matrix n 3D in camera coordinates. First column is the
+            point ID
+    :param: the camera's intrinsic parameters
+    :return n by 3 matrix of 2D points on screen coordinates. First column
+            is the point ID
+    """
+    points_3d = lens3D[:, 1:4]
+    rows = points_3d.shape[0]
     ids = np.reshape(lens3D[:, 0], (rows, 1))
 
-    m = np.transpose(m)
-    m = np.divide(m, m[2,:])
-    m = np.transpose(np.matmul(intrinsic, m))
-    m = m[:, 0:2]
-    m = np.concatenate((ids,m), axis=1)
+    points_3d = np.transpose(points_3d)
+    normalised_points = np.divide(points_3d, points_3d[2, :])
+    projected_points = np.transpose(np.matmul(intrinsic, normalised_points))
+    projected_points = projected_points[:, 0:2]
+    projected_points_with_ids = np.concatenate((ids, projected_points), axis=1)
 
-    return m
+    return projected_points_with_ids
 
 
-def distort (lens3D, d):
+def distort(lens3D, d):
 
     m = lens3D[:,1:4]
     rows = m.shape[0]
