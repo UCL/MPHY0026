@@ -64,6 +64,16 @@ def main(args=None):
                         dest='mean',
                         action='store_true')
 
+    parser.add_argument("-reg",
+                        "--registration",
+                        required=False,
+                        help='Registration transformation.')
+
+    parser.add_argument("-f",
+                        "--fiducials",
+                        required=False,
+                        help='Fiducials.')
+
     version_string = __version__
     friendly_version_string = version_string if version_string else 'unknown'
     parser.add_argument(
@@ -80,5 +90,7 @@ def main(args=None):
                      args.fps,
                      args.number,
                      args.dump,
-                     args.mean
+                     args.mean,
+                     args.registration,
+                     args.fiducials
                      )
