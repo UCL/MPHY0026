@@ -49,7 +49,6 @@ Caveat:
 2. Locate 4 fiducials in order in Physical Space
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* The Pointer tip offset is at ``-17.91 0.95 -157.72``, and is stored in file ``tests\data\pelvis\optical-pointer-offset.txt``. You will learn pivot calibration next week.
 * Ensure the tracker is on
 * Place the pointer in the first fiducial, facing the tracker
 
@@ -59,23 +58,19 @@ Caveat:
 
   Figure 2: Placing optically tracked pointer in fiducial, facing tracker.
 
-* Use the command line tool to grab one point::
+Use the command line tool to grab record the location of the points::
 
-    python mphy0026_grab_pointer.py -t vega -p /c/Users/SmartLiver/SmartLiver/config/8700340.rom -o tests/data/pelvis/optical-pointer-offset.txt -f 1 -n 1 -d p1.txt
+    python mphy0026_grab_pointer.py -t vega -p /c/Users/SmartLiver/SmartLiver/config/8700340.rom -o tests/data/pelvis/optical-pointer-offset.txt -f 0.2 -n 4 -d tracker.txt
 
-i.e. 1 frame per second, and collect 1 sample, save to file ``p1.txt``.
+This will grab a frame every 5 seconds (fps of 0.2), allowing time to move the pointer to each fiducial in turn.
 
-* Grab 3 remaining points, saving each to a new file, e.g. ``p2.txt, p3.txt, p4.txt``
-* Concatenate all 4 points into a single file. In gitbash.exe that would be::
-
-    cat p1.txt p2.txt p3.txt p4.txt > tracker.txt
+N.B. The Pointer tip offset is at ``-17.91 0.95 -157.72``, and is stored in file ``tests\data\pelvis\optical-pointer-offset.txt``. You will learn pivot calibration next week.
 
 
 3. Register Physical Space to Image Space
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Given CT landmarks in a file called ``ct.txt`` and tracker landmarks in a file called ``tracker.txt``,
-you can compute Arun's method as::
+* Given CT landmarks in a file called ``ct.txt`` and tracker landmarks in a file called ``tracker.txt``, you can compute Arun's method as::
 
     python mphy0026_registration.py -f ct.txt -m tracker.txt -o tracker-to-ct-using-PBR.txt
 
@@ -87,7 +82,7 @@ Someone might move the phantom or tracker inbetween runs.)
 4. Display Registered CT scan With Pointer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* This can now be visualised::
+The registration can be used to visualise the CT at the pointer tip::
 
     python mphy0026_quadview.py -t vega -v tests/data/pelvis/pelvis_cropped.nii  -reg tracker-to-ct-using-PBR.txt -p /c/Users/SmartLiver/SmartLiver/config/8700340.rom -min 901 -max 1023 -o tests/data/pelvis/optical-pointer-offset.txt
 
@@ -132,15 +127,10 @@ So, if we want 900 points of data, at 30 frames per second that is about 30 seco
 7. Calculation of TRE
 ^^^^^^^^^^^^^^^^^^^^^
 
-* For PBR, this can be achieved by, registering using fewer points (3), and using the remaining point as a
-target.
-
+* For PBR, this can be achieved by, registering using fewer points (3), and using the remaining point as a target.
 * For ICP, as the fiducials are not used for registration, these can be used directly.
 * BUT - you ideally need to measure physical space, using an independent measure, eg. ruler.
-* If you take a CT fiducial position, and convert to tracker/physical space, and measure the distance
-from the predicted position to the actual position, you have also included CT FLE.
-
-(check this ... according to definition of TRE).
+* If you take a CT fiducial position, and convert to tracker/physical space, and measure the distance from the predicted position to the actual position, you have also included CT FLE. (Check this ... according to definition of TRE).
 
 8. Report Back
 ^^^^^^^^^^^^^^
