@@ -60,7 +60,7 @@ Caveat:
 
 Use the command line tool to grab record the location of the points::
 
-    python mphy0026_grab_pointer.py -t vega -p /c/Users/SmartLiver/SmartLiver/config/8700340.rom -o tests/data/pelvis/optical-pointer-offset.txt -f 0.2 -n 4 -d tracker.txt
+    python mphy0026_grab_pointer.py -t vega -p tests/data/pelvis/8700340.rom -o tests/data/pelvis/optical-pointer-offset.txt -f 0.2 -n 4 -d tracker.txt
 
 This will grab a frame every 5 seconds (fps of 0.2), allowing time to move the pointer to each fiducial in turn.
 
