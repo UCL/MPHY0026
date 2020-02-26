@@ -41,7 +41,7 @@ Segmentation
 .. figure:: segmentation_example.png
   :width: 50%
 
-  Figure 1: Data from CT scans can be converted to triangle meshes and rendered. This example produced by `Visible Patient <https://www.visiblepatient.com/en/>`_.
+  Data from CT scans can be converted to triangle meshes and rendered. This example produced by `Visible Patient <https://www.visiblepatient.com/en/>`_.
 
 In this course we will cover:
 
@@ -55,7 +55,7 @@ Tracking / Calibration
 .. figure:: smart_liver_vis_1.png
   :width: 50%
 
-  Figure 2: Atracsys (top) and NDI Polaris Veiga (bottom) optical trackers.
+  Atracsys (top) and NDI Polaris Veiga (bottom) optical trackers.
 
 In this course we will cover:
 
@@ -71,7 +71,7 @@ Registration
 .. figure:: smart_liver_vis_1.png
   :width: 50%
 
-  Figure 3: Registration is aligning various images. Here a pre-operative model is aligned to intra-operative laparoscopic video.
+  Registration is aligning various images. Here a pre-operative model is aligned to intra-operative laparoscopic video.
 
 
 Visualisation
@@ -82,7 +82,7 @@ Visualisation
 .. figure:: smart_liver_vis_2.png
   :width: 50%
 
-  Figure 4: Examples of Visualisations from the SmartLiver project. (top) Wireframe and too many meshes is confusing. (bottom) We experimented with depth fogging and outlines.
+  Examples of Visualisations from the SmartLiver project. (top) Wireframe and too many meshes is confusing. (bottom) We experimented with depth fogging and outlines.
 
 
 User Interface
@@ -93,7 +93,7 @@ User Interface
 .. figure:: smart_liver_gui_v2.png
   :width: 50%
 
-  Figure 5: Examples of User Interfaces from the SmartLiver project. (top) Desktop application was not very suitable for the OR. (bottom) Complexity was reduced over time to improve usability, and to work on a touchscreen.
+  Examples of User Interfaces from the SmartLiver project. (top) Desktop application was not very suitable for the OR. (bottom) Complexity was reduced over time to improve usability, and to work on a touchscreen.
 
 
 A System-Wide Approach

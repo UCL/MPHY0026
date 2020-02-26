@@ -38,7 +38,7 @@ First X-ray Guidance
   :alt: First medical X-ray by Wilhelm Röntgen of his wife Anna Bertha Ludwig's hand
   :width: 600
 
-  Figure: First medical X-ray by Wilhelm Röntgen of his wife Anna Bertha Ludwig's hand, Wilhelm Röntgen. [Public domain], from Wikimedia.
+  The first medical X-ray by Wilhelm Röntgen of his wife Anna Bertha Ludwig's hand, Wilhelm Röntgen. [Public domain], from Wikimedia.
 
 11th Jan **1896** - the first clinical use of X-rays by `John Hall-Edwards`_, Birmingham, UK, to remove a needle from a hand (Wikipedia).
 
@@ -56,7 +56,7 @@ Stereotactic Surgery
   :alt: Stereotaxic apparatus used by Sir Victor Horsley and Richard Clarke. Made by Swift and Son, London, c1905
   :width: 600
 
-  Figure: Stereotactic apparatus used by Sir Victor Horsley and Richard Clarke. Made by Swift and Son, London, c1905, from sciencemuseumgroup.org.uk, licensed under `CC BY-NC 4.0`_.
+  Stereotactic apparatus used by Sir Victor Horsley and Richard Clarke. Made by Swift and Son, London, c1905, from sciencemuseumgroup.org.uk, licensed under `CC BY-NC 4.0`_.
 
 This led to other frames, using for example spherical coordinates:
 
