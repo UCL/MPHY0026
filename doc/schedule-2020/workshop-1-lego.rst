@@ -9,7 +9,7 @@ Assumes you have installed
 * `NiftyIGI.exe <https://github.com/NifTK/NifTK/releases>`_.
 * `MPHY0026 repo <https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026>`_.
 
-Note: all command line tools below respond to the ``--help`` argument to describe available options
+Note: all command line tools below should be run from the MPHY0026/ directory. Each program will respond to the ``--help`` argument to describe available options.
 
 
 1. Locate 5 fiducials in order in physical space
@@ -51,6 +51,7 @@ The registration can be used to visualise the CT at the pointer tip::
 
     python mphy0026_quadview.py -t aruco -v tests/data/lego/lego.nii  -reg tracker-to-ct-using-PBR.txt -p 0 -o tests/data/lego/aruco_pointer_offset.txt
 
+The depth (towards the camera) information for the Aruco tracker is less accurate that the x/y positions - this may be reflected in the registration accuracy.
 
 4. Grab Data for ICP
 ^^^^^^^^^^^^^^^^^^^^

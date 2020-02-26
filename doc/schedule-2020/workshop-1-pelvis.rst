@@ -9,7 +9,7 @@ Assumes you have installed
 * `NiftyIGI.exe <https://github.com/NifTK/NifTK/releases>`_.
 * `MPHY0026 repo <https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026>`_.
 
-Note: all command line tools below respond to the ``--help`` argument to describe available options
+Note: all command line tools below should be run from the MPHY0026/ directory. Each program will respond to the ``--help`` argument to describe available options.
 
 
 1. Locate 4 fiducials in order in CT
@@ -112,7 +112,7 @@ So, if we want 900 points of data, at 30 frames per second that is about 30 seco
 
     python mphy0026_registration.py -f tests/data/pelvis/pelvis_cropped_decimated.vtk -m surface.txt -o tracker-to-ct-using-ICP.txt
 
-* Look at the residual. Does it look high/low.
+* Look at the residual. Does it look high/low?
 * You could test the alignment, but using the ```tracker-to-ct-using-ICP.txt``` in place of the point-based one above.
 * Its probably bad due to poor initialisation.
 * So, use the Point-Based Registration to initialise::

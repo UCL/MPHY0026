@@ -9,7 +9,7 @@ Assumes you have installed
 * `NiftyIGI.exe <https://github.com/NifTK/NifTK/releases>`_.
 * `MPHY0026 repo <https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026>`_.
 
-Note: all command line tools below respond to the ``--help`` argument to describe available options
+Note: all command line tools below should be run from the MPHY0026/ directory. Each program will respond to the ``--help`` argument to describe available options.
 
 
 1. Locate 5 fiducials in order in Physical Space
@@ -22,7 +22,7 @@ Note: all command line tools below respond to the ``--help`` argument to describ
 .. figure:: workshop-1-skull-fiducials.png
   :width: 100%
 
-  Figure 2: Location of 5 fiducial markers to be used.
+  Figure 1: Location of 5 fiducial markers to be used.
 
 * Use the command line tool to record the location of the points::
 
