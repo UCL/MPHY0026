@@ -16,8 +16,7 @@ We will be tracking Aruco tags using a webcam. Before beginning, check the webca
 1. Locate 5 fiducials in order in physical space
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Ensure the tracker is on.
-* Place the pointer in the first fiducial.
+* Place the pointer on the first fiducial (The fiducial point is taken as the centre of the piece).
 
 .. figure:: workshop-1-lego-fiducials.png
   :width: 50%
