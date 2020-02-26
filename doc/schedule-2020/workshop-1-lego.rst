@@ -66,7 +66,7 @@ The same pointer program can also grab data for surface based registration using
 
 * The person dragging the pointer should not lift/remove from the surface, as the tracker will keep tracking.
 * If the tracker fails to detect the pointer (i.e. pointer is obscured), the output on console will stop, and data collection will stop.
-* Once complete, the file ``surface.txt`` should contain 900 rows of point data, representing the physical location of the surface.
+* Once complete, the file ``surface.txt`` should contain 500 rows of point data, representing the physical location of the surface.
 
 5. Register ICP data to VTK surface
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

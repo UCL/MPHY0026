@@ -70,9 +70,9 @@ N.B. The Pointer tip offset is at ``-17.91 0.95 -157.72``, and is stored in file
 3. Register Physical Space to Image Space
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Given CT landmarks in a file called ``ct.txt`` and tracker landmarks in a file called ``tracker.txt``, you can compute Arun's method as::
+* Given CT landmarks (use either the provided values, or the ones you collected) and tracker landmarks in a file called ``tracker.txt``, you can compute Arun's method as::
 
-    python mphy0026_registration.py -f ct.txt -m tracker.txt -o tracker-to-ct-using-PBR.txt
+    python mphy0026_registration.py -f tests/data/pelvis/pelvis_cropped_ct_fiducial_markers.txt -m tracker.txt -o tracker-to-ct-using-PBR.txt
 
 The program reports FRE, which typically should be < 1, mostly < 0.75
 
@@ -84,7 +84,7 @@ Someone might move the phantom or tracker inbetween runs.)
 
 The registration can be used to visualise the CT at the pointer tip::
 
-    python mphy0026_quadview.py -t vega -v tests/data/pelvis/pelvis_cropped.nii  -reg tracker-to-ct-using-PBR.txt -p /c/Users/SmartLiver/SmartLiver/config/8700340.rom -min 901 -max 1023 -o tests/data/pelvis/optical-pointer-offset.txt
+    python mphy0026_quadview.py -t vega -v tests/data/pelvis/pelvis_cropped.nii  -reg tracker-to-ct-using-PBR.txt -p tests/data/pelvis/8700340.rom -min 901 -max 1023 -o tests/data/pelvis/optical-pointer-offset.txt
 
 
 5. Grab Data for ICP
@@ -99,7 +99,7 @@ So, if we want 900 points of data, at 30 frames per second that is about 30 seco
 * Place the pointer on the pelvis phantom.
 * Start grabbing data::
 
-    python mphy0026_grab_pointer.py -t vega -p /c/Users/SmartLiver/SmartLiver/config/8700340.rom -o tests/data/pelvis/optical-pointer-offset.txt  -f 30 -n 900 -d surface.txt
+    python mphy0026_grab_pointer.py -t vega -p tests/data/pelvis/8700340.rom -o tests/data/pelvis/optical-pointer-offset.txt  -f 30 -n 900 -d surface.txt
 
 * The person dragging the pointer should not lift/remove from the surface, as the tracker will keep tracking.
 * If the tracker fails to detect the pointer (i.e. pointer is obscured), the output on console will stop, and data collection will stop.
@@ -119,7 +119,10 @@ So, if we want 900 points of data, at 30 frames per second that is about 30 seco
 
     python mphy0026_registration.py -f tests/data/pelvis/pelvis_cropped_decimated.vtk -m surface.txt -o tracker-to-ct-using-ICP.txt -i tracker-to-ct-using-PBR.txt
 
-* The residual should be much lower, and you can re-run the quad viewer to confirm its registered.
+* The residual should be much lower, and you can re-run the quad viewer to confirm its registered::
+	
+	python mphy0026_quadview.py -t vega -v tests/data/pelvis/pelvis_cropped.nii  -reg tracker-to-ct-using-ICP.txt -p tests/data/pelvis/8700340.rom -min 901 -max 1023 -o tests/data/pelvis/optical-pointer-offset.txt
+
 * Repeat, using much fewer points?
 * Repeat, using points from a very flat/boring/planar area of the phantom?
 * Repeat, manually jittering the pointer up and down, to simulate poor data. When does registration fail?
@@ -130,7 +133,7 @@ So, if we want 900 points of data, at 30 frames per second that is about 30 seco
 * For PBR, this can be achieved by, registering using fewer points (3), and using the remaining point as a target.
 * For ICP, as the fiducials are not used for registration, these can be used directly.
 * BUT - you ideally need to measure physical space, using an independent measure, eg. ruler.
-* If you take a CT fiducial position, and convert to tracker/physical space, and measure the distance from the predicted position to the actual position, you have also included CT FLE. (Check this ... according to definition of TRE).
+* If you take a CT fiducial position, and convert to tracker/physical space, and measure the distance from the predicted position to the actual position, you have also included CT FLE.
 
 8. Report Back
 ^^^^^^^^^^^^^^
