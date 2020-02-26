@@ -48,7 +48,7 @@ In groups of 1,2,3, take a skim through the following papers and identify:
 * the clinical need
 * the engineering solution
 * the component parts
-* coordinate systems
+* coordinate systems (if you don't know what that is yet, skip it).
 
 What do the papers say about system accuracy, and how is accuracy measured.
 Other considerations should include the types of images used for guidance,
@@ -76,6 +76,7 @@ Pre-op data On Video
 --------------------
 
 [Prevost2019]_: The CASCination system. Similarly, [Thompson2015]_, with the UCL SmartLiver system, for laparoscopic liver surgery.
+Here the CASCination paper is better for clinical pictures, but the Thompson paper shows the coordinate systems.
 
 See also: :ref:`additional_resources:Examples - Liver Ablation`
 
