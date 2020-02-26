@@ -1,4 +1,4 @@
-. _Definitions:
+.. _Definitions:
 
 Definitions
 ===========
@@ -16,12 +16,14 @@ Upon completion of this section, the student will be able to
 
 Nomenclature
 ------------
+* CAI - Computer Assisted Interventions
+*  US - Ultrasound
 
 (previous)
 
 * CAS - Computer Assisted Surgery
 * DOF - Degrees-of-freedom
-* CAI - Computer Assisted Interventions
+
 * IGS - Image-Guided Surgery
 * IGT - Image-Guided Therapy
 * IGI - Image-Guided Interventions
