@@ -13,7 +13,12 @@ Examples
 
   Figure 1: (top) At least 3 points are selected in pre-operative data such as MR/CT. (bottom) The same 3 points are measured in physical space, using a coordinate measuring device, such as a tracker.
 
-* :ref:`additional_resources:Examples - Image-Guided Surgery for Brain Tumours`
+Another example from youtube:
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/_BFTK6LWH5g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 * [Prevost2019]_: CASCination system uses long pointer, 4 points on liver - see `supplementary material <https://www.journalacs.org/cms/10.1016/j.jamcollsurg.2016.06.392/attachment/a000fb26-217c-481e-a7e6-4b0a2e826b5c/mmc1.mp4>`_ in [Conrad2016]_, namely left/middle hepatic vein drainage, main portcal vein drainage, insertion of fulsiform ligament, insertion of gallbladder dome.
 
 
@@ -43,8 +48,8 @@ Fiducial marker types
 
 Accuracy is determined by the fiducial marker type, and the ability to accurately measure it in the OR.
 
-* Bone implanted screws, detachable heads
-* `Stick on markers <https://izimed.com/products/multi-modality-markers>`
+* Bone implanted screws, detachable heads. See [Maurer1998]_.
+* `Stick on markers <https://izimed.com/products/multi-modality-markers>`, seen in Mock OR, in Workshop 1.
 * Bite-blocks [Edwards2000]_
 
 

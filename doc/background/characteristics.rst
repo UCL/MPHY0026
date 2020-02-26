@@ -3,8 +3,6 @@
 Characteristics Of The Field
 ============================
 
-Learning Objectives
--------------------
 
 Mental Exercise / Discussion
 ----------------------------

@@ -10,13 +10,19 @@ It is essential to understand the key registration methods for CAS,
 and also have an understanding of some of the large body of work done
 in quantifying the likely error of registration.
 
-* ToDo
+Upon completion of this section, the student will be able to:
+
+* Understand what a coordinate system is
+* Sketch the main coordinate systems in a CAS system
+* Implement coordinate conversions using 4x4 homogeneous transformations
+* Recall the main registration methods
+* Understand the challenges when registering to physical space
 
 
 Introduction
 ------------
 
-Registration is the process of aligning two Coordinate systems. See :ref:`Notebooks`.
+Registration is the process of aligning two Coordinate Systems. See :ref:`Notebooks`.
 
 
 Medical Image Computing
@@ -24,6 +30,8 @@ Medical Image Computing
 
 This example may be more familiar to you if you have done the `IPMI`_ course.
 In medical imaging terms, registration is often done to align image-volumes, e.g. MR/CT
+
+Like in this example:
 
 .. raw:: html
 

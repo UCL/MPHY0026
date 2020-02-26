@@ -21,7 +21,13 @@ so that it aligns with the intra-operative scene, e.g. live video.
 
 in the root of the MPHY0026 (i.e. this course) git repo.
 
-* Or see: :ref:`additional_resources:Examples: Manual Alignment, CT to Tracker`
+Or, see Manual Alignment done with SmartLiver:
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/-12OjjU2i9E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Discussion - how usable is it?
 
 
 Papers
@@ -55,4 +61,4 @@ Cons:
 Accuracy:
 
 * Depends on anatomy and user interface, and user
-* e.g. 10-20mm is not uncommon
+* e.g. 10-20mm is not uncommon with deformable anatomy, maybe < 5 with neuro?
