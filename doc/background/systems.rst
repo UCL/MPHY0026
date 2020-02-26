@@ -14,8 +14,36 @@ Upon completion of this section, the student will
 Introduction
 ------------
 
-In this section, we walk through some specifically chosen papers, and
-identify:
+In this section, we skim through some specifically chosen papers
+to further understand some systems that have been developed
+for CAS.
+
+First though, Prof. Terry Peters gives examples from the Image-Guided Surgery Lab:
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FQEluqyR-SY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+Pointer-Based 4 Quadrant View
+-----------------------------
+
+The 4-quadrant view with a pointer is the classic implementation of image-guidance, see [Galloway1993]_.
+
+To see this in action:
+
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/_BFTK6LWH5g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+By the end of Lecture 1, and Workshop 1, we will build our own!
+
+
+Classroom Exercise
+------------------
+
+In groups of 1,2,3, take a skim through the following papers and identify:
 
 * the clinical need
 * the engineering solution
@@ -23,18 +51,11 @@ identify:
 * coordinate systems
 
 What do the papers say about system accuracy, and how is accuracy measured.
-Other considerations should include the types of images used for guidance, 
-how the images are displayed to the surgeon, and how the user/surgeon 
+Other considerations should include the types of images used for guidance,
+how the images are displayed to the surgeon, and how the user/surgeon
 interacts with the system.
 
-See `Terry Peters <http://www.robarts.ca/terry-peters>`_ explaining :ref:`additional_resources:What is Image-Guided Surgery?`,
-by way of some examples.
-
-Pointer-Based 4 Quadrant View
------------------------------
-
-See classic papers such as [Galloway1993]_.
-For an up-to-date example, see: :ref:`additional_resources:Examples - Image-Guided Surgery for Brain Tumours`.
+Gather round and present a summary to each other.
 
 
 Ultrasound On Video
