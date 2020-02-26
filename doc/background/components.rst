@@ -52,12 +52,12 @@ In this course we will cover:
 Tracking / Calibration
 ----------------------
 
-.. figure:: optical_trackers.png
+.. figure:: optical_trackers.jpg
   :width: 50%
 
   Atracsys (top) and NDI Polaris Veiga (bottom) optical trackers.
 
-.. figure:: em_tracker.png
+.. figure:: em_tracker.jpg
   :width: 50%
 
   NDI Aurora Tracker: Left-to-right: System Control Unit, Sensor Interface Unit, Pointer, Field Generator.
