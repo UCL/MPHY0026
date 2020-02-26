@@ -11,7 +11,7 @@ Assumes you have installed
 
 Note: all command line tools below respond to the ``--help`` argument to describe available options
 
-
+We will be tracking Aruco tags using a webcam. Before beginning, check the webcam positioning to ensure that the Aruco tag is visble when probing the phantom.	
 1. Locate 5 fiducials in order in physical space
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -29,17 +29,17 @@ Note: all command line tools below respond to the ``--help`` argument to describ
 
 This will grab a frame every 5 seconds (fps of 0.2), allowing time to move the pointer to each fiducial in turn.
 
-N.B. The Pointer tip offset is at ``-154.43 -24.17 3.14``, and is stored in file ``tests\data\lego\aruco_pointer_offset.txt``. This has been obatined by pivot calibration, which will be covered in next week's materials.
+N.B. The Pointer tip offset is at ``-154.43 -24.17 3.14``, and is stored in file ``tests\data\lego\aruco_pointer_offset.txt``. This has been obtained by pivot calibration, which will be covered in next week's materials.
 
 
 2. Register Physical Space to Image Space
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The ct fiducial positions are provided in `tests\data\lego\ct_fiducials.txt`
+The ct fiducial positions are provided in ``tests/data/lego/ct_fiducials.txt``
 
 You can compute a point based registration using Arun's method::
 
-    python mphy0026_registration.py -f tests/data/lego/ct_fiducials.txt -m tracker.txt -o tracker-to-ct-using-PBR.txt
+    python mphy0026_registration.py -f tests/data/lego/lego_ct_fiducials.txt -m tracker.txt -o tracker-to-ct-using-PBR.txt
 
 (Note: CT points can be saved for later use. Physical space points cannot.
 Someone might move the phantom or tracker inbetween runs.)
@@ -55,20 +55,18 @@ The registration can be used to visualise the CT at the pointer tip::
 4. Grab Data for ICP
 ^^^^^^^^^^^^^^^^^^^^
 
-The same pointer program can also grab data for surface based registration using ICP. We will grab 10 fps from the Aruco tracker.
-
-So, if we want 500 points of data, at 10 frames per second that is 50 seconds of data collection.
+The same pointer program can also grab data for surface based registration using ICP. We will grab 500 frames at 10 fps from the Aruco tracker.
 
 * Assign 1 person to be dragging the pointer.
 * Place the pointer on the phantom.
 * Any movement of the phantom during collection will result in larger errors.
 * Start grabbing data::
 
-    python mphy0026_grab_pointer.py -t aruco -p 0 -o tests/data/legol/aruco_pointer_offset.txt  -f 10 -n 500 -d surface.txt
+    python mphy0026_grab_pointer.py -t aruco -p 0 -o tests/data/lego/aruco_pointer_offset.txt  -f 10 -n 500 -d surface.txt
 
 * The person dragging the pointer should not lift/remove from the surface, as the tracker will keep tracking.
 * If the tracker fails to detect the pointer (i.e. pointer is obscured), the output on console will stop, and data collection will stop.
-* Once complete, the file ``surface.txt`` should contain 900 rows of point data, representing the physical location of the surface.
+* Once complete, the file ``surface.txt`` should contain 500 rows of point data, representing the physical location of the surface.
 
 5. Register ICP data to VTK surface
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -84,7 +82,9 @@ So, if we want 500 points of data, at 10 frames per second that is 50 seconds of
 
     python mphy0026_registration.py -f tests/data/lego/lego.vtk -m surface.txt -o tracker-to-ct-using-ICP.txt -i tracker-to-ct-using-PBR.txt
 
-* The residual should be much lower, and you can re-run the quad viewer to confirm its registered.
+* The residual should be much lower, and you can re-run the quad viewer (with the new registration file) to confirm its registered::
+    python mphy0026_quadview.py -t aruco -v tests/data/lego/lego.nii  -reg tracker-to-ct-using-ICP.txt -p 0 -o tests/data/lego/aruco_pointer_offset.txt
+
 * Repeat, using much fewer points?
 * Repeat, using points from a very flat/boring/planar area of the phantom?
 * Repeat, manually jittering the pointer up and down, to simulate poor data. When does registration fail?

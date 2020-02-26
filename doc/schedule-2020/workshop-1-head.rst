@@ -9,7 +9,7 @@ Assumes you have installed
 * `NiftyIGI.exe <https://github.com/NifTK/NifTK/releases>`_.
 * `MPHY0026 repo <https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026>`_.
 
-Note: all command line tools below respond to the ``--help`` argument to describe available options
+Note: all command line tools below should be run from the MPHY0026/ directory. Each program will respond to the ``--help`` argument to describe available options.
 
 
 1. Locate 5 fiducials in order in Physical Space
@@ -22,7 +22,7 @@ Note: all command line tools below respond to the ``--help`` argument to describ
 .. figure:: workshop-1-skull-fiducials.png
   :width: 100%
 
-  Figure 2: Location of 5 fiducial markers to be used.
+  Figure 1: Location of 5 fiducial markers to be used.
 
 * Use the command line tool to record the location of the points::
 
@@ -35,7 +35,7 @@ N.B. The Pointer tip offset is at ``22.81 2.35 -4.51``, and is stored in file ``
 2. Register Physical Space to Image Space
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The ct fiducial positions are provided in `tests\data\skull\ct_fiducials.txt`
+The ct fiducial positions are provided in ``tests\data\skull\ct_fiducials.txt``
 
 You can compute a point based registration using Arun's method::
 
@@ -55,9 +55,7 @@ The registration can be used to visualise the CT at the pointer tip::
 4. Grab Data for ICP
 ^^^^^^^^^^^^^^^^^^^^
 
-The same pointer program can also grab data for surface based registration using ICP. We will grab 30 fps from the Aurora tracker.
-
-So, if we want 900 points of data, at 30 frames per second that is 30 seconds of data collection.
+The same pointer program can also grab data for surface based registration using ICP. We will grab 900 points at 30 fps from the Aurora tracker.
 
 * Assign 1 person to be dragging the pointer.
 * Place the pointer on the phantom.
@@ -67,7 +65,7 @@ So, if we want 900 points of data, at 30 frames per second that is 30 seconds of
     python mphy0026_grab_pointer.py -t aurora -p 0 -o tests/data/skull/em_pointer_offset.txt  -f 30 -n 900 -d surface.txt
 
 * The person dragging the pointer should not lift/remove from the surface, as the tracker will keep tracking.
-* If the tracker fails to detect the pointer (i.e. pointer is obscured), the output on console will stop, and data collection will stop.
+* If the tracker fails to detect the pointer (i.e. pointer is obscured), the output on console will stop, and data collection will stop. The Aurora tracker has a fixed 'field of view' around the base station.
 * Once complete, the file ``surface.txt`` should contain 900 rows of point data, representing the physical location of the surface.
 
 5. Register ICP data to VTK surface
@@ -84,7 +82,8 @@ So, if we want 900 points of data, at 30 frames per second that is 30 seconds of
 
     python mphy0026_registration.py -f tests/data/skull/skull.vtk -m surface.txt -o tracker-to-ct-using-ICP.txt -i tracker-to-ct-using-PBR.txt
 
-* The residual should be much lower, and you can re-run the quad viewer to confirm its registered.
+* The residual should be much lower, and you can re-run the quad viewer to confirm its registered::
+
 * Repeat, using much fewer points?
 * Repeat, using points from a very flat/boring/planar area of the phantom?
 * Repeat, manually jittering the pointer up and down, to simulate poor data. When does registration fail?
