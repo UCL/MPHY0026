@@ -11,7 +11,8 @@ Assumes you have installed
 
 Note: all command line tools below respond to the ``--help`` argument to describe available options
 
-We will be tracking Aruco tags using a webcam. Before beginning, check the webcam positioning to ensure that the Aruco tag is visble when probing the phantom.	
+We will be tracking Aruco tags using a webcam. Before beginning, check the webcam positioning to ensure that the Aruco tag is visible when probing the phantom.
+
 1. Locate 5 fiducials in order in physical space
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -83,6 +84,7 @@ The same pointer program can also grab data for surface based registration using
     python mphy0026_registration.py -f tests/data/lego/lego.vtk -m surface.txt -o tracker-to-ct-using-ICP.txt -i tracker-to-ct-using-PBR.txt
 
 * The residual should be much lower, and you can re-run the quad viewer (with the new registration file) to confirm its registered::
+
     python mphy0026_quadview.py -t aruco -v tests/data/lego/lego.nii  -reg tracker-to-ct-using-ICP.txt -p 0 -o tests/data/lego/aruco_pointer_offset.txt
 
 * Repeat, using much fewer points?
@@ -92,7 +94,7 @@ The same pointer program can also grab data for surface based registration using
 6. Calculation of TRE
 ^^^^^^^^^^^^^^^^^^^^^
 
-* For PBR, this can be achieved by, registering using fewer points (3), and using the remaining point as a target.
+* For PBR, this can be achieved by, registering using fewer points (at least 3), and using the remaining point as a target.
 * For ICP, as the fiducials are not used for registration, these can be used directly.
 * BUT - you ideally need to measure physical space, using an independent measure, eg. ruler.
 * If you take a CT fiducial position, and convert to tracker/physical space, and measure the distance from the predicted position to the actual position, you have also included CT FLE.

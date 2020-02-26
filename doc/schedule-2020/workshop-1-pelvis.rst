@@ -24,7 +24,7 @@ Note: all command line tools below should be run from the MPHY0026/ directory. E
 
 2. Run NiftyIGI.exe (or similar medical image viewer of your choice).
 3. Load the image ``tests\data\pelvis\pelvis_cropped.nii``
-4. Adjust the window/level (right hand, vertical slider), to get a good contrast, write these numbers for later, e.g. 962, 122. Remember this is Level/Window, convert to Min/Max.
+4. Adjust the window/level (right hand, vertical slider), to get a good contrast, write these numbers for later, e.g. 962, 122. These are is Level/Window. Convert to Min/Max.
 5. Write down the 3D location (look on bottom status bar), of each of 4 points in order.
 
 .. figure:: workshop-1-pelvis-NiftyIGI.png
@@ -130,7 +130,7 @@ So, if we want 900 points of data, at 30 frames per second that is about 30 seco
 7. Calculation of TRE
 ^^^^^^^^^^^^^^^^^^^^^
 
-* For PBR, this can be achieved by, registering using fewer points (3), and using the remaining point as a target.
+* For PBR, this can be achieved by, registering using fewer points (at least 3), and using the remaining point as a target.
 * For ICP, as the fiducials are not used for registration, these can be used directly.
 * BUT - you ideally need to measure physical space, using an independent measure, eg. ruler.
 * If you take a CT fiducial position, and convert to tracker/physical space, and measure the distance from the predicted position to the actual position, you have also included CT FLE.

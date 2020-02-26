@@ -1,7 +1,7 @@
 .. _Workshop1Head:
 
 Workshop 1: UCL Skull Phantom, EM Tracker, Windows
-========================================================
+==================================================
 
 Assumes you have installed
 
@@ -30,19 +30,20 @@ Note: all command line tools below should be run from the MPHY0026/ directory. E
 
 This will grab a frame every 5 seconds (fps of 0.2), allowing time to move the pointer to each fiducial in turn.
 
-N.B. The Pointer tip offset is at ``22.81 2.35 -4.51``, and is stored in file ``tests\data\skull\em-pointer-offset.txt``. This has been obatined by pivot calibration, which will be covered in next week's materials.
+N.B. The Pointer tip offset is at ``22.81 2.35 -4.51``, and is stored in file ``tests\data\skull\em-pointer-offset.txt``. This has been obtained by pivot calibration, which will be covered in next week's materials.
 
 2. Register Physical Space to Image Space
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The ct fiducial positions are provided in ``tests\data\skull\ct_fiducials.txt``
+The CT fiducial positions are provided in ``tests\data\skull\ct_fiducials.txt``
 
 You can compute a point based registration using Arun's method::
 
     python mphy0026_registration.py -f tests/data/skull/ct_fiducials.txt -m tracker.txt -o tracker-to-ct-using-PBR.txt
 
+
 (Note: CT points can be saved for later use. Physical space points cannot.
-Someone might move the phantom or tracker inbetween runs.)
+Someone might move the phantom or tracker invbetween runs.)
 
 3. Display Registered CT scan With Pointer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -82,7 +83,7 @@ The same pointer program can also grab data for surface based registration using
 
     python mphy0026_registration.py -f tests/data/skull/skull.vtk -m surface.txt -o tracker-to-ct-using-ICP.txt -i tracker-to-ct-using-PBR.txt
 
-* The residual should be much lower, and you can re-run the quad viewer to confirm its registered::
+* The residual should be much lower, and you can re-run the quad viewer to confirm its registered.
 
 * Repeat, using much fewer points?
 * Repeat, using points from a very flat/boring/planar area of the phantom?
@@ -91,7 +92,7 @@ The same pointer program can also grab data for surface based registration using
 6. Calculation of TRE
 ^^^^^^^^^^^^^^^^^^^^^
 
-* For PBR, this can be achieved by, registering using fewer points (3), and using the remaining point as a target.
+* For PBR, this can be achieved by, registering using fewer points (at least 3), and using the remaining point as a target.
 * For ICP, as the fiducials are not used for registration, these can be used directly.
 * BUT - you ideally need to measure physical space, using an independent measure, eg. ruler.
 * If you take a CT fiducial position, and convert to tracker/physical space, and measure the distance from the predicted position to the actual position, you have also included CT FLE.
