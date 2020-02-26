@@ -84,11 +84,14 @@ Frameless Stereotaxy
 So, the advent of CT scanning in the 1970s and the modern PC in the 1980s led to the concept of frameless stereotaxy [PetersCleary2010]_,
 first in the operating microscope [Roberts1986]_ and then with a mechanical arm for a tracker, with the display using the a 4-quadrant view [Galloway1993]_.
 
+In this course, we will build a tracked pointer, 4 quadrant view for image-guided surgery in :ref:`Workshop1`.
 
 Surgical Planning
 -----------------
 
-Pioneered by Terry Peters et al. [Peters1987]_, [Peters1989]_.
+Pioneered by Terry Peters et al. [Peters1987]_, [Peters1989]_. The aim here was to integrate
+multi-modality imaging (MR/CT/DSA) via fiducials visible in each image, and also to provide
+a stereoscopic display for better visualisation of DSA.
 
 .. _`John Hall-Edwards`: https://en.wikipedia.org/wiki/John_Hall-Edwards
 .. _`Röntgen`: https://en.wikipedia.org/wiki/Wilhelm_R%C3%B6ntgen
