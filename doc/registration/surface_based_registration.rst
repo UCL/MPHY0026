@@ -9,7 +9,16 @@ Examples
 Watch 2 videos:
 
 * :ref:`additional_resources:Examples - Medtronic Registration` for neurosurgery
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/s0HoK5J1_-g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 * :ref:`additional_resources:Examples - Surface Registration with Pathfinder`
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/vxd145vVknk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Surface Reconstruction Methods:
 
@@ -73,6 +82,9 @@ Worse case performance, finding the closest point is :math:`O(N_p * N_x)`.
 * Parallelism (OpenMP)
 * Faster point search - :ref:`additional_resources:Algorithm - K-D Tree`, mentioned in [Zhang1994]_ who also proposed ICP.
 
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/TLxWtXEbtFE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 

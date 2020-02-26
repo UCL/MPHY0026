@@ -15,6 +15,8 @@ Upon completion of this section, the student will be able to:
 * Understand what a coordinate system is
 * Sketch the main coordinate systems in a CAS system
 * Implement coordinate conversions using 4x4 homogeneous transformations
+* Recall the main registration methods
+* Understand the challenges when registering to physical space
 
 
 Introduction
