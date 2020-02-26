@@ -22,11 +22,10 @@ def load_intrinsic(filein):
     projection = np.zeros((1, 3))
     distortion = np.zeros((1, 5))
     with open(filein, 'rt') as csvfile:
-        reader = _read_csv_test(csvfile)
+        reader = _read_csv_text(csvfile)
         rownumber = 1
         for row in reader:
             #some files have blanks at the end of each line
-            length = len(row)
             if rownumber < 4:
                 while len(row) > 3:
                     row.pop()
@@ -48,14 +47,13 @@ def load_intrinsic(filein):
     projection = np.reshape(projection, (3, 3))
     distortion = np.reshape(distortion, (1, 5))
 
-    return (projection, distortion)
+    return projection, distortion
 
 
-def load_model_points(filein, offset=np.zeros((1, 4))):
+def load_model_points(filein):
     """
     loads a four column text file
-    :params: filename, optional offset, which is subtracted from
-    each row
+    :params: filename
     :return: array of points
     """
     model_points = np.zeros((4))
@@ -64,8 +62,6 @@ def load_model_points(filein, offset=np.zeros((1, 4))):
         rownumber = 1
         for row in reader:
             point = np.array([float(col) for col in row])
-            if point.shape[0] == offset.shape[0]:
-                point = np.subtract(point, offset)
             if rownumber == 1:
                 model_points = point
             else:
@@ -78,7 +74,7 @@ def load_model_points(filein, offset=np.zeros((1, 4))):
     return model_points
 
 
-def load_4x4_Matrix(filein):
+def load_matrix(filein):
     """
     matrix loader
     :param: filename
@@ -106,7 +102,7 @@ def load_4x4_Matrix(filein):
     return matrix
 
 
-def multiply_points_by_4x4(points_in, matrix):
+def multiply_points_by_matrix(points_in, matrix):
     """Multiply a matrix of point vectors by
     a 4x4 matrix
     :param: An n by 4 matrix of n points, the first
@@ -114,18 +110,18 @@ def multiply_points_by_4x4(points_in, matrix):
     :param: A 4x4 matrix
     :return: An n by 4 matrix of n transformed points
     """
-    points = pointsin[:, 1:4]
+    points = points_in[:, 1:4]
     rows = points.shape[0]
     ids = np.reshape(points_in[:, 0], (rows, 1))
     ones = np.reshape(np.ones(rows), (rows, 1))
-    homegenous_pts = np.transpose(np.concatenate((points, ones), axis=1))
+    homogenous_pts = np.transpose(np.concatenate((points, ones), axis=1))
 
     hom_pts_out = np.transpose(np.matmul(matrix, homogenous_pts))
     pts_out = hom_pts_out[:, 0:3]
     pts_out_with_id = np.concatenate((ids, pts_out), axis=1)
     return pts_out_with_id
 
-def project (lens3D, intrinsic):
+def project(lens_3d, intrinsic):
     """
     Projects 3D points relative to the lens to screen points
     :param: n by 4 matrix n 3D in camera coordinates. First column is the
@@ -134,9 +130,9 @@ def project (lens3D, intrinsic):
     :return n by 3 matrix of 2D points on screen coordinates. First column
             is the point ID
     """
-    points_3d = lens3D[:, 1:4]
+    points_3d = lens_3d[:, 1:4]
     rows = points_3d.shape[0]
-    ids = np.reshape(lens3D[:, 0], (rows, 1))
+    ids = np.reshape(lens_3d[:, 0], (rows, 1))
 
     points_3d = np.transpose(points_3d)
     normalised_points = np.divide(points_3d, points_3d[2, :])
@@ -146,66 +142,83 @@ def project (lens3D, intrinsic):
 
     return projected_points_with_ids
 
+def _distort_point(point, distortion):
+    """
+    Distorts a 2D point according to a five parameter distortion
+    :param: a 2D point
+    :param: a 1x5 distortion array [r1, r2, t1, t3, r3]
+    :return: the distorted 2D point
+    """
+    radius = np.linalg.norm(point)
+    rfactor = 1 + distortion[0, 0] * radius**2 + \
+              distortion[0, 1] * radius**4 + \
+              distortion[0, 4] * radius**6
+    rdpixels = np.multiply(point[0:2], rfactor)
 
-def distort(lens3D, d):
+    twoponexy = point[0] * point[1] * 2 * distortion[0, 2]
+    twoptwoxy = point[0] * point[1] * 2 * distortion[0, 3]
+    xfactor = twoponexy + distortion[0, 3] * (radius**2 + 2 * point[0]**2)
+    yfactor = twoptwoxy + distortion[0, 2] * (radius**2 + 2 * point[1]**2)
 
-    m = lens3D[:,1:4]
-    rows = m.shape[0]
-    ids = np.reshape(lens3D[:,0], (rows,1))
-    m = np.transpose(m)
-    m = np.divide(m, m[2,:])
+    tdrdpixels = rdpixels + ([xfactor, yfactor])
 
-    r = np.linalg.norm(m[0:2,:], axis=0)
-    for row in range(0,rows):
-        rfactor = 1 + d[0,0] * r[row]**2 + d[0,1] * r[row]**4 + d[0,4] * r[row]**6
-        rdpixels = np.multiply(m[0:2,row],rfactor)
+    return tdrdpixels
 
-        twoponexy = m[0,row] * m[1,row] * 2 * d[0,2]
-        twoptwoxy = m[0,row] * m[1,row] * 2 * d[0,3]
-        xfactor = twoponexy + d[0,3]* ( r[row]**2 + 2* m[0,row]**2)
-        yfactor = twoptwoxy + d[0,2]* ( r[row]**2 + 2* m[1,row]**2)
+def distort(lens_3d, distortion):
+    """
+    Distorts a 2D point according to a five parameter distortion
+    :param: a 2D point
+    :param: a 1x5 distortion array [r1, r2, t1, t3, r3]
+    :return: the distorted 2D point
+    """
+    points = lens_3d[:, 1:4]
+    rows = points.shape[0]
+    ids = np.reshape(lens_3d[:, 0], (rows, 1))
+    points = np.transpose(points)
+    norm_points = np.divide(points, points[2, :])
 
-        tdrdpixels = rdpixels + ([xfactor,yfactor])
+    for row in range(0, rows):
+        norm_points[0:2, row] = _distort_point(norm_points[0:2, row],
+                                               distortion)
 
-        m[0:2,row]=tdrdpixels
+    distorted_points = np.transpose(norm_points)
+    return np.concatenate((ids, distorted_points), axis=1)
 
-    m = np.transpose(m)
-    m = np.concatenate((ids,m),axis=1)
 
-    return m
-
-def calculate_errors ( screenPoints , projectedPoints ):
-    screenRows=screenPoints.shape[0]
-    projectedRows=projectedPoints.shape[0]
-    deltas=np.zeros((screenRows,2))
+def calculate_errors(screen_points, projected_points):
+    """
+    Finds corresponding points in each input list, and
+    calculates the distances between each list
+    """
+    screen_rows = screen_points.shape[0]
+    projected_rows = projected_points.shape[0]
+    deltas = np.zeros((screen_rows, 2))
     count = 0
-    for srow in range (0,screenRows):
-        id=screenPoints[srow,0]
+    for srow in range(0, screen_rows):
+        point_id = screen_points[srow, 0]
         count += 1
-        for prow in range ( 0, projectedRows):
-            if ( id == projectedPoints[prow,0]):
-                deltas[srow,:] = np.subtract( screenPoints[srow,1:3] , projectedPoints[prow,1:3])
+        for prow in range(0, projected_rows):
+            if point_id == projected_points[prow, 0]:
+                deltas[srow, :] = np.subtract(screen_points[srow, 1:3],
+                                              projected_points[prow, 1:3])
                 break
-            if ( prow == projectedRows - 1 ):
-                print ( "NO MATCH for " , id )
+            if prow == projected_rows - 1:
+                print("NO MATCH for ", point_id)
 
     return deltas
 
 
-def plot_errors (imageFileName, projectedPoints, screenPoints, cropToImage = True):
-    img = mpimg.imread(imageFileName)
-    fig,ax1 = plt.subplots(figsize=(12, 8))
+def plot_errors(image_file_name, projected_points, screen_points,
+                crop_to_image=True):
+    """
+    Creates a visualisation of the projected and
+    detected screen points
+    """
+    img = mpimg.imread(image_file_name)
+    _, ax1 = plt.subplots(figsize=(12, 8))
     ax1.imshow(img)
-    if cropToImage:
+    if crop_to_image:
         ax1.set_ylim([0, img.shape[0]])
         ax1.set_xlim([0, img.shape[1]])
-    ax1.scatter(projectedPoints[:,1], projectedPoints[:,2])
-    ax1.scatter(screenPoints[:,1], screenPoints[:,2])
-
-    return
-
-
-
-
-
-
+    ax1.scatter(projected_points[:, 1], projected_points[:, 2])
+    ax1.scatter(screen_points[:, 1], screen_points[:, 2])
