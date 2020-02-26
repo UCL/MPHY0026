@@ -6,7 +6,7 @@ History
 Learning Objectives
 -------------------
 
-Upon completion of this section, the student will be able to
+Upon completion of this section, the student will be able to:
 
 * describe landmark events that launched the field of CAS
 
