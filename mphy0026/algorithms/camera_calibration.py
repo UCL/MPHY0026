@@ -3,6 +3,8 @@ calibration and tracking
 """
 
 import csv
+import xml.dom.minidom
+import glob
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
@@ -222,3 +224,44 @@ def plot_errors(image_file_name, projected_points, screen_points,
         ax1.set_xlim([0, img.shape[1]])
     ax1.scatter(projected_points[:, 1], projected_points[:, 2])
     ax1.scatter(screen_points[:, 1], screen_points[:, 2])
+
+
+def picked_object_reader(filename, points_only=True):
+    """
+    processes an xml picked object file.
+    :param: the filename, and optional flag to only process point landmarks
+    :return: an nx4 array of landmarks, first column is point id
+    """
+    doc = xml.dom.minidom.parse(filename)
+    picked_objects = doc.getElementsByTagName("picked_object")
+
+    point_array = np.array((0, 4), dtype=float)
+    for picked_obj in picked_objects:
+        if not points_only or not picked_obj.getAttribute("line"):
+            points = picked_obj.getElementsByTagName("coordinate")
+            ident = picked_obj.getElementsByTagName("id")
+            for point in points:
+                coords = point.getAttribute("xyz")
+                coord_array = np.array([float(col) for col in coords])
+
+                coord_array = np.concatenate((ident, coord_array), axis=1)
+
+                point_array = np.concatenate((point_array, coord_array), axis=0)
+
+    return point_array
+
+
+def picked_object_directory_reader(directory, points_only=True):
+    """
+    processes an xml picked object directory
+    :param: directory name, and optional flag to only process point landmarks
+    :return: an nx4 array of landmarks, first column is point id
+    """
+    point_array = np.array((0, 4), dtype=float)
+    filenames = glob.glob(directory + './???????????????????_*Points.xml')
+
+    for filename in filenames:
+        points = picked_object_reader(filename, points_only)
+        point_array = np.concatenate((point_array, points), axis=0)
+
+    return point_array
