@@ -16,6 +16,11 @@ and section 6.4 of :ref:`bookClearyPeters`.
 
 For MPHY0026, none of these formula need memorizing.
 
+In the text below, we've used notation from each paper. This is to
+encourage people to read it, alongside the paper. Or should we make
+the notation consistent on this page?
+
+
 Evaluation Criteria
 ^^^^^^^^^^^^^^^^^^^
 
@@ -23,11 +28,11 @@ When preparing this section, I (Matt) naturally jumps to thoughts of
 FLE, FRE, TRE, covered below. But thanks to Ziv, it's worth discussing these
 additional criteria first:
 
-1. Fast - real-time
+1. Fast - real-time. What is real-time really? Very context dependent, and often a marketing buzzword.
 2. Accurate - [Maurer1998]_.
-3. Robust - :math:`N/2`, meaning over half the data must be outliers to break the registration
-4. Automatic - No user interaction
-5. Reliable - Given clinical expectation, the registration is deemed a success
+3. Robust - :math:`N/2`, meaning over half the data must be outliers to break the registration.
+4. Automatic - No user interaction.
+5. Reliable - Given clinical expectation, the registration is deemed a success.
 
 Open Discussion.
 
@@ -41,6 +46,8 @@ Fiducial Localisation Error (FLE)
 .. math::
 
   \sigma_{fl}^2 = E( \lVert {\bf e}_{fl} \rVert^2 )
+
+where :math:`E` means *Expectation*, i.e. average.
 
 * FLE is different for Image and Physical space
 
@@ -60,7 +67,7 @@ What errors exist in practice?
 Fiducial Registration Error (FRE)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For point sets :math:`{\bf p}_j` and :math:`{\bf q}_j` and tranform :math:`T`, point-based registration minimises:
+For ordered, corresponding point sets :math:`{\bf p}_j` and :math:`{\bf q}_j` and tranform :math:`T`, point-based registration minimises:
 
 .. math::
 
@@ -68,7 +75,7 @@ For point sets :math:`{\bf p}_j` and :math:`{\bf q}_j` and tranform :math:`T`, p
 
 
 So FRE is the minimum of this function. i.e. "the distance between corresponding
-fiducials after registration and transformation" [Maurer1998]_.
+fiducials after* registration and transformation" [Maurer1998]_.
 
 *Questions*
 
@@ -99,15 +106,15 @@ The seminal paper by Fitzpatrick et al [Fitzpatrick1998]_ re-derived the followi
 
 .. math::
 
-    E(FRE^2) = \frac{(n-2) E(FLE^2)}{n}
+    \langle FRE^2 \rangle = (1 - 2/N) \langle FLE^2 \rangle
 
-where :math:`n` is the number of fiducials and :math:`E` means *Expectation*.
+where :math:`N` is the number of fiducials and :math:`\langle \rangle` means *Expectation*, i.e. average.
 
 The main result of the paper was a formula to predict TRE from TRE:
 
 .. math::
 
-    E(TRE^2({\bf p})) \approx \frac{E(FRE^2)}{(n-2)} \left( (1 + \frac{1}{3}) \sum_{i=1}^3 \frac{d_k^2}{f_k^2} \right)
+    \langle TRE^2({\bf p}) \rangle \approx \frac{ \langle FLE^2 \rangle }{N} \left( 1 + \frac{1}{3} \sum_{k=1}^3 \frac{d_k^2}{f_k^2} \right)
 
 where :math:`{\bf p}` is a target point, :math:`d_k^2` the squared distance between the target
 and the :math:`k` th principal axis and :math:`f_k^2` is the mean squared distance between the fiducial
