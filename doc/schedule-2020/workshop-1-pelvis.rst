@@ -27,7 +27,7 @@ Note: all command line tools below should be run from the MPHY0026/ directory. E
 4. Adjust the window/level (right hand, vertical slider), to get a good contrast, write these numbers for later, e.g. 962, 122. These are is Level/Window. Convert to Min/Max.
 5. Write down the 3D location (look on bottom status bar), of each of 4 points in order.
 
-.. figure:: workshop-1-pelvis-NiftyIGI.png
+.. figure:: workshop-1-pelvis-NiftyIGI.PNG
   :width: 100%
 
   Figure 2: Illustration, of NiftyIGI, showing CT volume at a fiducial point.
