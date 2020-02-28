@@ -22,7 +22,7 @@ Upon completion of this section, the student will be able to:
 Introduction
 ------------
 
-Registration is the process of aligning two Coordinate Systems. See :ref:`Notebooks`.
+Registration is the process of aligning two Coordinate Systems.
 
 
 Medical Image Computing
@@ -50,6 +50,8 @@ For example, aligning pre-operative data (CT/MR) scans to patient (tracker/world
 
 * display the physical location of the tip of a tracked pointer in the MR/CT scan
 * overlay MR/CT scan data on top of a laparoscopic video feed
+
+See :ref:`Notebooks`, for more on Coordinate Systems, and transformation notation.
 
 
 Methods

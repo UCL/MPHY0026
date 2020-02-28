@@ -35,8 +35,8 @@ Papers
 * Extensions to global alignment, e.g. [Yang2015]_
 
 
-Algorithm
-^^^^^^^^^
+Algorithm - Iterative Closest Point
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 From section IV (A) in [BeslMcKay1992]_, they define:
 

@@ -40,7 +40,7 @@ e.g. [Batchelor2000]_, [Wiles2008]_, [Moghari2009]_, [Danilchenko2010]_, [Thomps
 Algorithm
 ^^^^^^^^^
 
-See above paper for the maths. To my mind, `best seen in code in SNAPPY <https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/scikit-surgerycore/blob/master/sksurgerycore/algorithms/procrustes.py>`.
+See above paper for the maths. To my mind, `best seen in code in SNAPPY <https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/scikit-surgerycore/blob/master/sksurgerycore/algorithms/procrustes.py>`_.
 
 
 Fiducial marker types
@@ -49,8 +49,8 @@ Fiducial marker types
 Accuracy is determined by the fiducial marker type, and the ability to accurately measure it in the OR.
 
 * Bone implanted screws, detachable heads. See [Maurer1998]_.
-* `Stick on markers <https://izimed.com/products/multi-modality-markers>`, seen in Mock OR, in Workshop 1.
-* Bite-blocks [Edwards2000]_
+* `Stick on markers <https://izimed.com/products/multi-modality-markers>`_, seen in Mock OR, in Workshop 1.
+* Bite-blocks [Edwards2000]_.
 
 
 Typical Performance
@@ -72,7 +72,7 @@ Cons:
 
 Accuracy:
 
-* Neurosurgery: 0.5-1mm on Fiducials, 0.5-4mm on Targets, e.g. [Edwards2000]_
-* Neurosurgery: Similar range of errors, and a good explanation of FLE, FRE, TRE etc. [Shamir2009]_
+* Neurosurgery: 0.5-1mm on Fiducials, 0.5-4mm on Targets, e.g. [Edwards2000]_.
+* Neurosurgery: Similar range of errors, and a good explanation of FLE, FRE, TRE etc. [Shamir2009]_.
 * Liver surgery: Time was median 8:50 min. Accuracy (FRE), 14.0mm to 9.2mm, mean 12.8mm [Prevost2019]_.
 
