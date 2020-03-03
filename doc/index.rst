@@ -2,7 +2,7 @@ Computer Assisted Surgery and Therapy
 =====================================
 
 * MPHY0026 at `University College London (UCL)`_.
-* Authors: `Matt Clarkson`_, `Steve Thompson`_, `Ester Bonmati`_.
+* Authors: `Matt Clarkson`_, `Steve Thompson`_, `Ester Bonmati`_, `Ann Blandford`_, `Tom Dowrick`_.
 * `Source code`_ that generates this set of notes.
 
 Course Details
@@ -42,6 +42,7 @@ Course Principles
 
 * *Research led*: Closely linked to academic literature, and research at UCL and world-wide
 * *A systems approach*: A researcher may only work on one component, but to achieve the clinical goal, we must understand the total system performance
+* *Learn by doing*: Code examples, often using the `SNAPPY`_ libraries.
 
 Contents
 --------
@@ -53,9 +54,9 @@ Contents
   background/background.rst
   imaging/imaging.rst
   segmentation/segmentation.rst
-  registration/registration.rst
   tracking/tracking.rst
   calibration/calibration.rst
+  registration/registration.rst
   visualisation/visualisation.rst
   ui/ui.rst
   evaluation/evaluation.rst
@@ -67,31 +68,29 @@ Contents
 Sessions
 --------
 
-All at Charles Bell House.
-
-+------------+--------------+-----------+-----------------+
-| Date       | Location     | Leader    | Topic(s)        |
-+============+==============+===========+=================+
-| 27/02/2020 | G11          | Matt      | :ref:`Lecture1` |
-+------------+--------------+-----------+-----------------+
-| 27/02/2020 | G10 + Lab    | ?         | :ref:`Workshop1`|
-+------------+--------------+-----------+-----------------+
-| 05/03/2020 | G11          | ?         | :ref:`Lecture2` |
-+------------+--------------+-----------+-----------------+
-| 05/03/2020 | G10 + Lab    | ?         | :ref:`Workshop2`|
-+------------+--------------+-----------+-----------------+
-| 12/03/2020 | G11          | ?         | :ref:`Lecture3` |
-+------------+--------------+-----------+-----------------+
-| 12/03/2020 | G10 + Lab    | ?         | :ref:`Workshop3`|
-+------------+--------------+-----------+-----------------+
-| 19/03/2020 | G11          | ?         | :ref:`Lecture4` |
-+------------+--------------+-----------+-----------------+
-| 19/03/2020 | G10 + Lab    | ?         | :ref:`Workshop4`|
-+------------+--------------+-----------+-----------------+
-| 26/03/2020 | 1.07         | ?         | :ref:`Lecture5` |
-+------------+--------------+-----------+-----------------+
-| 26/03/2020 | G10 + Lab    | ?         | :ref:`Workshop5`|
-+------------+--------------+-----------+-----------------+
++------------+-----------------+-------------+-----------------+
+| Date       | Location        | Leader      | Topic(s)        |
++============+=================+=============+=================+
+| 27/02/2020 | G04             | Matt        | :ref:`Lecture1` |
++------------+-----------------+-------------+-----------------+
+| 27/02/2020 | G09 + Lab       | Matt        | :ref:`Workshop1`|
++------------+-----------------+-------------+-----------------+
+| 05/03/2020 | Rockefeller G42 | Ester/Steve | :ref:`Lecture2` |
++------------+-----------------+-------------+-----------------+
+| 05/03/2020 | G09 + Lab       | Ester/Steve | :ref:`Workshop2`|
++------------+-----------------+-------------+-----------------+
+| 12/03/2020 | G04             | Matt        | :ref:`Lecture3` |
++------------+-----------------+-------------+-----------------+
+| 12/03/2020 | G09 + Lab       | Yipeng/Matt | :ref:`Workshop3`|
++------------+-----------------+-------------+-----------------+
+| 19/03/2020 | G04             | Ann         | :ref:`Lecture4` |
++------------+-----------------+-------------+-----------------+
+| 19/03/2020 | G09 + Lab       | Steve       | :ref:`Workshop4`|
++------------+-----------------+-------------+-----------------+
+| 26/03/2020 | G04             | Matt        | :ref:`Lecture5` |
++------------+-----------------+-------------+-----------------+
+| 26/03/2020 | G09 + Lab       | Matt        | :ref:`Workshop5`|
++------------+-----------------+-------------+-----------------+
 
 .. raw:: html
 
@@ -104,6 +103,9 @@ All at Charles Bell House.
 .. _`Matt Clarkson`: https://iris.ucl.ac.uk/iris/browse/profile?upi=MJCLA42
 .. _`Steve Thompson`: https://iris.ucl.ac.uk/iris/browse/profile?upi=SATHO57
 .. _`Ester Bonmati`: https://iris.ucl.ac.uk/iris/browse/profile?upi=EBONM94
+.. _`Ann Blandford`: https://iris.ucl.ac.uk/iris/browse/profile?upi=AEBLA22
+.. _`Tom Dowrick`: https://iris.ucl.ac.uk/iris/browse/profile?upi=TMDOW59
 .. _`Moodle`: https://moodle.ucl.ac.uk/
 .. _`Source code`: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026
 .. _`Issue Tracker`: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026
+.. _`SNAPPY`: https://weisslab.cs.ucl.ac.uk/WEISS/PlatformManagement/SNAPPY

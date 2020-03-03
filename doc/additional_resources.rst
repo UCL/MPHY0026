@@ -10,6 +10,8 @@ course, but are not strictly necessary for summative assessment.
 Books
 -----
 
+.. _bookClearyPeters:
+
 .. figure:: https://m.media-amazon.com/images/I/61cFgn0z-4L._AC_UY218_ML3_.jpg
   :alt: Terry Peters and Kevin Cleary's Image-Guided interventions book
   :target: https://www.amazon.co.uk/Image-Guided-Interventions-Applications-Terry-Peters/dp/1489997334/ref=sr_1_1?keywords=peters+cleary+image-guided&qid=1575965815&sr=8-1
@@ -68,6 +70,14 @@ Prof Terry Peters gives examples from the Image-Guided Surgery Lab:
     <iframe width="560" height="315" src="https://www.youtube.com/embed/FQEluqyR-SY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
+Examples - Image-Guided Surgery for Brain Tumours
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/_BFTK6LWH5g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 Examples - Liver Ablation
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -77,6 +87,8 @@ in image-guided ablation of liver tumours.
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/XPN8nkUylj8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+and more recently, extended to augmented reality for laparoscopic liver surgery [Prevost2019]_.
 
 
 Examples - Neurosurgery
@@ -118,9 +130,59 @@ Examples - Brainlab, Intra-op to Pre-op imaging using calibration device
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/MZ7vkkRtaz0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+
 Examples - Brainlab, Needle insertion with Variguide
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Pz0QdomhyG4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+
+Examples - Leica ARVeo
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/mUTg7G9XwGk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+Leica ARVeo with Brainlab
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/PmLIB_KPPdw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+Examples: Manual Alignment, CT to Tracker
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/-12OjjU2i9E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+Examples - Surface Registration with Pathfinder
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/vxd145vVknk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+Examples - Surface Registration with Brainlab Z-touch
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/C9ngfY97Bkg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+Algorithm - K-D Tree
+^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/TLxWtXEbtFE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

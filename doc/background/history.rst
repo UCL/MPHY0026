@@ -6,9 +6,9 @@ History
 Learning Objectives
 -------------------
 
-Upon completion of this section, the student will be able to
+Upon completion of this section, the student will be able to:
 
-* recall landmark events that launched the field of CAS
+* describe landmark events that launched the field of CAS
 
 
 Discussion
@@ -18,8 +18,16 @@ A review paper by Terry Peters and Kevin Cleary gives a good
 introduction to the field of Image-guided Interventions [PetersCleary2010]_.
 
 In this section here, we just cover a few key events, before delving more deeply into
-a selection of :ref:`SystemExamples` for more detailed study, of what makes up a CAS system.
+a selection of :ref:`SystemExamples` for a more detailed study, of what makes up a CAS system.
 
+
+Pre X-ray Guidance
+------------------
+
+* Before the advent of interventional imaging the only physical way to
+determine what was inside the human body was to cut it open and
+use your eyes / hands. Thus surgery is both the diagnostic and
+theraputic tool.
 
 First X-ray Guidance
 --------------------
@@ -30,7 +38,7 @@ First X-ray Guidance
   :alt: First medical X-ray by Wilhelm Röntgen of his wife Anna Bertha Ludwig's hand
   :width: 600
 
-  Figure: First medical X-ray by Wilhelm Röntgen of his wife Anna Bertha Ludwig's hand, Wilhelm Röntgen. [Public domain], from Wikimedia.
+  The first medical X-ray by Wilhelm Röntgen of his wife Anna Bertha Ludwig's hand, Wilhelm Röntgen. [Public domain], from Wikimedia.
 
 11th Jan **1896** - the first clinical use of X-rays by `John Hall-Edwards`_, Birmingham, UK, to remove a needle from a hand (Wikipedia).
 
@@ -48,7 +56,7 @@ Stereotactic Surgery
   :alt: Stereotaxic apparatus used by Sir Victor Horsley and Richard Clarke. Made by Swift and Son, London, c1905
   :width: 600
 
-  Figure: Stereotactic apparatus used by Sir Victor Horsley and Richard Clarke. Made by Swift and Son, London, c1905, from sciencemuseumgroup.org.uk, licensed under `CC BY-NC 4.0`_.
+  Stereotactic apparatus used by Sir Victor Horsley and Richard Clarke. Made by Swift and Son, London, c1905, from sciencemuseumgroup.org.uk, licensed under `CC BY-NC 4.0`_.
 
 This led to other frames, using for example spherical coordinates:
 
@@ -59,7 +67,8 @@ This led to other frames, using for example spherical coordinates:
   Figure Arc for Leksell Stereotactic System, c1997. Frame for Leksell Stereotactic System, c1997. from sciencemuseumgroup.org.uk, licensed under `CC BY-NC 4.0`_.
 
 and with the advent of CT imaging in the 1970's, to frames that could be imaged, to more easily map from
-image coordinates to physical coordinates.
+image coordinates to physical coordinates. This means, you can understand where your physical tools are
+in relation to pre-operative imaging, or vice-versa.
 
 
 .. figure:: https://upload.wikimedia.org/wikipedia/en/e/ef/Photograph_of_Stereotactic_Frame_With_3_N-localizers.jpg
@@ -75,11 +84,14 @@ Frameless Stereotaxy
 So, the advent of CT scanning in the 1970s and the modern PC in the 1980s led to the concept of frameless stereotaxy [PetersCleary2010]_,
 first in the operating microscope [Roberts1986]_ and then with a mechanical arm for a tracker, with the display using the a 4-quadrant view [Galloway1993]_.
 
+In this course, we will build a tracked pointer, 4 quadrant view for image-guided surgery in :ref:`Workshop1`.
 
 Surgical Planning
 -----------------
 
-Pioneered by Terry Peters et al. [Peters1987]_, [Peters1989]_.
+Pioneered by Terry Peters et al. [Peters1987]_, [Peters1989]_. The aim here was to integrate
+multi-modality imaging (MR/CT/DSA) via fiducials visible in each image, and also to provide
+a stereoscopic display for better visualisation of DSA.
 
 .. _`John Hall-Edwards`: https://en.wikipedia.org/wiki/John_Hall-Edwards
 .. _`Röntgen`: https://en.wikipedia.org/wiki/Wilhelm_R%C3%B6ntgen

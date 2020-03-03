@@ -29,6 +29,8 @@ Extras
 
 .. [Bernhardt2017] Sylvain Bernhardt, Stéphane A. Nicolau, Luc Soler, Christophe Doignon, **"The status of augmented reality in laparoscopic surgery as of 2016"**, http://dx.doi.org/10.1016/j.media.2017.01.007
 
+.. [Qian2019] Long Qian, Jie Yin Wu, Simon DiMaio, Nassir Navab, Peter Kazanzides, **"A Review of Augmented Reality in Robotic-Assisted Surgery"**, http://dx.doi.org/10.1109/TMRB.2019.2957061
+
 
 Application Examples
 --------------------
@@ -45,6 +47,8 @@ Essential
 .. [Thompson2015] Stephen Thompson, Johannes Totz, Yi Song, Stian Johnsen, Danail Stoyanov, Sebastien Ourselin, Kurinchi Gurusamy, Crispin Schneider, Brian Davidson, David Hawkes, Matthew J Clarkson, **"Accuracy Validation of an Image Guided Laparoscopy System for Liver Resection"**, http://dx.doi.org/10.1117/12.2080974
 
 .. [Hu2016] Yipeng Hu, Veeru Kasivisvanathan, Lucy A. M. Simmons, Matthew J. Clarkson, Stephen A. Thompson, Taimur T. Shah, Hashim U. Ahmed, Shonit Punwani, David J. Hawkes, Mark Emberton, Caroline M. Moore, Dean C. Barratt, **"Development and Phantom Validation of a 3-D-Ultrasound-Guided System for Targeting MRI-Visible Lesions During Transrectal Prostate Biopsy"**, http://dx.doi.org/10.1109/TBME.2016.2582734
+
+.. [Prevost2019] Gian Andrea Prevost, Benjamin Eigl, Iwan Paolucci, Tobias Rudolph, Matthias Peterhans, Stefan Weber, Guido Beldi, Daniel Candinas, Anja Lachenmayer, **"Efficiency, Accuracy and Clinical Applicability of a New Image-Guided Surgery System in 3D Laparoscopic Liver Surgery"**, https://doi.org/10.1007/s11605-019-04395-7
 
 Extras
 ^^^^^^
@@ -76,11 +80,6 @@ Segmentation
 Essential
 ^^^^^^^^^
 
-There is a large body of literature, and many reviews, such as [Sharma2010]_. In this course, we cover some
-classical methods [Sharma2010]_, statistical shape models [Heimann2009]_, and an example of
-a more modern machine learning method [Ronneberger2015]_, which led to [Isensee2018]_ which won the
-medical image decathlon challenge [Simpson2019]_.
-
 .. [Heimann2009] Tobias Heimann, Hans-Peter Meinzer, **"Statistical shape models for 3D medical image segmentation"**, http://dx.doi.org/10.1016/j.media.2009.05.004
 
 .. [Sharma2010] Neeraj Sharma and Lalit M. Aggarwal, **"Automated medical image segmentation techniques."**, http://dx.doi.org/10.4103/0971-6203.58777
@@ -103,14 +102,13 @@ Examples
 
 .. [Pratt2012] Philip Pratt, Erik Mayer, Justin Vale, Daniel Cohen, Eddie Edwards, Ara Darzi and Guang-Zhong Yang, **"An effective visualisation and registration system for image-guided robotic partial nephrectomy"**, https://doi.org/10.1007/s11701-011-0334-z
 
+[Thompson2013a]_
+
 Point-Based Registration
 ------------------------
 
 Essential
 ^^^^^^^^^
-
-There are two popular methods [Arun1987]_, [Horn1987]_ and obviously others, but functionally there is little difference between them [Eggert1998]_.
-Students need to understand terms and acronyms like FLE, FRE and TRE [Fitzpatrick1998]_ and crucially, that FRE and TRE are uncorrelated [Fitzpatrick2001]_.
 
 .. [Arun1987] K. S. Arun, T. S. Huang, S. D. Blostein, **"Least-Squares Fitting of Two 3-D Point Sets"**, http://dx.doi.org/10.1109/TPAMI.1987.4767965
 
@@ -118,14 +116,21 @@ Students need to understand terms and acronyms like FLE, FRE and TRE [Fitzpatric
 
 .. [Eggert1998] D. W. Eggert, A. Lorusso, R. B. Fisher, **"Estimating 3-D rigid body transformations: a comparison of four major algorithms"**, http://dx.doi.org/10.1007/s001380050048
 
+.. [Shamir2009] Reuben R. Shamir, Leo Joskowicz, Sergey Spektor and Yigal Shoshan, **"Localization and registration accuracy in image guided neurosurgery: a clinical study"**, http://dx.doi.org/10.1007/s11548-008-0268-8
+
+.. [Conrad2016] Claudius Conrad, Matteo Fusaglia, Matthias Peterhans, Huanxiang Lu, Stefan Weber, Brice Gayet, **"Augmented Reality Navigation Surgery Facilitates Laparoscopic Rescue of Failed Portal Vein Embolization"** https://doi.org/10.1016/j.jamcollsurg.2016.06.392
+
+.. [Maurer1993] Maurer, Calvin, McCrory, Jennifer, Fitzpatrick, J. Michael, **"Estimation of accuracy in localizing externally attached markers in multimodal volume head images"**, http://dx.doi.org/10.1117/12.154535
+
+.. [Maurer1998] Calvin R. Maurer, Jr., J. Michael Fitzpatrick, Matthew Y. Wang, Robert L. Galloway, Jr., Robert J. Maciunas and George S. Allen, **"Registration of Head Volume Images Using Implantable Fiducial Markers"**, http://dx.doi.org/10.1109/42.611354
+
 .. [Fitzpatrick1998] J. Michael Fitzpatrick, Jay B. West, Calvin R. Maurer, Jr., **"Predicting Error in Rigid-Body Point-Based Registration"**, http://dx.doi.org/10.1109/42.736021
 
 .. [Fitzpatrick2001] J. Michael Fitzpatrick, Jay B. West, **"The Distribution of Target Registration Error in Rigid-Body Point-Based Registration"**, http://dx.doi.org/10.1109/42.952729
 
+
 Extras
 ^^^^^^
-
-The above papers all assume isotropic, independent fiducial localisation error. There is a body of work looking at error propagation in cased where this is not valid.
 
 .. [Batchelor2000] P. Batchelor, J.M. Fitzpatrick, **"A study of the anisotropically weighted procrustes problem [optical image-guided surgery application]"**, https://doi.org/10.1109/MMBIA.2000.852380
 
@@ -135,15 +140,12 @@ The above papers all assume isotropic, independent fiducial localisation error. 
 
 .. [Danilchenko2010] A Danilchenko, JM Fitzpatrick, **"General approach to first-order error prediction in rigid point registration"** , https://doi.org/10.1109/TMI.2010.2091513
 
-.. [Thompson2013]  Stephen Thompson,Graeme Penney, Prokar Dasgupta, David Hawkes, **"Improved Modelling of Tool Tracking Errors by Modelling Dependent Marker Errors"**, https://doi.org/10.1109/TMI.2012.2216890
+.. [Thompson2013]  Stephen Thompson, Graeme Penney, Prokar Dasgupta, David Hawkes, **"Improved Modelling of Tool Tracking Errors by Modelling Dependent Marker Errors"**, https://doi.org/10.1109/TMI.2012.2216890
 
+.. [Fitzpatrick2009] Fitzpatrick, J. Michael, **"Fiducial registration error and target registration error are uncorrelated"**, http://dx.doi.org/10.1117/12.813601
 
 Surface-Based Registration
 --------------------------
-
-An essential reference is the Iterative Closest Point algorithm (ICP) [BeslMcKay1992]_, which has 8000+ citations.
-It has been extended and tweaked in many fields, but in Image-Guided Surgery, perhaps the most relevant is
-the anisotropic adaptation [LenaMaierHein2011]_, followed by global optimisation [Yang2015]_.
 
 Essential
 ^^^^^^^^^
@@ -156,6 +158,12 @@ Essential
 
 Extras
 ^^^^^^
+
+.. [Fusaglia2016] Matteo Fusaglia, Hanspeter Hess, Marius Schwalbe, Matthias Peterhans, Pascale Tinguely, Stefan Weber, Huanxiang Lu, **"A clinically applicable laser-based image-guided system for laparoscopic liver procedures"**, https://doi.org/10.1007/s11548-015-1309-8
+
+.. [Zhang1994] Zhengyou Zhang, **"Iterative Point Matching for Registration of Free-Form Curves and Surfaces "**, https://doi.org/10.1007/BF01427149
+
+.. [Oktay2013] Ozan Oktay, Li Zhang, Tommaso Mansi, Peter Mountney, Philip Mewes, Stéphane Nicolau, Luc Soler, Christophe Chef d’hotel, **"Biomechanically Driven Registration of Pre- to Intra-Operative 3D Images for Laparoscopic Surgery"**, https://doi.org/10.1007/978-3-642-40763-5_1
 
 
 Tracking Systems
@@ -176,6 +184,10 @@ Extras
 .. [Xiao2018] Guofang Xiao, Ester Bonmati, Stephen Thompson, Joe Evans, John Hipwell, Daniil Nikitichev, Kurinchi Gurusamy, Sébastien Ourselin, David J Hawkes, Brian Davidson, Matthew J Clarkson **"Electromagnetic tracking in image‐guided laparoscopic surgery: Comparison with optical tracking and feasibility study of a combined laparoscope and laparoscopic ultrasound system"**, https://doi.org/10.1002/mp.13210
 
 .. [Bonmati2017] Ester Bonmati, Yipeng Hu, Kurinchi Gurusamy, Brian Davidson, Stephen P. Pereira, Matthew J. Clarkson, Dean C. Barratt, **"Assessment of Electromagnetic Tracking Accuracy for Endoscopic Ultrasound"** http://dx.doi.org/10.1007/978-3-319-54057-3_4
+
+.. [West2004] Jay B. West and Calvin R. Maurer, Jr., **"Designing Optically Tracked Instruments for Image-Guided Surgery"**, http://dx.doi.org/10.1109/TMI.2004.825614
+
+.. [Shahidi2002] Ramin Shahidi, Michael R. Bax, Calvin R. Maurer, Jr., Jeremy A. Johnson, Eric P. Wilkinson, Bai Wang, Jay B. West, Martin J. Citardi, Kim H. Manwaring, and Rasool Khadem, **"Implementation, Calibration and Accuracy Testing of an Image-Enhanced Endoscopy System", http://dx.doi.org/10.1109/TMI.2002.806597
 
 
 Calibration
@@ -271,7 +283,7 @@ Essential
 
 .. [SomogyiGanss2014] Eszter Somogyi-Ganss, Howard I. Holmes and Asbjørn Jokstad, **"Accuracy of a novel prototype dynamic computer-assisted surgery system"**, http://dx.doi.org/10.1109/10.1111/clr.12414
 
-.. [Thompson2013] Stephen Thompson, Graeme Penney, Michele Billia, Ben Challacombe, David Hawkes, Prokar Dasgupta, **"Design and evaluation of an image‐guidance system for robot‐assisted radical prostatectomy"**, https://doi.org/10.1111/j.1464-410X.2012.11692.x
+.. [Thompson2013a] Stephen Thompson, Graeme Penney, Michele Billia, Ben Challacombe, David Hawkes, Prokar Dasgupta, **"Design and evaluation of an image‐guidance system for robot‐assisted radical prostatectomy"**, https://doi.org/10.1111/j.1464-410X.2012.11692.x
 
 Extras
 ^^^^^^

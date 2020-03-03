@@ -14,7 +14,7 @@ import sksurgeryvtk.widgets.vtk_overlay_window as ow
 
 class ManualRegistrationMainWidget(QtWidgets.QWidget):
     """
-    Model2CameraMainWidget to hold an overlay viewer and sliders.
+    ManualRegistrationMainWidget to just enable a VTK window and interactor.
     """
     def __init__(self,
                  background_file,
