@@ -59,7 +59,10 @@ setup(
 
     entry_points={
         'console_scripts': [
-            'mphy0026_manual_registration=mphy0026.__main__:main',
+            'mphy0026_manual_registration=mphy0026.ui.mphy0026_manual_registration_command_line:main',
+            'mphy0026_registration=mphy0026.ui.mphy0026_register_command_line:main',
+            'mphy0026_quadview=mphy0026.ui.mphy0026_quadview_command_line:main',
+            'mphy0026_grab_pointer=mphy0026.ui.mphy0026_grab_pointer_command_lines:main'
         ],
     },
 )
