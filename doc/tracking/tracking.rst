@@ -8,5 +8,4 @@ Tracking
   optical.rst
   em.rst
   errors.rst
-  examples.rst
   summary.rst

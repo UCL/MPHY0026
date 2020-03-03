@@ -178,6 +178,8 @@ Essential
 
 .. [West2004] Jay B. West, Calvin R. Maurer, Jr., **"Designing Optically Tracked Instruments for Image-Guided Surgery"**, http://dx.doi.org/10.1109/TMI.2004.825614
 
+.. [Hummel2005] Johann B. Hummel, Michael R. Bax, Michael L. Figl, Yan Kang, Calvin Maurer Jr., Wolfgang W. Birkfellner, Helmar Bergmann and Ramin Shahidi, **"Design and application of an assessment protocol for electromagnetic tracking systems"**, https://aapm.onlinelibrary.wiley.com/doi/full/10.1118/1.1944327 
+
 Extras
 ^^^^^^
 

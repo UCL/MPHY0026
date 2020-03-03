@@ -49,6 +49,31 @@ The following picture show how the different components are connected.
   
   Main system components of an infra-red optical tracking system
 
+And the following pictures show the real components of a NDI Polaris Vicra optical tracking system:
+
+.. figure:: optical_cameras.jpg
+  :alt: Optical tracking system cameras
+  :width: 600
+  
+  Optical tracking system cameras.
+  
+.. figure:: optical_system_unit.jpg
+  :alt: Optical tracking system unit
+  :width: 600
+  
+  Optical tracking system unit.
+  
+.. figure:: optical_rigid_body.jpg
+  :alt: Optical tracking system rigid body with markers attached.
+  :width: 600
+  
+  Optical tracking system rigid body with markers attached.
+
+.. figure:: optical_IR_marker.jpg
+  :alt: Optical tracking system IR markers.
+  :width: 600
+  
+  Optical tracking system IR markers.
 
 Errors of optical trackers: depth reconstruction error
 ------------------------------------------------------

@@ -3,7 +3,7 @@
 Introduction
 ============
 
-Tracking devices allow to track the position of a tool or device relative to the patient anatomy during a surgical procedure in 3D space and is a key technology in CAI. 
+Tracking systems are fundamental for CAI as they allow to track the position of a tool or device (e.g., laparoscope, endoscope, needle, ultrasoudn probe, camera, ...) relative to the patient anatomy during a surgical procedure in 3D space and is a key technology in CAI. 
 
 History
 -------
@@ -18,15 +18,26 @@ Types of tracking
 
 Tracking systems can be grouped as follows:
 
-* **Mechanical digitizers**: Transform a mechanical movement to a digital measurement
+* **Mechanical digitizers**: Transform a mechanical movement to a digital measurement.
+
+.. figure:: mechanical_digitiser.jpg
+  :alt: Example of a mechanic digitizer to hold an ultrasound probe for prostate interventions, with a prostate phantom.
+  :width: 600
+  
+  Example of a mechanic digitizer to hold an ultrasound probe for prostate interventions, with a prostate phantom.
 
 * **Ultrasonic transducers**: Measures the time of an ultrasonic pulse from 3 sources into 3 microphones attached to a rigid body in order to calculate distances.
 
-* **Optical tracking**: Most popular tracking used in surgical interventions. Several cameras track several markers in a fixed geometry.
+* **Optical tracking**: Most popular tracking used in surgical interventions. Several cameras track several markers in a fixed geometry. See next sections for more details.
 
-* **Electromagnetic tracking**: 
+* **Electromagnetic tracking**: Electromagnetically-tracked sensors can be tracked within an electromagnetic field. See next sections for more details.
 
-* **Fiber-optic ultrasound**: Used in ultrasound interventions for research mainly. A fiber-optic ultrasound receiver communicates with a external ultrasound probe and allows to localise needles during ultrasound interventions (e.g., . 
+* **Fiber-optic ultrasound**: Used in ultrasound interventions for research mainly. A fiber-optic ultrasound receiver communicates with a external ultrasound probe and allows to localise needles during ultrasound interventions.
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GutD3Cc6LxA?start=2705" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 * **Accelerometers and gyroscopes**: Measure acceleration and angular velocity to determine the position. Is the same system used in mobile phones. Ultrasound probes from Clarius employ this system to reconstruct 2D ultrasound planes to 3D models.
 
