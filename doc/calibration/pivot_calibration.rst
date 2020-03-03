@@ -1,0 +1,39 @@
+.. _Pivot:
+
+Pivot calibration
+=================
+
+Pivot calibration is the transformation between a tracked marker/sensor and the tip of a tool (e.g., pointer). Pivot calibration consists in rotating the tracked instrument on a stationary point in order to localise the 3D position of the instrument's tip.
+There are several ways to perform the pivot calibration, mainly: sphere fitting, algebraic one step, and algebraic two steps. All these methods solve exactly the same problem but taking the transformation in a different order. In the next section we describe the sphere fitting method.
+  
+Sphere fitting
+--------------
+
+The sphere fitting method assumes that the tracked sensor/marker forms a sphere while is rotated (see figure below), where the marker is at the surface of the sphere and the tip of the tracked tool at the centre of the sphere (pivoting point).
+
+.. figure:: pivot_calibration.png
+  :alt: Transformations involved in a pivot calibration using an optical tracker
+  :width: 600
+  
+  Transformations involved in a pivot calibration using an optical tracker
+
+The equation of a sphere with origin at point *(x_0, x_0, x_0)*, a point *(x,y,z)* on the surface and a radius *r* has the following equation:
+
+.. figure:: pivot_eq1.png
+
+If we expand this equation we get:
+
+.. figure:: pivot_eq2.png
+	
+which in turn is equivalent to:
+
+.. figure:: pivot_eq3.png
+	
+Considering that we will have a list of *n* surface points, this can be written in a least-squares form *f=AC*:
+
+Where 
+
+.. figure:: pivot_eq4.png
+	
+
+This can be easily solved using Python or MATLAB functions, among others libraries.
