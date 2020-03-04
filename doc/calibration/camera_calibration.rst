@@ -1,19 +1,15 @@
 .. _Camera
 
-Video camera parameters calibration
-===================================
-
-Video camera calibration can be divided in two different steps: intrinsic parameters calibration and extrinsic parameters calibration.
-Extrinsic camera parameters refers to the position and orientation of the camera with respect to the world coordinate system.
-Intrinsic camera parameters refers to the parameters needed to map camera coordinates to pixel coordinates.
-
-The following image shows a representation of video calibration.
+Intrinsic camera parameters calibration
+=======================================
+In order to map the camera coordinates to pixel coordinates (to map virtual objects in the real world), we need to find the intrinsic camera parameters.
+The following image shows a representation of the elements involved in a camera calibration.
 
 .. figure:: intrinsic_extrinsic.png
-  :alt: Intrinsic versus extrinsic parameters
+  :alt: Intrinsic camera parameters calibration
   :width: 600
   
-  Intrinsic versus extrinsic parameters
+  Intrinsic camera parameters calibration
 
 Intrinsic parameters include: 
 
@@ -31,8 +27,7 @@ Assuming the following pinhole camera model:
   
   Pinhole model
 
-
-To map a 2D point *(u,v)* to a 3D point *(X,Y,Z)* the following equation need to be solved:
+To map a 2D point *(u,v)* to a 3D point *(X,Y,Z)* the following equation needs to be solved:
 
 .. figure:: camera_eq1.png
 

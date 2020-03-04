@@ -213,7 +213,7 @@ Extras
 
 .. [Tsai1989] Roger Y. Tsai and Reimar K. Lenz, **"A New Technique for Fully Autonomous and Efficient 3D Robotics Hand/Eye Calibration"**, http://dx.doi.org/10.1109/70.34770
 
-.. [Birkfellner1998] Wolfgang Birkfellner, Franz Watzinger, Felix Wanschitz, Rolf Ewers, Helman Bergmann, **"Calibration of Tracking Systems in a Surgical Engironment"**, http://dx.doi.org/10.1109/42.736028
+.. [Birkfellner1998] Wolfgang Birkfellner, Franz Watzinger, Felix Wanschitz, Rolf Ewers, Helman Bergmann, **"Calibration of Tracking Systems in a Surgical Environment"**, http://dx.doi.org/10.1109/42.736028
 
 .. [Hsu2009] Po-Wei Hsu, Richard W. Prager, Andrew H. Gee and Graham M. Treece,  **"Freehand 3D Ultrasound Calibration: A Review"**, http://dx.doi.org/10.1007/978-3-540-68993-5_3
 
