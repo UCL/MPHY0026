@@ -191,6 +191,8 @@ Extras
 
 .. [MeierHein2012] L. Maier-Hein, A. M. Franz, W. Birkfellner, J. Hummel, I. Gergel, I. Wegner, and H.-P. Meinzer,  **"Standardized assessment of new electromagnetic field generators in an interventional radiology setting"**, http://dx.doi.org/10.1118/1.4712222
 
+.. [Heller2006] A Chris Heller, Arun P. Amar, Charles Y. Liu, Michael L.J. Apuzzo, **"Surgery of the Mind and Mood: A Mosaic of Issues in Time and Evolution"**, https://academic.oup.com/neurosurgery/article/59/4/720/2559224
+
 
 Calibration
 -----------

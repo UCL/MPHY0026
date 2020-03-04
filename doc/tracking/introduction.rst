@@ -1,4 +1,4 @@
-.. _Introduction:
+.. _IntroductionTracking:
 
 Introduction
 ============
@@ -7,7 +7,7 @@ Tracking systems are fundamental for CAI as they allow to track the position of 
 
 History
 -------
-* **1940s**: A tracking system is used for the first time in humans. It is a sterotactic device and is used for neurological applications.
+* **1900s**: A tracking system is used for the first time in humans. It is a mechanical sterotactic frame and is used for neurological applications. This frame has 3-dimensional coordinate system and allows to place instruments at a specific location by manually selecting the position at each coordinate [HorsleyClarke1908]_, [Heller2006]_.
 * **1960s**: The benefits and accuracy of the stereotactic device becomes a standard practice.
 * **1980s**: Mechanical digitizers become popular due to their use in CAS, especially in neurosurgery. 
 * **1990s**: Optical trackers are introduced in order to overcome clinical problems of previous tracking systems such as the ability to track multiple devices and sterilisation issues, evolving to very accurate devices. On of the main limitations of optical trackers is the line-of-sight requirement between the tracked markers and the camera.
@@ -16,15 +16,15 @@ History
 Types of tracking
 -----------------
 
-Tracking systems can be grouped as follows:
+The most common tracking systems used in surgery can be grouped as follows:
 
-* **Mechanical digitizers**: Transform a mechanical movement to a digital measurement.
+* **Mechanical digitizers**: Transform a mechanical movement to a digital measurement. These digitizers are widely used in robotics, in order to move robot arms but also in other clinical applications such as prostate interventions (see picutre below):
 
 .. figure:: mechanical_digitiser.jpg
   :alt: Example of a mechanic digitizer to hold an ultrasound probe for prostate interventions, with a prostate phantom.
   :width: 600
   
-  Example of a mechanic digitizer to hold an ultrasound probe for prostate interventions, with a prostate phantom.
+  Example of a mechanical digitizer to hold an ultrasound probe for prostate interventions, with a prostate phantom.
 
 * **Ultrasonic transducers**: Measures the time of an ultrasonic pulse from 3 sources into 3 microphones attached to a rigid body in order to calculate distances.
 

@@ -1,4 +1,4 @@
-.. _Errors:
+.. _ErrorsTracking:
 
 Errors and accuracy
 ===================
@@ -7,7 +7,9 @@ All tracking systems suffer from positional and rotational errors. In the follow
   
 Lever-arm effect error
 ----------------------
-Rotational errors can have a big impact on the performance of the optical tracking system due to the so-called lever-arm effect, specially when the tracked marker/sensor lies further away from the tip of the tool that is being tracked. The lever-arm effect is the propagation of an error on the rotation measurement of the marker to the tool tip. The longer the distance between the marker and the tip of the tool, the larger the error may be.
+Rotational errors can have a big impact on the performance of the optical tracking system due to the so-called lever-arm effect, specially when the tracked marker/sensor lies further away from the tip of the tool that is being tracked [West2004]_. 
+The lever-arm effect is the propagation of an error on the rotation measurement of the marker to the tool tip. 
+The longer the distance between the marker and the tip of the tool, the larger the error may be.
 
 .. figure:: lever-arm.jpg
   :alt: Lever-arm effect error
@@ -26,9 +28,11 @@ Precision refers to how close two or more measurements are closed to each other,
   :width: 600
   
   Difference between accuracy and precision
-  
+
+Several protocols have been proposed to study static errors: [Frantz2003]_ and [Wiles2004]_ among others.
 These errors can be found by analysing the tracking data when the sensor/marker remain in a static position (do not move). There have been several studies regarding the analysis of static errors.
-The most common protocol was proposed by Hummel et al. [Hummel2005]_, as several optical and electromagnetic tracking systems have been evaluated using this protocol: [Xiao2018]_, [Bonmati2017], [West2004]_, [Shahidi2002]_. The so-called Hummel protocol consists of a machined base plate [FIG] that allows to measure positional and rotational tracking data with high simplicity, reproducibility with a precise ground truth and accuracy.
+The most common protocol was proposed by Hummel et al. [Hummel2005]_, as several optical and electromagnetic tracking systems have been evaluated using this protocol: [Xiao2018]_, [Bonmati2017]_, [West2004]_, [Shahidi2002]_. 
+The so-called Hummel protocol consists of a machined base plate (see Figure below) that allows to measure positional and rotational tracking data with high simplicity, reproducibility with a precise ground truth and accuracy.
 Static errors are divided in jitter and accuracy.
 
 .. figure:: hummel_board.jpg
@@ -56,7 +60,7 @@ The accuracy is calculated as the mean of absolute difference between the ground
 Dynamic errors
 --------------
 
-Dynamic errors can be found by fixing the markers/sensors onto a fixed surface (rigid body) forming a triangle (or another geometrical shape). Then the rigid body is moved within the field of view of the tracking system.
+Dynamic errors can be found by fixing the markers/sensors onto a fixed surface (rigid body) forming a triangle (or another geometrical shape) [Thompson2013]_, [Bonmati2017]_. Then the rigid body is moved within the field of view of the tracking system.
 The differences in distance between the markers/sensors are moved are compared to the distances when the rigid body is in static position in order to find the dynamic error. The analysis can be done at different speeds.
 Although this evaluation does not represent a complete analysis of the dynamic error, gives a useful estimate.
 

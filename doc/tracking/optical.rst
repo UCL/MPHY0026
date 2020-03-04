@@ -7,7 +7,7 @@ Introduction
 ------------
 
 Optical tracking involve the use of cameras (usually in a fixed position) to localise markers fixed in a rigid body shape (moving object) that is tracked in real-time. The cameras and tracked markers need to be in line-of-sight.
-This system is the most popular so far in surgical interventions mainly due to its accuracy and reliability, however, the required line-of-sight between cameras and markers make this technology not adequate for  interventions where the object of interest is inside the human body (e.g., endoscope, catheter, etc.).
+This system is the most popular so far in surgical interventions mainly due to its accuracy and reliability (0.25 mm accuracy with an NDI optical tracker), however, the required line-of-sight between cameras and markers make this technology not adequate for  interventions where the object of interest is inside the human body (e.g., endoscope, catheter, etc.).
 
 Types of systems
 ----------------
@@ -19,7 +19,11 @@ Video tracking systems
 
 Video tracking systems track a fiducial marker with a printed pattern on it (e.g., white/black squares) from video images taken from one or multiple calibrated cameras.
 
-(TODO: Picture of markers here)
+.. figure:: aruco_marker.jpg
+  :alt: Aruco marker
+  :width: 600
+  
+  Aruco marker
 
 Infra-red-based tracking systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -37,8 +41,8 @@ System components
 The system components of an optical tracking system are: 
 
 * One or multiple cameras: The camera capture range defines the tracking volume where the markers can move and be tracked
-* A system unit which may be comprised of other units (for infra-red-based systems only): The system units performs all the processing of the images captures by the camera and provides the 3D position of the markers.
-* Markers: Will be fixed to the tools that need to be tracked. Each tool must have a different marker.
+* A system unit: The system units performs all the processing of the images captures by the camera and provides the 3D position of the markers.
+* Markers: Will be fixed to the tools that need to be tracked. Each tool must have a uniquely identifiable marker
 * A computer: Takes the processed tracked data from the system unit in order to provide assistance to the surgical procedure.
 
 The following picture show how the different components are connected.
@@ -75,12 +79,18 @@ And the following pictures show the real components of a NDI Polaris Vicra optic
   
   Optical tracking system IR markers.
 
-Errors of optical trackers: depth reconstruction error
-------------------------------------------------------
+Errors of optical trackers
+--------------------------
 
-Similar to the human eye, 2 stereo cameras are used to image the markers, which are then detected from the images and matched from the left and right images. The 3D position of the markers is found by doing triangulation as the position of the two cameras is known.
-By comparing the two images, and doing a triangulation the 3D position of the marker can be obtained. However depth calculation can have errors, due to the so-called disparity (difference between the same point projected on the two images).
+Similar to the human eye, 2 or more stereo cameras are used to image the markers, which are then detected from the images and matched from the left and right images. 
+The 3D position of the markers is found by doing triangulation as the position of the two cameras is known.
+By comparing the two images, and doing a triangulation the 3D position of the marker can be obtained. 
+However depth calculation can have errors, due to the so-called disparity (difference between the same point projected on the two images).
 Errors in disparity are inversely proportional to the depth, meaning that errors in disparity calculation will increase quadratically the depth measurement from the camera. 
+
+Furthermore, tracking errors propagate from 2D errors in pixels from the tracking cameras to 3D positional errors through triangulation. 
+This results in substantially anisotropic errors (errors normal to the camera lens are typically 3 times those parallel). 
+There is also substantial variation over the tracking volume, resulting in most systems having a factory set tracking volume.
 
 Limitations of optical trackers
 -------------------------------

@@ -43,13 +43,13 @@ The following picture show how the different components are connected.
   
   Main system components of an electromagnetic tracking system
 
-And the following pictures show the real components of a NDI Polaris Vicra optical tracking system:
+And the following pictures show the components of a NDI Polaris Vicra optical tracking system:
 
 .. figure:: em_field_generator.jpg
-  :alt: EM tracking system field generator
+  :alt: EM tracking system field generator. This NDI tabletop is medically useful because it can be placed under the patient and has a shield to avoid distortions from the patient's bed.
   :width: 600
   
-  EM tracking system field generator
+  EM tracking system field generator. This NDI tabletop is medically useful because it can be placed under the patient and has a shield to avoid distortions from the patient's bed.
 
 .. figure:: em_system_unit.jpg
   :alt: EM tracking system unit (bottom) and sensor unit (top)
