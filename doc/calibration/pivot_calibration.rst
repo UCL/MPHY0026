@@ -46,6 +46,13 @@ Where
 
 This can be easily solved using Python or MATLAB functions, among others libraries.
 
+In the following video Dr. Clarkson explains and demonstrates how to do a pivot calibration:
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/wIEbG6ya63I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 Errors
 ------
 The accuracy of this method depends on the shape of the tip of the tool, the length of the tool and the noise on the pivoting data.

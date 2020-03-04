@@ -12,10 +12,21 @@ The following figure shows a representation of the elements involved in a hand-e
   
   Hand-eye calibration
   
-To find the geometrical relationship between the camera coordinate system and the tracking system, several images of a stationary feature (e.g., cross-hair, chessboard) from different points of view are acquired.
+To find the geometrical relationship between the camera coordinate system and the tracking system, several images of a stationary feature (e.g., cross-hair, chessboard) from different points of view are acquired (or the other way round).
 Then, to solve the calibration problem we have to solve the following equation: *AX=XB*. Where *A* and *B* represent transformations to the marker/sensor and is given by the tracking system (*[R1,T1]* and *[R2,T2]* in the above image). 
 *X* is the unknown transformation matrix we need to find (*[R0,T0]* in the above image). 
 There are several closed-form solutions to solve the equation such as [Thompson2016]_, [Malti2013]_, [Tsai1989]_ , [Heller2016]_, and [Morgan2017]_ among others.
+
+In the following videos Dr. Clarkson explains and demonstrates how to do a hand-eye calibration with a laparoscope and a chessboard:
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/_hxFnr-0_0Y" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+.. raw:: html
+
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/BTAFdsUyTfU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 Free hand ultrasound calibration
 --------------------------------

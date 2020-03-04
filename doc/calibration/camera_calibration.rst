@@ -1,4 +1,4 @@
-.. _Camera
+.. _CameraCalibration
 
 Intrinsic camera parameters calibration
 =======================================

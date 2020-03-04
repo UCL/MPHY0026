@@ -19,16 +19,16 @@ The Lecture
 * 10 mins - :ref:`Optical`
 * 10 mins - :ref:`EM`
 * 10 mins - :ref:`ErrorsTracking`
+*  5 mins - :ref:`SummaryTracking`
 
 *  5 mins - Break
 
-*  5 mins - Intro to calibration
-*  5 mins - Types of calibration
-* 10 mins - Pivot calibration
-* 10 mins - Hand eye calibration
-*  5 mins - US calibration
-* 10 mins - Video camera intrinsic parameters calibration
-* 10 mins - Applications and discussion
+* 10 mins - :ref`IntroductionCalibration`
+* 10 mins - :ref`Pivot`
+* 5  mins - :ref`Template`
+* 15 mins - :ref`CameraCalibration`
+* 15 mins - :ref`Handeye`
+*  5 mins - :ref`SummaryCalibration`
 
 *  5 mins - Break
 

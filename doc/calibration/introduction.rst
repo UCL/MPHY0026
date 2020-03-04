@@ -1,4 +1,4 @@
-.. _Introduction:
+.. _IntroductionCalibration:
 
 Introduction
 ============
@@ -15,8 +15,10 @@ Types of calibration in surgery
 
 Calibration processes can be grouped as follows:
 
-* **Pivot calibration**: Finds the transformation between a tracking system and the tip of a tool.
+* **Pivot calibration**: Finds the transformation between a tracking system and the tip of a tool using a stationary point.
+* **Template-based tool calibration**: Finds the transformation between a tracking system and the tip of a tool using a rigid template.
 * **Hand-eye calibration**: Finds the transformation between a tracking system and a camera.
 * **Intrinsic camera parameters calibration**: Finds the intrinsic camera parameters.
+
 
 The next sections describe the details of these calibration processes.
