@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<picked_object_list>
+  <version>1</version>
+  <picked_object line="false">
+    <id>0</id>
+    <frame>1950</frame>
+    <channel>left</channel>
+    <timestamp>1521039750403678464</timestamp>
+    <points>
+      <coordinate xyz="462 331 0"/>
+    </points>
+  </picked_object>
+</picked_object_list>
