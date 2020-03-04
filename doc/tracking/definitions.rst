@@ -1,9 +1,3 @@
-Tracking
-========
-
-Definitions
------------
-
 . _Definitions:
 
 Definitions
