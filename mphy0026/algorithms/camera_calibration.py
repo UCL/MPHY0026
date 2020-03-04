@@ -104,6 +104,28 @@ def load_matrix(filein):
     return matrix
 
 
+def load_matrix_as_point(filename):
+    """
+    loads the last column of a 4x4 matrix as a 1 by 4
+    point, i.e. it discards any rotational data.
+    :param: filename
+    :return: 1x4 point
+    """
+    point = np.zeros((1, 4))
+    with open(filename, 'rt') as csvfile:
+        reader = _read_csv_text(csvfile)
+        rownumber = 0
+        for row in reader:
+            #some files have blanks at the end of each line
+            while len(row) > 4:
+                row.pop()
+
+            point[0, rownumber] = row.pop()
+            rownumber += 1
+
+    return point
+
+
 def multiply_points_by_matrix(points_in, matrix):
     """Multiply a matrix of point vectors by
     a 4x4 matrix
