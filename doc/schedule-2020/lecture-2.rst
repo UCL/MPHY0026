@@ -23,12 +23,12 @@ The Lecture
 
 *  5 mins - Break
 
-* 10 mins - :ref`IntroductionCalibration`
-* 10 mins - :ref`Pivot`
-* 5  mins - :ref`Template`
-* 15 mins - :ref`CameraCalibration`
-* 15 mins - :ref`Handeye`
-*  5 mins - :ref`SummaryCalibration`
+* 10 mins - :ref:`IntroductionCalibration`
+* 10 mins - :ref:`Pivot`
+* 5  mins - :ref:`Template`
+* 15 mins - :ref:`CameraCalibration`
+* 15 mins - :ref:`Handeye`
+*  5 mins - :ref:`SummaryCalibration`
 
 *  5 mins - Break
 
