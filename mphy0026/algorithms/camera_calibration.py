@@ -226,6 +226,46 @@ def plot_errors(image_file_name, projected_points, screen_points,
     ax1.scatter(screen_points[:, 1], screen_points[:, 2])
 
 
+class InteractiveMeasure:
+    """A class to handle mouse press events, outputting the
+    distance to a target point.
+    """
+    def __init__(self, fig, point):
+        self.point = point
+        self.cid = fig.canvas.mpl_connect('button_press_event', self)
+
+    def __call__(self, event):
+        print('%s click: xdata=%f, ydata=%f' %
+              ('double' if event.dblclick else 'single',
+               event.xdata, event.ydata))
+        screen_p = np.array((1, 2))
+        screen_p[0] = event.xdata
+        screen_p[1] = event.ydata
+        print("distance = ", np.linalg.norm(screen_p - self.point))
+
+
+def plot_errors_interactive(image_file_name, projected_point,
+                            crop_to_image=True):
+    """
+    Creates a visualisation of the projected and
+    detected screen points, which you can click on
+    to measure distances
+    """
+    img = mpimg.imread(image_file_name)
+    fig, ax1 = plt.subplots(figsize=(12, 8))
+    ax1.imshow(img)
+    if crop_to_image:
+        ax1.set_ylim([0, img.shape[0]])
+        ax1.set_xlim([0, img.shape[1]])
+    #this is just going to show the first point in an array.
+    #Could get clever and search for nearest point on click?
+    ax1.scatter(projected_point[0, 1], projected_point[0, 2])
+
+    _ = InteractiveMeasure(fig, (projected_point[0, 1], projected_point[0, 2]))
+
+    plt.show()
+
+
 def picked_object_reader(filename, points_only=True):
     """
     processes an xml picked object file.
