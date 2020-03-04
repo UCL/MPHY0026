@@ -104,7 +104,7 @@ def load_matrix(filein):
     return matrix
 
 
-def load_matrix_as_point(filename):
+def load_matrix_as_point(filename, point_id=0):
     """
     loads the last column of a 4x4 matrix as a 1 by 4
     point, i.e. it discards any rotational data.
@@ -112,9 +112,10 @@ def load_matrix_as_point(filename):
     :return: 1x4 point
     """
     point = np.zeros((1, 4))
+    point[0, 0] = point_id
     with open(filename, 'rt') as csvfile:
         reader = _read_csv_text(csvfile)
-        rownumber = 0
+        rownumber = 1
         for row in reader:
             #some files have blanks at the end of each line
             while len(row) > 4:
@@ -122,6 +123,9 @@ def load_matrix_as_point(filename):
 
             point[0, rownumber] = row.pop()
             rownumber += 1
+
+            if rownumber > 3:
+                break
 
     return point
 
