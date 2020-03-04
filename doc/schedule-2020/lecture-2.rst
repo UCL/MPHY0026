@@ -14,7 +14,7 @@ Before the lecture please read:
 The Lecture
 -----------
 
-*  5 mins - Introduction to the lecture and tracking
+*  5 mins - Introduction to the lecture
 * 15 mins - :ref:`IntroductionTracking`
 * 10 mins - :ref:`Optical`
 * 10 mins - :ref:`EM`
