@@ -178,6 +178,8 @@ Essential
 
 .. [West2004] Jay B. West, Calvin R. Maurer, Jr., **"Designing Optically Tracked Instruments for Image-Guided Surgery"**, http://dx.doi.org/10.1109/TMI.2004.825614
 
+.. [Hummel2005] Johann B. Hummel, Michael R. Bax, Michael L. Figl, Yan Kang, Calvin Maurer Jr., Wolfgang W. Birkfellner, Helmar Bergmann and Ramin Shahidi, **"Design and application of an assessment protocol for electromagnetic tracking systems"**, https://aapm.onlinelibrary.wiley.com/doi/full/10.1118/1.1944327 
+
 Extras
 ^^^^^^
 
@@ -185,9 +187,11 @@ Extras
 
 .. [Bonmati2017] Ester Bonmati, Yipeng Hu, Kurinchi Gurusamy, Brian Davidson, Stephen P. Pereira, Matthew J. Clarkson, Dean C. Barratt, **"Assessment of Electromagnetic Tracking Accuracy for Endoscopic Ultrasound"** http://dx.doi.org/10.1007/978-3-319-54057-3_4
 
-.. [West2004] Jay B. West and Calvin R. Maurer, Jr., **"Designing Optically Tracked Instruments for Image-Guided Surgery"**, http://dx.doi.org/10.1109/TMI.2004.825614
-
 .. [Shahidi2002] Ramin Shahidi, Michael R. Bax, Calvin R. Maurer, Jr., Jeremy A. Johnson, Eric P. Wilkinson, Bai Wang, Jay B. West, Martin J. Citardi, Kim H. Manwaring, and Rasool Khadem, **"Implementation, Calibration and Accuracy Testing of an Image-Enhanced Endoscopy System", http://dx.doi.org/10.1109/TMI.2002.806597
+
+.. [MeierHein2012] L. Maier-Hein, A. M. Franz, W. Birkfellner, J. Hummel, I. Gergel, I. Wegner, and H.-P. Meinzer,  **"Standardized assessment of new electromagnetic field generators in an interventional radiology setting"**, http://dx.doi.org/10.1118/1.4712222
+
+.. [Heller2006] A Chris Heller, Arun P. Amar, Charles Y. Liu, Michael L.J. Apuzzo, **"Surgery of the Mind and Mood: A Mosaic of Issues in Time and Evolution"**, https://academic.oup.com/neurosurgery/article/59/4/720/2559224
 
 
 Calibration

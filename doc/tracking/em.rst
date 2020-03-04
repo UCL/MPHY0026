@@ -6,7 +6,7 @@ Electromagnetic tracking
 Introduction
 ------------
 
-Electromagnetic (EM) tracking systems track EMs moving within an EM field with known geometry created by a field generator. There is no need no maintain a lie-of-sight between the sensors and the field generator, which makes them very suitable to track instruments inside the body such as endoscopes and needles.
+Electromagnetic (EM) tracking systems track EMs moving within an EM field with known geometry created by a field generator. The electromagnetic field varies over time and position, therefore the sensors can measure the local field (6 DOFs). There is no need no maintain a lie-of-sight between the sensors and the field generator, which makes them very suitable to track instruments inside the body such as endoscopes and needles.
 There are several types of EM tracking systems, which are described in the next sub sections.
 
 AC-driven
@@ -32,16 +32,38 @@ The system components of an electromagnetic tracking system are:
 
 * One field generator: Generates a magnetic field where the sensors can move and be tracked.
 * A system unit which may be comprised of other units (e.g., sensor unit): Takes the readings from the sensors in the field and returns the 3D position.
-* One or multiple sensors: Sensors will be attached to the tool that needs to be tracked and connected to the system unit (or sensor unit).
+* One or multiple sensors: Sensors will be attached to the tool that needs to be tracked and connected to the system unit (or sensor unit). They can be very small (0.3 mm).
 * A computer: Takes the processed tracked data from the system unit in order to provide assistance to the surgical procedure.
 
 The following picture show how the different components are connected.
 
 .. figure:: em_tracking.png
-  :alt: Main system components of an electromagnetic tracking system
+  :alt: Main system components of an electromagnetic tracking system.
   :width: 600
   
   Main system components of an electromagnetic tracking system
+
+And the following pictures show the components of a NDI Polaris Vicra optical tracking system:
+
+.. figure:: em_field_generator.jpg
+  :alt: EM tracking system field generator. This NDI tabletop is medically useful because it can be placed under the patient and has a shield to avoid distortions from the patient's bed.
+  :width: 600
+  
+  EM tracking system field generator. This NDI tabletop is medically useful because it can be placed under the patient and has a shield to avoid distortions from the patient's bed.
+
+.. figure:: em_system_unit.jpg
+  :alt: EM tracking system unit (bottom) and sensor unit (top)
+  :width: 600
+  
+  EM tracking system unit (bottom) and sensor unit (top)
+  
+.. figure:: em_sensor.jpg
+  :alt: EM tracking system sensor
+  :width: 600
+  
+  EM tracking system sensor
+  
+
   
 Errors in electromagnetic tracking
 ----------------------------------
