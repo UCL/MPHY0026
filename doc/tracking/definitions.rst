@@ -1,4 +1,4 @@
-. _Definitions:
+.. _DefinitionsTracking:
 
 Definitions
 ===========
@@ -8,21 +8,16 @@ Learning Objectives
 
 Upon completion of this section, the student will be able to
 
-* Understand the different tracking systems that can be used in medicine
-* Identify advantages and disadvantages of each type of tracking for each clinical application
-* TBD
+* Name the three tracking systems most applicable to surgery.
+* Identify advantages and disadvantages of each type of tracking for each clinical application.
+* Describe the principal of operation of each tracking system.
+* Describe the likely tracking errors associated with each tracking system.
+* Give examples of at least two other tracking systems that have been proposed for surgery.
 
-(previous)
-* Devices and Characteristics
-* Error analyses in literature
-* Visual tracking
-* Kalman filtering
 
-Nomenclature
-------------
+Nomenclature used in this section
+---------------------------------
 
 * CAS - Computer Assisted Surgery
-* CAI - Computer Assisted Interventions
-* IGS - Image-Guided Surgery
-* IGT - Image-Guided Therapy
-* IGI - Image-Guided Interventions
+* DOF - Degrees-of-freedom
+

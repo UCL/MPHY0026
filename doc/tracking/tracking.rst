@@ -5,8 +5,7 @@ Tracking
 
   definitions.rst
   introduction.rst
-  components.rst
   optical.rst
   em.rst
-  examples.rst
+  errors.rst
   summary.rst

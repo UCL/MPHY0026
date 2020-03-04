@@ -14,12 +14,11 @@ Before the lecture please read:
 The Lecture
 -----------
 
-*  5 mins - Introduction to the lecture and tracking
-* 10 mins - Background/history
-* 10 mins - Introduction to tracking systems and components
-* 10 mins - Optical tracking + errors
-* 10 mins - Electromagnetic tracking + errors
-* 10 mins - Tracking errors
+*  5 mins - Introduction to the lecture
+* 15 mins - :ref:`IntroductionTracking`
+* 10 mins - :ref:`Optical`
+* 10 mins - :ref:`EM`
+* 10 mins - :ref:`ErrorsTracking`
 
 *  5 mins - Break
 
@@ -33,7 +32,7 @@ The Lecture
 
 *  5 mins - Break
 
-* 55 mins - Paper discussion: [Xiao2018], [Bonmati2017]
+* 55 mins - Paper discussion: [Xiao2018]_, [Bonmati2017]_
 
 
 
