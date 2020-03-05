@@ -36,7 +36,7 @@ Infra-red cameras are used as optical markers can be tracked easier due to the e
 
 .. figure:: infrared_images.png
   :alt: Example of two images acquired with two infra-red cameras of a tracked tool.
-  :width: 300
+  :width: 800
   
   Example of two images acquired with two infra-red cameras of a tracked tool.
   
@@ -59,7 +59,8 @@ The following picture show how the different components are connected.
   
   Main system components of an infra-red optical tracking system
 
-And the following pictures show the real components of a NDI optical tracking system:
+
+And the following pictures show the real components of a `NDI Polaris Vicra <https://www.ndigital.com/medical/products/polaris-family/>`_ optical tracking system:
 
 .. figure:: optical_cameras.jpg
   :alt: Optical tracking system cameras
@@ -79,9 +80,9 @@ And the following pictures show the real components of a NDI optical tracking sy
   
   Rigid body with markers attached.
   
-.. figure:: infrared_images.png
+.. figure:: infrared_tracking_rigid_body.png
   :alt: Another example of rigid bodies with markers attached.
-  :width: 300
+  :width: 600
   
   Another example of rigid bodies with markers attached.
 

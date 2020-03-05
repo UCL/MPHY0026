@@ -28,7 +28,7 @@ In the following videos Dr. Clarkson explains and demonstrates how to do a hand-
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/BTAFdsUyTfU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-Free hand ultrasound calibration
+Free-hand ultrasound calibration
 --------------------------------
 Hand-eye calibration can also be used to perform a free-hand ultrasound calibration, where we want to find the origin of the US image in respect to the tracked ultrasound probe with a marker/sensor attached.
 The process is very similar. In this case we need a US-compatible phantom in which 2D points can be easily found on the 2D ultrasound images. 
