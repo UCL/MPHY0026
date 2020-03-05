@@ -6,15 +6,16 @@ Electromagnetic tracking
 Introduction
 ------------
 
-Electromagnetic (EM) tracking systems track EMs moving within an EM field with known geometry created by a field generator. 
+Electromagnetic (EM) tracking systems track EM sensors moving within an EM field with known geometry created by a field generator. 
 The electromagnetic field varies over time and position, therefore the sensors can measure the local field (6 DOFs). 
 There is no need no maintain a line-of-sight between the sensors and the field generator, which makes them very suitable to track instruments inside the body such as endoscopes and needles.
-There are several types of EM tracking systems, which are described in the next sub sections.
 
 AC-driven
 ^^^^^^^^^
 
-First EM tracking systems used alternate current. These systems consist of several coils aligned in a specific geometry that emit the magnetic field. Small sensors (coils) measure the voltage from each coil and this is used to find the position of the sensor inside the EM field.  
+First EM tracking systems used alternate current. 
+These systems consist of several coils aligned in a specific geometry that emit the magnetic field. 
+Small sensors (coils) measure the voltage from each coil and this is used to find the position of the sensor inside the EM field.  
 
 DC-driven
 ^^^^^^^^^
