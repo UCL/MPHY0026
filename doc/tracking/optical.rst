@@ -21,7 +21,7 @@ Video tracking systems track a fiducial marker with a printed pattern on it (e.g
 
 .. figure:: aruco_marker.jpg
   :alt: Aruco marker
-  :width: 600
+  :width: 300
   
   Aruco marker
 
@@ -34,7 +34,13 @@ Infra-red cameras are used as optical markers can be tracked easier due to the e
 
 * **Passive optical trackers**: Retro-reflective spheres are illuminated and detected by the infra-red cameras. The spheres are attached to a rigid body with a unique geometry for each tracked device.
 
-
+.. figure:: infrared_images.png
+  :alt: Example of two images acquired with two infra-red cameras of a tracked tool.
+  :width: 300
+  
+  Example of two images acquired with two infra-red cameras of a tracked tool.
+  
+  
 System components
 -----------------
 
@@ -53,7 +59,7 @@ The following picture show how the different components are connected.
   
   Main system components of an infra-red optical tracking system
 
-And the following pictures show the real components of a NDI Polaris Vicra optical tracking system:
+And the following pictures show the real components of a NDI optical tracking system:
 
 .. figure:: optical_cameras.jpg
   :alt: Optical tracking system cameras
@@ -66,12 +72,18 @@ And the following pictures show the real components of a NDI Polaris Vicra optic
   :width: 600
   
   Optical tracking system unit.
-  
+
 .. figure:: optical_rigid_body.jpg
-  :alt: Optical tracking system rigid body with markers attached.
+  :alt: Rigid body with markers attached.
   :width: 600
   
-  Optical tracking system rigid body with markers attached.
+  Rigid body with markers attached.
+  
+.. figure:: infrared_images.png
+  :alt: Another example of rigid bodies with markers attached.
+  :width: 300
+  
+  Another example of rigid bodies with markers attached.
 
 .. figure:: optical_IR_marker.jpg
   :alt: Optical tracking system IR markers.
