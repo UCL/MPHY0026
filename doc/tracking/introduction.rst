@@ -22,7 +22,7 @@ The most common tracking systems used in surgery can be grouped as follows:
 
 .. figure:: mechanical_digitiser.jpg
   :alt: Example of a mechanic digitizer to hold an ultrasound probe for prostate interventions, with a prostate phantom.
-  :width: 600
+  :width: 300
   
   Example of a mechanical digitizer to hold an ultrasound probe for prostate interventions, with a prostate phantom.
 
