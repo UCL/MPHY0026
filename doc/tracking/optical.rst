@@ -53,7 +53,7 @@ The following picture show how the different components are connected.
   
   Main system components of an infra-red optical tracking system
 
-And the following pictures show the real components of a NDI Polaris Vicra optical tracking system:
+And the following pictures show the real components of a `NDI Polaris Vicra <https://www.ndigital.com/medical/products/polaris-family/>`_ optical tracking system:
 
 .. figure:: optical_cameras.jpg
   :alt: Optical tracking system cameras

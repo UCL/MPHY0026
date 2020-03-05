@@ -14,10 +14,10 @@ The following image shows a representation of the elements involved in a camera 
 Intrinsic parameters include: 
 
 - Scale factor (often equal to 1)
-- Focal length (distance between the optical centre an the image plane)
+- Focal length (distance between the centre of projection an the image plane)
 - principal point (assume pixel 0,0 to be at the centre of the image)
-- Skew (when the image plane is not exactly at the centre of the image plane)
-- Geometric distortion.
+- Skew (when the principal point is not exactly at the centre of the image plane)
+- Geometric distortion (due to the lens).
 
 Assuming the following pinhole camera model:
 

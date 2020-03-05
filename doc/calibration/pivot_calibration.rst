@@ -8,8 +8,6 @@ This process consists in rotating the tracked instrument on a stationary point i
 There are several ways to perform the pivot calibration, mainly: sphere fitting, algebraic one step, and algebraic two steps. 
 All these methods solve exactly the same problem but taking the transformation in a different order. 
 A review can be found here: [Yaniv2015]_.
-In the next section we describe the sphere fitting method.
-
 
 Sphere fitting
 --------------

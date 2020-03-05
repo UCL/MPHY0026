@@ -12,25 +12,25 @@ Then the spatial relationship can be found by acquiring one or more images.
   :alt: Template-based calibration on the CAScination system. Position 1.
   :width: 300
   
-  Template-based calibration on the CAScination system. Position 1.
+  Template-based calibration on the `CAScination <https://www.cascination.com/>`_ system. Position 1.
 
 .. figure:: cascination_template_2.jpg
   :alt: Template-based calibration on the CAScination system. Position 2.
   :width: 300
   
-  Template-based calibration on the CAScination system. Position 2.
+  Template-based calibration on the `CAScination <https://www.cascination.com/>`_ system. Position 2.
 
 .. figure:: medtronic_template_1.jpg
   :alt: Template-based calibration on the Medtronic Bucholz Freehand system. Position 1.
   :width: 300
   
-  Template-based calibration on the Medtronic Bucholz Freehand system. Position 1.
+  Template-based calibration on the `Medtronic Bucholz Freehand <https://www.medtronic.com/uk-en/index.html>`_ system. Position 1.
 
 .. figure:: medtronic_template_2.jpg
   :alt: Template-based calibration on the Medtronic Bucholz Freehand system. Position 2.
   :width: 300
   
-  Template-based calibration on the Medtronic Bucholz Freehand system. Position 2.
+  Template-based calibration on the `Medtronic Bucholz Freehand <https://www.medtronic.com/uk-en/index.html>`_. Position 2.
 
 The following video shows how the calibration in the CAScination system is performed:
 

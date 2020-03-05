@@ -6,7 +6,9 @@ Electromagnetic tracking
 Introduction
 ------------
 
-Electromagnetic (EM) tracking systems track EMs moving within an EM field with known geometry created by a field generator. The electromagnetic field varies over time and position, therefore the sensors can measure the local field (6 DOFs). There is no need no maintain a lie-of-sight between the sensors and the field generator, which makes them very suitable to track instruments inside the body such as endoscopes and needles.
+Electromagnetic (EM) tracking systems track EMs moving within an EM field with known geometry created by a field generator. 
+The electromagnetic field varies over time and position, therefore the sensors can measure the local field (6 DOFs). 
+There is no need no maintain a line-of-sight between the sensors and the field generator, which makes them very suitable to track instruments inside the body such as endoscopes and needles.
 There are several types of EM tracking systems, which are described in the next sub sections.
 
 AC-driven
@@ -43,7 +45,7 @@ The following picture show how the different components are connected.
   
   Main system components of an electromagnetic tracking system
 
-And the following pictures show the components of a NDI Polaris Vicra optical tracking system:
+And the following pictures show the components of a `NDI Aurora <https://www.ndigital.com/medical/products/aurora/>`_ optical tracking system:
 
 .. figure:: em_field_generator.jpg
   :alt: EM tracking system field generator. This NDI tabletop is medically useful because it can be placed under the patient and has a shield to avoid distortions from the patient's bed.
