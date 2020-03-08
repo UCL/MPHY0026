@@ -53,7 +53,9 @@ Books
 Websites
 --------
 
-.. [ZivYaniv] Ziv Yaniv's homepage: http://yanivresearch.info/
+.. [ZivYaniv] `Ziv Yaniv's homepage <http://yanivresearch.info/>`_.
+.. [AndreGaschler] `Andre Gaschler's rotation converter <https://www.andre-gaschler.com/rotationconverter/>`_.
+.. [SciPyRotation] `Useful rotation converters in SciPy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.transform.Rotation.html>`_.
 
 
 Videos
@@ -186,3 +188,4 @@ Algorithm - K-D Tree
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/TLxWtXEbtFE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

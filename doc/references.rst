@@ -213,7 +213,7 @@ Essential
 Extras
 ^^^^^^
 
-.. [Tsai1987] Roger Y. Tsai, **"A Versatile Camera Calibration Techniaue for High-Accuracy 3D Machine Vision Metrology Using Off-the-shelf TV Cameras and Lenses"**, http://dx.doi.org/10.1109/JRA.1987.1087109
+.. [Tsai1987] Roger Y. Tsai, **"A Versatile Camera Calibration Technique for High-Accuracy 3D Machine Vision Metrology Using Off-the-shelf TV Cameras and Lenses"**, http://dx.doi.org/10.1109/JRA.1987.1087109
 
 .. [Tsai1989] Roger Y. Tsai and Reimar K. Lenz, **"A New Technique for Fully Autonomous and Efficient 3D Robotics Hand/Eye Calibration"**, http://dx.doi.org/10.1109/70.34770
 
@@ -228,6 +228,8 @@ Extras
 .. [Morgan2017] Isabella Morgan, Uditha Jayarathne, Adam Rankin, Terry M. Peters and Elvis C. S. Chen, **"Hand-eye calibration for surgical cameras: a Procrustean Perspective-n-Point solution"**, http://dx.doi.org/10.1007/s11548-017-1590-9
 
 .. [Ma2017] Buton Ma, Niloofar Banihaveb, Joy Choi, Elvis C. S. Chen, Amber L. Simpson, **"Is pose-based pivot calibration superior to sphere fitting?"**, http://dx.doi.org/10.1117/12.2256050
+
+.. [FischlerBolles1981] Martin A. Fischler, Robert C. Bolles, **"Random sample consensus: a paradigm for model fitting with applications to image analysis and automated cartography"**, https://doi.org/10.1145/358669.358692
 
 
 Visualisation

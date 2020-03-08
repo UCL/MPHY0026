@@ -7,7 +7,10 @@ Pivot calibration is the transformation between a tracked marker/sensor and the 
 This process consists in rotating the tracked instrument on a stationary point in order to localise the 3D position of the instrument's tip.
 There are several ways to perform the pivot calibration, mainly: sphere fitting, algebraic one step, and algebraic two steps. 
 All these methods solve exactly the same problem but taking the transformation in a different order. 
-A review can be found here: [Yaniv2015]_.
+A review can be found here: [Yaniv2015]_. Yaniv et al. concluded that algebraic formulations were more precise
+and more accurate than sphere fitting, but Ma et al. found that sphere fitting was superior when data was good
+and algebraic methods degrade less when data is bad [Ma2017]_.
+
 
 Sphere fitting
 --------------

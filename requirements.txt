@@ -3,11 +3,14 @@
 # confused with the software requirements, which are listed in
 # doc/requirements.rst
 numpy
+scipy
 ipykernel
 nbsphinx
 matplotlib
+opencv-contrib-python
 scikit-surgerycore
 scikit-surgeryvtk
 scikit-surgerynditracker
 scikit-surgeryarucotracker
 scikit-surgerypclcpp
+scikit-surgeryopencvcpp
