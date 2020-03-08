@@ -213,7 +213,7 @@ Essential
 Extras
 ^^^^^^
 
-.. [Tsai1987] Roger Y. Tsai, **"A Versatile Camera Calibration Techniaue for High-Accuracy 3D Machine Vision Metrology Using Off-the-shelf TV Cameras and Lenses"**, http://dx.doi.org/10.1109/JRA.1987.1087109
+.. [Tsai1987] Roger Y. Tsai, **"A Versatile Camera Calibration Technique for High-Accuracy 3D Machine Vision Metrology Using Off-the-shelf TV Cameras and Lenses"**, http://dx.doi.org/10.1109/JRA.1987.1087109
 
 .. [Tsai1989] Roger Y. Tsai and Reimar K. Lenz, **"A New Technique for Fully Autonomous and Efficient 3D Robotics Hand/Eye Calibration"**, http://dx.doi.org/10.1109/70.34770
 

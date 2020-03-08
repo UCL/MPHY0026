@@ -35,5 +35,5 @@ The Lecture
 * 55 mins - Paper discussion: [Xiao2018]_, [Bonmati2017]_
 
 
-
-
+After The Lecture
+-----------------
