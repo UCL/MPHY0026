@@ -78,6 +78,13 @@ in relation to pre-operative imaging, or vice-versa.
   Stereotactic frame with N-localisers, by Kirigiri, on wikimedia, licensed under `CC BY-SA 3.0`_.
 
 
+This is an example on YouTube:
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/HQojtBKiVfk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 Frameless Stereotaxy
 --------------------
 
