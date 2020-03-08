@@ -12,7 +12,7 @@ Before The Lecture
 The Lecture
 -----------
 
-* 15 mins - recap calibration
+* 15 mins - Recap calibration, Questions?
 * 15 mins - RANSAC
 * 30 mins - Imaging in CAS
 * 30 mins - Segmentation Overview

@@ -229,6 +229,8 @@ Extras
 
 .. [Ma2017] Buton Ma, Niloofar Banihaveb, Joy Choi, Elvis C. S. Chen, Amber L. Simpson, **"Is pose-based pivot calibration superior to sphere fitting?"**, http://dx.doi.org/10.1117/12.2256050
 
+.. [FischlerBolles1981] Martin A. Fischler, Robert C. Bolles, **"Random sample consensus: a paradigm for model fitting with applications to image analysis and automated cartography"**, https://doi.org/10.1145/358669.358692
+
 
 Visualisation
 -------------
