@@ -53,8 +53,9 @@ Books
 Websites
 --------
 
-.. [ZivYaniv] Ziv Yaniv's homepage: http://yanivresearch.info/
-.. [AndreGaschler] Andre Gaschler's rotation convert https://www.andre-gaschler.com/rotationconverter/
+.. [ZivYaniv] `Ziv Yaniv's homepage <http://yanivresearch.info/>`_.
+.. [AndreGaschler] `Andre Gaschler's rotation converter <https://www.andre-gaschler.com/rotationconverter/>`_.
+.. [SciPyRotation] `Useful rotation converters in SciPy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.transform.Rotation.html>`_.
 
 
 Videos
