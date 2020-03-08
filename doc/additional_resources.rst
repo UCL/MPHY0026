@@ -54,6 +54,7 @@ Websites
 --------
 
 .. [ZivYaniv] Ziv Yaniv's homepage: http://yanivresearch.info/
+.. [AndreGaschler] Andre Gaschler's rotation convert https://www.andre-gaschler.com/rotationconverter/
 
 
 Videos
