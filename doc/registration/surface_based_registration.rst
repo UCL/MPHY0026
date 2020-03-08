@@ -3,40 +3,50 @@
 Surface-Based Registration
 ==========================
 
-Examples
-^^^^^^^^
+Watch videos:
 
-Watch 2 videos:
-
-* :ref:`additional_resources:Examples - Medtronic Registration` for neurosurgery
+Examples - Surface Registration with Medtronic Stealthstation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/s0HoK5J1_-g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-* :ref:`additional_resources:Examples - Surface Registration with Pathfinder`
+
+Examples - Surface Registration with Pathfinder
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/vxd145vVknk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+
+Examples - Surface Registration with Brainlab Z-touch
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/C9ngfY97Bkg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 Surface Reconstruction Methods:
 
 * Dragging a pointer
-* :ref:`additional_resources:Examples - Surface Registration with Brainlab Z-touch`
-* Stereo vision, surface reconstruction, stitching [Thompson2015]_
+* Laser-Pointer like Brainlab Z-touch
 * Laser pointer [Fusaglia2016]_
+* Stereo vision, surface reconstruction, stitching [Thompson2015]_
 
-Papers
-^^^^^^
+
+Key Papers
+^^^^^^^^^^
 
 * ICP Algorithm. [BeslMcKay1992]_.
 * Variations for anisotropic noise, e.g. [LenaMaierHein2011]_
 * Extensions to global alignment, e.g. [Yang2015]_
 
 
-Algorithm - Iterative Closest Point
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Algorithm - Iterative Closest Point (ICP)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 From section IV (A) in [BeslMcKay1992]_, they define:
 
@@ -85,9 +95,6 @@ Worse case performance, finding the closest point is :math:`O(N_p * N_x)`.
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/TLxWtXEbtFE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-
 
 
 

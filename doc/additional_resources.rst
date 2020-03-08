@@ -61,17 +61,6 @@ Websites
 Videos
 ------
 
-
-What is Image-Guided Surgery?
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Prof Terry Peters gives examples from the Image-Guided Surgery Lab:
-
-.. raw:: html
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/FQEluqyR-SY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
 Examples - Image-Guided Surgery for Brain Tumours
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -109,13 +98,6 @@ Examples - Vascular Surgery
 Dr Tara Mastracci at UCL talks about `Cydar Medical <http://cydarmedical.com>`_ for `vascular surgery <https://www.youtube.com/watch?v=vmPTcf8VowE&feature=emb_err_watch_on_yt>`_.
 
 
-Examples - Medtronic Registration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. raw:: html
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/s0HoK5J1_-g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 
 Examples - Brainlab, BK5000 ultrasound, in Neurosurgery
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -149,43 +131,9 @@ Examples - Leica ARVeo
     <iframe width="560" height="315" src="https://www.youtube.com/embed/mUTg7G9XwGk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-
 Leica ARVeo with Brainlab
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/PmLIB_KPPdw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-Examples: Manual Alignment, CT to Tracker
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. raw:: html
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/-12OjjU2i9E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-Examples - Surface Registration with Pathfinder
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. raw:: html
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/vxd145vVknk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-Examples - Surface Registration with Brainlab Z-touch
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. raw:: html
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/C9ngfY97Bkg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-Algorithm - K-D Tree
-^^^^^^^^^^^^^^^^^^^^
-
-.. raw:: html
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/TLxWtXEbtFE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
