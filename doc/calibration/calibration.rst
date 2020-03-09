@@ -9,5 +9,6 @@ Calibration
   template.rst
   camera_calibration.rst
   handeye_calibration.rst
+  ransac.rst
   summary.rst
   

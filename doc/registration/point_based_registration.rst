@@ -76,3 +76,25 @@ Accuracy:
 * Neurosurgery: Similar range of errors, and a good explanation of FLE, FRE, TRE etc. [Shamir2009]_.
 * Liver surgery: Time was median 8:50 min. Accuracy (FRE), 14.0mm to 9.2mm, mean 12.8mm [Prevost2019]_.
 
+
+Notebooks
+^^^^^^^^^
+
+Have a play with the provided :ref:`Notebooks`.
+
+SNAPPY provides the main algorithms:
+
+.. code::
+
+    # Note that the SNAPPY libraries provide point-based registration using Arun's method and matrix utilities.
+    import sksurgerycore.algorithms.procrustes as pbr
+    import sksurgerycore.transforms.matrix as mu
+
+so Arun's algorithm is `here <https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/scikit-surgerycore/-/blob/master/sksurgerycore/algorithms/procrustes.py>`_
+and the matrix utilities are `here <https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/scikit-surgerycore/-/blob/master/sksurgerycore/transforms/matrix.py>`_.
+
+and can be installed with:
+
+.. code::
+
+    pip install scikit-surgerycore
