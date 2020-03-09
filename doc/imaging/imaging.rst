@@ -3,4 +3,4 @@ Imaging
 
 .. toctree::
 
-  imaging_types.rst
+  imaging_overview.rst

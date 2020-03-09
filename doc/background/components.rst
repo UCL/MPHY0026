@@ -27,12 +27,10 @@ As mentioned in papers like [PetersCleary2010]_, CAS system normally comprises
 Imaging
 -------
 
-To Do: fill, once we have written imaging lecture.
+This isn't a course in imaging. Common types include:
 
-For first lecture: List imaging types:
-
-* Pre-op: MR, CT, DSA
-* Intra-op: Video, Ultrasound, PA
+* Pre-op: MR, CT, PET, SPECT, DTI, DSA
+* Intra-op: Video, Ultrasound, X-Ray (flouroscopy), PA
 
 
 Segmentation

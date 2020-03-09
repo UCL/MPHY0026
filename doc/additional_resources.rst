@@ -61,13 +61,6 @@ Websites
 Videos
 ------
 
-Examples - Image-Guided Surgery for Brain Tumours
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. raw:: html
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/_BFTK6LWH5g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
 
 Examples - Liver Ablation
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -92,29 +85,6 @@ An example of using Slicer to display diffusion imaging tracts during image-guid
     <iframe width="560" height="315" src="https://www.youtube.com/embed/KrGkGPR5hs0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-Examples - Vascular Surgery
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Dr Tara Mastracci at UCL talks about `Cydar Medical <http://cydarmedical.com>`_ for `vascular surgery <https://www.youtube.com/watch?v=vmPTcf8VowE&feature=emb_err_watch_on_yt>`_.
-
-
-
-Examples - Brainlab, BK5000 ultrasound, in Neurosurgery
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. raw:: html
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/gU2yvMjnxhw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-Examples - Brainlab, Intra-op to Pre-op imaging using calibration device
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. raw:: html
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/MZ7vkkRtaz0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
 Examples - Brainlab, Needle insertion with Variguide
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -122,13 +92,6 @@ Examples - Brainlab, Needle insertion with Variguide
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Pz0QdomhyG4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
-Examples - Leica ARVeo
-^^^^^^^^^^^^^^^^^^^^^^
-
-.. raw:: html
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/mUTg7G9XwGk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 Leica ARVeo with Brainlab
