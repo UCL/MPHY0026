@@ -69,7 +69,7 @@ Pre-op data In The Operating Microscope
 
 [Edwards2000]_: The MAGI system, augmented reality in the operating microscope, for brain surgery.
 
-See also: :ref:`additional_resources:Examples - Leica ARVeo`, :ref:`additional_resources:Leica ARVeo with Brainlab`
+See also: :ref:`additional_resources:Leica ARVeo with Brainlab`
 
 
 Pre-op data On Video
@@ -78,15 +78,11 @@ Pre-op data On Video
 [Prevost2019]_: The CASCination system. Similarly, [Thompson2015]_, with the UCL SmartLiver system, for laparoscopic liver surgery.
 Here the CASCination paper is better for clinical pictures, but the Thompson paper shows the coordinate systems.
 
-See also: :ref:`additional_resources:Examples - Liver Ablation`
-
 
 X-ray, CT guidance in the OR
 ----------------------------
 
 [Feuerstein2008]_: TUM X-ray, CT system.
-
-See also: :ref:`additional_resources:Examples - Vascular Surgery`
 
 
 Freehand Ultrasound with MR

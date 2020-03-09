@@ -16,6 +16,13 @@ For the sake of brevity, we will omit this for now, and you may revisit it after
 the lectures on calibration.
 
 
+Examples - Brainlab, Intra-op to Pre-op imaging using calibration device
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/MZ7vkkRtaz0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 
 

@@ -9,7 +9,7 @@ The RANSAC plgorithm was first introduced by Fischler and Bolles in [FischlerBol
 Video
 ^^^^^
 
-This is a nice explanation by Penn State Robotics.
+This is a nice explanation by Jianbo Shi of Penn State Robotics.
 
 .. raw:: html
 
