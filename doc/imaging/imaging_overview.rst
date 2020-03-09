@@ -14,7 +14,7 @@ acquisition.
 We assume you have read:
 
 * [Elson2010]_ - Review of imaging in surgery, pre-op, intra-op, post-op.
-* [PetersClearey2010]_ - Includes more examples of what type of imaging devices are used, and where.
+* [PetersCleary2010]_ - Includes more examples of what type of imaging devices are used, and where.
 
 In this section, we have a free-form discussion, based on the following material.
 
@@ -87,8 +87,9 @@ Some Thoughts
 ^^^^^^^^^^^^^
 
 * You have to understand how a surgeon uses their imaging, BEFORE building a guidance system that is unnecessary.
-* Consider the frequency, and reasoning. Its normally a few key points during a long operating.
+* Consider the frequency of use, and why. Its normally a few key points during a long operating that are critical for imaging and guidance.
 * A CAS system has to integrate with the workflow, so there are often a lot of imaging parameters that are then hard to tweak on a guidance system.
+* Remember: A lot of the things we like to work on in Computer Science departments may not be necessary if imaging is improved!
 
 
 
