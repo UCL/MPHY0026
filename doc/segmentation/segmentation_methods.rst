@@ -100,6 +100,17 @@ What Tools Can I Use?
 * `OSIRIX <https://www.osirix-viewer.com/>`_, or the open-source `Horos <https://horosproject.org/>`_.
 
 
+Commercial Services Exist
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+* `Visible Patient <http://www.visiblepatient.com>`_
+* `Mevis Distant Services <https://www.mevis.de/en/solutions/professional/mevis-distant-services-mds/>`_
+
+Think carefully about the cost-benefit of segmenting your own,
+and if training a Deep Learning model, will you outperform others
+with much larger datasets?
+
+
 Segmentation of Pre-Op data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
