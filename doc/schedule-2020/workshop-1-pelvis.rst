@@ -60,7 +60,7 @@ Caveat:
 
 Use the command line tool to grab record the location of the points::
 
-    python mphy0026_grab_pointer.py -t vega -p tests/data/pelvis/8700340.rom -o tests/data/pelvis/optical-pointer-offset.txt -f 0.2 -n 4 -d tracker.txt
+    python mphy0026_grab_pointer.py -t vega -p doc/notebooks/NDIGeometries/8700340.rom -o tests/data/pelvis/optical-pointer-offset.txt -f 0.2 -n 4 -d tracker.txt
 
 This will grab a frame every 5 seconds (fps of 0.2), allowing time to move the pointer to each fiducial in turn.
 
@@ -84,7 +84,7 @@ Someone might move the phantom or tracker inbetween runs.)
 
 The registration can be used to visualise the CT at the pointer tip::
 
-    python mphy0026_quadview.py -t vega -v tests/data/pelvis/pelvis_cropped.nii  -reg tracker-to-ct-using-PBR.txt -p tests/data/pelvis/8700340.rom -min 901 -max 1023 -o tests/data/pelvis/optical-pointer-offset.txt
+    python mphy0026_quadview.py -t vega -v tests/data/pelvis/pelvis_cropped.nii  -reg tracker-to-ct-using-PBR.txt -p doc/notebooks/NDIGeometries/8700340.rom -min 901 -max 1023 -o tests/data/pelvis/optical-pointer-offset.txt
 
 
 5. Grab Data for ICP
@@ -99,7 +99,7 @@ So, if we want 900 points of data, at 30 frames per second that is about 30 seco
 * Place the pointer on the pelvis phantom.
 * Start grabbing data::
 
-    python mphy0026_grab_pointer.py -t vega -p tests/data/pelvis/8700340.rom -o tests/data/pelvis/optical-pointer-offset.txt  -f 30 -n 900 -d surface.txt
+    python mphy0026_grab_pointer.py -t vega -p doc/notebooks/NDIGeometries/8700340.rom -o tests/data/pelvis/optical-pointer-offset.txt  -f 30 -n 900 -d surface.txt
 
 * The person dragging the pointer should not lift/remove from the surface, as the tracker will keep tracking.
 * If the tracker fails to detect the pointer (i.e. pointer is obscured), the output on console will stop, and data collection will stop.
@@ -121,7 +121,7 @@ So, if we want 900 points of data, at 30 frames per second that is about 30 seco
 
 * The residual should be much lower, and you can re-run the quad viewer to confirm its registered::
 	
-	python mphy0026_quadview.py -t vega -v tests/data/pelvis/pelvis_cropped.nii  -reg tracker-to-ct-using-ICP.txt -p tests/data/pelvis/8700340.rom -min 901 -max 1023 -o tests/data/pelvis/optical-pointer-offset.txt
+	python mphy0026_quadview.py -t vega -v tests/data/pelvis/pelvis_cropped.nii  -reg tracker-to-ct-using-ICP.txt -p doc/notebooks/NDIGeometries/8700340.rom -min 901 -max 1023 -o tests/data/pelvis/optical-pointer-offset.txt
 
 * Repeat, using much fewer points?
 * Repeat, using points from a very flat/boring/planar area of the phantom?
