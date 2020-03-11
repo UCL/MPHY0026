@@ -33,7 +33,6 @@ def run_grab_pointer(tracker_type,
     :param mean: if True will grab points and compute mean average
     :param registration: if this and fiducials supplied, will work out FLE
     :param fiducials: if this and registration supplied, will work out FLE
-    :return:
     """
 
     print("Grab Pointer: ")

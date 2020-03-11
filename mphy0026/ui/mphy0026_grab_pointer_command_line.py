@@ -67,12 +67,12 @@ def main(args=None):
     parser.add_argument("-reg",
                         "--registration",
                         required=False,
-                        help='Registration transformation.')
+                        help='Registration transformation. Tracker to image.')
 
     parser.add_argument("-fid",
                         "--fiducials",
                         required=False,
-                        help='Fiducials.')
+                        help='Fiducials, in image space.')
 
     version_string = __version__
     friendly_version_string = version_string if version_string else 'unknown'
