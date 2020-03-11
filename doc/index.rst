@@ -2,7 +2,7 @@ Computer Assisted Surgery and Therapy
 =====================================
 
 * MPHY0026 at `University College London (UCL)`_.
-* Authors: `Matt Clarkson`_, `Steve Thompson`_, `Ester Bonmati`_, `Ann Blandford`_, `Tom Dowrick`_.
+* Authors: `Matt Clarkson`_, `Steve Thompson`_, `Ester Bonmati`_, `Ann Blandford`_, `Tom Dowrick`_, `Yipeng Hu`_.
 * `Source code`_ that generates this set of notes.
 
 Course Details
@@ -110,6 +110,7 @@ Contents
 .. _`Ester Bonmati`: https://iris.ucl.ac.uk/iris/browse/profile?upi=EBONM94
 .. _`Ann Blandford`: https://iris.ucl.ac.uk/iris/browse/profile?upi=AEBLA22
 .. _`Tom Dowrick`: https://iris.ucl.ac.uk/iris/browse/profile?upi=TMDOW59
+.. _`Yipeng Hu`: https://iris.ucl.ac.uk/iris/browse/profile?upi=YHUXX66
 .. _`Moodle`: https://moodle.ucl.ac.uk/
 .. _`Source code`: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026
 .. _`Issue Tracker`: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026
