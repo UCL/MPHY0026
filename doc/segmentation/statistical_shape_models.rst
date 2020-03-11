@@ -93,9 +93,10 @@ Workshop 3
 We shall see PCA in action, and visualise shape models of the prostate.
 
 .. figure:: ShapeRep_point.gif
-  :alt: A shape model of the prostate, courtesy of Dr Yipeng Hu.
+  :alt: Shape model of prostate
   :width: 600
 
+  A shape model of the prostate, courtesy of Dr Yipeng Hu.
 
 The code is here::
 
@@ -116,10 +117,18 @@ Of particular interest to CAS/IGI, SSM can be used for segmentation and registra
 * Its like non-rigid, biologically plausible ICP.
 
 
+.. figure:: ASM_sketch.jpg
+  :alt: AAM model sketch
+  :width: 600
+
+  A quick sketch illustrating AAM. For each point, find better point, then fit model.
+
 * The above process is itself a registration.
 * Also, once converged, label everything inside the model as segmented.
 * Can also be used: Register patient model to mean model, register mean model to image data
 
 .. figure:: Registration_mini.gif
-  :alt: Animation depicting a shape model derived from MRI simulations to intra-operative Ultrasound, courtesy of Dr Yipeng Hu.
+  :alt: Animation illustrating registration
   :width: 600
+
+  Animation depicting a shape model derived from MRI simulations to intra-operative Ultrasound, courtesy of Dr Yipeng Hu.
