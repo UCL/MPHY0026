@@ -97,6 +97,11 @@ We shall see PCA in action, and visualise shape models of the prostate.
   :width: 600
 
 
+The code is here::
+
+  git clone https://weisslab.cs.ucl.ac.uk/WEISSTeaching/TaughtModule_ComputerAssistedSurgeryAndTherapy.git
+
+
 Active Shape Models
 ^^^^^^^^^^^^^^^^^^^
 
