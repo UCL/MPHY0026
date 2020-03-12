@@ -40,6 +40,20 @@ def main(args=None):
                         help='Comma separated x,y,z of calibration divot.'
                         )
 
+    parser.add_argument("-f",
+                        "--fps",
+                        required=False,
+                        default=20,
+                        help='Frames per second.'
+                        )
+
+    parser.add_argument("-n",
+                        "--number",
+                        required=False,
+                        default=100,
+                        help='Number of samples.'
+                        )
+
     parser.add_argument("-d",
                         "--dump",
                         required=True,
@@ -59,6 +73,8 @@ def main(args=None):
                             args.pointer,
                             args.reference,
                             args.offset,
+                            args.fps,
+                            args.number,
                             args.dump
                             )
 
