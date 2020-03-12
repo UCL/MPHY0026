@@ -63,7 +63,8 @@ setup(
             'mphy0026_registration=mphy0026.ui.mphy0026_register_command_line:main',
             'mphy0026_quadview=mphy0026.ui.mphy0026_quadview_command_line:main',
             'mphy0026_grab_pointer=mphy0026.ui.mphy0026_grab_pointer_command_line:main',
-            'mphy0026_template_calibration=mphy0026.ui.mphy0026_template_calibration_command_line:main'
+            'mphy0026_template_calibration=mphy0026.ui.mphy0026_template_calibration_command_line:main',
+            'mphy0026_pivot_calib=mphy0026.ui.mphy0026_pivot_calib_command_line:main'
         ],
     },
 )
