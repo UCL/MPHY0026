@@ -56,7 +56,6 @@ def _check_tracker_data(tracker_frame,
         tracking_pointer = True
 
     if reference is not None \
-            and not np.isnan(tracker_frame[4][pointer_index]) \
             and not np.isnan(tracker_frame[4][reference_index]):
         tracking_reference = True
 
@@ -103,6 +102,9 @@ def compute_tracked_pointer_posn(tracker_frame,
                               pointer,
                               reference)
 
+    if not tracking_pointer:
+        raise ValueError("Not tracking pointer")
+
     if calibration_mode and not tracking_reference:
         raise ValueError("In calibration mode, the reference must be tracked.")
 
@@ -121,12 +123,21 @@ def compute_tracked_pointer_posn(tracker_frame,
         pointer_to_world = tracker_frame[3][pointer_index]
         reference_to_world = tracker_frame[3][reference_index]
 
+        print("Matt, pointer_to_world=" + str(pointer_to_world))
+        print("Matt, reference_to_world=" + str(reference_to_world))
+
         if calibration_mode:
+            print("Matt, calibration_mode")
+            print("Matt, offset=" + str(offset))
+            print("Matt, reference_to_world=" + str(reference_to_world))
+
             world_to_pointer = np.linalg.inv(pointer_to_world)
             divot_in_world = np.matmul(reference_to_world,
                                        offset)
+            print("Matt, divot_in_world=" + str(divot_in_world))
             divot_in_pointer = np.matmul(world_to_pointer,
                                          divot_in_world)
+            print("Matt, divot_in_pointer=" + str(divot_in_pointer))
             pointer_tip_transposed = \
                 (np.transpose(divot_in_pointer))[0, 0:3]
             pointer_posn = pointer_tip_transposed

@@ -33,12 +33,6 @@ def main(args=None):
                              'or ArUco tag number of tracked reference object.'
                         )
 
-    parser.add_argument("-o",
-                        "--offset",
-                        required=True,
-                        help='Comma separated x,y,z of pivoting divot.'
-                        )
-
     parser.add_argument("-f",
                         "--fps",
                         required=False,
@@ -72,7 +66,6 @@ def main(args=None):
     run_pivot_calibration(args.tracker,
                           args.pointer,
                           args.reference,
-                          args.offset,
                           args.fps,
                           args.number,
                           args.dump

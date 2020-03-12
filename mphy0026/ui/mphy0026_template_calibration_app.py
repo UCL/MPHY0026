@@ -67,7 +67,7 @@ def template_calibration(tracker_type,
                                                       tracker_type,
                                                       pointer,
                                                       reference,
-                                                      offset,
+                                                      divot_offset,
                                                       calibration_mode=True
                                                       )
 

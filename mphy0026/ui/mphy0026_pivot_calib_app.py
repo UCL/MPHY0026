@@ -35,7 +35,6 @@ def run_pivot_calibration(tracker_type,
     print("  tracker_type = ", tracker_type)
     print("  pointer = ", pointer)
     print("  reference = ", reference)
-    print("  offset = ", offset)
     print("  fps = ", fps)
     print("  number = ", number)
     print("  dump = ", dump)
@@ -44,8 +43,6 @@ def run_pivot_calibration(tracker_type,
         raise ValueError("The number of samples must be >=1")
     if float(fps) > 500:
         raise ValueError("The number of frames per second must be <= 500")
-
-    divot_offset = pp.extract_pointer_offset(offset)
 
     tracker = tf.create_tracker(tracker_type, pointer, reference)
 
@@ -63,25 +60,27 @@ def run_pivot_calibration(tracker_type,
         start = datetime.now()
 
         tracker_frame = tracker.get_frame()
-        
-        # Yay! Exercise for the reader. A classic lecturing trick.
 
+        # Yay! Exercise for the reader. A classic lecturing trick.
         # Tracked port numbers are stored in a list, call the list
-        item_ids = tracker_frame.port_numbers()
+        item_ids = tracker_frame[0]
 
         # Get the index for each item according to the known port numbers
-        pointer_idx = item_ids.index(pointer)
-        reference_idx = item_ids.index(reference)
+        pointer_idx = item_ids[0]
+        reference_idx = item_ids[1]
 
         # Grab both matrices.
-        pointer_matrix = tracker_frame.tracking(pointer_idx)
-        reference_matrix = tracker_frame.tracking(reference_idx)
+        pointer_matrix = tracker_frame[3][0]
+        reference_matrix = tracker_frame[3][1]
 
+        print("Matt, pointer_matrix=" + str(pointer_matrix))
         # Compute relative tracker position (i.e. pointer-to-reference).
         pointer_to_reference = np.linalg.inv(reference_matrix) @ pointer_matrix
 
-        # Store big array.
-        samples[counter, :] = pointer_to_reference
+        if not np.isnan(tracker_frame[4][0]) and not np.isnan(tracker_frame[4][1]):
+            # Store big array.
+            samples[counter, :, :] = pointer_to_reference
+            counter = counter + 1
 
         # This timing stuff is just to delay the loop, so we get
         # approximately the right sampling rate, without extra threads.
@@ -94,6 +93,7 @@ def run_pivot_calibration(tracker_type,
 
     # Now compute pivot calibration.
     # See, scikit-surgerycore.algorithms.pivot
+    print("Matt, shape=" + str(samples.shape))
     pointer_offset, RMS = pivot_calibration(samples)
 
     # Print pointer offset

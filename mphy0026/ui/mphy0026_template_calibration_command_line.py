@@ -37,7 +37,8 @@ def main(args=None):
     parser.add_argument("-o",
                         "--offset",
                         required=True,
-                        help='Comma separated x,y,z of calibration divot.'
+                        type=str,
+                        help='File containing x,y,z of calibration divot.'
                         )
 
     parser.add_argument("-f",
@@ -56,7 +57,7 @@ def main(args=None):
 
     parser.add_argument("-d",
                         "--dump",
-                        required=True,
+                        required=False,
                         help='Output file, to write pointer tip to.'
                         )
 
