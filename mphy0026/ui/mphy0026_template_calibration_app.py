@@ -55,8 +55,8 @@ def template_calibration(tracker_type,
     counter = 0
     samples = np.ndarray((number_of_samples, 3))
 
-    print('Starting acquisition of {number_of_samples} \
-          points in {ms_per_loop / 1000} seconds...')
+    print('Starting acquisition of ' + str(number_of_samples) \
+          + ' points in ' + str(ms_per_loop / 1000) + ' seconds...')
 
     while counter < number_of_samples:
         start = datetime.now()
@@ -68,7 +68,7 @@ def template_calibration(tracker_type,
                                                       pointer,
                                                       reference,
                                                       divot_offset,
-                                                      calibration_mode=True
+                                                      template_mode=True
                                                       )
 
         if pointer_tip is not None:
@@ -83,8 +83,8 @@ def template_calibration(tracker_type,
         if sleeptime_ms > 0:
             time.sleep(sleeptime_ms / 1000)
 
-    samples = np.mean(samples, axis=0, keepdims=True)
-    print("Pointer tip is:" + str(samples))
-
     if dump:
         np.savetxt(dump, samples)
+
+    samples = np.mean(samples, axis=0, keepdims=True)
+    print("Pointer offset from template calibration  is:" + str(samples))

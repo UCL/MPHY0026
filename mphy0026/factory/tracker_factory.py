@@ -10,6 +10,9 @@ def create_tracker(tracker_type, pointer, reference):
     """
     Logic for creating a tracker.
 
+    This logic is rather specific to these tutorials.
+    So, currently, pointer is mandatory, reference is optional.
+
     :param tracker_type: string, must be one of [vega|aurora|aruco]
     :param pointer: .rom file, port number or ArUco tag number for pointer
     :param reference: .rom file, port number or ArUco tag number for reference
