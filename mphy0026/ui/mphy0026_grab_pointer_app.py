@@ -33,7 +33,6 @@ def run_grab_pointer(tracker_type,
     :param mean: if True will grab points and compute mean average
     :param registration: if this and fiducials supplied, will work out FLE
     :param fiducials: if this and registration supplied, will work out FLE
-    :return:
     """
 
     print("Grab Pointer: ")
@@ -63,7 +62,7 @@ def run_grab_pointer(tracker_type,
     counter = 0
     samples = np.ndarray((number_of_samples, 3))
 
-    print(f'Starting acquisition of {number_of_samples} \
+    print('Starting acquisition of {number_of_samples} \
           points in {ms_per_loop / 1000} seconds...')
 
     while counter < number_of_samples:

@@ -1,18 +1,18 @@
 # coding=utf-8
 
-""" Command line processing for grab pointer app. """
+""" Command line processing for pivot calibration app. """
 
 import argparse
 
 from mphy0026 import __version__
-from mphy0026.ui.mphy0026_grab_pointer_app import run_grab_pointer
+from mphy0026.ui.mphy0026_pivot_calib_app import run_pivot_calibration
 
 
 def main(args=None):
     """ Entry point for mphy0026_grab_pointer application. """
 
     parser = argparse.ArgumentParser(
-        description='MPHY0026 - Grab Pointer')
+        description='MPHY0026 - Pivot Calibration')
 
     parser.add_argument("-t",
                         "--tracker",
@@ -30,13 +30,13 @@ def main(args=None):
                         "--reference",
                         required=False,
                         help='Reference .rom file, port number, '
-                             'or ArUco tag number.'
+                             'or ArUco tag number of tracked reference object.'
                         )
 
     parser.add_argument("-o",
                         "--offset",
                         required=True,
-                        help='Comma separated x,y,z of pointer offset.'
+                        help='Comma separated x,y,z of pivoting divot.'
                         )
 
     parser.add_argument("-f",
@@ -59,38 +59,20 @@ def main(args=None):
                         help='Dump data to file.'
                         )
 
-    parser.add_argument("-m",
-                        "--mean",
-                        dest='mean',
-                        action='store_true')
-
-    parser.add_argument("-reg",
-                        "--registration",
-                        required=False,
-                        help='Registration transformation. Tracker to image.')
-
-    parser.add_argument("-fid",
-                        "--fiducials",
-                        required=False,
-                        help='Fiducials, in image space.')
-
     version_string = __version__
     friendly_version_string = version_string if version_string else 'unknown'
     parser.add_argument(
         "--version",
         action='version',
-        version='MPHY0026 - Grab Pointer version ' + friendly_version_string)
+        version='MPHY0026 - Pivot Calibration version ' + friendly_version_string)
 
     args = parser.parse_args(args)
 
-    run_grab_pointer(args.tracker,
-                     args.pointer,
-                     args.reference,
-                     args.offset,
-                     args.fps,
-                     args.number,
-                     args.dump,
-                     args.mean,
-                     args.registration,
-                     args.fiducials
-                     )
+    run_pivot_calibration(args.tracker,
+                          args.pointer,
+                          args.reference,
+                          args.offset,
+                          args.fps,
+                          args.number,
+                          args.dump
+                          )

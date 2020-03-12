@@ -80,9 +80,9 @@ Segmentation
 Essential
 ^^^^^^^^^
 
-.. [Heimann2009] Tobias Heimann, Hans-Peter Meinzer, **"Statistical shape models for 3D medical image segmentation"**, http://dx.doi.org/10.1016/j.media.2009.05.004
+.. [Shlens2014] Jonathon Schlens, **"A Tutorial on Principal Component Analysis"**, https://https://arxiv.org/abs/1404.1100
 
-.. [Sharma2010] Neeraj Sharma and Lalit M. Aggarwal, **"Automated medical image segmentation techniques."**, http://dx.doi.org/10.4103/0971-6203.58777
+.. [Heimann2009] Tobias Heimann, Hans-Peter Meinzer, **"Statistical shape models for 3D medical image segmentation"**, http://dx.doi.org/10.1016/j.media.2009.05.004
 
 .. [Ronneberger2015] Olaf Ronneberger, Philipp Fischer and Thomas Brox, **"U-Net: Convolutional Networks for Biomedical Image Segmentation"**, http://dx.doi.org/10.1007/978-3-319-24574-4_28
 
@@ -143,6 +143,9 @@ Extras
 .. [Thompson2013]  Stephen Thompson, Graeme Penney, Prokar Dasgupta, David Hawkes, **"Improved Modelling of Tool Tracking Errors by Modelling Dependent Marker Errors"**, https://doi.org/10.1109/TMI.2012.2216890
 
 .. [Fitzpatrick2009] Fitzpatrick, J. Michael, **"Fiducial registration error and target registration error are uncorrelated"**, http://dx.doi.org/10.1117/12.813601
+
+.. [Chen2017] Elvis C. S. Chen, Burton Ma, Terry M. Peters, **"Contact-less stylus for surgical navigation: registration without digitization"**, https://doi.org/10.1007/s11548-017-1576-7
+
 
 Surface-Based Registration
 --------------------------
