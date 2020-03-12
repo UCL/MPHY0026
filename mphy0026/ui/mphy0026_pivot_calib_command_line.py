@@ -9,7 +9,7 @@ from mphy0026.ui.mphy0026_pivot_calib_app import run_pivot_calibration
 
 
 def main(args=None):
-    """ Entry point for mphy0026_grab_pointer application. """
+    """ Entry point for mphy0026_pivot_calib application. """
 
     parser = argparse.ArgumentParser(
         description='MPHY0026 - Pivot Calibration')

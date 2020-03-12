@@ -11,14 +11,14 @@ import mphy0026.factory.tracker_factory as tf
 import mphy0026.algorithms.compute_tracked_pointer_posn as pp
 
 
-def template_calibration(tracker_type,
-                         pointer,
-                         reference,
-                         offset,
-                         fps,
-                         number,
-                         dump
-                         ):
+def run_template_calibration(tracker_type,
+                             pointer,
+                             reference,
+                             offset,
+                             fps,
+                             number,
+                             dump
+                             ):
     """
     Computes the pointer tip, using a Template Calibration method.
 

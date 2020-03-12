@@ -7,9 +7,9 @@
 import time
 from datetime import datetime
 import numpy as np
+from sksurgerycore.algorithms.pivot import pivot_calibration
 import mphy0026.factory.tracker_factory as tf
 import mphy0026.algorithms.compute_tracked_pointer_posn as pp
-from sksurgerycore.algorithms.pivot import pivot_calibration
 
 
 def run_pivot_calibration(tracker_type,
@@ -96,5 +96,5 @@ def run_pivot_calibration(tracker_type,
     if dump:
         np.savetxt(dump, pointer_offset.T)
 
-    print("Pointer offset from pivot calibration: ",
+    print("Pointer offset from pivot calibration: "
           + str(pointer_offset.T) + ", RMS=" + str(rms))

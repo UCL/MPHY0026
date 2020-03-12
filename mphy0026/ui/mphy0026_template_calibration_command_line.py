@@ -71,11 +71,11 @@ def main(args=None):
 
     args = parser.parse_args(args)
 
-    tc.template_calibration(args.tracker,
-                            args.pointer,
-                            args.reference,
-                            args.offset,
-                            args.fps,
-                            args.number,
-                            args.dump
-                            )
+    tc.run_template_calibration(args.tracker,
+                                args.pointer,
+                                args.reference,
+                                args.offset,
+                                args.fps,
+                                args.number,
+                                args.dump
+                                )
