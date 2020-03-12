@@ -64,7 +64,8 @@ def main(args=None):
     parser.add_argument(
         "--version",
         action='version',
-        version='MPHY0026 - Pivot Calibration version ' + friendly_version_string)
+        version='MPHY0026 - Pivot Calibration version '
+                + friendly_version_string)
 
     args = parser.parse_args(args)
 

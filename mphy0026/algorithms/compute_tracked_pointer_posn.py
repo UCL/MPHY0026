@@ -101,8 +101,7 @@ def compute_tracked_pointer_posn(tracker_frame,
         = _check_tracker_data(tracker_frame,
                               tracker_type,
                               pointer,
-                              reference,
-                              calibration_mode)
+                              reference)
 
     if calibration_mode and not tracking_reference:
         raise ValueError("In calibration mode, the reference must be tracked.")

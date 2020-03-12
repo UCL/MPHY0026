@@ -65,7 +65,8 @@ def main(args=None):
     parser.add_argument(
         "--version",
         action='version',
-        version='MPHY0026 - Template Calibration version ' + friendly_version_string)
+        version='MPHY0026 - Template Calibration version '
+                + friendly_version_string)
 
     args = parser.parse_args(args)
 
@@ -77,4 +78,3 @@ def main(args=None):
                             args.number,
                             args.dump
                             )
-

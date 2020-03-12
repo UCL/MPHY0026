@@ -2,6 +2,8 @@
 
 """ Harness to run Template Calibration application. """
 
+#pylint: disable=duplicate-code
+
 import time
 from datetime import datetime
 import numpy as np
