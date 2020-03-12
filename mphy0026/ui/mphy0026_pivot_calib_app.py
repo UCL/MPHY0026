@@ -9,12 +9,12 @@ from datetime import datetime
 import numpy as np
 import mphy0026.factory.tracker_factory as tf
 import mphy0026.algorithms.compute_tracked_pointer_posn as pp
+from sksurgerycore.algorithms.pivot import pivot_calibration
 
 
 def run_pivot_calibration(tracker_type,
                           pointer,
                           reference,
-                          offset,
                           fps,
                           number,
                           dump
@@ -26,7 +26,6 @@ def run_pivot_calibration(tracker_type,
     :param tracker_type: string [vega|aurora|aruco]
     :param pointer: .rom file, port number or ArUco tag number for pointer
     :param reference: .rom file, port number or ArUco tag number for reference
-    :param offset: string containing x,y,z of calibration divot.
     :param fps: number of frames per second
     :param number: number of samples
     :param dump: if specified, file to dump data to
@@ -55,7 +54,7 @@ def run_pivot_calibration(tracker_type,
     number_of_samples = int(number)
 
     counter = 0
-    samples = np.ndarray((number_of_samples, 3))
+    samples = np.ndarray((number_of_samples, 4, 4))
 
     print('Starting acquisition of {number_of_samples} \
           points in {ms_per_loop / 1000} seconds...')
@@ -64,12 +63,25 @@ def run_pivot_calibration(tracker_type,
         start = datetime.now()
 
         tracker_frame = tracker.get_frame()
-
+        
         # Yay! Exercise for the reader. A classic lecturing trick.
 
+        # Tracked port numbers are stored in a list, call the list
+        item_ids = tracker_frame.port_numbers()
+
+        # Get the index for each item according to the known port numbers
+        pointer_idx = item_ids.index(pointer)
+        reference_idx = item_ids.index(reference)
+
         # Grab both matrices.
+        pointer_matrix = tracker_frame.tracking(pointer_idx)
+        reference_matrix = tracker_frame.tracking(reference_idx)
+
         # Compute relative tracker position (i.e. pointer-to-reference).
+        pointer_to_reference = np.linalg.inv(reference_matrix) @ pointer_matrix
+
         # Store big array.
+        samples[counter, :] = pointer_to_reference
 
         # This timing stuff is just to delay the loop, so we get
         # approximately the right sampling rate, without extra threads.
@@ -82,6 +94,10 @@ def run_pivot_calibration(tracker_type,
 
     # Now compute pivot calibration.
     # See, scikit-surgerycore.algorithms.pivot
+    pointer_offset, RMS = pivot_calibration(samples)
+
+    # Print pointer offset
+    print("Pointer offset from pivot calibration: ", pointer_offset)
 
     # Save offset.
     if dump:
