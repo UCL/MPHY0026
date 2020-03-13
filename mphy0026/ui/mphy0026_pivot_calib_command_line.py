@@ -9,7 +9,7 @@ from mphy0026.ui.mphy0026_pivot_calib_app import run_pivot_calibration
 
 
 def main(args=None):
-    """ Entry point for mphy0026_grab_pointer application. """
+    """ Entry point for mphy0026_pivot_calib application. """
 
     parser = argparse.ArgumentParser(
         description='MPHY0026 - Pivot Calibration')
@@ -31,12 +31,6 @@ def main(args=None):
                         required=False,
                         help='Reference .rom file, port number, '
                              'or ArUco tag number of tracked reference object.'
-                        )
-
-    parser.add_argument("-o",
-                        "--offset",
-                        required=True,
-                        help='Comma separated x,y,z of pivoting divot.'
                         )
 
     parser.add_argument("-f",
@@ -64,14 +58,14 @@ def main(args=None):
     parser.add_argument(
         "--version",
         action='version',
-        version='MPHY0026 - Pivot Calibration version ' + friendly_version_string)
+        version='MPHY0026 - Pivot Calibration version '
+                + friendly_version_string)
 
     args = parser.parse_args(args)
 
     run_pivot_calibration(args.tracker,
                           args.pointer,
                           args.reference,
-                          args.offset,
                           args.fps,
                           args.number,
                           args.dump

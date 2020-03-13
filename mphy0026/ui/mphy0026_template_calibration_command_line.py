@@ -37,12 +37,27 @@ def main(args=None):
     parser.add_argument("-o",
                         "--offset",
                         required=True,
-                        help='Comma separated x,y,z of calibration divot.'
+                        type=str,
+                        help='File containing x,y,z of calibration divot.'
+                        )
+
+    parser.add_argument("-f",
+                        "--fps",
+                        required=False,
+                        default=20,
+                        help='Frames per second.'
+                        )
+
+    parser.add_argument("-n",
+                        "--number",
+                        required=False,
+                        default=100,
+                        help='Number of samples.'
                         )
 
     parser.add_argument("-d",
                         "--dump",
-                        required=True,
+                        required=False,
                         help='Output file, to write pointer tip to.'
                         )
 
@@ -51,14 +66,16 @@ def main(args=None):
     parser.add_argument(
         "--version",
         action='version',
-        version='MPHY0026 - Template Calibration version ' + friendly_version_string)
+        version='MPHY0026 - Template Calibration version '
+                + friendly_version_string)
 
     args = parser.parse_args(args)
 
-    tc.template_calibration(args.tracker,
-                            args.pointer,
-                            args.reference,
-                            args.offset,
-                            args.dump
-                            )
-
+    tc.run_template_calibration(args.tracker,
+                                args.pointer,
+                                args.reference,
+                                args.offset,
+                                args.fps,
+                                args.number,
+                                args.dump
+                                )
