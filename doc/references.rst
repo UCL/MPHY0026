@@ -31,6 +31,8 @@ Extras
 
 .. [Qian2019] Long Qian, Jie Yin Wu, Simon DiMaio, Nassir Navab, Peter Kazanzides, **"A Review of Augmented Reality in Robotic-Assisted Surgery"**, http://dx.doi.org/10.1109/TMRB.2019.2957061
 
+.. [Sielforst2008] Tobias Sielhorst, Marco Feuerstein, Nassir Navab **"Advanced Medical Displays: A Literature Review of Augmented Reality"**, http://dx.doi.org/10.1109/JDT.2008.2001575
+
 
 Application Examples
 --------------------
@@ -235,11 +237,20 @@ Extras
 .. [FischlerBolles1981] Martin A. Fischler, Robert C. Bolles, **"Random sample consensus: a paradigm for model fitting with applications to image analysis and automated cartography"**, https://doi.org/10.1145/358669.358692
 
 
-Visualisation
--------------
+Visualisation And Multi-Modal Interaction
+-----------------------------------------
 
 Essential
 ^^^^^^^^^
+
+.. [Tourancheau2012] Sylvain Tourancheau, Mårten Sjöström, Roger Olsson, Anders Persson, Thomas Ericson, Johan Rudling, Bengt Norén, **"Subjective evaluation of user experience in interactive 3D visualization in a medical context"**, https://doi.org/10.1117/12.910828
+
+.. [Norman1988] D. Norman, **"The design of everyday things."**, Basic Books.
+
+.. [Wickens2008] Wickens, C. D., **"Multiple resources and mental workload"**, https://doi.org/10.1518/001872008X288394
+
+Extras
+^^^^^^
 
 .. [Bichlmeier2010] Christoph Bichlmeier, Felix Wimmer, Sandro Michael Heining and Nassir Navab, **"Contextual Anatomic Mimesis Hybrid In-Situ Visualization Method for Improving Multi-Sensory Depth Perception in Medical Augmented Reality"**, http://dx.doi.org/10.1109/ISMAR.2007.4538837
 
@@ -251,30 +262,31 @@ Essential
 
 .. [Marcus2015] Hani J Marcus, Philip Pratt, Archie Hughes-Hallett, Thomas P Cundy, Adam P Marcus, Guang-Zhong Yang, Ara Darzi, Dipankar Nandi, **"Comparative Effectiveness and Safety of Image Guidance Systems in Neurosurgery: A Preclinical Randomized Study"**, http://dx.doi.org/10.3171/2014.10.JNS141662
 
-Extras
-^^^^^^
-
-.. [Dilley2019] Dilley, James W. R. MRCOG; Hughes-Hallett, Archie PhD; Pratt, Philip J. PhD; Pucher, Philip H. PhD; Camara, Mafalda MSc; Darzi, Ara W. FRS; Mayer, Erik K. PhD, **"Perfect Registration Leads to Imperfect Performance A Randomized Trial of Multimodal Intraoperative Image Guidance"**. http://dx.doi.org/10.1097/SLA.0000000000002793
+.. [Dilley2019] Dilley, James W. R., Hughes-Hallett, Archie, Pratt, Philip J., Pucher, Philip H., Camara, Mafalda, Darzi, Ara W., Mayer, Erik K., **"Perfect Registration Leads to Imperfect Performance A Randomized Trial of Multimodal Intraoperative Image Guidance"**. http://dx.doi.org/10.1097/SLA.0000000000002793
 
 .. [Thompson2018] Stephen Thompson, Crispin Schneider, Michele Bosi, Kurinchi Gurusamy, Sébastien Ourselin, Brian Davidson, David Hawkes, Matthew J Clarkson, **"In vivo estimation of target registration errors during augmented reality laparoscopic surgery"**, https://dx.doi.org/10.1007/s11548-018-1761-3
 
 .. [Dixon2012] Benjamin J. Dixon, Michael J. Daly, Harley Chan, Allan D. Vescan, Ian J. Witterick, Jonathan C. Irish **"Surgeons blinded by enhanced navigation: the effect of augmented reality on attention"**, https://dx.doi.org/10.1007/s00464-012-2457-3
 
-.. [Sielforst2008] Tobias Sielhorst, Marco Feuerstein, Nassir Navab **"Advanced Medical Displays: A Literature Review of Augmented Reality"**, http://dx.doi.org/10.1109/JDT.2008.2001575
 
-User Interface
---------------
+
+Human Computer Interaction
+--------------------------
 
 Essential
 ^^^^^^^^^
 
-.. [Cronin2019] Sean, Cronin, Gavin Doherty. **"Touchless Computer Interfaces in Hospitals: A Review."**, http://dx.doi.org/10.1177/1460458217748342
+.. [BeyerHoltzblatt1999] Beyer, H., Holtzblatt, K., **"Contextual design. interactions"**, https://dl.acm.org/doi/fullHtml/10.1145/291224.291229
 
-.. [Mewes2016] Mewes A, Hensen B, Wacker F, Hansen C. **"Touchless interaction with software in interventional radiology and surgery: a systematic literature review."**, https://dx.doi.org/10.1007/s11548-016-1480-6
+.. [Hazelhurst2007] Hazlehurst, B., McMullen, C. K., Gorman, P. N, **" Distributed cognition in the heart room: how situation awareness arises from coordinated communications during cardiac surgery."**, https://doi.org/10.1016/j.jbi.2007.02.001
 
 
 Extras
 ^^^^^^
+
+.. [Cronin2019] Sean, Cronin, Gavin Doherty. **"Touchless Computer Interfaces in Hospitals: A Review."**, http://dx.doi.org/10.1177/1460458217748342
+
+.. [Mewes2016] Mewes A, Hensen B, Wacker F, Hansen C. **"Touchless interaction with software in interventional radiology and surgery: a systematic literature review."**, https://dx.doi.org/10.1007/s11548-016-1480-6
 
 .. [Wheeler2019] Gavin Wheeler, Shujie Deng, Kuberan Pushparajah, Julia Schnabel, John Simpson, Alberto Gomez Herrero, **"A Virtual Linear Measurement System for Accurate Quantification of Medical Images"**, http://dx.doi.org/10.1049/HTL.2019.0074
 
