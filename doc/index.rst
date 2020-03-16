@@ -89,7 +89,9 @@ Contents
   tracking/tracking.rst
   calibration/calibration.rst
   registration/registration.rst
-  visualisation/visualisation.rst
+  hci/hci.rst
+  interaction/vmi.rst
+  graphics/graphics.rst
   ui/ui.rst
   evaluation/evaluation.rst
   references.rst
