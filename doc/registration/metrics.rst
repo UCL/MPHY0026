@@ -99,7 +99,7 @@ TRE is "the distance between homologous points other than the centroids of fiduc
 * In the literature, we also see clinical targets, centroids of tumour etc.
 
 
-Estimating TRE from FRE
+Estimating TRE from FLE
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 The seminal paper by Fitzpatrick et al [Fitzpatrick1998]_ re-derived the following:
@@ -110,14 +110,14 @@ The seminal paper by Fitzpatrick et al [Fitzpatrick1998]_ re-derived the followi
 
 where :math:`N` is the number of fiducials and :math:`\langle \rangle` means *Expectation*, i.e. average.
 
-The main result of the paper was a formula to predict TRE from TRE:
+The main result of the paper was a formula to predict TRE from FLE:
 
 .. math::
 
     \langle TRE^2({\bf p}) \rangle \approx \frac{ \langle FLE^2 \rangle }{N} \left( 1 + \frac{1}{3} \sum_{k=1}^3 \frac{d_k^2}{f_k^2} \right)
 
 where :math:`{\bf p}` is a target point, :math:`d_k^2` the squared distance between the target
-and the :math:`k` th principal axis and :math:`f_k^2` is the mean squared distance between the fiducial
+and the :math:`k` th principal axis and :math:`f_k^2` is the root mean squared distance between the fiducial
 points and the same axis.
 
 The last formula is often used in designing optically tracked tools [West2004]_, and for estimating

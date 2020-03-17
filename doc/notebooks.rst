@@ -8,3 +8,4 @@ Notebooks
 * `Point Based Registration <notebooks/point_based_registration.html>`_
 * `Calibration and Tracking Workshop <calibration_and_tracking.html>`_
 * `Pivot Calibration With and Without RANSAC <notebooks/RANSAC.html>`_
+* `Laparoscopic Liver Surgery Simulator <notebooks/lap_liver_sim.html`_
