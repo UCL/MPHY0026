@@ -9,3 +9,4 @@ Notebooks
 * `Calibration and Tracking Workshop <calibration_and_tracking.html>`_
 * `Pivot Calibration With and Without RANSAC <notebooks/RANSAC.html>`_
 * `Laparoscopic Liver Surgery Simulator <notebooks/lap_liver_sim.html>`_
+* `Using FLE to Compute TRE <notebooks/TRE_Worksheet.html>`_
