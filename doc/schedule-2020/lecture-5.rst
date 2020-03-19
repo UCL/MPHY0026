@@ -3,4 +3,8 @@
 Lecture 5
 =========
 
- Evaluation of IGI systems. Image-guided Therapy.
+* Wrap up
+* Graphics
+* Evaluations
+* Interfaces
+
