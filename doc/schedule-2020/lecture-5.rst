@@ -16,10 +16,10 @@ The Lecture
 A bit of a wrap up. Still very much work in progress, as we
 get to grips with remote working.
 
-* 30 minutes - Graphics
-* 30 minutes - Augmented Reality
-* 30 minutes - Applications
-* 30 minutes - Computer Aided Surgery and Therapy ... Where's the "Therapy"?
+* 30 minutes - :ref:`Graphics`, surface rendering, volume rendering
+* 30 minutes - :ref:`AugmentedReality`, what is it, uses, pro's, con's
+* 30 minutes - :ref:`Interfaces`, what interaction devices have been tried in surgery
+* 30 minutes - :ref:`Evaluation`
 
 
 After The Lecture

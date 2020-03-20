@@ -3,4 +3,4 @@ Graphics
 
 .. toctree::
 
-  graphics_overview.rst
+  introduction.rst
