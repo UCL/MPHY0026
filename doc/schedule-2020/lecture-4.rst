@@ -11,8 +11,8 @@ Before The Lecture
 The Lecture
 -----------
 
-* Visualisation and Multimodal Interaction
-* Human Computer Interaction (HCI) in a nutshell
+* :ref:`VMMI`
+* :ref:`HCI`
 
 (notes will be provided as Word/PDF and integrated into the online notes after course ends).
 
