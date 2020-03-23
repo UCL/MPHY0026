@@ -249,6 +249,7 @@ Essential
 
 .. [Wickens2008] Wickens, C. D., **"Multiple resources and mental workload"**, https://doi.org/10.1518/001872008X288394
 
+
 Extras
 ^^^^^^
 
@@ -293,6 +294,21 @@ Extras
 .. [Hatscher2019] Hatscher, B., Mewes, A., Pannicke, E. et al., **"Touchless scanner control to support MRI-guided interventions"**, https://dx.doi.org/10.1007/s11548-019-02058-1
 
 .. [Hart2006] Sandra G. Hart, **"NASA-Task Load Index (NASA-TLX); 20 Years Later"**, https://doi.org/10.1177/154193120605000909
+
+
+Graphics
+--------
+
+Essential
+^^^^^^^^^
+
+Extras
+^^^^^^
+
+.. [Lorensen1987] William E. Lorensen, Harvey E. Cline, **"Marching cubes: A high resolution 3D surface construction algorithm"**, https://doi.org/10.1145/37402.37422
+
+.. [Schroeder1992] William J. Schroeder, Jonathan A. Zarga, William E. Lorensen, **"Decimation of Triangle Meshes"**, https://doi.org/10.1145/133994.134010
+
 
 Evaluation
 ----------

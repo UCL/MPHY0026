@@ -50,6 +50,16 @@ Books
   Mauro et al., "Image-Guided Interventions"
 
 
+.. _bookFoleyVanDam:
+
+.. figure:: https://images-na.ssl-images-amazon.com/images/I/51IyaCNnhOL._SX359_BO1,204,203,200_.jpg
+  :alt: Foley et al., Computer GraphicsBook
+  :target: https://www.amazon.co.uk/Computer-Graphics-Principles-Practice-1995-08-14/dp/B01JNW82R8/ref=sr_1_2?dchild=1&keywords=Foley+Van+Dam&qid=1584968851&sr=8-2
+  :width: 200
+
+  Foley et al., "Computer Graphics Principles and Practice"
+
+
 Websites
 --------
 
