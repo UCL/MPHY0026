@@ -16,8 +16,8 @@ For this course, once you have identified your imaging modalities,
 worked out tracking, calibration, registration and segmentation,
 we come to the part of "and now put something on the screen".
 In order to do that, we will cover basic concepts. Most researchers in
-this field are still trying to get the underlying algorithms working,
-and few are working at improving the visualisation. For a good overview
+this field are still trying to get the underlying algorithms (registration, calibration) working,
+and few are working at improving their visualisation. For a good overview
 see [KerstenOertel2013]_, [KerstenOertel2015]_.
 
 We will cover:
@@ -32,7 +32,10 @@ We will cover:
 Surface Versus Volume Rendering
 -------------------------------
 
-First, to continue the introduction, lets look at the two main types of visualisation:
+In computing at least, "rendering" means "drawing", and "visualisation" is the process of
+drawing a picture of data, so the terms "rendering" and "visualisation" are fairly interchangeable.
+
+First, lets look at the two main types of rendering:
 
 
 Surface Rendering
@@ -53,9 +56,9 @@ In this video, we see:
 Volume Rendering
 ^^^^^^^^^^^^^^^^
 
-In this video, we see how volume visualisation is different.
+In this video, we see how volume rendering is different to surface rendering:
 
-* Volume visualisation works on voxel data directly.
+* Volume rendering works on voxel data directly.
 * There is no explicit segmentation step.
 * The value of a pixel in the image is determined by what a ray of light travels through, and functions that map 3D image (e.g. MR/CT) intensity or gradient to opacity and colour.
 
