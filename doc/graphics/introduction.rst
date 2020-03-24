@@ -16,8 +16,8 @@ For this course, once you have identified your imaging modalities,
 worked out tracking, calibration, registration and segmentation,
 we come to the part of "and now put something on the screen".
 In order to do that, we will cover basic concepts. Most researchers in
-this field are still trying to get the underlying algorithms working,
-and few are working at improving the visualisation. For a good overview
+this field are still trying to get the underlying algorithms (registration, calibration) working,
+and few are working at improving their visualisation. For a good overview
 see [KerstenOertel2013]_, [KerstenOertel2015]_.
 
 We will cover:
@@ -32,7 +32,10 @@ We will cover:
 Surface Versus Volume Rendering
 -------------------------------
 
-First, to continue the introduction, lets look at the two main types of visualisation:
+In computing at least, "rendering" means "drawing", and "visualisation" is the process of
+drawing a picture of data, so the terms "rendering" and "visualisation" are fairly interchangeable.
+
+First, lets look at the two main types of rendering:
 
 
 Surface Rendering
@@ -53,9 +56,9 @@ In this video, we see:
 Volume Rendering
 ^^^^^^^^^^^^^^^^
 
-In this video, we see how volume visualisation is different.
+In this video, we see how volume rendering is different to surface rendering:
 
-* Volume visualisation works on voxel data directly.
+* Volume rendering works on voxel data directly.
 * There is no explicit segmentation step.
 * The value of a pixel in the image is determined by what a ray of light travels through, and functions that map 3D image (e.g. MR/CT) intensity or gradient to opacity and colour.
 
@@ -101,7 +104,12 @@ High level APIs encapsulate the low level detail, and provide a
 more easily accessible interface. In addition, they are often wrapped
 in a much nicer scripting language (e.g. Python for VTK).
 
-In CAS, lots of systems use VTK, and so do we in these notes.
+In CAS, lots of research systems use VTK, and so do we in these notes.
+
+
+VTK Examples
+------------
+
 Recently, `Kitware <https://www.kitware.com/>`_ have provided VTK.js, a Javascript re-write of VTK.
 Here we show some `VTK.js examples <https://kitware.github.io/vtk-js/examples/>`_, as they can be demonstrated in the browser!!
 
@@ -109,9 +117,6 @@ Here we show some `VTK.js examples <https://kitware.github.io/vtk-js/examples/>`
 
 The code is fairly similar to the `VTK Python or C++ Examples <https://lorensen.github.io/VTKExamples/site/>`_, and the same principles apply throughout.
 
-
-VTK Examples
-------------
 
 Cone Example
 ^^^^^^^^^^^^
@@ -127,6 +132,46 @@ Demonstrates:
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
         <iframe src="https://kitware.github.io/vtk-js/examples/Cone/index.html" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
+
+
+The Marching Cubes Algorithm
+----------------------------
+
+The Marching Cubes algorithm is used to create a surface from voxel data.
+We have already seen this above in the Surface Rendering example.
+
+The Marching cubes [Lorensen1987]_ was published in 1987. The core of the algorithm is explained by the following diagram.
+
+.. figure:: MarchingCubesIllustration.png
+  :alt: 3 Cases from The Marching Cubes Algorithm
+  :width: 600
+
+  Three cases from the Marching Cubes Algorithm. Originally 15 cases proposed.
+
+
+and this video provides more explanation.
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/NLsdLUbOvCY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+Here's a simple example, just picking an iso-surface out from a volume:
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://kitware.github.io/vtk-js/examples/ImageMarchingCubes/index.html" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+What's going on?
+
+* Set radius to zero.
+* Imagine a cube of data in front of the camera. (e.g. 50 x 50 x 50)
+* Imagine the values go from zero in the middle to a maximum value (e.g. 100) at the end of the cube.
+* At some intermediary value (e.g. 50), we want to extract the surface.
+* The marching cubes algorithm will determine where to place the triangles to represent the surface.
+* More voxels gives higher resolution.
 
 
 Marching Cubes Example
@@ -149,43 +194,14 @@ VTK has a pipeline architecture, you connect things together in a pipeline, then
 and the system renders the result.
 
 
-The Marching Cubes Algorithm
-----------------------------
+Marching Cubes Video
+^^^^^^^^^^^^^^^^^^^^
 
-The Marching Cubes algorithm is used to create a surface from voxel data.
-We have already seen this above in the Surface Rendering example.
-
-Let's take another look.
+This video by Sebastian Lague is very helpful:
 
 .. raw:: html
 
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-        <iframe src="https://kitware.github.io/vtk-js/examples/ImageMarchingCubes/index.html" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-    </div>
-
-What's going on?
-
-* Set radius to zero.
-* Imagine a cube of data in front of the camera. (e.g. 50 x 50 x 50)
-* Imagine the values go from zero in the middle to a maximum value (e.g. 100) at the end of the cube.
-* At some intermediary value (e.g. 50), we want to extract the surface.
-* The marching cubes algorithm will determine where to place the triangles to represent the surface.
-* More voxels gives higher resolution.
-
-Marching cubes [Lorensen1987]_ was published in 1987. The core of the algorithm is explained by the following diagram.
-
-.. figure:: MarchingCubesIllustration.png
-  :alt: 3 Cases from The Marching Cubes Algorithm
-  :width: 600
-
-  Three cases from the Marching Cubes Algorithm. Originally 15 cases proposed.
-
-
-and this video provides more explanation.
-
-.. raw:: html
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/NLsdLUbOvCY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/M3iI2l0ltbE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 Mesh Post-Processing
