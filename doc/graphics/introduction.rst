@@ -15,8 +15,10 @@ and the subject of many a classic text book such as: :ref:`bookFoleyVanDam`.
 For this course, once you have identified your imaging modalities,
 worked out tracking, calibration, registration and segmentation,
 we come to the part of "and now put something on the screen".
-In order to do that, we will cover basic concepts, as in reality,
-most people in this field are still at that level.
+In order to do that, we will cover basic concepts. Most researchers in
+this field are still trying to get the underlying algorithms working,
+and few are working at improving the visualisation. For a good overview
+see [KerstenOertel2013]_, [KerstenOertel2015]_.
 
 We will cover:
 
@@ -41,7 +43,7 @@ In this video, we see:
 * Contouring, drawing round objects of interest, labelling pixels, resulting in a segmented region.
 * Converting segmented regions into triangle meshes.
 * Reducing the numbers of triangles, to ensure rendering is fast enough.
-* Rendering such a surface
+* Rendering such a surface, as a solid surface or as wireframe.
 
 .. raw:: html
 
@@ -53,8 +55,8 @@ Volume Rendering
 
 In this video, we see how volume visualisation is different.
 
-* Volume visualisation works on voxel data directly
-* There is no explicit segmentation step
+* Volume visualisation works on voxel data directly.
+* There is no explicit segmentation step.
 * The value of a pixel in the image is determined by what a ray of light travels through, and functions that map 3D image (e.g. MR/CT) intensity or gradient to opacity and colour.
 
 .. raw:: html
@@ -117,8 +119,8 @@ Cone Example
 Demonstrates:
 
 * Fast rendering, browser uses WebGL, and hence hardware acceleration
-* In surface rendering, everything is typically composed of triangles, points or lines. More complex shapes made up of lots of triangles.
-* OpenGL will render arbitrary polygons, but all polygons can be converted to triangles, and hence the hardware is optimised for triangles, so most people only use triangles.
+* In surface rendering, everything is typically composed of triangles, points or lines. More complex shapes are made up of lots of triangles.
+* OpenGL will render arbitrary polygons, but all polygons can be converted to triangles, and hence the hardware is optimised for triangles, so most people convert all polygons to only triangles.
 
 .. raw:: html
 
@@ -165,10 +167,10 @@ What's going on?
 
 * Set radius to zero.
 * Imagine a cube of data in front of the camera. (e.g. 50 x 50 x 50)
-* Imagine the values go from zero in the middle to a maximum value (e.g. 100) at the end of the cube
-* At some intermediary value (e.g. 50), we want to extract the surface,
+* Imagine the values go from zero in the middle to a maximum value (e.g. 100) at the end of the cube.
+* At some intermediary value (e.g. 50), we want to extract the surface.
 * The marching cubes algorithm will determine where to place the triangles to represent the surface.
-* More voxels gives higher resolution
+* More voxels gives higher resolution.
 
 Marching cubes [Lorensen1987]_ was published in 1987. The core of the algorithm is explained by the following diagram.
 
@@ -232,5 +234,84 @@ More details describing the above decimation and smoothing diagram can be found 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Dps_UGngAX8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-Volume Visualisation
-^^^^^^^^^^^^^^^^^^^^
+Volume Rendering
+----------------
+
+The following diagrams and video illustrate the basic concept of volume rendering.
+
+.. figure:: VolumeRenderingRayCasting.png
+  :alt: Illustration of Ray Casting
+  :width: 600
+
+  Volume Rendering in medical imaging, is implemented via Ray Casting. Imagine the reverse of a pinhole model. For each image pixel, project a ray into space, and evaluate the voxel intensity values along each step through the volume. See video.
+
+
+.. figure:: VolumeRenderingCompositing.png
+  :alt: Illustration of Compositing
+  :width: 600
+
+  At each step along the ray, you evaluate a function to compute the value of the resultant pixel. Functions depend on the volume data value, the opacity transfer function and colour transfer functions. See video.
+
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/QdNW_IUIrow" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+You should now have a fair idea of what the following VTK.js example is doing:
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://kitware.github.io/vtk-js/examples/PiecewiseGaussianWidget/index.html" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+For the above example, the instructions for use are `here <https://kitware.github.io/vtk-js/examples/PiecewiseGaussianWidget.html>`_.
+
+
+Other types of volume rendering include:
+
+* MIP = Maximum Intensity Projection. For each ray, just extract the maximum value along the ray path.
+* Average Intensity Projection. Like MIP, but extract average intensity. Not widely used.
+* Minimum Intensity Projection. Like MIP, but extract minimum intensity. Not widely used.
+
+
+Texture Mapping
+---------------
+
+The final technique we will look at is texture mapping.
+
+Texture mapping is a way of assigning an :math:`(t_x, t_y)` value to a vertex,
+where the values of :math:`(t_x, t_y)`, which normally range :math:`[0-1]` refer to locations in an image. i.e. a pixel array.
+When it comes time to render a polygon, then instead of just painting the polygon a single colour, the texture image is painted on top of the polygon.
+
+This was developed initially to add repeating textures that could be rendered very quickly. Graphics hardware soon had dedicated processors to
+do this in real-time, giving much improved visual effects.
+
+See `this page <https://learnopengl.com/Getting-started/Textures>`_ for examples. So rather than have to produce
+polygon models and work out how to mathematically define a colour function that looked like wood/metal/grass for example,
+you can just take a photo, store the picture as a texture map, and map the coordinates of your triangles into the texture map.
+This gave very much enhanced realism, at fast rendering speeds.
+
+By why mention this for medical imaging?
+
+Take a look at this example:
+
+.. raw:: html
+
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+        <iframe src="https://kitware.github.io/vtk-js/examples/MultiSliceImageMapper/index.html" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
+
+In this example, there are 3 image planes, axial, sagittal and coronal. How are they drawn on screen?
+
+Each slice is extracted and mapped to a bit of texture memory. Then for each slice, you define 4 points that represent
+the location in space of the corners. The graphics subsystem then simply maps the value of the image onto the correct
+location in space. In other words, you are rendering 3 squares, where each square is rendered as a texture map.
+
+i.e. you don't paint these pixels 1 by 1.
+
+So, in this way, the location in space can be changed very quickly as the graphics hardware can rotate/translate
+the objects using hardware acceleration. If you change the slice then the image data can be remapped onto texture memory very quickly,
+and the picture redrawn.
+
+
