@@ -1,4 +1,0 @@
-.. _Interaction:
-
-Interaction
-===========

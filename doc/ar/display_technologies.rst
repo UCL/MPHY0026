@@ -1,4 +1,0 @@
-.. _DisplayTechnologies:
-
-Display Technologies
-====================

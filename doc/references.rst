@@ -319,8 +319,25 @@ Augmented Reality
 Essential
 ^^^^^^^^^
 
+[Sielforst2008]_
+
+.. [Nicolau2011] Stéphane Nicolau, Luc Soler, Didier Mutter, Jacques Marescaux, **"Augmented reality in laparoscopic surgical oncology"**,  http://dx.doi.org/10.1016/j.suronc.2011.07.002
+
+.. [Wang2017] Rong Wang, Zheng Geng, Zhaoxing Zhang, Renjing Pei, Xiangbing Meng, **"Autostereoscopic augmented reality visualization for depth perception in endoscopic surgery"**, http://dx.doi.org/10.1016/j.displa.2017.03.003
+
+.. [Dixon2012] Benjamin J. Dixon, Michael J. Daly, Harley Chan, Allan D. Vescan, Ian J. Witterick, Jonathan C. Irish, **"Surgeons blinded by enhanced navigation: the effect of augmented reality on attention"**, http://dx.doi.org/10.1007/s00464-012-2457-3
+
+.. [Dilley2019] James W. R. Dilley, Archie Hughes-Hallett, Philip J. Pratt, Philip H. Pucher, Mafalda Camara, Ara W. Darzi and Erik K. Mayer, **"Perfect Registration Leads to Imperfect Performance"**, http://dx.doi.org/10.1097/SLA.0000000000002793
+
+
 Extras
 ^^^^^^
+
+.. [Milgram1995] Paul Milgram, David Drascic, Julius J. Grodski, Anu Restogi, Shumin Zhai, Chin Zhou, **"Merging Real and Virtual Worlds"**, http://dx.doi.org/10.1117/12.197321
+
+.. [Sielhorst2006] Tobias Sielhorst, Christoph Bichlmeier and Sandro Michael Heining, and Nassir Navab, **"Depth Perception – A Major Issue in Medical AR: Evaluation Study by Twenty Surgeons"**,  https://doi.org/10.1007/11866565_45
+
+.. [Volonte2011] Francesco Volonte´, Francois Pugin, Pascal Bucher, Maki Sugimoto, Osman Ratib, Philippe Morel, **"Augmented reality and image overlay navigation with OsiriX in laparoscopic and robotic surgery: not only a matter of fashion"**, http://dx.doi.org/10.1007/s00534-011-0385-6
 
 
 Others
@@ -336,7 +353,6 @@ This study shows that the majority of bile duct injuries are due to the inabilit
 Here's a reminder that anatomy is variable and that there is not necessarily consensus on what's what.
 
 .. [Schnelldorfer2012] Schnelldorfer T1, Sarr MG, Adams DB. **"What is the duct of Luschka?--A systematic review."**, https://dx.doi.org/10.1007/s11605-011-1802-5
-
 
 First X-rays:
 

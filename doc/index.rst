@@ -92,7 +92,7 @@ Contents
   interaction/visualisation_and_multimodal_interaction.rst
   hci/hci.rst
   graphics/graphics.rst
-  ar/augmented_reality.rst
+  augmented/augmented_reality.rst
   references.rst
   additional_resources.rst
   coursework/system_simulation.rst
