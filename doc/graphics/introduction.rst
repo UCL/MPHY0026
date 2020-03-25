@@ -9,8 +9,9 @@ Introduction
 In this section, we give a brief overview of some graphics concepts that
 are required for image-guided surgery.
 
-Computer Graphics is a big field, worthy of several modules on a computer science course,
-and the subject of many a classic text book such as: :ref:`bookFoleyVanDam`.
+Computer Graphics is a big field, worthy of at least several modules on a computer science course,
+and the subject of many a classic text book such as: :ref:`bookFoleyVanDam`, as people build whole
+careers in computer graphics and visualisation.
 
 For this course, once you have identified your imaging modalities,
 worked out tracking, calibration, registration and segmentation,
@@ -123,7 +124,7 @@ Cone Example
 
 Demonstrates:
 
-* Fast rendering, browser uses WebGL, and hence hardware acceleration
+* Fast rendering, browser uses WebGL, and hence hardware acceleration.
 * In surface rendering, everything is typically composed of triangles, points or lines. More complex shapes are made up of lots of triangles.
 * OpenGL will render arbitrary polygons, but all polygons can be converted to triangles, and hence the hardware is optimised for triangles, so most people convert all polygons to only triangles.
 
@@ -140,7 +141,7 @@ The Marching Cubes Algorithm
 The Marching Cubes algorithm is used to create a surface from voxel data.
 We have already seen this above in the Surface Rendering example.
 
-The Marching cubes [Lorensen1987]_ was published in 1987. The core of the algorithm is explained by the following diagram.
+The Marching cubes [Lorensen1987]_ was published in 1987. The core of the algorithm is explained by the following diagram and video.
 
 .. figure:: MarchingCubesIllustration.png
   :alt: 3 Cases from The Marching Cubes Algorithm
