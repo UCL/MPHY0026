@@ -1,6 +1,0 @@
-Evaluation
-==========
-
-.. toctree::
-
-  introduction.rst
