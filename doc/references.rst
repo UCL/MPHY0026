@@ -323,9 +323,13 @@ Essential
 
 .. [Nicolau2011] Stéphane Nicolau, Luc Soler, Didier Mutter, Jacques Marescaux, **"Augmented reality in laparoscopic surgical oncology"**,  http://dx.doi.org/10.1016/j.suronc.2011.07.002
 
+.. [Dixon2012] Benjamin J. Dixon, Michael J. Daly, Harley Chan, Allan D. Vescan, Ian J. Witterick, Jonathan C. Irish, **"Surgeons blinded by enhanced navigation: the effect of augmented reality on attention"**, http://dx.doi.org/10.1007/s00464-012-2457-3
+
 .. [Wang2017] Rong Wang, Zheng Geng, Zhaoxing Zhang, Renjing Pei, Xiangbing Meng, **"Autostereoscopic augmented reality visualization for depth perception in endoscopic surgery"**, http://dx.doi.org/10.1016/j.displa.2017.03.003
 
-.. [Dixon2012] Benjamin J. Dixon, Michael J. Daly, Harley Chan, Allan D. Vescan, Ian J. Witterick, Jonathan C. Irish, **"Surgeons blinded by enhanced navigation: the effect of augmented reality on attention"**, http://dx.doi.org/10.1007/s00464-012-2457-3
+.. [McIntire2014] John P. McIntire, Paul R. Havig, Eric E. Geiselman, **"Stereoscopic 3D displays and human performance: A comprehensive review"**, http://dx.doi.org/10.1016/j.displa.2013.10.004
+
+.. [Guha2017] Daipayan Guha, Naif M. Alotaibi, Nhu Nguyen, Shaurya Gupta, Christopher McFaul, Victor X.D. Yang, **"Augmented Reality in Neurosurgery: A Review of Current Concepts and Emerging Applications"**, https://doi.org/10.1017/cjn.2016.443
 
 .. [Dilley2019] James W. R. Dilley, Archie Hughes-Hallett, Philip J. Pratt, Philip H. Pucher, Mafalda Camara, Ara W. Darzi and Erik K. Mayer, **"Perfect Registration Leads to Imperfect Performance"**, http://dx.doi.org/10.1097/SLA.0000000000002793
 

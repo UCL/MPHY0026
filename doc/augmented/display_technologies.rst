@@ -19,14 +19,13 @@ Here Brainlab Arveo integrates flourescence imaging with optics.
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/PmLIB_KPPdw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
 * AR Windows: e.g. Semi-transparent mirror
 * Video see through, head-mounted: e.g. ultrasound in virtual reality glasses
 * Monitor based: e.g. fixed video camera, overlay, or laparoscopic/endoscopic
 * Calibrated medical devices: e.g. Navab C-arm + Video
 * Direct projection: IRCAD, Luc Soleur
 
-These examples can be found in [Sielforst2008]_, and [Nicolau2011]_, and described in:
+These examples can be found in [Sielforst2008]_, and [Nicolau2011]_, and described in this video:
 
 .. raw:: html
 

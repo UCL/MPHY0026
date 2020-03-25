@@ -19,7 +19,7 @@ get to grips with remote working.
 * 60 minutes - Prof Blandford, Kitchen Usability Analysis Worksheet
 * 15 minutes - Compulsory Course Feedback
 * 60 minutes - :ref:`Graphics`, surface rendering, volume rendering, marching cubes, decimation, smoothing, texture mapping.
-* 45 minutes - :ref:`AugmentedReality`, including devices, methods, applications
+* 45 minutes - :ref:`AugmentedReality`, including devices, methods, applications, clinical evidence
 
 
 After The Lecture
