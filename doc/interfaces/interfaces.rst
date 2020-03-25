@@ -1,6 +1,0 @@
-Interfaces
-==========
-
-.. toctree::
-
-  introduction.rst

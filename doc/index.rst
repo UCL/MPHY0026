@@ -93,8 +93,6 @@ Contents
   hci/hci.rst
   graphics/graphics.rst
   ar/augmented_reality.rst
-  interfaces/interfaces.rst
-  evaluation/evaluation.rst
   references.rst
   additional_resources.rst
   coursework/system_simulation.rst

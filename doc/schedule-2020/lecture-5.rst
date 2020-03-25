@@ -16,10 +16,10 @@ The Lecture
 A bit of a wrap up. Still very much work in progress, as we
 get to grips with remote working.
 
-* 30 minutes - :ref:`Graphics`, surface rendering, volume rendering
-* 30 minutes - :ref:`AugmentedReality`, what is it, uses, pro's, con's
-* 30 minutes - :ref:`Interfaces`, what interaction devices have been tried in surgery
-* 30 minutes - :ref:`Evaluation`
+* 60 minutes - Prof Blandford, Kitchen Usability Analysis Worksheet
+* 60 minutes - :ref:`Graphics`, surface rendering, volume rendering, marching cubes, decimation, smoothing, texture mapping.
+* 15 minutes - Compulsory Course Feedback
+* 45 minutes - :ref:`AugmentedReality` devices, methods, applications
 
 
 After The Lecture
@@ -30,7 +30,7 @@ So, going forward, what you read next depends on your interests.
 For example:
 
 * [Bernhardt2017]_ - Review on augmented reality in laparoscopcy
-* [Qian2019]_ - Review on augmented reality in Robotic Assisted surgery
+* [Qian2019]_ - Review on augmented reality in Robotic Assisted Surgery
 * [Sielforst2008]_ - Review on augmented reality displays
 * [Mewes2016]_ Review on touchless interaction in radiology and surgery
 
