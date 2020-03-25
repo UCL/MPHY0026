@@ -1,4 +1,4 @@
-.. _Graphics:
+.. _GraphicsIntro:
 
 Introduction
 ============
