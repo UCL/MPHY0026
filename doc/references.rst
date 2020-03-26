@@ -343,6 +343,10 @@ Extras
 
 .. [Volonte2011] Francesco Volonte´, Francois Pugin, Pascal Bucher, Maki Sugimoto, Osman Ratib, Philippe Morel, **"Augmented reality and image overlay navigation with OsiriX in laparoscopic and robotic surgery: not only a matter of fashion"**, http://dx.doi.org/10.1007/s00534-011-0385-6
 
+.. [Fotouhi2020] Javad Fotouhi, Arian Mehrfard, Tianyu Song, Alex Johnson M.D., Greg Osgood M.D., Mathias Unberath, Mehran Armand, and Nassir Navab, **"Spatiotemporal-Aware Augmented Reality: Redefining HCI in Image-Guided Therapy"**, https://arxiv.org/abs/2003.02260
+
+.. [Espinel2020] Yamid Espinel, Erol Özgür, Lilian Calvet, Bertrand Le Roy, Emmanuel Buc & Adrien Bartoli, **"Combining Visual Cues with Interactions for 3D–2D Registration in Liver Laparoscopy"**, https://doi.org/10.1007/s10439-020-02479-z
+
 
 Others
 ------
@@ -393,6 +397,5 @@ Papers on Evaluation of systems:
 .. [Thompson2013a] Stephen Thompson, Graeme Penney, Michele Billia, Ben Challacombe, David Hawkes, Prokar Dasgupta, **"Design and evaluation of an image‐guidance system for robot‐assisted radical prostatectomy"**, https://doi.org/10.1111/j.1464-410X.2012.11692.x
 
 .. [Balachandran2009] Ramya Balachandran, J. Michael Fitzpatrick, and Robert F. Labadie, **"Accuracy of Image-guided Surgical Systems at the Lateral Skull Base as Clinically Assessed Using Bone-Anchored Hearing Aid Posts as Surgical Targets"**, https://dx.doi.org/10.1097%2FMAO.0b013e3181859a08
-
 
 
