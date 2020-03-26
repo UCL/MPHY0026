@@ -33,6 +33,8 @@ For example:
 * [Qian2019]_ - Review on augmented reality in Robotic Assisted Surgery
 * [Sielforst2008]_ - Review on augmented reality displays
 * [Mewes2016]_ Review on touchless interaction in radiology and surgery
+* [Espinel2020]_ Hot off the press - 3D/2D registration for Liver Surgery
+* [Fotouhi2020]_ Hot off the press - Context aware HCI
 
 
 
