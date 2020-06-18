@@ -100,11 +100,37 @@ left has a target identified in red. The idea is to locate the target on the int
   Figure 3: SciKit-SurgeryFRED adds a Fiducial Localisation Error to the marker in the intraoperative image. The zoomed in region shows the cross hair where the marker is in the pre-operative image, and the green circle where we have located it. The difference between the circle and cross hair centre is the FLE for this marker.
 
 
+Point based registration requires at least three points to work. So keep adding marker points. At this point you may want to revisit the literature on point based registration, [Fitzpatrick1998]_, [Fitzpatrick2001]_, and  [Maurer1998]_ and consider where to place the fiducial markers to best effect. 
+
 .. figure:: scikit-surgeryfred_3.png
   :width: 100%
 
-  Figure 4: With 3 or more fiducial markers place, SciKit-SurgeryFRED is able to peform a point-based "Procrustes" registration between the two images. 
+  Figure 4: With 3 or more fiducial markers place, SciKit-SurgeryFRED is able to peform a point-based "Procrustes" registration between the two images. Note that the target is now present in the intraoperative together with a cross hair. Similarly to figure 3, the cross hair represents the actual position of the target, whereas the red circle is the estimated position using point based registration. The difference between the two centres if the Target Registration Error (TRE), in this case 2.18 mm ("Actual TRE").
 
+
+You can add as many marker points as you like (SciKit-Surgery-FRED currently crashes after around 65 markers are placed) and see how the six measures (defined below) in the text boxes change. Placed markers cannot be deleted, but you can restart the registration with a new target by pressing 'r'. 
+
+What the text boxes mean
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+SciKitSurgery-FRED has four text boxes list six metrics, this is what they mean and how they should behave.
+
+The first text box contains:
+
+* "Number of Fids" is the number of fiducial markers placed, which should increase by one each time you click on the image.
+* "Expected FLE" is the expected absolute value of the Fiducial Localisation Error. SciKit-SurgeryFRED models the FLE as a two dimensional isotropic normally distributed random variable. Each time a new registration is started (by starting the application or by pressing 'r') the standard deviation of the FLE is randomly selected from a uniform distribution between 0.5 and 5.0. Each time a fiducial is placed, its position is perturbed in two dimensions by this standard deviation. The expected absolute value of an FLE with a given standard deviation is calculated and is shown here.  
+
+The second text box contains the expected values TRE and FRE as derived by [Fitzpatrick1998]_.
+
+* "Expected FRE" is the expected value of the fiducial localisation error. This the expected absolute value of he fiducial registration error as defined in equation 10 of [Fitzpatrick1998]_. FRE is a function of the expected FLE and the number of fiducial markers. FLE should increase slightly as the number of fiducial markers increases.
+
+.. figure:: fre_equation_10.png
+  :width: 50%
+
+* "Expected TRE" is the expected value of the target registration error. This the expected absolute value of he target registration error as defined in equation 46 of [Fitzpatrick1998]_. TRE is a function of the FLE and the number and geometry of the fiducial markers. Although it should reduce gradually as more fiducial markers are placed, it can be greatly altered by where you place the markers. Try this many times and see what happens to expected TRE for different marker configurations.
+
+.. figure:: tre_equation_46.png
+  :width: 50%
 
 
 
