@@ -14,3 +14,4 @@ scikit-surgerynditracker
 scikit-surgeryarucotracker
 scikit-surgerypclcpp
 scikit-surgeryopencvcpp
+scikit-surgeryfred
