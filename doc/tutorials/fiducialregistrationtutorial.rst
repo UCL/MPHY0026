@@ -86,6 +86,12 @@ The first argument should point to a png image. We've supplied a MRI of a brain,
 
   Figure 1: SciKit-SurgeryFRED opens a window with two scenes, at left is the preoperative image (MRI) with a target point marked in red. At right is the intra-operative scene where only the patient outline is visible. We will use fiducial based registration to locate the target point on the intraoperative scene.
 
+You can watch the SciKit-SurgeryFRED video:
+
+.. raw:: html
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/t_6CH5uroYo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 On staring SciKit-SurgeryFRED you should see two images side by side as in Figure 1. The pre-operative image at
 left has a target identified in red. The idea is to locate the target on the intraoperative image at right, where we can only see the patient's outline. Locating the target in the intraoperative image is done here using fiducial marker based registration. Mouse clicking on either image will place a fiducial marker on each image, defining a point correspondence between the two images.
 
