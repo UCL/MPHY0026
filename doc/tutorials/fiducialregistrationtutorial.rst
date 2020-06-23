@@ -138,7 +138,9 @@ The second text box contains the expected values TRE and FRE as derived by [Fitz
 .. figure:: tre_equation_46.png
   :width: 50%
 
+The third text box contains:
 
+* "Actual TRE", this is the actual measured Target Registration Error. It is the distance between the position of the target determined by registration and the actual position of the target. It is this value that will determine the effectiveness of an intervention, however in practice it cannot be known. It can only be measured in experiments where a second imaging modality is used or in the case of SciKit-SurgeryFRED, by simulation. The aim of this tutorial is to investigate which of the other statistics provide the best estimate of the actual TRE.
 
 .. _`SciKit-Surgery`: https://github.com/UCL/scikit-surgery/wikis/home
 .. _`Medical Imaging Summer School`: https://medicss.cs.ucl.ac.uk/
