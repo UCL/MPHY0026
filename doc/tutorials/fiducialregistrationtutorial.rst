@@ -142,6 +142,18 @@ The third text box contains:
 
 * "Actual TRE", this is the actual measured Target Registration Error. It is the distance between the position of the target determined by registration and the actual position of the target. It is this value that will determine the effectiveness of an intervention, however in practice it cannot be known. It can only be measured in experiments where a second imaging modality is used or in the case of SciKit-SurgeryFRED, by simulation. The aim of this tutorial is to investigate which of the other statistics provide the best estimate of the actual TRE.
 
+The fourth box contains:
+
+* "Actual FRE", this is the residual RMS distance between the registered point sets. It will largely depend on the FLE and the number of fiducial markers. Because it is easily measured it is often reported by commercial image guidance systems. However using the actual FRE as a measure of registration accuracy can be dangerous, as detailed succinctly in [Fitzpatrick2009]. More generally, the use of residual errors as a measure of accuracy (for registration and calibrations) is common in the literature, but is best avoided, for the same reasons.
+
+Perform several registrations
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Now take around 20 minutes to perform multiple registrations. See what patterns of fiducial markers give low TREs and what patterns give high TREs. Observe how the statistics change as you add more fiducial markers. Each time a registration is performed SciKit-Surgery will write the results to the log file "fred_results.log". Check that this file is present and that you can read it. Try and generate at least 100 registrations, the results of which will be used in the next section to look for correlations between the different statistics and the actual TRE.
+
+
+Part 2 What Statistics are Useful in Predicting Actual TRE
+----------------------------------------------------------
+
 .. _`SciKit-Surgery`: https://github.com/UCL/scikit-surgery/wikis/home
 .. _`Medical Imaging Summer School`: https://medicss.cs.ucl.ac.uk/
 .. _`SciKit-SurgeryFRED`: https://github.com/UCL/scikit-surgeryfred
