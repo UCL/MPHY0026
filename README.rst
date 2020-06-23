@@ -38,6 +38,7 @@ more about Python development, tox and virtualenvs. For those in a hurry,
 you can do this to run examples:
 
 ```
+# start with a clean (i.e. new) python virtual environment, from either conda or virtualenv.
 pip install tox
 tox
 source .tox/py36/bin/activate

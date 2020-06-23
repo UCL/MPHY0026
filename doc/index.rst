@@ -11,7 +11,7 @@ Course Details
 For those of you taking this course for university credit at `UCL`_, these
 are the essential details:
 
- * All formal announcements come via `Moodle`_.
+ * All formal announcements come via UCL's `Moodle`_.
 
  * Assessment:
 
@@ -40,8 +40,8 @@ the Gitlab `Issue Tracker`_. Your help and feedback will make this a better cour
 Course Principles
 -----------------
 
-* *Research led*: Closely linked to academic literature, and research at UCL and world-wide
-* *A systems approach*: A researcher may only work on one component, but to achieve the clinical goal, we must understand the total system performance
+* *Research led*: Closely linked to academic literature, and research at UCL and world-wide.
+* *A systems approach*: A researcher may only work on one component, but to achieve the clinical goal, we must understand the total system performance.
 * *Learn by doing*: Code examples, often using the `SNAPPY`_ libraries.
 
 
@@ -97,6 +97,7 @@ Contents
   additional_resources.rst
   coursework/system_simulation.rst
   notebooks.rst
+  summerschool/summerschool.rst
 
 .. raw:: html
 
