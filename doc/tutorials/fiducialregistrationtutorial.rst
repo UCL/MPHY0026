@@ -154,6 +154,66 @@ Now take around 20 minutes to perform multiple registrations. See what patterns 
 Part 2 What Statistics are Useful in Predicting Actual TRE
 ----------------------------------------------------------
 
+At the end of part 1 you should have created a logfile called "fred_results.log", which consists of a line for each successful registration, like:
+
+::
+
+    2020-06-23 14:21:01,019 - sksurgeryfred - INFO - success, 5.9342, 6.2639, 5.0875, 4.6176, 7.9979, 3
+    2020-06-23 14:21:03,219 - sksurgeryfred - INFO - success, 2.0491, 7.1730, 4.7173, 5.6554, 7.9979, 4
+    2020-06-23 14:21:04,150 - sksurgeryfred - INFO - success, 1.8424, 6.6209, 4.7914, 6.1951, 7.9979, 5
+    2020-06-23 14:21:05,216 - sksurgeryfred - INFO - success, 0.8983, 6.8619, 4.7471, 6.5302, 7.9979, 6
+    2020-06-23 14:21:06,315 - sksurgeryfred - INFO - success, 0.7015, 6.4242, 3.6960, 6.7594, 7.9979, 7
+    2020-06-23 14:21:11,742 - sksurgeryfred - INFO - success, 11.1016, 4.6396, 26.8543, 3.1793, 5.5067, 3
+    2020-06-23 14:21:12,820 - sksurgeryfred - INFO - success, 3.9498, 4.6584, 3.1586, 3.8939, 5.5067, 4
+
+There is a time stamp and name, followed by 6 comma separated numbers. In order these are
+
+::
+
+    actual TRE, actual FRE, expected TRE, expected FRE, expected FLE, number of fiducial markers
+
+You should be able to parse this data into the data analyse software of your choice and investigate what if any correlations exist between the different data. For convenience SciKit-SurgeryFRED comes with a basic plotting tool, which you can try as a start.
+
+::
+    
+    python sksurgeryfred_plotter.py fred_results.log
+
+or 
+
+:: 
+    
+    sksurgeryfred_plotter fred_results.log
+
+Should result in something like Figure 5.
+
+.. figure:: plots.png
+  :width: 100%
+
+  Figure 5: Plots of the five statistics and their correlation with the Actual TRE, using sksurgeryfred_plotter.
+
+Take some time now to interrogate this data. Some questions to consider;
+
+* Are your results similar to those in figure 5?
+* If you were trying to estimate the actual target registration error, which statistic is of most use?
+* What level of uncertainty would there be in an individual registration?
+* What are the practical implications of using these statistics? For example, while the actual FRE and the number of fiducial markers can always be determined, the other statistics require a prior knowledge of the expected FLE.
+* If your results are similar to mine, why is there no correlation between FLE and actual TRE?
+* Are there conditions when you might expect to see correlation between FLE and TRE?
+
+Have a deeper dive through the data. What sort of probability distributions do the data fit? Are the assumptions used in our simulation valid in practice?
+
+When you've looked at the data, you can have a go at part 3, where you'll try and apply what you've learned to some simulated surgery.
+
+
+Part 3 Treatment Planning Simulation
+------------------------------------
+
+A game where you have to estimate TRE to ensure that the entire target volume is treated. 
+1. Place 5 fiducial markers.
+2. Estimate TRE.
+3. Adjust the treatment volume to be sure of hitting the target.
+4. Score is some sort of weighted thing based on any untreated target volume plus collateral damage.
+
 .. _`SciKit-Surgery`: https://github.com/UCL/scikit-surgery/wikis/home
 .. _`Medical Imaging Summer School`: https://medicss.cs.ucl.ac.uk/
 .. _`SciKit-SurgeryFRED`: https://github.com/UCL/scikit-surgeryfred
