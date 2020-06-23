@@ -11,7 +11,7 @@ Course Details
 For those of you taking this course for university credit at `UCL`_, these
 are the essential details:
 
- * All formal announcements come via `Moodle`_.
+ * All formal announcements come via UCL's `Moodle`_.
 
  * Assessment:
 
@@ -40,9 +40,9 @@ the Gitlab `Issue Tracker`_. Your help and feedback will make this a better cour
 Course Principles
 -----------------
 
-* *Research led*: Closely linked to academic literature, and research at UCL and world-wide
-* *A systems approach*: A researcher may only work on one component, but to achieve the clinical goal, we must understand the total system performance
-* *Learn by doing*: Code examples, often using the `SNAPPY`_ libraries.
+* *Research led*: Closely linked to academic literature, and research at UCL and world-wide.
+* *A systems approach*: A researcher may only work on one component, but to achieve the clinical goal, we must understand the total system performance.
+* *Learn by doing*: Code examples, often using the `SciKit-Surgery`_ libraries, referenced in `The SciKit-Surgery Paper`_.
 
 
 Sessions
@@ -97,6 +97,7 @@ Contents
   additional_resources.rst
   coursework/system_simulation.rst
   notebooks.rst
+  summerschool/summerschool.rst
 
 .. raw:: html
 
@@ -115,4 +116,5 @@ Contents
 .. _`Moodle`: https://moodle.ucl.ac.uk/
 .. _`Source code`: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026
 .. _`Issue Tracker`: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026
-.. _`SNAPPY`: https://weisslab.cs.ucl.ac.uk/WEISS/PlatformManagement/SNAPPY
+.. _`SciKit-Surgery`: https://github.com/UCL/scikit-surgery/wiki
+.. _`The SciKit-Surgery Paper`: https://doi.org/10.1007/s11548-020-02180-5
