@@ -208,11 +208,24 @@ When you've looked at the data, you can have a go at part 3, where you'll try an
 Part 3 Treatment Planning Simulation
 ------------------------------------
 
-A game where you have to estimate TRE to ensure that the entire target volume is treated. 
-1. Place 5 fiducial markers.
-2. Estimate TRE.
-3. Adjust the treatment volume to be sure of hitting the target.
-4. Score is some sort of weighted thing based on any untreated target volume plus collateral damage.
+The last part of the tutorial is a game that highlights some of the issues that occur during image guided 
+interventions. Here the image guided intervention has been simplified, your job is to place fiducial markers to
+minimise target registration error, then use the knowledge you developed in parts 1 and 2 to adjust the ablation 
+margin to maximise the treatment of the target and minimise damage to healthy tissue. Start by launching the game, something like. 
+
+:: 
+
+    sksurgeryfred_game https://github.com/UCL/scikit-surgeryfred/raw/master/data/brain512.png
+
+The rules are:
+* You are going to perform 20 image guided ablations. 
+* You locate the target in the intraoperative image by placing up to 5 fiducial markers, using the same process as in part  1.
+* You change the treatment margin using the up and down arrow keys. Up to increase the margin, down to decrease.
+* When you think you have the right margin you perform the ablation by pressing 'a'
+* You will be awarded a score. If you treat 100% of the target you start with 1000 points, anything less than 100% and you start with 0 points. Points are then subtracted based on the amount of healthy tissue ablated. A large margin will increase the chances of 100% ablation, but increase the amount of healthy tissue ablated.
+* Throughout the game you will be shown different statistics to help you make your decision. 
+  You are then presented with statistics. For your first 4 goes you have it easy, you are told the actual TRE. All 
+ 
 
 .. _`SciKit-Surgery`: https://github.com/UCL/scikit-surgery/wikis/home
 .. _`Medical Imaging Summer School`: https://medicss.cs.ucl.ac.uk/
