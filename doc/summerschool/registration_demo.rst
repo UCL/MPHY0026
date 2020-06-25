@@ -217,14 +217,35 @@ margin to maximise the treatment of the target and minimise damage to healthy ti
 
     sksurgeryfred_game https://github.com/UCL/scikit-surgeryfred/raw/master/data/brain512.png
 
+Here's a video showing what to do:
+
+.. raw:: html
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/ansH1w2ST-g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+    
 The rules are:
+
 * You are going to perform 20 image guided ablations. 
-* You locate the target in the intraoperative image by placing up to 5 fiducial markers, using the same process as in part  1.
-* You change the treatment margin using the up and down arrow keys. Up to increase the margin, down to decrease.
+* You locate the target in the intraoperative image by placing up to 6 fiducial markers, using the same process as in part  1.
+* You can change the treatment margin using the up and down arrow keys. Up to increase the margin, down to decrease.
 * When you think you have the right margin you perform the ablation by pressing 'a'
 * You will be awarded a score. If you treat 100% of the target you start with 1000 points, anything less than 100% and you start with 0 points. Points are then subtracted based on the amount of healthy tissue ablated. A large margin will increase the chances of 100% ablation, but increase the amount of healthy tissue ablated.
 * Throughout the game you will be shown different statistics to help you make your decision. 
-  You are then presented with statistics. For your first 4 goes you have it easy, you are told the actual TRE. All 
+* For the first 4 ablations you are shown the actual TRE (this is for training purposes, you could not 
+  know this during an actual ablation). Knowing the TRE makes it easy to set the margin, the margin just needs to 
+  bigger than the TRE to ensure 100% treatment.
+* You can then perform 16 more ablations, being shown different combinations of statistics that could be available 
+  during an actual ablation. Your job is to use your knowledge of the predictive power of these statistics (gained 
+  during part 1 and 2) to set the minimum effective margin. 
+* Keep going until you get to the game over screen.
+
+When you've finished have a look at the file 'fred_game.log'. It should contain a record of your scores together with 
+a record of what statistics were visible for each score. Is there a link between the visible statistics and your scores?
+Does it correspond to the correlations you might have found in part 2?
+
+I would be grateful if you let me know your scores by `emailing me`_ 'fred_game.log', along with any comments on the 
+usefulness of this tutorial.
  
 
 .. _`SciKit-Surgery`: https://github.com/UCL/scikit-surgery/wikis/home
@@ -232,3 +253,5 @@ The rules are:
 .. _`SciKit-SurgeryFRED`: https://github.com/UCL/scikit-surgeryfred
 .. _`MPHY0026`: https://mphy0026.readthedocs.io/en/latest/
 .. _`SciKit-SurgeryBARD`: https://scikit-surgerybard.readthedocs.io/en/latest/02_4_Register_And_Ovelay.html
+.. _`emailing me`: s.thompson@ucl.ac.uk
+
