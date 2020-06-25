@@ -45,7 +45,7 @@ Running the overlay application will allow you to try manual alignment of 2D/3D 
 
 Two cases are presented, a 2D alignment of a circle, and a more realistic example where a liver model needs to be alinged to a background shape.  
 
-In each case, try to minimise both the size error and the alignment error. Alignment error considers both rotation and position.  
+In each case, try to minimise both the size error and the alignment error. Alignment error in this case in an arbitrary measure that considers both rotation and position.  
 
 
 .. image:: overlay.gif
