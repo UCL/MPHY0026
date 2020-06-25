@@ -25,8 +25,8 @@ For surgical applications, specific use cases include:
 * Picture in picture ultrasound, so that a surgeon does not have to look between multiple screens.
 
 
-Challenges
-^^^^^^^^^^
+Issue to consider
+^^^^^^^^^^^^^^^^^
 * Where to place the overlay data? Data should be conveniently located, but don't want to obscure the clincian's view.
 * How is the AR model aligned to the real life view? Manual aligment is simple to implement, but can be difficult to orient properly for complex shapes (See exercise).
 * Getting things to look 'real' is challenging.
@@ -35,18 +35,25 @@ Challenges
 Exercise
 ^^^^^^^^
 
-Running the overlay application will allow you to try manual alignment of 2D/3D objects.
-Two cases are presented, a 2D alignment of a circle, and a more realistic example where a liver model needs to be alinged to a background shape. Some margin of error is allowed for, so the two objets do not have to match perfectly.
+**Prerequisites**
+
+The example in this section requires Python, it is assumed that pupils have a working Python installation and are able to install packages. If this tutorial has been installed as part of the MPHY0026 module, then the required packages should already be present.
+
+Running the overlay application will allow you to try manual alignment of 2D/3D objects. From the root MPHY0026 folder, run:
+    
+    python mphy0026_overlay.py 
+
+Two cases are presented, a 2D alignment of a circle, and a more realistic example where a liver model needs to be alinged to a background shape.  
+
+In each case, try to minimise both the size error and the alignment error. Alignment error considers both rotation and position.  
 
 
-    python mphy0026_overlay.py
+.. image:: overlay.gif
 
-.. image:: overlay_circle.gif
-.. image:: overlay_liver.gif
 
-Questions
-^^^^^^^^^
-
+* Repeat the exercise multiple times (Press 'Move Target' to generate a new location).
 * Does adjusting the opacity of the model make it easier/harder?
 * How does 3D alignment compare to 2D aligment?
 * What are the potential drawbacks of this approach for surgical applications?
+* What can be considered a 'good' aligment?
+* What type of user interface would be best for aligment?

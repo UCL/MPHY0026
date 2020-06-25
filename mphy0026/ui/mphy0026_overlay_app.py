@@ -83,25 +83,18 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
             if event == "EndInteractionEvent":
                 
                 # position
-                pos_ok = self.check_position()
-                if pos_ok:
-                    self.txtPosition.SetInput("Position: Aligned!!")
-                else:
-                    self.txtPosition.SetInput("Position: Not aligned")
+                pos_error = self.check_position()
+                self.txtPosition.SetInput(f"Alignment Error: {pos_error:.2f}")
 
                 # scale
-                
-                scale_ok = self.check_scale()
-                if scale_ok:
-                    self.txtScale.SetInput("Size: Aligned!!")
-                else:
-                    self.txtScale.SetInput("Size: Not alinged")
+                scale_error = self.check_scale()
+                self.txtScale.SetInput(f"Size Error: {scale_error:.2f}")
 
-                if pos_ok and scale_ok:
-                    print(1)
-                    self.vtk_overlay_window.background_renderer.SetBackground(0, 0.5, 0.5)
-                else:
-                    self.vtk_overlay_window.background_renderer.SetBackground(0, 0, 0)
+                # if pos_ok and scale_ok:
+                #     print(1)
+                #     self.vtk_overlay_window.background_renderer.SetBackground(0, 0.5, 0.5)
+                # else:
+                #     self.vtk_overlay_window.background_renderer.SetBackground(0, 0, 0)
 
 
         self.vtk_overlay_window._Iren.AddObserver("EndInteractionEvent", interactionChange)
@@ -155,7 +148,7 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
         if self.mode == "circle":
             self.setup_circle_overlay()
 
-        else:
+        elif self.mode == "liver":
             self.setup_liver_overlay()
 
         self.update()
@@ -211,7 +204,7 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
         if self.mode == "circle":
             self.draw_circle()
         
-        else:
+        elif self.mode == "liver":
             self.set_target_liver()
 
         print(f'Circle: {self.target_actor.GetCenter()}')
@@ -243,7 +236,7 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
     def draw_circle(self):
 
         # Generate random position and size
-        self.circle_radius = random.random() * 200 + 25
+        self.circle_radius = random.random() * 500 + 25
         self.target_x = -400 + self.circle_radius + (800 - 2*self.circle_radius) * random.random()
         self.target_y = -260 + self.circle_radius + (520 - 2*self.circle_radius) * random.random()
         print(self.target_x, self.target_y, self.circle_radius)
@@ -270,16 +263,17 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
         
         if self.mode == "circle":
             position_model = self.model.actor.GetCenter()
-            tol = 10
 
-        else:
+        elif self.mode == "liver":
             position_model = self.model.actor.GetPosition()
-            tol = 25
 
         x, y = position_model[0], position_model[1]
 
-        if abs(x - self.target_x) < tol and abs(y - self.target_y) < tol:
-            return True
+        x_error = abs(x - self.target_x)
+        y_error = abs(y - self.target_y)
+
+        mse = np.sqrt(x_error**2 + y_error**2)
+        return mse
 
         return False
 
@@ -289,23 +283,17 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
         model_scale = self.model.actor.GetScale()[0]
         if self.mode == "circle":
             model_in_taget_space = 100 * model_scale * 3 / 2
-            diff = abs(model_in_taget_space - self.circle_radius)
-            tol = 3
+            diff = (model_in_taget_space - self.circle_radius)
 
-        else:
+        elif self.mode == "liver":
             target_scale = self.target_actor.GetScale()[0]
-            diff = 100 * abs(target_scale - model_scale)
-            print(diff)
-            tol = 7
+            diff = 100 * (model_scale - target_scale)
 
-        if  diff < tol:
-            return True
-
-        return False
+        return diff
 
     def reset_text_labels(self):
-        self.txtPosition.SetInput("Position: Not aligned")
-        self.txtScale.SetInput("Size: Not aligned")
+        self.txtPosition.SetInput("Alignment Error: N/A")
+        self.txtScale.SetInput("Size Error: N/A")
 
 def run_overlay():
     """
