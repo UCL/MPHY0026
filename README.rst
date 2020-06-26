@@ -38,15 +38,21 @@ more about Python development, tox and virtualenvs. For those in a hurry,
 you can do this to run examples:
 
 ```
-# start with a clean (i.e. new) python virtual environment, from either conda or virtualenv.
+# Clone the repository
+git clone https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026
+# Get inside the repository directory
+cd MPHY0026
+# Install tox if it is not already installed
 pip install tox
+# Run tox commands without any arguments.(The command may take up to 10 minutes)
 tox
+# For Mac and Linux users, run the command
 source .tox/py36/bin/activate
-<run whatever example>
+# For Windows users, run the the commands
+cd .tox\py36\bin
+activate
+# The environment is setup now and you can run any example with the application.
 ```
-If you are on Windows, the ```activate``` script is in ```.tox\y36\Scripts\activate```
-but the same principle applies.
-
 
 Developing
 ----------
