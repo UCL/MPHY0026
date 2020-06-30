@@ -160,11 +160,15 @@ tag centres, something like Figure 3. Double check that you've set tag_width rig
 Assembly of Your Tracker
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Now your tracking your markers, assemble the pointer to your tracker markers. I've used gaffer tape to stick a skewer the back of my phone (Figure 4). It is important that the assembly is rigid, you do not want the pointer tip to move relative to the markers.
+Now you're tracking your markers, assemble the pointer to your tracker markers. I've used gaffer tape to stick a skewer the back of my phone (Figure 4). It is important that the assembly is rigid, you do not want the pointer tip to move relative to the markers.
 
+.. figure:: pivot_calibration/pointer.png
+  :width: 80%
+
+  Figure 4: The assembled tracked pointer.
 
 Part 2 Calibration
----------------------------------------
+------------------
 
 .. _`SciKit-Surgery`: https://github.com/UCL/scikit-surgery/wikis/home
 .. _`Medical Imaging Summer School`: https://medicss.cs.ucl.ac.uk/
