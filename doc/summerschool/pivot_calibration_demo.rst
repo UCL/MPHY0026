@@ -149,8 +149,22 @@ If you run SciKit-SurgeryBARD now with something like
     scikit-surgerybard -c config/pointer_markers.json
 
 you should be able that the tags are being tracked by the presence of silver spheres overlaid on the 
-tag centres.
+tag centres, something like Figure 3. Double check that you've set tag_width right, an incorrect value will make the next step (calibration) very difficult.
 
+
+.. figure:: pivot_calibration/pointer_tracking.png
+  :width: 100%
+  
+  Figure 3: If the pointer tags are being tracked you should see silver spheres overlaid on the tags. Here the tag width was measured at 38 mm. If you set tag_width incorrectly in the configuration file the tags will still track, however if you set it too high (58 mm here) the tracker will locate the tags further away than they really are (small spheres at left), similarly if you set it too small (e.g. 18 mm) the spheres will appear closer (thus larger) than they should be.
+
+Assembly of Your Tracker
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Now your tracking your markers, assemble the pointer to your tracker markers. I've used gaffer tape to stick a skewer the back of my phone (Figure 4). It is important that the assembly is rigid, you do not want the pointer tip to move relative to the markers.
+
+
+Part 2 Calibration
+---------------------------------------
 
 .. _`SciKit-Surgery`: https://github.com/UCL/scikit-surgery/wikis/home
 .. _`Medical Imaging Summer School`: https://medicss.cs.ucl.ac.uk/
