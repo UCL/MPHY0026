@@ -82,18 +82,10 @@ today's demo I found a metal skewer which has the benefit of not leaving pen mar
 For the tracking system we'll use OpenCV's implementation of the `ArUco`_ tracking 
 library which requires only a calibrated webcam or mobile phone camera and 
 the ability to print markers or show them on a screen. Figure 1 shows the
-tags we will use for tracking the pointer. You can print them out an stick them onto
-some cardbard, or you can display them on your mobile phone screen using the 
-QR tag (Figure 2)
-
-The ArUco tracking library relies on using computer vision to detect the 
-corners of uniquely identifiable tags in a single frame of video. 
-
-Sub-Heading
-^^^^^^^^^^^
-
-some resources
-
+tags we will use for tracking the pointer. You can print them out from the `printer ready pdf`_
+and glue them to something rigid (cardboard etc), 
+or you can display them on your mobile phone screen using the 
+QR tag (Figure 2).
 
 .. figure:: https://github.com/UCL/scikit-surgerybard/raw/master/data/pointer_withscale.png
   :width: 20%
@@ -103,8 +95,61 @@ some resources
 .. figure:: https://github.com/UCL/scikit-surgerybard/raw/master/data/qrtags/pointer_qr.png
   :width: 20%
   
-  And heres a qrtag link to, so you can get it easiliy on your phone. 
-  https://qrgo.page.link/wGpRi
+  Figure 2: Scan this with your phone to open the tag image.
+
+The ArUco tracking library relies on using computer vision to detect the 
+corners of uniquely identifiable tags in a single frame of video. The position of the
+tag relative to the camera can then be calculated using camera relative to the tag then be calculated 
+via the `perspective n point`_ problem, implemented in `OpenCV`_. Solving this requires the 
+tag corners in 3D space, which are defined in the file `pointer.txt`_. The first column of 
+pointer.txt defines the uniquely identifiable tag ID. The remaining 15 columns are the x,y,z 
+coordinates of the tag centre and four corners, as shown here:
+
+::
+
+  #tag id   #centre (x,y,z) #corner0 (x,y,z)     #corner1 (x,y,z) #corner2 (x,y,z) #corner3 (x,y,z)
+  208	    -17.5	-8.75	0	-24.75	-16	0	-10.25	-16	0	-10.25	-1.5	0	-24.75	-1.5	0
+  295	    0	-8.75	0	-7.25	-16	0	7.25	-16	0	7.25	-1.5	0	-7.25	-1.5	0
+  365	    17.5	-8.75	0	10.25	-16	0	24.75	-16	0	24.75	-1.5	0	10.25	-1.5	0
+  31	    -17.5	8.75	0	-24.75	1.5	0	-10.25	1.5	0	-10.25	16	0	-24.75	16	0
+  1	0	    8.75	0	-7.25	1.5	0	7.25	1.5	0	7.25	16	0	-7.25	16	0
+  757	    17.5	8.75	0	10.25	1.5	0	24.75	1.5	0	24.75	16	0	10.25	16	0
+
+
+When you start SciKit-SurgeryBARD you need to define identify pointer.txt in the `config.json`_ file, shown below. 
+
+::
+
+  {
+    "camera": {
+        "source": 0,
+        "width": 640,
+        "height": 480,
+        "grab": 33,
+        "clock": 15,
+        "fullscreen": false,
+        "calibration" : "data/calibration.npz"
+    },
+
+    "pointerData": {
+        "pointer_tag_file": "data/pointer.txt",
+        "tag_width" : 32
+    },
+
+    "out path" : "pointer_positions"
+  }
+
+Ignoring the camera section, which is covered in the `camera calibration tutorial`_, we see that the pointer tag file is defined with the "pointer_tag_file" entry. Underneath that is "tag_width". If you printed your tags out 
+they should be 32 mm wide, however if you are using a screen to show your tags it may be harder to control the tag width. Looking at Figure 1 you'll notice the horizontal line above the tags. You can measure the length of this line on your screen and enter the length into the configuration file. This enables to scale your tags without having to change `pointer.txt`_.
+
+If you run SciKit-SurgeryBARD now with something like
+
+::
+
+    scikit-surgerybard -c config/pointer_markers.json
+
+you should be able that the tags are being tracked by the presence of silver spheres overlaid on the 
+tag centres.
 
 
 .. _`SciKit-Surgery`: https://github.com/UCL/scikit-surgery/wikis/home
@@ -114,5 +159,10 @@ some resources
 .. _`Pivot Calibration with RANSAC`: https://mphy0026.readthedocs.io/en/latest/notebooks/RANSAC.html
 .. _`point based registration`: https://mphy0026.readthedocs.io/en/latest/registration/point_based_registration.html
 .. _`surface based registration`: https://mphy0026.readthedocs.io/en/latest/registration/surface_based_registration.html
-
+.. _`printer ready pdf`: https://github.com/UCL/scikit-surgerybard/raw/master/data/resources.pdf
 .. _`ArUco`: https://docs.opencv.org/trunk/d5/dae/tutorial_aruco_detection.html
+.. _`perspective n point`: https://en.wikipedia.org/wiki/Perspective-n-Point
+.. _`OpenCV`: https://docs.opencv.org/2.4/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html#solvepnp
+.. _`pointer.txt`: https://github.com/UCL/scikit-surgerybard/raw/master/data/pointer.txt
+.. _`config.json`: https://github.com/UCL/scikit-surgerybard/raw/master/config/pointer_markers.json 
+.. _`camera calibration tutorial`: https://mphy0026.readthedocs.io/en/latest/summerschool/camera_calibration_demo.html
