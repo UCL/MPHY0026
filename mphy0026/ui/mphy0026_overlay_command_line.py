@@ -7,7 +7,7 @@ import argparse
 from mphy0026 import __version__
 from mphy0026.ui.mphy0026_overlay_app import run_overlay
 
-
+#pylint:disable=no-member
 def main(args=None):
     """ Entry point for mphy0026_overlay application. """
 

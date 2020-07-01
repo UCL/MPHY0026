@@ -3,19 +3,15 @@
 """ Harness to run CT & overlay application. """
 
 import sys
-import vtk
-import cv2
-import random
 import os
-import numpy as np
-from PySide2 import QtWidgets, QtGui, QtCore
-from PySide2.QtWidgets import QSizePolicy
-import sksurgeryvtk.widgets.vtk_overlay_window as ow
+import vtk
+from PySide2 import QtWidgets
 import sksurgeryvtk.models.vtk_surface_model as sm
 import sksurgeryutils.common_overlay_apps as coa
 
+#pylint:disable=no-member, too-many-instance-attributes
 class OverlayMainWindow(coa.OverlayOnVideoFeed):
-
+    """ OverlayMainWindow"""
     def __init__(self, video_source, input_volume, input_surface):
         super().__init__(video_source)
 
@@ -33,7 +29,8 @@ class OverlayMainWindow(coa.OverlayOnVideoFeed):
 
         reader.Update()
 
-        self.model = sm.VTKSurfaceModel(input_surface, [0.5, 0.5, 0.5], opacity=0.5)
+        self.model = sm.VTKSurfaceModel(input_surface,
+                                        [0.5, 0.5, 0.5], opacity=0.5)
         self.vtk_overlay_window.add_vtk_models([self.model])
 
          # Calculate the center of the volume
@@ -56,8 +53,8 @@ class OverlayMainWindow(coa.OverlayOnVideoFeed):
 
         self.reslice_center = \
         [-0.5 * self.x_spacing * (self.num_x - 1),
-        -0.5 * self.y_spacing * (self.num_y - 1),
-        -0.5 * self.z_spacing * (self.num_z - 1)]
+         -0.5 * self.y_spacing * (self.num_y - 1),
+         -0.5 * self.z_spacing * (self.num_z - 1)]
 
         # Setup reslice driver
         self.reslice = vtk.vtkImageReslice()
@@ -65,7 +62,8 @@ class OverlayMainWindow(coa.OverlayOnVideoFeed):
 
         # Specific values to make the skull example look nicer.
         self.reslice.SetOutputExtent(100, 400, 150, 400, 25, 175)
-        self.reslice.SetOutputOrigin(self.reslice_center[0], self.reslice_center[1], 0)
+        self.reslice.SetOutputOrigin(self.reslice_center[0],
+                                     self.reslice_center[1], 0)
 
         self.reslice.SetInterpolationModeToLinear()
 
@@ -100,8 +98,10 @@ class OverlayMainWindow(coa.OverlayOnVideoFeed):
         for tips on setting the translation correctly. """
         slice_transform = vtk.vtkTransform()
         slice_transform.Identity()
-        
-        slice_transform.Translate(-1 * self.reslice_center[0], -1 * self.reslice_center[1], -1 * self.reslice_center[2])
+
+        slice_transform.Translate(-1 * self.reslice_center[0],
+                                  -1 * self.reslice_center[1],
+                                  -1 * self.reslice_center[2])
         slice_transform.RotateX(self.reslice_x_angle)
         slice_transform.RotateY(self.reslice_y_angle)
         slice_transform.RotateZ(self.reslice_z_angle)
@@ -119,15 +119,15 @@ class OverlayMainWindow(coa.OverlayOnVideoFeed):
         self.vtk_overlay_window.Render()
 
 class MainWindow(QtWidgets.QMainWindow):
-    
+    """ MainWindow """
     def __init__(self, video_source, input_volume, input_surface):
 
         super().__init__()
 
-        self.overlay_window = OverlayMainWindow(video_source, input_volume, input_surface)
+        self.overlay_window = OverlayMainWindow(video_source,
+                                                input_volume, input_surface)
 
         self.layout = QtWidgets.QHBoxLayout()
-        
 
         self.layout.addWidget(self.overlay_window.vtk_overlay_window)
         self.setup_controls()
@@ -138,7 +138,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.setCentralWidget(self.frame)
 
     def setup_controls(self):
-
+        """ Setup widgets for buttons etc."""
         self.controls = QtWidgets.QVBoxLayout()
 
         # Not really controlling x/y rotation, but good enough for a demo
@@ -160,7 +160,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.toggle_model_btn.clicked.connect(self.toggle_model)
         self.toggle_slice_btn.clicked.connect(self.toggle_slice)
-        
+
         self.slider_layout = QtWidgets.QHBoxLayout()
         self.slider_layout.addWidget(self.slider_x)
         self.slider_layout.addWidget(self.slider_y)
@@ -174,10 +174,11 @@ class MainWindow(QtWidgets.QMainWindow):
         self.layout.addLayout(self.controls)
 
     def toggle_model(self):
+        """ Toggle model view"""
         self.overlay_window.model.toggle_visibility()
 
     def toggle_slice(self):
-
+        """ Toggle slice view """
         actor = self.overlay_window.reslice_actor
 
         if actor.GetVisibility():
@@ -186,19 +187,22 @@ class MainWindow(QtWidgets.QMainWindow):
             actor.VisibilityOn()
 
     def x_changed(self, x_value):
+        """ Callbakc for x slider. """
         self.overlay_window.reslice_x_angle = x_value
         self.overlay_window.update_reslice()
 
     def y_changed(self, y_value):
+        """ Callback for y slider"""
         self.overlay_window.reslice_y_angle = y_value
         self.overlay_window.update_reslice()
 
     def start(self):
+        """ Start overlay window. """
         self.overlay_window.start()
 
 def run_overlay():
     """
-
+    Run the app
     """
 
     # Need this for all the Qt magic.
@@ -207,7 +211,8 @@ def run_overlay():
     # App is just one window, containing one widget, defined above.
 
     # Not gauranteed to work well with data other than the skull test data.
-    window = MainWindow(0, 'tests/data/skull/skull.nii', 'tests/data/skull/skull.vtk')
+    window = MainWindow(0, 'tests/data/skull/skull.nii',
+                        'tests/data/skull/skull.vtk')
     window.show()
     window.start()
 

@@ -3,17 +3,14 @@
 """ Harness to run overlay application. """
 
 import sys
-import vtk
-import cv2
 import random
+import vtk
 import numpy as np
 from PySide2 import QtWidgets, QtGui, QtCore
-from PySide2.QtWidgets import QSizePolicy
 import sksurgeryvtk.widgets.vtk_overlay_window as ow
 import sksurgeryvtk.models.vtk_surface_model as sm
 
-
-
+#pylint:disable=no-member, too-many-instance-attributes, invalid-name
 class OverlaywMainWindow(QtWidgets.QMainWindow):
     """
     OverlayMainWindow.
@@ -22,6 +19,7 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
         """
         Constructor, puts OverlayMainWidget in window.
         """
+
         super().__init__()
 
         self.mode = "circle"
@@ -39,7 +37,7 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
         self.h_box.addWidget(self.vtk_overlay_window)
         self.layout.addLayout(self.h_box)
         self.layout.addLayout(self.controls_box)
-        
+
         self.add_group_box()
         self.add_opacity_slider()
 
@@ -70,18 +68,19 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
 
         self.vtk_overlay_window.foreground_renderer.AddActor(self.txtScale)
         self.vtk_overlay_window.foreground_renderer.AddActor(self.txtPosition)
-        
+
         self.setup_target()
         self.setup_overlay()
 
         self.update()
         self.setContentsMargins(0, 0, 0, 0)
 
-        # Handle the mouse button events.
-        def interactionChange(obj, event):
-
+        def interactionChange(_, event):
+            """
+            Mouse callbacks
+            """
             if event == "EndInteractionEvent":
-                
+
                 # position
                 pos_error = self.check_position()
                 self.txtPosition.SetInput(f"Alignment Error: {pos_error:.2f}")
@@ -90,16 +89,12 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
                 scale_error = self.check_scale()
                 self.txtScale.SetInput(f"Size Error: {scale_error:.2f}")
 
-                # if pos_ok and scale_ok:
-                #     print(1)
-                #     self.vtk_overlay_window.background_renderer.SetBackground(0, 0.5, 0.5)
-                # else:
-                #     self.vtk_overlay_window.background_renderer.SetBackground(0, 0, 0)
-
-
-        self.vtk_overlay_window._Iren.AddObserver("EndInteractionEvent", interactionChange)
+        #pylint:disable=protected-access
+        self.vtk_overlay_window._Iren.AddObserver("EndInteractionEvent",
+                                                  interactionChange)
 
     def show_controls_dialog(self):
+        """."""
         dialog = QtWidgets.QMessageBox()
         dialog.setText("Mouse Controls \n" \
                        "Left button: Rotate (x/y)\n" \
@@ -109,6 +104,7 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
         dialog.exec_()
 
     def add_group_box(self):
+        """."""
         self.group_box = QtWidgets.QGroupBox("Select model")
 
         self.radio_btn_circle = QtWidgets.QRadioButton("Circle")
@@ -125,25 +121,27 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
         self.radio_btn_circle.setChecked(True)
 
     def circle_selected(self):
+        """Callback"""
         self.mode = "circle"
         self.reset_models()
 
-
     def liver_selected(self):
+        """Callback"""
         self.mode = "liver"
         self.reset_models()
 
     def reset_models(self):
+        """ Reset models to default"""
         self.setup_overlay()
         self.setup_target()
         self.vtk_overlay_window.background_renderer.SetBackground(0, 0, 0)
         self.update()
 
     def setup_overlay(self):
-
+        """Setup overlays"""
         if self.model:
             self.vtk_overlay_window.foreground_renderer.RemoveActor(
-            self.model.actor)
+                self.model.actor)
 
         if self.mode == "circle":
             self.setup_circle_overlay()
@@ -154,19 +152,20 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
         self.update()
 
     def setup_circle_overlay(self):
-
+        """Position overlay sphere """
         sphere_model = 'tests/data/overlay/sphere.vtk'
         self.model = sm.VTKSurfaceModel(sphere_model, [0.5, 0.5, 0.5])
         self.vtk_overlay_window.add_vtk_models([self.model])
 
     def setup_liver_overlay(self):
-
+        """ Positio overlay liver"""
         liver_model = 'tests/data/overlay/liver.vtk'
         self.model = sm.VTKSurfaceModel(liver_model, [1.0, 0.0, 0.0])
         self.vtk_overlay_window.add_vtk_models([self.model])
 
     def update(self):
         """ Re render the window."""
+        #pylint:disable=protected-access
         self.vtk_overlay_window._RenderWindow.Render()
 
     def add_opacity_slider(self):
@@ -197,13 +196,15 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
         self.update()
 
     def setup_target(self):
+        """ Do some setup for the targets. """
         # Clear previously drawn circles
         if self.target_actor:
-            self.vtk_overlay_window.foreground_renderer.RemoveActor(self.target_actor)
+            self.vtk_overlay_window.foreground_renderer.RemoveActor(
+                self.target_actor)
 
         if self.mode == "circle":
             self.draw_circle()
-        
+
         elif self.mode == "liver":
             self.set_target_liver()
 
@@ -215,6 +216,8 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
         self.update()
 
     def set_target_liver(self):
+        #pylint:disable=attribute-defined-outside-init, unexpected-keyword-arg
+        """ Set position of target liver. """
         liver_model = 'tests/data/overlay/liver.vtk'
         self.target_model = sm.VTKSurfaceModel(liver_model, [0.5, 0.5, 0.5],
                                                pickable=False)
@@ -223,24 +226,26 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
         self.target_x = -300 + 600 * random.random()
         self.target_y = -200 + 400 * random.random()
         self.target_actor.SetOrigin(0, 0, 0)
-        
+
         scale = 0.5 + random.random() * 1.0
         self.target_actor.SetScale(scale, scale, scale)
 
         self.target_actor.RotateX(180*random.random())
         self.target_actor.RotateY(90*random.random())
-        
+
         self.target_actor.SetPosition(self.target_x, self.target_y, 0)
 
 
     def draw_circle(self):
-
+        """ Draw a circle at random coordinates in the window. """
+        #pylint:disable=attribute-defined-outside-init
         # Generate random position and size
         self.circle_radius = random.random() * 500 + 25
-        self.target_x = -400 + self.circle_radius + (800 - 2*self.circle_radius) * random.random()
-        self.target_y = -260 + self.circle_radius + (520 - 2*self.circle_radius) * random.random()
-        print(self.target_x, self.target_y, self.circle_radius)
-        """ Draw a circle at random coordinates in the window. """
+        self.target_x = -400 + self.circle_radius \
+            + (800 - 2*self.circle_radius) * random.random()
+        self.target_y = -260 + self.circle_radius\
+             + (520 - 2*self.circle_radius) * random.random()
+
         # Create a circle
         polygon_source = vtk.vtkRegularPolygonSource()
         # Comment this line to generate a disk instead of a circle.
@@ -260,13 +265,14 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
     def check_position(self):
         """ Check if overlay model is correctly aligned in x/y with the
         background. """
-        
+
         if self.mode == "circle":
             position_model = self.model.actor.GetCenter()
 
         elif self.mode == "liver":
             position_model = self.model.actor.GetPosition()
 
+        #pylint:disable=invalid-name
         x, y = position_model[0], position_model[1]
 
         x_error = abs(x - self.target_x)
@@ -274,8 +280,6 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
 
         mse = np.sqrt(x_error**2 + y_error**2)
         return mse
-
-        return False
 
     def check_scale(self):
         """ Check if the overlay is the correct size for the background image.
@@ -292,12 +296,13 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
         return diff
 
     def reset_text_labels(self):
+        """ Reset to default"""
         self.txtPosition.SetInput("Alignment Error: N/A")
         self.txtScale.SetInput("Size Error: N/A")
 
 def run_overlay():
     """
-
+    Run app
     """
 
     # Need this for all the Qt magic.
