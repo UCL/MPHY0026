@@ -167,7 +167,7 @@ Now you're tracking your markers, assemble the pointer to your tracker markers. 
 
   Figure 4: The assembled tracked pointer.
 
-Part 2 Calibration
+Part 3 Calibration
 ------------------
 
 The final stage in building your pointer is to determine the position of the pointer tip relative to the tracking markers. We refer to this as pivot calibration. The most commonly used calibration is pivot calibration, where the tip of pointer is held stationary and the body of the pointer is pivoted about this fixed point. 
@@ -192,8 +192,88 @@ Acquiring marker poses for calibration amounts to pivoting the pointer through a
 
 You should aim to capture at least 20 poses, around 100 would be ideal, but is important to try and spread them evenly around the imaginary cone coming up from the pivot point.
 
-Performing Pivot Calibration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Performing a Pivot Calibration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Performing the pivot calibration involves finding the offset between the measured marker positions and the unknown tip position such that the pointer tip is stationary. SciKit-SurgeryBARD currently implements two algorithms to find the offset. These are "Algebraic one step", "sphere fitting" which are described in `Yanniv 2015`_. In addition the algebraic one step method can be used on conjunction with `RANSAC`_ to remove outliers from the optimisation. Try running:
+
+
+::
+
+    python bardPivotCalibration.py -i pointer_positions/bard_pointer_matrices/
+
+You should see output like:
+
+::
+
+    Pointer Offset =  [[-180.34596358   -2.65290744    2.35962519]]
+    Pivot Location =  [[-125.67858276  108.98254023  369.15847379]]
+    Residual Error =  9.914944136259292
+
+The pointer offset is the position of the pointer tip relative to the marker pattern, this is what we're trying to find. The pivot location is the location of the pivot relative to the tracking camera (the webcam). It is useful to compare this with your physical setup as it can give a quick indication of whether things have worked correctly. Looking at last value we see that the pivot location was about 37 cm from the camera. That seems about right given what we see in the video above. The last value is the residual error, which gives a measure of the spread of pointer tips around the estimated pivot location. 
+
+By default bardPivotCalibration.py used the algebraic one step method. You can change this by supplying a configuration file with the -c command line flag. Create configuration file like this `for sphere fitting`_ 
+
+::
+
+  {
+	 "method" : "sphere_fitting",
+	 "init_parameters" : [-800, -90, -2000, 300]
+  }   
+
+
+and like this `for RANSAC`_
+
+::
+    
+  { 
+	"method": "ransac",
+	"number_iterations" : 10,
+	"error_threshold" : 4,
+	"consensus_threshold" : 0.25
+  }
+
+
+then rerun pivot calibration with your configuration file. 
+
+:: 
+    
+    python bardPivotCalibration.py -i pointer_positions/bard_pointer_matrices/ -c your_config.json
+
+
+What happens. It is likely you'll need to change in the initial parameters for sphere fitting. The first thee parameters are the estimate pivot location, and the last is the sphere radius. You could use the output from the algebraic one step method for this.
+
+If time permits repeat this process (acquisition and calibration) several times and save your results in separate directories. How much to the results vary? What happens to the residual errors?
+
+Part 4 Estimating Calibration Error
+-----------------------------------
+
+Knowing how accurately you're pointer can locate things if very important for image guided surgery. This localisation accuracy forms the main part of Fiducial Localisation Error which will be covered in greater detail in the `registration tutorial`_. 
+
+Start by picking one of your registrations and copying the pointer tip position into a pointer_tip.txt file like:
+
+:: 
+
+    -180.34596358   -2.65290744    2.35962519
+
+Then add "pointer_tag_to_tip" entry to the BARD configuration file like:
+
+::
+
+    "pointerData": {
+        "pointer_tag_file": "data/pointer.txt",
+	"tag_width": 38
+	"pointer_tag_to_tip": "data/pointer_tip.txt"
+    },
+
+Now run SciKit-SurgeryBARD with;
+
+::
+
+    scikit-surgerybard -c config/pointer_markers.json
+
+When your tags are visible you should now see an extra sphere, somewhere near the tip of the pointer.
+
 
 
 .. _`SciKit-Surgery`: https://github.com/UCL/scikit-surgery/wikis/home
@@ -210,3 +290,8 @@ Performing Pivot Calibration
 .. _`pointer.txt`: https://github.com/UCL/scikit-surgerybard/raw/master/data/pointer.txt
 .. _`config.json`: https://github.com/UCL/scikit-surgerybard/raw/master/config/pointer_markers.json 
 .. _`camera calibration tutorial`: https://mphy0026.readthedocs.io/en/latest/summerschool/camera_calibration_demo.html
+.. _`Yanniv 2015`: https://dx.doi.org/10.1117/12.2081348
+.. _`RANSAC`: https://doi.org/10.1145%2F358669.358692
+.. _`for sphere fitting`:  https://github.com/UCL/scikit-surgerycalibration/raw/master/config/sphere_conf.json
+.. _`for RANSAC`: https://github.com/UCL/scikit-surgerycalibration/raw/master/config/ransac_conf.json
+.. _`registration tutorial`: https://mphy0026.readthedocs.io/en/latest/summerschool/registration_demo.html
