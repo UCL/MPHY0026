@@ -275,6 +275,42 @@ Now run SciKit-SurgeryBARD with;
 When your tags are visible you should now see an extra sphere, somewhere near the tip of the pointer.
 
 
+.. figure:: pivot_calibration/pointer_with_tip.png
+  :width: 100%
+
+  Figure 5: Tracked pointer with tip. Note the additional sphere at the left hand side showing the estimated position of the pointer tip.
+
+At this point the you may notice that the sphere marking the pointer tip is very jittery. This due to the 
+small tracking errors at the markers being magnified by the lever arm of the pointer. A longer pointer should
+be more jittery. You can reduce the jitter by adding some tracking averaging to the pointer with the "smoothing_buffer" entry.
+
+::
+
+  "pointerData": {
+        "pointer_tag_file": "data/pointer.txt",
+	"tag_width": 38,
+	"pointer_tag_to_tip": "data/pointer_tip.txt",
+	"smoothing_buffer" : 5
+  
+will use a 5 frame rolling average to reduce the random tracking noise. 
+
+Now you can see where your calibration places the pointer tip and where it actually is you can make some estimates of the calibration accuracy. This will be easier with some sort of measuring device (a ruler for example, see figure 6.
+
+.. figure:: pivot_calibration/pointer_measurement.png
+  :width: 100%
+
+  Figure 6: Use a ruler to measure the difference between the estimatated and apparent pointer tip positions in various orientations. Make sure you do it in a range or orientations.
+
+Estimate the calibration error over a range of pointer poses. Make a note of it, then repeat the process for a different calibration from Part 3. Do this for as many calibrations as time allows. Try and answer the following questions.
+
+* How accurate is the calibration on average?
+* How much does calibration accuracy vary?
+* Was one method better than another?
+* Is there any link between the number of calibration data points and the calibration accuracy?
+* Is there any link between calibration residual errors and calibration accuracy?
+* If you have time, make a pointer with a shorter or longer shaft, what happens then?
+
+Write up your results and share. That is the end of the tutorial, thank you.
 
 .. _`SciKit-Surgery`: https://github.com/UCL/scikit-surgery/wikis/home
 .. _`Medical Imaging Summer School`: https://medicss.cs.ucl.ac.uk/
