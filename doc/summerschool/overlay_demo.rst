@@ -32,8 +32,8 @@ Issue to consider
 * Getting things to look 'real' is challenging.
 
 
-Exercise
-^^^^^^^^
+Exercise 1
+^^^^^^^^^^
 
 **Prerequisites**
 
@@ -57,3 +57,23 @@ In each case, try to minimise both the size error and the alignment error. Align
 * What are the potential drawbacks of this approach for surgical applications?
 * What can be considered a 'good' aligment?
 * What type of user interface would be best for aligment?
+
+
+Exercise 2
+^^^^^^^^^^
+
+The next application shows a more realistic use case, where we want to overlay 3D and 2D data on the same scene. A webcam is required for this section.
+
+    python mphy0026_slice_overlay.py
+
+Here, we overlay a 3D model of an artificial skull, along with 2D slice data taken along a plane of the volume, on a video feed.
+The two sliders can be used to control the position of the 2D slice. The model/slice views can be toggled on/off.
+
+.. image:: slice_overlay.gif
+
+* Try to overlay the model on your own head/a friend.
+* What are the potential drawbacks of this approach for surgical applications?
+* Which of the two views - 3D or 2D, do you think could provide the most useful information to a surgeon?
+
+
+
