@@ -170,6 +170,32 @@ Now you're tracking your markers, assemble the pointer to your tracker markers. 
 Part 2 Calibration
 ------------------
 
+The final stage in building your pointer is to determine the position of the pointer tip relative to the tracking markers. We refer to this as pivot calibration. The most commonly used calibration is pivot calibration, where the tip of pointer is held stationary and the body of the pointer is pivoted about this fixed point. 
+
+Acquiring Data for Calibration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Watch the video below for a demonstration of how to use SciKit-SurgeryBARD to acquire a set of marker poses to use for calibration.
+
+.. raw:: html
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/1Y6xA-ezXds" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+Acquiring marker poses for calibration amounts to pivoting the pointer through a cone of around 60 degrees while pressing 'd' in the SciKit-SurgeryBARD window. If it's not already there you need to add the following to your configuration file to tell SciKit-SurgeryBARD to turn on keyboard interaction. 
+
+::
+    
+    "interaction": {
+	  "keyboard" : true
+    },
+
+You should aim to capture at least 20 poses, around 100 would be ideal, but is important to try and spread them evenly around the imaginary cone coming up from the pivot point.
+
+Performing Pivot Calibration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
 .. _`SciKit-Surgery`: https://github.com/UCL/scikit-surgery/wikis/home
 .. _`Medical Imaging Summer School`: https://medicss.cs.ucl.ac.uk/
 .. _`MPHY0026`: https://mphy0026.readthedocs.io/en/latest/
