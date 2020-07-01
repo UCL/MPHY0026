@@ -7,7 +7,7 @@ MPHY0026: Computer Assisted Surgery and Therapy
    :target: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026
    :alt: Logo
 
-.. image:: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026/badges/master/build.svg
+.. image:: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026/badges/master/pipeline.svg
    :target: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026/pipelines
    :alt: GitLab-CI test status
 
