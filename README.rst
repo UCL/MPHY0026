@@ -37,22 +37,29 @@ by tox. Please work through the whole of the `SNAPPY Tutorial`_ to understand
 more about Python development, tox and virtualenvs. For those in a hurry,
 you can do this to run examples:
 
-```
-# Clone the repository
-git clone https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026
-# Get inside the repository directory
-cd MPHY0026
-# Install tox if it is not already installed
-pip install tox
-# Run tox commands without any arguments.(The command may take up to 10 minutes)
-tox
-# For Mac and Linux users, run the command
-source .tox/py36/bin/activate
-# For Windows users, run the the commands
-cd .tox\py36\bin
-activate
-# The environment is setup now and you can run any example with the application.
-```
+::
+
+    # Clone the repository
+    git clone https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026
+    
+    # Get inside the repository directory
+    cd MPHY0026
+    
+    # Install tox if it is not already installed
+    pip install tox
+    
+    # Run tox commands without any arguments.(The command may take up to 10 minutes)
+    tox
+    
+    # For Mac and Linux users, run the command
+    source .tox/py36/bin/activate
+    
+    # For Windows users, run the the commands
+    cd .tox\py36\bin
+    activate
+    
+    # The environment is setup now and you can run any example with the application.
+
 
 Developing
 ----------
