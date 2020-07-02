@@ -130,7 +130,7 @@ When you start SciKit-SurgeryBARD you need to define identify pointer.txt in the
         "grab": 33,
         "clock": 15,
         "fullscreen": false,
-        "calibration" : "data/calibration.npz"
+        "calibration directory": "data/calibration/matts_mbp_640_x_480"
     },
 
     "pointerData": {
