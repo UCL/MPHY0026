@@ -29,7 +29,6 @@ After completing the tutorial students should be able to:
 * Explain what is meant by camera calibration
 * Be able to design a protocol to accurately calibrate a camera
 * Be able to list common sources of error that cause poor calibration
-* Explain why calibration accuracy depends on depth from the camera
 
 
 Assumed Knowledge
@@ -58,7 +57,7 @@ to enable remote delivery when the students do not have access to a calibration 
 
 
 What is Camera Calibration?
---------------------------
+---------------------------
 
 "Geometric camera calibration", also called "camera resectioning" is the process of
 selecting a suitable model that mimics the physical process of image formation,
@@ -99,7 +98,7 @@ a laptop camera. If you have a USB webcam, it may be easier to position that. Or
 First choose a calibration target:
 
   - if you have a printer, download a `6mm calibration target`_ and print it, and attach it to something flat, e.g. old CD case.
-  - or use your phone. Search google images for "camera calibration chessboard". Download an image, display it as large as possible on your phone. Measure the size of the squares with a ruler.
+  - or use your phone. Search google images for "camera calibration chessboard". Click on an image, display it as large as possible on your phone. Measure the size of the squares with a ruler. Ensure your energy saver settings don't dim the display too quickly.
 
 Then, check you have the correct parameters set in the configuration file.
 
@@ -117,7 +116,7 @@ Then, check you have the correct parameters set in the configuration file.
 Now, we can run the main calibration program.
 
 If you've cloned the repository you should be able to run the following commands,
-when your current working directory is the root directory of the repository.
+assuming your current working directory is the root directory of the repository.
 
 ::
 
@@ -143,8 +142,12 @@ The calibration process is best explained via a video:
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/AAkuYGBV7GA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Use 'c' to 'capture' an image, and 'q' to 'quit'. If you want to save your data, use the '-s' option
-to specify an output folder, and optionally '-p' to specify a filename prefix.
+Controls:
+
+  - 'q': quit
+  - 'c': capture an image
+  - 's': directory to save calibration results to.
+  - 'p': filename prefix
 
 
 Exercises
@@ -156,6 +159,7 @@ a feel for various problems. Watch out for poorly captured points:
 .. figure:: camera_calibration/bad_capture.png
   :alt: Example of bad points.
   :width: 600
+
   This image shows an example of poorly (incorrectly) identified points.
 
 If you see an image above, where the detected points are not in straight rows,
@@ -237,19 +241,19 @@ exercises for the reader:
 
   - Start the app, make sure the chessboard is in view, and that when you hit 'c' the chessboard is correctly detected
   - Restart the app
-  - Press 'm' repeatedly, after 10 presses, without moving the camera or the chessboard, you have the standard deviation of the x, y, z translational measurement.
+  - With the chessboard in view, press 'c', then press 'm' repeatedly. After 10 presses of the 'm' key, without moving the camera or the chessboard, you have the standard deviation of the x, y, z positional measurement.
   - Restart the app
   - Press 'c' once to capture the current position
   - move the chessboard by 5mm
   - Press 't' to measure the translation
   - Repeat, moving the chessboard by 5mm, and hitting 't' to evaluate the translation
-  - Paste the numbers into a spreadsheet.
-  - Compute the distance moved for each shift.
+  - Paste the translation numbers into a spreadsheet.
+  - Compute the distance moved for each shift, to combine x, y, z translation into a distance (as the direction of movement it unlikely to be exactly aligned with the camera).
   - Compute the error for each shift, and then the Mean and Standard Deviation of the error.
 
-  - Repeat this whole thing twice, using a 'good' and a 'bad' calibration. Are the calibrations different?
+  - Repeat this whole thing twice, using a 'good' and a 'bad' calibration. Are the calibrations discernibly different?
 
-Write down the Mean and Standard deviation of the x-translation, to hand in.
+Write down the Mean and Standard deviation of the translation error, to hand in.
 
 
 Hand-In
