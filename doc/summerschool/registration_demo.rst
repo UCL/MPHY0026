@@ -8,7 +8,7 @@ Introduction
 
 This is the `SciKit-Surgery`_ tutorial on fiducial marker based registration. 
 It was developed as a two hour tutorial for online delivery during the 2020 
-`Medical Imaging Summer School`_ hosted by UCL, but should be more broadly useable.
+`Medical Image Computing Summer School`_ hosted by UCL, but should be more broadly useable.
 The concepts taught are directly applicable to fiducial marker based registration
 as applied to image guided interventions, and are more broadly applicable to 
 other registration and calibrations where a good understanding of residual errors 
@@ -249,7 +249,7 @@ usefulness of this tutorial.
  
 
 .. _`SciKit-Surgery`: https://github.com/UCL/scikit-surgery/wikis/home
-.. _`Medical Imaging Summer School`: https://medicss.cs.ucl.ac.uk/
+.. _`Medical Image Computing Summer School`: https://medicss.cs.ucl.ac.uk/
 .. _`SciKit-SurgeryFRED`: https://github.com/UCL/scikit-surgeryfred
 .. _`MPHY0026`: https://mphy0026.readthedocs.io/en/latest/
 .. _`SciKit-SurgeryBARD`: https://scikit-surgerybard.readthedocs.io/en/latest/02_4_Register_And_Ovelay.html

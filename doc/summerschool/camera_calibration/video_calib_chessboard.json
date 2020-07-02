@@ -1,0 +1,8 @@
+{
+    "method": "chessboard",
+    "source": 0,
+    "window size": [640, 480],
+    "corners": [8, 5],
+    "square size in mm": 5,
+    "minimum number of views": 5
+}
