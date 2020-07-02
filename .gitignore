@@ -10,6 +10,7 @@
 # PyInstaller
 build/
 dist/
+tests/output
 
 # Jupyter output
 doc/notebooks/.ipynb_checkpoints/

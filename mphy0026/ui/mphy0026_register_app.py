@@ -3,6 +3,8 @@
 """ Harness to run Point/Surface-based registration algorithms. """
 
 import os
+import sys
+import copy
 import numpy as np
 import sksurgeryvtk.models.vtk_surface_model as sm
 import sksurgerycore.io.load_mps as lmps
@@ -48,9 +50,16 @@ def register_points(fixed_points,
         print("  Transform = ", transform)
         print("  Fiducial Registration Error = ", error)
     else:
+        transformed_source_points = copy.deepcopy(moving_points)
         error = sks.icp(moving_points.astype(float),
-                                            fixed_points.astype(float),
-                                            transform)
+                        fixed_points.astype(float),
+                        1000,                # Number of iterations
+                        sys.float_info.max,  # Max correspondence distance
+                        0.0000001,           # Transformation epsilon
+                        0.0000001,           # Cost function epsilon
+                        False,               # Use LM-ICP
+                        transform,
+                        transformed_source_points)
         print("Iterative Closest Point: ")
         print("  Transform = ", transform)
         print("  Residual = ", error)
