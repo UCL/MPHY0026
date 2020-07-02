@@ -20,6 +20,7 @@ Head mounted systems for overlay, such as the Microsoft Hololens, allow for over
     <iframe width="560" height="315" src="https://www.youtube.com/embed/loGxO3L7rFE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 For surgical applications, specific use cases include:
+
 * Drawing a region of interest around pertinent landmarks - tumors, arteries etc.
 * Overlaying a 3D model of an organ which includes additional anatomical information that may not be visible on the video.
 * Picture in picture ultrasound, so that a surgeon does not have to look between multiple screens.
