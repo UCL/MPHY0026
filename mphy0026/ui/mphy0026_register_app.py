@@ -48,7 +48,7 @@ def register_points(fixed_points,
         print("  Transform = ", transform)
         print("  Fiducial Registration Error = ", error)
     else:
-        error = sks.iterative_closest_point(moving_points.astype(float),
+        error = sks.icp(moving_points.astype(float),
                                             fixed_points.astype(float),
                                             transform)
         print("Iterative Closest Point: ")
