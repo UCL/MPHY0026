@@ -211,7 +211,7 @@ You should see output like:
 
 The pointer offset is the position of the pointer tip relative to the marker pattern, this is what we're trying to find. The pivot location is the location of the pivot relative to the tracking camera (the webcam). It is useful to compare this with your physical setup as it can give a quick indication of whether things have worked correctly. Looking at last value we see that the pivot location was about 37 cm from the camera. That seems about right given what we see in the video above. The last value is the residual error, which gives a measure of the spread of pointer tips around the estimated pivot location. 
 
-By default bardPivotCalibration.py used the algebraic one step method. You can change this by supplying a configuration file with the -c command line flag. Create configuration file like this `for sphere fitting`_ 
+By default bardPivotCalibration.py uses the algebraic one step method. You can change this by supplying a configuration file with the -c command line flag. Create configuration file like this `for sphere fitting`_ 
 
 ::
 
@@ -240,14 +240,14 @@ then rerun pivot calibration with your configuration file.
     python bardPivotCalibration.py -i pointer_positions/bard_pointer_matrices/ -c your_config.json
 
 
-What happens. It is likely you'll need to change in the initial parameters for sphere fitting. The first thee parameters are the estimate pivot location, and the last is the sphere radius. You could use the output from the algebraic one step method for this.
+What happens? It is likely you'll need to change in the initial parameters for sphere fitting. The first three parameters are the estimated pivot location, and the last is the sphere radius. You could use the output from the algebraic one step method for this.
 
-If time permits repeat this process (acquisition and calibration) several times and save your results in separate directories. How much to the results vary? What happens to the residual errors?
+If time permits repeat this process (acquisition and calibration) several times and save your results in separate directories. How much do the results vary? What happens to the residual errors?
 
 Part 4 Estimating Calibration Error
 -----------------------------------
 
-Knowing how accurately you're pointer can locate things if very important for image guided surgery. This localisation accuracy forms the main part of Fiducial Localisation Error which will be covered in greater detail in the `registration tutorial`_. 
+Knowing how accurately your pointer can locate things if very important for image guided surgery. This localisation accuracy forms the main part of Fiducial Localisation Error which will be covered in greater detail in the `registration tutorial`_. 
 
 Start by picking one of your registrations and copying the pointer tip position into a pointer_tip.txt file like:
 
@@ -291,7 +291,7 @@ be more jittery. You can reduce the jitter by adding some tracking averaging to 
 	"pointer_tag_to_tip": "data/pointer_tip.txt",
 	"smoothing_buffer" : 5
   
-will use a 5 frame rolling average to reduce the random tracking noise. 
+This will use a 5 frame rolling average to reduce the random tracking noise. 
 
 Now you can see where your calibration places the pointer tip and where it actually is you can make some estimates of the calibration accuracy. This will be easier with some sort of measuring device (a ruler for example, see figure 6.
 
