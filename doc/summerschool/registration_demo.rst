@@ -1,4 +1,4 @@
-.. _FidRegistrationTutorial
+.. _FidRegistrationTutorial:
 
 Fiducial Registration Tutorial
 ==============================
