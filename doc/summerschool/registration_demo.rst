@@ -81,7 +81,7 @@ If you've cloned the repository you should be able to run.
 
 The first argument should point to a png image. We've supplied a MRI of a brain, but it other images are possible.
 
-.. figure:: scikit-surgeryfred_0.png
+.. figure:: registration_demo/scikit-surgeryfred_0.png
   :width: 100%
 
   Figure 1: SciKit-SurgeryFRED opens a window with two scenes, at left is the preoperative image (MRI) with a target point marked in red. At right is the intra-operative scene where only the patient outline is visible. We will use fiducial based registration to locate the target point on the intraoperative scene.
@@ -95,12 +95,12 @@ You can watch the SciKit-SurgeryFRED video:
 On staring SciKit-SurgeryFRED you should see two images side by side as in Figure 1. The pre-operative image at
 left has a target identified in red. The idea is to locate the target on the intraoperative image at right, where we can only see the patient's outline. Locating the target in the intraoperative image is done here using fiducial marker based registration. Mouse clicking on either image will place a fiducial marker on each image, defining a point correspondence between the two images.
 
-.. figure:: scikit-surgeryfred_1.png
+.. figure:: registration_demo/scikit-surgeryfred_1.png
   :width: 100%
 
   Figure 2: Clicking on either image places a fiducial marker (in green) defining a point correspondence between the images
 
-.. figure:: scikit-surgeryfred_1_zoom.png
+.. figure:: registration_demo/scikit-surgeryfred_1_zoom.png
   :width: 100%
 
   Figure 3: SciKit-SurgeryFRED adds a Fiducial Localisation Error to the marker in the intraoperative image. The zoomed in region shows the cross hair where the marker is in the pre-operative image, and the green circle where we have located it. The difference between the circle and cross hair centre is the FLE for this marker.
@@ -108,7 +108,7 @@ left has a target identified in red. The idea is to locate the target on the int
 
 Point based registration requires at least three points to work. So keep adding marker points. At this point you may want to revisit the literature on point based registration, [Fitzpatrick1998]_, [Fitzpatrick2001]_, and  [Maurer1998]_ and consider where to place the fiducial markers to best effect. 
 
-.. figure:: scikit-surgeryfred_3.png
+.. figure:: registration_demo/scikit-surgeryfred_3.png
   :width: 100%
 
   Figure 4: With 3 or more fiducial markers place, SciKit-SurgeryFRED is able to peform a point-based "Procrustes" registration between the two images. Note that the target is now present in the intraoperative together with a cross hair. Similarly to figure 3, the cross hair represents the actual position of the target, whereas the red circle is the estimated position using point based registration. The difference between the two centres if the Target Registration Error (TRE), in this case 2.18 mm ("Actual TRE").
@@ -130,12 +130,12 @@ The second text box contains the expected values TRE and FRE as derived by [Fitz
 
 * "Expected FRE" is the expected value of the fiducial localisation error. This the expected absolute value of he fiducial registration error as defined in equation 10 of [Fitzpatrick1998]_. FRE is a function of the expected FLE and the number of fiducial markers. FLE should increase slightly as the number of fiducial markers increases.
 
-.. figure:: fre_equation_10.png
+.. figure:: registration_demo/fre_equation_10.png
   :width: 50%
 
 * "Expected TRE" is the expected value of the target registration error. This the expected absolute value of he target registration error as defined in equation 46 of [Fitzpatrick1998]_. TRE is a function of the FLE and the number and geometry of the fiducial markers. Although it should reduce gradually as more fiducial markers are placed, it can be greatly altered by where you place the markers. Try this many times and see what happens to expected TRE for different marker configurations.
 
-.. figure:: tre_equation_46.png
+.. figure:: registration_demo/tre_equation_46.png
   :width: 50%
 
 The third text box contains:
@@ -186,7 +186,7 @@ or
 
 Should result in something like Figure 5.
 
-.. figure:: plots.png
+.. figure:: registration_demo/plots.png
   :width: 100%
 
   Figure 5: Plots of the five statistics and their correlation with the Actual TRE, using sksurgeryfred_plotter.
