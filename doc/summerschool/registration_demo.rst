@@ -23,7 +23,7 @@ The tutorial is divided into four sections:
 * Discussion and writing up results (20 minutes)
 
 Learning Objectives
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 After completing the tutorial students should be able to:
 
@@ -35,7 +35,7 @@ After completing the tutorial students should be able to:
 
 
 Assumed Knowledge
-^^^^^^^^^^^^^^^^^
+-----------------
 
 `SciKit-SurgeryFRED`_ is Python software, it is assumed that pupils have a working Python installation and are able to install packages. If this tutorial has been installed as part of the `MPHY0026`_ module, then `SciKit-SurgeryFRED`_ should have already been installed. If not you should be able to install `SciKit-SurgeryFRED`_ using:
 
@@ -51,7 +51,7 @@ and the source code installed with
 
 
 Related Tutorials
-^^^^^^^^^^^^^^^^^
+-----------------
 
 This tutorial was designed to replace the point based registration session of the `SciKit-SurgeryBARD`_ tutorial, to enable remote delivery when the students do not have access to a suitable phantom or printer.
 
@@ -117,7 +117,7 @@ Point based registration requires at least three points to work. So keep adding 
 You can add as many marker points as you like (SciKit-Surgery-FRED currently crashes after around 65 markers are placed) and see how the six measures (defined below) in the text boxes change. Placed markers cannot be deleted, but you can restart the registration with a new target by pressing 'r'. 
 
 What the text boxes mean
-^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------
 
 SciKitSurgery-FRED has four text boxes list six metrics, this is what they mean and how they should behave.
 
@@ -147,7 +147,8 @@ The fourth box contains:
 * "Actual FRE", this is the residual RMS distance between the registered point sets. It will largely depend on the FLE and the number of fiducial markers. Because it is easily measured it is often reported by commercial image guidance systems. However using the actual FRE as a measure of registration accuracy can be dangerous, as detailed succinctly in [Fitzpatrick2009]. More generally, the use of residual errors as a measure of accuracy (for registration and calibrations) is common in the literature, but is best avoided, for the same reasons.
 
 Perform several registrations
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------
+
 Now take around 20 minutes to perform multiple registrations. See what patterns of fiducial markers give low TREs and what patterns give high TREs. Observe how the statistics change as you add more fiducial markers. Each time a registration is performed SciKit-Surgery will write the results to the log file "fred_results.log". Check that this file is present and that you can read it. Try and generate at least 100 registrations, the results of which will be used in the next section to look for correlations between the different statistics and the actual TRE.
 
 
@@ -184,12 +185,13 @@ or
     
     sksurgeryfred_plotter fred_results.log
 
-Should result in something like Figure 5.
+Should result in something like Figure :numref:`fred_plots`.
 
+.. _fred_plots:
 .. figure:: registration_demo/plots.png
   :width: 100%
 
-  Figure 5: Plots of the five statistics and their correlation with the Actual TRE, using sksurgeryfred_plotter.
+  Plots of the five statistics and their correlation with the Actual TRE, using sksurgeryfred_plotter.
 
 Take some time now to interrogate this data. Some questions to consider;
 
