@@ -49,7 +49,7 @@ Two cases are presented, a 2D alignment of a circle, and a more realistic exampl
 In each case, try to minimise both the size error and the alignment error. Alignment error in this case in an arbitrary measure that considers both rotation and position.  
 
 
-.. image:: overlay.gif
+.. image:: overlay/overlay.gif
 
 
 * Repeat the exercise multiple times (Press 'Move Target' to generate a new location).
@@ -70,7 +70,7 @@ The next application shows a more realistic use case, where we want to overlay 3
 Here, we overlay a 3D model of an artificial skull, along with 2D slice data taken along a plane of the volume, on a video feed.
 The two sliders can be used to control the position of the 2D slice. The model/slice views can be toggled on/off.
 
-.. image:: slice_overlay.gif
+.. image:: overlay/slice_overlay.gif
 
 * Try to overlay the model on your own head/a friend.
 * What are the potential drawbacks of this approach for surgical applications?
