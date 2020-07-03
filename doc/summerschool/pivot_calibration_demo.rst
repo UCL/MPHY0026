@@ -148,7 +148,13 @@ If you run SciKit-SurgeryBARD now with something like
 
 ::
 
-    scikit-surgerybard -c config/pointer_markers.json
+    sksurgerybard -c config/pointer_markers.json
+
+or 
+
+:: 
+    
+    python sksurgerybard.py -c config/pointer_markers.json
 
 you should be able that the tags are being tracked by the presence of silver spheres overlaid on the 
 tag centres, something like :numref:`reg_pointer_tracking`. Double check that you've set tag_width right, an incorrect value will make the next step (calibration) very difficult.
@@ -199,6 +205,11 @@ Performing a Pivot Calibration
 
 Performing the pivot calibration involves finding the offset between the measured marker positions and the unknown tip position such that the pointer tip is stationary. SciKit-SurgeryBARD currently implements two algorithms to find the offset. These are "Algebraic one step", "sphere fitting" which are described in `Yanniv 2015`_. In addition the algebraic one step method can be used on conjunction with `RANSAC`_ to remove outliers from the optimisation. Try running:
 
+:: 
+
+    bardPivotCalibration -i pointer_positions/bard_pointer_matrices/
+
+or
 
 ::
 
@@ -238,6 +249,12 @@ and like this `for RANSAC`_
 
 then rerun pivot calibration with your configuration file. 
 
+::
+
+    bardPivotCalibration -i pointer_positions/bard_pointer_matrices/ -c your_config.json
+
+or
+
 :: 
     
     python bardPivotCalibration.py -i pointer_positions/bard_pointer_matrices/ -c your_config.json
@@ -272,7 +289,13 @@ Now run SciKit-SurgeryBARD with;
 
 ::
 
-    scikit-surgerybard -c config/pointer_markers.json
+    sksurgerybard -c config/pointer_markers.json
+
+or 
+
+:: 
+    
+    python sksurgerybard.py -c config/pointer_markers.json
 
 When your tags are visible you should now see an extra sphere, somewhere near the tip of the pointer.
 
