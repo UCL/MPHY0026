@@ -57,8 +57,6 @@ setup(
         'ipykernel',
         'nbsphinx',
         'matplotlib',
-        'vtk<9.0.0',
-        'PySide2<=5.12.0',
         'opencv-contrib-python',
         'scikit-surgerycore',
         'scikit-surgeryvtk',
