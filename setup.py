@@ -53,8 +53,21 @@ setup(
     install_requires=[
         'six>=1.10',
         'numpy>=1.11',
+        'scipy',
+        'ipykernel',
+        'nbsphinx',
+        'matplotlib',
+        'vtk<9.0.0',
+        'PySide2<=5.12.0',
+        'opencv-contrib-python',
         'scikit-surgerycore',
-        'scikit-surgeryvtk'
+        'scikit-surgeryvtk',
+        'scikit-surgerynditracker',
+        'scikit-surgeryarucotracker',
+        'scikit-surgerypclcpp',
+        'scikit-surgeryopencvcpp',
+        'scikit-surgeryfred',
+        'scikit-surgerybard'
     ],
 
     entry_points={

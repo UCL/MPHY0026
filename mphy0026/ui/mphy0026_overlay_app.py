@@ -10,7 +10,7 @@ from PySide2 import QtWidgets, QtGui, QtCore
 import sksurgeryvtk.widgets.vtk_overlay_window as ow
 import sksurgeryvtk.models.vtk_surface_model as sm
 
-#pylint:disable=no-member, too-many-instance-attributes, invalid-name
+# pylint:disable=no-member, too-many-instance-attributes, invalid-name
 class OverlaywMainWindow(QtWidgets.QMainWindow):
     """
     OverlayMainWindow.
@@ -89,10 +89,11 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
                 scale_error = self.check_scale()
                 self.txtScale.SetInput(f"Size Error: {scale_error:.2f}")
 
-        #pylint:disable=protected-access
+        # pylint:disable=protected-access
         self.vtk_overlay_window._Iren.AddObserver("EndInteractionEvent",
                                                   interactionChange)
 
+    # pylint:disable=no-self-use
     def show_controls_dialog(self):
         """."""
         dialog = QtWidgets.QMessageBox()
