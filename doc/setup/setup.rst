@@ -116,10 +116,10 @@ as *this* project itself has not been installed.
 Jupyter Notebooks
 -----------------
 
-In both Option 1 and Option 2, once you have an active Python notebook, but extra steps
-are required to get code running nicely within Jupyter Notebooks.
-You will notice that `these instructions for Jupyter Notebooks`_ in this course, require Option 2 described above.
-This is another reason to prefer Option 2.
+Once you have an active Python environment, extra steps are required to get
+code in this repository running nicely within Jupyter Notebooks.
+You will notice that `these instructions for Jupyter Notebooks`_ in this course,
+require Option 2 described above. This is another reason to prefer Option 2.
 
 
 .. _`how to create and activate a virtual env`: https://docs.python.org/3/tutorial/venv.html#creating-virtual-environments
