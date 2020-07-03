@@ -16,6 +16,7 @@ The tutorial is divided into three sections:
 * Exercise 1 - 3D Model Alignment (75 minutes)
 * Exercise 2 - 3D & 2D overlay on video feed (15 minutes)
 
+
 Learning Objectives
 -------------------
 
@@ -25,12 +26,17 @@ After completing this tutorial, students should be able to:
 * Describe common challenges of image overlay in medical imaging.
 * Explain the advantages/disadvantages of overlaying 2D & 3D data.
 
-**Assumed Knowledge**
+
+Assumed Knowledge
+-----------------
 
 It is assumed that pupils have a working Python installation and are able to install packages.
 If this tutorial has been installed as part of the `MPHY0026`_ module, then the required packages should already be present.
 
-**Background**
+
+Background
+----------
+
 
 Overlaying data on a video feed is commonly used to:
 
@@ -42,11 +48,15 @@ Overlaying data on a video feed is commonly used to:
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/zzcdPA6qYAU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+    Illustration of text overlay on a video image, taken from the Terminator movies.
+
 Head mounted systems for overlay, such as the Microsoft Hololens, allow for overlay directly in the user's field of view.
 
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/loGxO3L7rFE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    Illustration of proposed medical application of Microsoft Hololens see through head up display.
 
 For surgical applications, specific use cases include:
 
@@ -55,27 +65,33 @@ For surgical applications, specific use cases include:
 * Picture in picture ultrasound, so that a surgeon does not have to look between multiple screens.
 
 
-**Issue to consider**
+Issue to consider
+-----------------
 
 * Where to place the overlay data? Data should be conveniently located, but don't want to obscure the clincian's view.
-* How is the AR model aligned to the real life view? Manual aligment is simple to implement, but can be difficult to orient properly for complex shapes (See exercise).
+* How is the AR model aligned to the real life view? Manual alignment is simple to implement, but can be difficult to orient properly for complex shapes (See exercise).
 * Getting things to look 'real' is challenging.
 
-**Additional information**
 
-Further learning material can be found in the following sections:
+Additional information
+----------------------
+
+Further learning material can be found in the following sections of this course.
 
 * `Augmented Reality`_ - examples of different systems and use cases.
 * `Graphics`_ - Techcnical details on different rendering methods and algorithms.
 
+
 Exercise 1
-^^^^^^^^^^
+----------
 
 Running the overlay application will allow you to try manual alignment of 2D/3D objects. From the root MPHY0026 folder, run:
-    
+
+::
+
     python mphy0026_overlay.py 
 
-Two cases are presented, a 2D alignment of a circle, and a more realistic example where a liver model needs to be alinged to a background shape.  
+Two cases are presented, a 2D alignment of a circle, and a more realistic example where a liver model needs to be aligned to a background shape.
 
 In each case, try to minimise both the size error and the alignment error. Alignment error in this case in an arbitrary measure that considers both rotation and position.  
 
@@ -92,9 +108,11 @@ In each case, try to minimise both the size error and the alignment error. Align
 
 
 Exercise 2
-^^^^^^^^^^
+----------
 
 The next application shows a more realistic use case, where we want to overlay 3D and 2D data on the same scene. A webcam is required for this section.
+
+::
 
     python mphy0026_slice_overlay.py
 
