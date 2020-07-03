@@ -95,6 +95,7 @@ Contents
   augmented/augmented_reality.rst
   references.rst
   additional_resources.rst
+  setup/setup.rst
   coursework/system_simulation.rst
   notebooks.rst
   summerschool/summerschool.rst
