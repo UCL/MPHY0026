@@ -39,7 +39,7 @@ Or you can use conda environments.
 
   - See `how to create and activate a conda env`_.
 
-Conda manages where to put each new environment.
+Conda manages where to put each new environment, so Conda is probably easier.
 
 Setup This Project
 ------------------
@@ -54,15 +54,17 @@ Developers typically choose option 2, and option 2 is necessary if you want to r
 Option 1
 ^^^^^^^^
 
-Given you are inside, (i.e. you have activated) your clean environment:
+Given you are inside, (i.e. you have activated) your clean environment, type:
 
 ::
+
     cd MPHY0026
     pip install .
 
+
 This should download all the dependencies and other projects, such as scikit-surgerybard used in
 the :ref:`SummerSchoolCameraCalibration`, or scikit-surgeryfred used in the :ref:`FidRegistrationTutorial`
-should now be available to use. Programs that are included in *this* project can either be run with
+should now be available to use. Programs that are included in *this* project can either be run with:
 
 ::
 
@@ -109,7 +111,7 @@ level, root folder of *this* repository, you would always type:
 
   python program_name.py
 
-as this project itself has not been installed.
+as *this* project itself has not been installed.
 
 Jupyter Notebooks
 -----------------
