@@ -1,22 +1,23 @@
 .. _SummerSchoolOverlay:
 
-Overlay
-=======
+Augmented Reality (AR) Overlay
+==============================
 
-**Introduction**
+Introduction
+------------
 
-This is the `SciKit-Surgery`_ tutorial on image overlay.
+This is the `SciKit-Surgery`_ tutorial on augmented reality image overlay.
 It was developed as a tutorial for online delivery during the 2020
-`Medical Imaging Summer School`_ hosted by UCL. 
-
+`Medical Imaging Computing Summer School`_ hosted by UCL.
 
 The tutorial is divided into three sections:
 
-* Background material (20-30 mins)
-* Exercise 1 - 3D Model Alignment (115 minutes)
+* Background material (30 mins)
+* Exercise 1 - 3D Model Alignment (75 minutes)
 * Exercise 2 - 3D & 2D overlay on video feed (15 minutes)
 
-**Learning Objectives**
+Learning Objectives
+-------------------
 
 After completing this tutorial, students should be have an understanding of:
 
@@ -107,7 +108,7 @@ The two sliders can be used to control the position of the 2D slice. The model/s
 * Which of the two views - 3D or 2D, do you think could provide the most useful information to a surgeon?
 
 .. _`SciKit-Surgery`: https://github.com/UCL/scikit-surgery/wikis/home
-.. _`Medical Imaging Summer School`: https://medicss.cs.ucl.ac.uk/
+.. _`Medical Imaging Computing Summer School`: https://medicss.cs.ucl.ac.uk/
 .. _`MPHY0026`: https://mphy0026.readthedocs.io/en/latest/
 .. _`Augmented Reality`: https://mphy0026.readthedocs.io/en/latest/augmented/augmented_reality.html
 .. _`Graphics`: https://mphy0026.readthedocs.io/en/latest/graphics/graphics.html
