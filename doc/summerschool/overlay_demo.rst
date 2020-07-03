@@ -19,11 +19,11 @@ The tutorial is divided into three sections:
 Learning Objectives
 -------------------
 
-After completing this tutorial, students should be have an understanding of:
+After completing this tutorial, students should be able to:
 
-* Common uses of image overlay in medical imaging.
-* Common challenges of image overlay in medical imaging.
-* The advantages/disadvantages of overlaying 2D & 3D data.
+* Describe common uses of image overlay in medical imaging.
+* Describe common challenges of image overlay in medical imaging.
+* Explain the advantages/disadvantages of overlaying 2D & 3D data.
 
 **Assumed Knowledge**
 
