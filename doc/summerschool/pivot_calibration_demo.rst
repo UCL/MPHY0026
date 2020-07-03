@@ -11,9 +11,9 @@ calibration of the pointer.
 It was developed as a two hour tutorial for online delivery during the 2020
 `Medical Imaging Summer School`_ hosted by UCL. Tracked pointers are an essential
 tool for image guided interventions, but are useful in a variety of 
-applications
+applications.
 
-The tutorial makes used the Python application `SciKit-SurgeryBARD`_
+The tutorial makes use of the Python application `SciKit-SurgeryBARD`_
 
 The tutorial is divided into four sections:
 
@@ -26,11 +26,11 @@ The tutorial is divided into four sections:
 Learning Objectives
 -------------------
 
-After completing the tutorial students should be able to:
+After completing the tutorial, students should be able to:
 
 * Describe how a tracked pointer can be used during image guided surgery.
-* Demonstrate the use ArUco marker to track an object using SciKit-SurgeryBARD
-* Perform a pivot calibration using SciKit-SurgeryBARD
+* Demonstrate the use of ArUco markers to track an object using SciKit-SurgeryBARD.
+* Perform a pivot calibration using SciKit-SurgeryBARD.
 * Estimate the accuracy of the calibrated tracked pointer.
 
 Assumed Knowledge
@@ -42,7 +42,7 @@ Assumed Knowledge
 
     pip install scikit-surgerybard
 
-and the source code installed with
+and the source code can be installed with
 
 ::
 
@@ -52,21 +52,24 @@ and the source code installed with
 Related Tutorials
 -----------------
 
-This tutorial was designed to replace the make your own pointer session of the `SciKit-SurgeryBARD`_ tutorial, to enable remote delivery when the students do not have access to a suitable phantom or printer. In also incorporates parts of the `Pivot Calibration with RANSAC`_ tutorial from the `MPHY0026`_ module.
+This tutorial was designed to replace the "make your own" pointer session of the `SciKit-SurgeryBARD`_ tutorial,
+to enable remote delivery when the students do not have access to a suitable phantom or printer.
+It also incorporates parts of the `Pivot Calibration with RANSAC`_ tutorial from the `MPHY0026`_ module.
 
 
 Part 1 Introduction to Tracked Pointers
 ---------------------------------------
 
 Tracked pointers enable the user to locate points and surfaces relative to the tracking system. 
-Their main use for image guided surgery is to locate fiducial markers for use in `point based registration`_ or to digitise surfaces for `surface based registration`_. More generally they can be
+Their main use for image guided surgery is to locate fiducial markers for use in `point based registration`_
+or to digitise surfaces for `surface based registration`_. More generally they can be
 used to make measurements and localise anatomy. 
 
 Tracked pointers consist of three parts. 
 
-* The tip, this is the bit that makes contact with the patient or fiducial marker. It must enable a unique point to be picked, so is often pointed so the tip is unambiguous. However it may also be spherical, so when inserted into a fiducial marker with a spherical divot the centre of the sphere is uniquely identifiable. For surgical applications the tip should be sterile.
-* The tracker marker. This is the part that is tracked by the tracking system, e.g. and electromagnetic coil or the reflective spheres used in optical tracking systems.
-* The frame and handle. In general it is not possible to place the tracking markers at the tip, so some sort of frame is needed to rigidly connect them. This frame can be designed also act as a handle for the user.
+* The tip, this is the bit that makes contact with the patient or fiducial marker. The pointer must enable a unique physical point to be located, so the pointer is often pointed so the tip location is unambiguous. However it may also be spherical, so when inserted into a fiducial marker with a spherical divot the centre of the sphere is uniquely identifiable. For surgical applications the tip should be sterilisable.
+* The tracker marker. This is the part that is tracked by the tracking system, e.g. an electromagnetic coil or the reflective spheres used in optical tracking systems.
+* The frame and handle. In general it is not possible to place the tracking markers at the tip, so some sort of frame is needed to rigidly connect them. This frame can be designed to also act as a handle for the user.
 
 Have a quick look at some of the videos on the linked (above) registration pages, and observe the types of pointers they use.
 
@@ -101,8 +104,8 @@ QR tag (:numref:`reg_pointerqr`).
 
 The ArUco tracking library relies on using computer vision to detect the 
 corners of uniquely identifiable tags in a single frame of video. The position of the
-tag relative to the camera can then be calculated using camera relative to the tag then be calculated 
-via the `perspective n point`_ problem, implemented in `OpenCV`_. Solving this requires the 
+tag relative to the camera can then be calculated using
+the `perspective n point`_ algorithm, implemented in `OpenCV`_. Solving this requires the
 tag corners in 3D space, which are defined in the file `pointer.txt`_. The first column of 
 pointer.txt defines the uniquely identifiable tag ID. The remaining 15 columns are the x,y,z 
 coordinates of the tag centre and four corners, as shown here:
@@ -118,7 +121,7 @@ coordinates of the tag centre and four corners, as shown here:
   757	    17.5	8.75	0	10.25	1.5	0	24.75	1.5	0	24.75	16	0	10.25	16	0
 
 
-When you start SciKit-SurgeryBARD you need to define identify pointer.txt in the `config.json`_ file, shown below. 
+When you start SciKit-SurgeryBARD you need to define the location of pointer.txt in the `config.json`_ file, as shown below.
 
 ::
 
@@ -156,7 +159,7 @@ or
     
     python sksurgerybard.py -c config/pointer_markers.json
 
-you should be able that the tags are being tracked by the presence of silver spheres overlaid on the 
+you should be able to see that the tags are being tracked by the presence of silver spheres overlaid on the
 tag centres, something like :numref:`reg_pointer_tracking`. Double check that you've set tag_width right, an incorrect value will make the next step (calibration) very difficult.
 
 .. _reg_pointer_tracking:
@@ -168,7 +171,7 @@ tag centres, something like :numref:`reg_pointer_tracking`. Double check that yo
 Assembly of Your Tracker
 ------------------------
 
-Now you're tracking your markers, assemble the pointer to your tracker markers. I've used gaffer tape to stick a skewer the back of my phone ( :numref:`reg_ass_poonter` ). It is important that the assembly is rigid, you do not want the pointer tip to move relative to the markers.
+Now you're tracking your markers, assemble the pointer to your tracker markers. I've used gaffer tape to stick a skewer to the back of my phone ( :numref:`reg_ass_poonter` ). It is important that the assembly is rigid, you do not want the pointer tip to move relative to the markers.
 
 .. _reg_ass_pointer
 .. figure:: pivot_calibration/pointer.png
@@ -281,8 +284,8 @@ Then add "pointer_tag_to_tip" entry to the BARD configuration file like:
 
     "pointerData": {
         "pointer_tag_file": "data/pointer.txt",
-	"tag_width": 38
-	"pointer_tag_to_tip": "data/pointer_tip.txt"
+        "tag_width": 38
+        "pointer_tag_to_tip": "data/pointer_tip.txt"
     },
 
 Now run SciKit-SurgeryBARD with;
@@ -311,21 +314,21 @@ be more jittery. You can reduce the jitter by adding some tracking averaging to 
 
 ::
 
-  "pointerData": {
+   "pointerData": {
         "pointer_tag_file": "data/pointer.txt",
-	"tag_width": 38,
-	"pointer_tag_to_tip": "data/pointer_tip.txt",
-	"smoothing_buffer" : 5
+        "tag_width": 38,
+        "pointer_tag_to_tip": "data/pointer_tip.txt",
+        "smoothing_buffer" : 5
   
 This will use a 5 frame rolling average to reduce the random tracking noise. 
 
-Now you can see where your calibration places the pointer tip and where it actually is you can make some estimates of the calibration accuracy. This will be easier with some sort of measuring device (a ruler for example, see :numref:`reg_pointer_measure`.
+Now you can see where your calibration places the pointer tip and where it actually is you can make some estimates of the calibration accuracy. This will be easier with some sort of measuring device (a ruler for example, see :numref:`reg_pointer_measure`).
 
 .. _reg_pointer_measure
 .. figure:: pivot_calibration/pointer_measurement.png
   :width: 100%
 
-  Use a ruler to measure the difference between the estimatated and apparent pointer tip positions in various orientations. Make sure you do it in a range or orientations.
+  Use a ruler to measure the difference between the estimatated and apparent pointer tip positions in various orientations. Make sure you do it in a range of orientations.
 
 Estimate the calibration error over a range of pointer poses. Make a note of it, then repeat the process for a different calibration from Part 3. Do this for as many calibrations as time allows. Try and answer the following questions.
 
