@@ -24,7 +24,7 @@ The tutorial is divided into four sections:
 * Discussion and writing up results (20 minutes)
 
 Learning Objectives
-^^^^^^^^^^^^^^^^^^^
+-------------------
 
 After completing the tutorial students should be able to:
 
@@ -34,7 +34,7 @@ After completing the tutorial students should be able to:
 * Estimate the accuracy of the calibrated tracked pointer.
 
 Assumed Knowledge
-^^^^^^^^^^^^^^^^^
+-----------------
 
 `SciKit-SurgeryBARD`_ is Python software, it is assumed that pupils have a working Python installation and are able to install packages. If this tutorial has been installed as part of the `MPHY0026`_ module, then `SciKit-SurgeryBARD`_ should have already been installed. If not you should be able to install `SciKit-SurgeryBARD`_ using:
 
@@ -50,7 +50,7 @@ and the source code installed with
 
 
 Related Tutorials
-^^^^^^^^^^^^^^^^^
+-----------------
 
 This tutorial was designed to replace the make your own pointer session of the `SciKit-SurgeryBARD`_ tutorial, to enable remote delivery when the students do not have access to a suitable phantom or printer. In also incorporates parts of the `Pivot Calibration with RANSAC`_ tutorial from the `MPHY0026`_ module.
 
@@ -81,21 +81,23 @@ today's demo I found a metal skewer which has the benefit of not leaving pen mar
 
 For the tracking system we'll use OpenCV's implementation of the `ArUco`_ tracking 
 library which requires only a calibrated webcam or mobile phone camera and 
-the ability to print markers or show them on a screen. Figure 1 shows the
+the ability to print markers or show them on a screen. :numref:`reg_pointerwithscale` shows the
 tags we will use for tracking the pointer. You can print them out from the `printer ready pdf`_
 and glue them to something rigid (cardboard etc), 
 or you can display them on your mobile phone screen using the 
-QR tag (Figure 2).
+QR tag (:numref:`reg_pointerqr`).
 
+.. _reg_pointerwithscale:
 .. figure:: https://github.com/UCL/scikit-surgerybard/raw/master/data/pointer_withscale.png
   :width: 20%
 
-  Figure 1: The patten of six unique tags we will use for pointer tracking. 
+  The patten of six unique tags we will use for pointer tracking. 
 
+.. _reg_pointerqr:
 .. figure:: https://github.com/UCL/scikit-surgerybard/raw/master/data/qrtags/pointer_qr.png
   :width: 20%
   
-  Figure 2: Scan this with your phone to open the tag image.
+  Scan this with your phone to open the tag image.
 
 The ArUco tracking library relies on using computer vision to detect the 
 corners of uniquely identifiable tags in a single frame of video. The position of the
@@ -128,7 +130,7 @@ When you start SciKit-SurgeryBARD you need to define identify pointer.txt in the
         "grab": 33,
         "clock": 15,
         "fullscreen": false,
-        "calibration" : "data/calibration.npz"
+        "calibration directory": "data/calibration/matts_mbp_640_x_480"
     },
 
     "pointerData": {
@@ -140,7 +142,7 @@ When you start SciKit-SurgeryBARD you need to define identify pointer.txt in the
   }
 
 Ignoring the camera section, which is covered in the `camera calibration tutorial`_, we see that the pointer tag file is defined with the "pointer_tag_file" entry. Underneath that is "tag_width". If you printed your tags out 
-they should be 32 mm wide, however if you are using a screen to show your tags it may be harder to control the tag width. Looking at Figure 1 you'll notice the horizontal line above the tags. You can measure the length of this line on your screen and enter the length into the configuration file. This enables to scale your tags without having to change `pointer.txt`_.
+they should be 32 mm wide, however if you are using a screen to show your tags it may be harder to control the tag width. Looking at :numref:`reg_pointerwithcale` you'll notice the horizontal line above the tags. You can measure the length of this line on your screen and enter the length into the configuration file. This enables to scale your tags without having to change `pointer.txt`_.
 
 If you run SciKit-SurgeryBARD now with something like
 
@@ -149,23 +151,24 @@ If you run SciKit-SurgeryBARD now with something like
     scikit-surgerybard -c config/pointer_markers.json
 
 you should be able that the tags are being tracked by the presence of silver spheres overlaid on the 
-tag centres, something like Figure 3. Double check that you've set tag_width right, an incorrect value will make the next step (calibration) very difficult.
+tag centres, something like :numref:`reg_pointer_tracking`. Double check that you've set tag_width right, an incorrect value will make the next step (calibration) very difficult.
 
-
+.. _reg_pointer_tracking:
 .. figure:: pivot_calibration/pointer_tracking.png
   :width: 100%
   
-  Figure 3: If the pointer tags are being tracked you should see silver spheres overlaid on the tags. Here the tag width was measured at 38 mm. If you set tag_width incorrectly in the configuration file the tags will still track, however if you set it too high (58 mm here) the tracker will locate the tags further away than they really are (small spheres at left), similarly if you set it too small (e.g. 18 mm) the spheres will appear closer (thus larger) than they should be.
+  If the pointer tags are being tracked you should see silver spheres overlaid on the tags. Here the tag width was measured at 38 mm. If you set tag_width incorrectly in the configuration file the tags will still track, however if you set it too high (58 mm here) the tracker will locate the tags further away than they really are (small spheres at left), similarly if you set it too small (e.g. 18 mm) the spheres will appear closer (thus larger) than they should be.
 
 Assembly of Your Tracker
-^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------
 
-Now you're tracking your markers, assemble the pointer to your tracker markers. I've used gaffer tape to stick a skewer the back of my phone (Figure 4). It is important that the assembly is rigid, you do not want the pointer tip to move relative to the markers.
+Now you're tracking your markers, assemble the pointer to your tracker markers. I've used gaffer tape to stick a skewer the back of my phone ( :numref:`reg_ass_poonter` ). It is important that the assembly is rigid, you do not want the pointer tip to move relative to the markers.
 
+.. _reg_ass_pointer
 .. figure:: pivot_calibration/pointer.png
   :width: 80%
 
-  Figure 4: The assembled tracked pointer.
+  The assembled tracked pointer.
 
 Part 3 Calibration
 ------------------
@@ -173,7 +176,7 @@ Part 3 Calibration
 The final stage in building your pointer is to determine the position of the pointer tip relative to the tracking markers. We refer to this as pivot calibration. The most commonly used calibration is pivot calibration, where the tip of pointer is held stationary and the body of the pointer is pivoted about this fixed point. 
 
 Acquiring Data for Calibration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------
 
 Watch the video below for a demonstration of how to use SciKit-SurgeryBARD to acquire a set of marker poses to use for calibration.
 
@@ -192,7 +195,7 @@ Acquiring marker poses for calibration amounts to pivoting the pointer through a
 You should aim to capture at least 20 poses, around 100 would be ideal, but is important to try and spread them evenly around the imaginary cone coming up from the pivot point.
 
 Performing a Pivot Calibration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------
 
 Performing the pivot calibration involves finding the offset between the measured marker positions and the unknown tip position such that the pointer tip is stationary. SciKit-SurgeryBARD currently implements two algorithms to find the offset. These are "Algebraic one step", "sphere fitting" which are described in `Yanniv 2015`_. In addition the algebraic one step method can be used on conjunction with `RANSAC`_ to remove outliers from the optimisation. Try running:
 
@@ -273,11 +276,11 @@ Now run SciKit-SurgeryBARD with;
 
 When your tags are visible you should now see an extra sphere, somewhere near the tip of the pointer.
 
-
+.. _reg_pointer
 .. figure:: pivot_calibration/pointer_with_tip.png
   :width: 100%
 
-  Figure 5: Tracked pointer with tip. Note the additional sphere at the left hand side showing the estimated position of the pointer tip.
+  Tracked pointer with tip. Note the additional sphere at the left hand side showing the estimated position of the pointer tip.
 
 At this point the you may notice that the sphere marking the pointer tip is very jittery. This due to the 
 small tracking errors at the markers being magnified by the lever arm of the pointer. A longer pointer should
@@ -293,12 +296,13 @@ be more jittery. You can reduce the jitter by adding some tracking averaging to 
   
 This will use a 5 frame rolling average to reduce the random tracking noise. 
 
-Now you can see where your calibration places the pointer tip and where it actually is you can make some estimates of the calibration accuracy. This will be easier with some sort of measuring device (a ruler for example, see figure 6.
+Now you can see where your calibration places the pointer tip and where it actually is you can make some estimates of the calibration accuracy. This will be easier with some sort of measuring device (a ruler for example, see :numref:`reg_pointer_measure`.
 
+.. _reg_pointer_measure
 .. figure:: pivot_calibration/pointer_measurement.png
   :width: 100%
 
-  Figure 6: Use a ruler to measure the difference between the estimatated and apparent pointer tip positions in various orientations. Make sure you do it in a range or orientations.
+  Use a ruler to measure the difference between the estimatated and apparent pointer tip positions in various orientations. Make sure you do it in a range or orientations.
 
 Estimate the calibration error over a range of pointer poses. Make a note of it, then repeat the process for a different calibration from Part 3. Do this for as many calibrations as time allows. Try and answer the following questions.
 
