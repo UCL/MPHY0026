@@ -155,7 +155,7 @@ If you run SciKit-SurgeryBARD now with;
 
 ::
 
-    sksurgerybard -c config/pointer_markers.json
+    sksurgerybard -c config.json
 
 you should be able to see that the tags are being tracked by the presence of silver spheres overlaid on the
 tag centres, something like :numref:`reg_pointer_tracking`. Double check that you've set tag_width right, an incorrect value will make the next step (calibration) very difficult.
@@ -277,7 +277,7 @@ Now run SciKit-SurgeryBARD with;
 
 ::
 
-    sksurgerybard -c config/pointer_markers.json
+    sksurgerybard -c config.json
 
 When your tags are visible you should now see an extra sphere, somewhere near the tip of the pointer.
 
