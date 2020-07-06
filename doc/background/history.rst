@@ -24,10 +24,7 @@ a selection of :ref:`SystemExamples` for a more detailed study, of what makes up
 Pre X-ray Guidance
 ------------------
 
-* Before the advent of interventional imaging the only physical way to
-determine what was inside the human body was to cut it open and
-use your eyes / hands. Thus surgery is both the diagnostic and
-theraputic tool.
+* Before the advent of interventional imaging the only physical way to determine what was inside the human body was to cut it open and use your eyes / hands. Thus surgery is both the diagnostic and theraputic tool.
 
 First X-ray Guidance
 --------------------
@@ -78,7 +75,8 @@ in relation to pre-operative imaging, or vice-versa.
   Stereotactic frame with N-localisers, by Kirigiri, on wikimedia, licensed under `CC BY-SA 3.0`_.
 
 
-This is an example on YouTube:
+This is an example on YouTube, from the Institute for Cancer Genetics and Informatics channel,
+where stereotactic coordinates are used for brain biopsy.
 
 .. raw:: html
 
@@ -92,6 +90,7 @@ So, the advent of CT scanning in the 1970s and the modern PC in the 1980s led to
 first in the operating microscope [Roberts1986]_ and then with a mechanical arm for a tracker, with the display using the a 4-quadrant view [Galloway1993]_.
 
 In this course, we will build a tracked pointer, 4 quadrant view for image-guided surgery in :ref:`Workshop1`.
+
 
 Surgical Planning
 -----------------
