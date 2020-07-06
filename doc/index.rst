@@ -105,8 +105,8 @@ Contents
   references.rst
   additional_resources.rst
   setup/setup.rst
-  coursework/system_simulation.rst
   notebooks.rst
+  coursework/system_simulation.rst
   summerschool/summerschool.rst
 
 .. raw:: html
