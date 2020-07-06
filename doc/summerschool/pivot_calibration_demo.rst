@@ -11,9 +11,9 @@ calibration of the pointer.
 It was developed as a two hour tutorial for online delivery during the 2020
 `Medical Imaging Summer School`_ hosted by UCL. Tracked pointers are an essential
 tool for image guided interventions, but are useful in a variety of 
-applications
+applications.
 
-The tutorial makes used the Python application `SciKit-SurgeryBARD`_
+The tutorial makes use of the Python application `SciKit-SurgeryBARD`_
 
 The tutorial is divided into four sections:
 
@@ -26,11 +26,11 @@ The tutorial is divided into four sections:
 Learning Objectives
 -------------------
 
-After completing the tutorial students should be able to:
+After completing the tutorial, students should be able to:
 
 * Describe how a tracked pointer can be used during image guided surgery.
-* Demonstrate the use ArUco marker to track an object using SciKit-SurgeryBARD
-* Perform a pivot calibration using SciKit-SurgeryBARD
+* Demonstrate the use of ArUco markers to track an object using SciKit-SurgeryBARD.
+* Perform a pivot calibration using SciKit-SurgeryBARD.
 * Estimate the accuracy of the calibrated tracked pointer.
 
 Assumed Knowledge
@@ -42,31 +42,37 @@ Assumed Knowledge
 
     pip install scikit-surgerybard
 
-and the source code installed with
+and the source code can be installed with
 
 ::
 
     git clone https://github.com/UCL/scikit-surgerybard
 
 
+See `Python setup`_ for a fuller description of how to set up your Python environment to run these demos. The commands given in this tutorial assume you have used pip to install SciKit-SurgeryBARD or that you are running in a suitable virtual environment with MPHY0026.
+
+
 Related Tutorials
 -----------------
 
-This tutorial was designed to replace the make your own pointer session of the `SciKit-SurgeryBARD`_ tutorial, to enable remote delivery when the students do not have access to a suitable phantom or printer. In also incorporates parts of the `Pivot Calibration with RANSAC`_ tutorial from the `MPHY0026`_ module.
+This tutorial was designed to replace the "make your own" pointer session of the `SciKit-SurgeryBARD`_ tutorial,
+to enable remote delivery when the students do not have access to a suitable phantom or printer.
+It also incorporates parts of the `Pivot Calibration with RANSAC`_ tutorial from the `MPHY0026`_ module.
 
 
 Part 1 Introduction to Tracked Pointers
 ---------------------------------------
 
 Tracked pointers enable the user to locate points and surfaces relative to the tracking system. 
-Their main use for image guided surgery is to locate fiducial markers for use in `point based registration`_ or to digitise surfaces for `surface based registration`_. More generally they can be
+Their main use for image guided surgery is to locate fiducial markers for use in `point based registration`_
+or to digitise surfaces for `surface based registration`_. More generally they can be
 used to make measurements and localise anatomy. 
 
 Tracked pointers consist of three parts. 
 
-* The tip, this is the bit that makes contact with the patient or fiducial marker. It must enable a unique point to be picked, so is often pointed so the tip is unambiguous. However it may also be spherical, so when inserted into a fiducial marker with a spherical divot the centre of the sphere is uniquely identifiable. For surgical applications the tip should be sterile.
-* The tracker marker. This is the part that is tracked by the tracking system, e.g. and electromagnetic coil or the reflective spheres used in optical tracking systems.
-* The frame and handle. In general it is not possible to place the tracking markers at the tip, so some sort of frame is needed to rigidly connect them. This frame can be designed also act as a handle for the user.
+* The tip, this is the bit that makes contact with the patient or fiducial marker. The pointer must enable a unique physical point to be located, so the pointer is often pointed so the tip location is unambiguous. However it may also be spherical, so when inserted into a fiducial marker with a spherical divot the centre of the sphere is uniquely identifiable. For surgical applications the tip should be sterilisable.
+* The tracker marker. This is the part that is tracked by the tracking system, e.g. an electromagnetic coil or the reflective spheres used in optical tracking systems.
+* The frame and handle. In general it is not possible to place the tracking markers at the tip, so some sort of frame is needed to rigidly connect them. This frame can be designed to also act as a handle for the user.
 
 Have a quick look at some of the videos on the linked (above) registration pages, and observe the types of pointers they use.
 
@@ -101,8 +107,8 @@ QR tag (:numref:`reg_pointerqr`).
 
 The ArUco tracking library relies on using computer vision to detect the 
 corners of uniquely identifiable tags in a single frame of video. The position of the
-tag relative to the camera can then be calculated using camera relative to the tag then be calculated 
-via the `perspective n point`_ problem, implemented in `OpenCV`_. Solving this requires the 
+tag relative to the camera can then be calculated using
+the `perspective n point`_ algorithm, implemented in `OpenCV`_. Solving this requires the
 tag corners in 3D space, which are defined in the file `pointer.txt`_. The first column of 
 pointer.txt defines the uniquely identifiable tag ID. The remaining 15 columns are the x,y,z 
 coordinates of the tag centre and four corners, as shown here:
@@ -118,45 +124,40 @@ coordinates of the tag centre and four corners, as shown here:
   757	    17.5	8.75	0	10.25	1.5	0	24.75	1.5	0	24.75	16	0	10.25	16	0
 
 
-When you start SciKit-SurgeryBARD you need to define identify pointer.txt in the `config.json`_ file, shown below. 
+SciKit-SurgeryBARD uses a configuration file to set various parameters and the location of the pointer.txt file. You can download a suitable file here (`config.json`_) or copy and paste from below.
 
 ::
 
-  {
+    {
     "camera": {
         "source": 0,
-        "width": 640,
-        "height": 480,
+        "window size": [640, 480],
         "grab": 33,
         "clock": 15,
         "fullscreen": false,
         "calibration directory": "data/calibration/matts_mbp_640_x_480"
     },
-
     "pointerData": {
         "pointer_tag_file": "data/pointer.txt",
         "tag_width" : 32
     },
-
+    "interaction": {
+        "keyboard": true,
+    },
     "out path" : "pointer_positions"
-  }
+    }
 
-Ignoring the camera section, which is covered in the `camera calibration tutorial`_, we see that the pointer tag file is defined with the "pointer_tag_file" entry. Underneath that is "tag_width". If you printed your tags out 
-they should be 32 mm wide, however if you are using a screen to show your tags it may be harder to control the tag width. Looking at :numref:`reg_pointerwithcale` you'll notice the horizontal line above the tags. You can measure the length of this line on your screen and enter the length into the configuration file. This enables to scale your tags without having to change `pointer.txt`_.
+You will need to change the camera section, based on your results from the `camera calibration tutorial`_. Check that the window size matches the images you used for calibration, which should have been saved as png images in the calibration directory. The pointer tag file is defined with the "pointer_tag_file" entry.
+Underneath that is "tag_width". If you printed your tags out 
+they should be 32 mm wide, however if you are using a screen to show your tags it may be harder to control the tag width. Looking at :numref:`reg_pointerwithscale` you'll notice the horizontal line above the tags. You can measure the length of this line on your screen and enter the length into the configuration file. This enables to scale your tags without having to change `pointer.txt`_.
 
-If you run SciKit-SurgeryBARD now with something like
+If you run SciKit-SurgeryBARD now with;
 
 ::
 
-    sksurgerybard -c config/pointer_markers.json
+    sksurgerybard -c config.json
 
-or 
-
-:: 
-    
-    python sksurgerybard.py -c config/pointer_markers.json
-
-you should be able that the tags are being tracked by the presence of silver spheres overlaid on the 
+you should be able to see that the tags are being tracked by the presence of silver spheres overlaid on the
 tag centres, something like :numref:`reg_pointer_tracking`. Double check that you've set tag_width right, an incorrect value will make the next step (calibration) very difficult.
 
 .. _reg_pointer_tracking:
@@ -168,9 +169,9 @@ tag centres, something like :numref:`reg_pointer_tracking`. Double check that yo
 Assembly of Your Tracker
 ------------------------
 
-Now you're tracking your markers, assemble the pointer to your tracker markers. I've used gaffer tape to stick a skewer the back of my phone ( :numref:`reg_ass_poonter` ). It is important that the assembly is rigid, you do not want the pointer tip to move relative to the markers.
+Now you're tracking your markers, assemble the pointer to your tracker markers. I've used gaffer tape to stick a skewer to the back of my phone ( :numref:`reg_ass_pointer` ). It is important that the assembly is rigid, you do not want the pointer tip to move relative to the markers.
 
-.. _reg_ass_pointer
+.. _reg_ass_pointer:
 .. figure:: pivot_calibration/pointer.png
   :width: 80%
 
@@ -179,7 +180,7 @@ Now you're tracking your markers, assemble the pointer to your tracker markers. 
 Part 3 Calibration
 ------------------
 
-The final stage in building your pointer is to determine the position of the pointer tip relative to the tracking markers. We refer to this as pivot calibration. The most commonly used calibration is pivot calibration, where the tip of pointer is held stationary and the body of the pointer is pivoted about this fixed point. 
+The final stage in building your pointer is to determine the position of the pointer tip relative to the tracking markers. We refer to this as the pointer's calibration. One method for finding the tip position is pivot calibration, where the tip of pointer is held stationary and the body of the pointer is pivoted about this fixed point. 
 
 Acquiring Data for Calibration
 ------------------------------
@@ -208,12 +209,6 @@ Performing the pivot calibration involves finding the offset between the measure
 :: 
 
     bardPivotCalibration -i pointer_positions/bard_pointer_matrices/
-
-or
-
-::
-
-    python bardPivotCalibration.py -i pointer_positions/bard_pointer_matrices/
 
 You should see output like:
 
@@ -253,13 +248,6 @@ then rerun pivot calibration with your configuration file.
 
     bardPivotCalibration -i pointer_positions/bard_pointer_matrices/ -c your_config.json
 
-or
-
-:: 
-    
-    python bardPivotCalibration.py -i pointer_positions/bard_pointer_matrices/ -c your_config.json
-
-
 What happens? It is likely you'll need to change in the initial parameters for sphere fitting. The first three parameters are the estimated pivot location, and the last is the sphere radius. You could use the output from the algebraic one step method for this.
 
 If time permits repeat this process (acquisition and calibration) several times and save your results in separate directories. How much do the results vary? What happens to the residual errors?
@@ -281,25 +269,19 @@ Then add "pointer_tag_to_tip" entry to the BARD configuration file like:
 
     "pointerData": {
         "pointer_tag_file": "data/pointer.txt",
-	"tag_width": 38
-	"pointer_tag_to_tip": "data/pointer_tip.txt"
+        "tag_width": 38
+        "pointer_tag_to_tip": "data/pointer_tip.txt"
     },
 
 Now run SciKit-SurgeryBARD with;
 
 ::
 
-    sksurgerybard -c config/pointer_markers.json
-
-or 
-
-:: 
-    
-    python sksurgerybard.py -c config/pointer_markers.json
+    sksurgerybard -c config.json
 
 When your tags are visible you should now see an extra sphere, somewhere near the tip of the pointer.
 
-.. _reg_pointer
+.. _reg_pointer:
 .. figure:: pivot_calibration/pointer_with_tip.png
   :width: 100%
 
@@ -311,21 +293,21 @@ be more jittery. You can reduce the jitter by adding some tracking averaging to 
 
 ::
 
-  "pointerData": {
+   "pointerData": {
         "pointer_tag_file": "data/pointer.txt",
-	"tag_width": 38,
-	"pointer_tag_to_tip": "data/pointer_tip.txt",
-	"smoothing_buffer" : 5
+        "tag_width": 38,
+        "pointer_tag_to_tip": "data/pointer_tip.txt",
+        "smoothing_buffer" : 5
   
 This will use a 5 frame rolling average to reduce the random tracking noise. 
 
-Now you can see where your calibration places the pointer tip and where it actually is you can make some estimates of the calibration accuracy. This will be easier with some sort of measuring device (a ruler for example, see :numref:`reg_pointer_measure`.
+Now you can see where your calibration places the pointer tip and where it actually is you can make some estimates of the calibration accuracy. This will be easier with some sort of measuring device (a ruler for example, see :numref:`reg_pointer_measure`).
 
-.. _reg_pointer_measure
+.. _reg_pointer_measure:
 .. figure:: pivot_calibration/pointer_measurement.png
   :width: 100%
 
-  Use a ruler to measure the difference between the estimatated and apparent pointer tip positions in various orientations. Make sure you do it in a range or orientations.
+  Use a ruler to measure the difference between the estimatated and apparent pointer tip positions in various orientations. Make sure you do it in a range of orientations.
 
 Estimate the calibration error over a range of pointer poses. Make a note of it, then repeat the process for a different calibration from Part 3. Do this for as many calibrations as time allows. Try and answer the following questions.
 
@@ -357,3 +339,4 @@ Write up your results and share. That is the end of the tutorial, thank you.
 .. _`for sphere fitting`:  https://github.com/UCL/scikit-surgerycalibration/raw/master/config/sphere_conf.json
 .. _`for RANSAC`: https://github.com/UCL/scikit-surgerycalibration/raw/master/config/ransac_conf.json
 .. _`registration tutorial`: https://mphy0026.readthedocs.io/en/latest/summerschool/registration_demo.html
+.. _`Python setup`: https://mphy0026.readthedocs.io/en/latest/setup/setup.html
