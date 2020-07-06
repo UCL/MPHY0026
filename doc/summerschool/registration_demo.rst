@@ -82,7 +82,7 @@ You can watch the SciKit-SurgeryFRED video:
   <iframe width="560" height="315" src="https://www.youtube.com/embed/t_6CH5uroYo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 On starting SciKit-SurgeryFRED you should see two images side by side as in :numref:`fred_0` . The pre-operative image on
-the left has a target identified in red. The idea is to locate the target on the intra-operative image on the right, where we can only see the patient's outline. Locating the target in the intra-operative image is done here using fiducial marker based registration. Mouse clicking on either image will place a fiducial marker on each image, defining a point correspondence between the two images.
+the left has a target identified in red. The idea is to locate the target on the intra-operative image on the right, where we can only see the patient's outline. Locating the target in the intra-operative image is done here using fiducial marker based registration. Mouse clicking on either image will place a fiducial marker at the same location (plus a randomly sampled fiducial localisation error) on each image, defining a point correspondence between the two images.
 
 .. _fred_1:
 .. figure:: registration_demo/scikit-surgeryfred_1.png
