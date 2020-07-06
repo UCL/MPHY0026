@@ -180,7 +180,7 @@ Now you're tracking your markers, assemble the pointer to your tracker markers. 
 Part 3 Calibration
 ------------------
 
-The final stage in building your pointer is to determine the position of the pointer tip relative to the tracking markers. We refer to this as pivot calibration. The most commonly used calibration is pivot calibration, where the tip of pointer is held stationary and the body of the pointer is pivoted about this fixed point. 
+The final stage in building your pointer is to determine the position of the pointer tip relative to the tracking markers. We refer to this as the pointer's calibration. One method for finding the tip position is pivot calibration, where the tip of pointer is held stationary and the body of the pointer is pivoted about this fixed point. 
 
 Acquiring Data for Calibration
 ------------------------------
