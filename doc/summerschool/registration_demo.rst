@@ -117,7 +117,7 @@ Except for the number of fiducial markers the units are in pixels, so any physic
 The first text box contains:
 
 * "Number of Fids" is the number of fiducial markers placed, which should increase by one each time you click on the image.
-* "Expected FLE" is the expected value of the squared Fiducial Localisation Error (equivalent to the variance or RMS squared). SciKit-SurgeryFRED models the FLE as a two dimensional isotropic normally distributed random variable. Each time a new registration is started (by starting the application or by pressing 'r') the standard deviation of the FLE is randomly selected from a uniform distribution between 0.5 and 5.0. Each time a fiducial is placed, its position is perturbed in two dimensions by this standard deviation. The expected absolute value of an FLE with a given standard deviation is calculated and is shown here.  
+* "Expected FLE" is the expected value of the squared Fiducial Localisation Error (equivalent to the variance or RMS squared). SciKit-SurgeryFRED models the FLE as a three dimensional isotropic normally distributed random variable. Each time a new registration is started (by starting the application or by pressing 'r') the standard deviation of the FLE is randomly selected from a uniform distribution between 0.5 and 5.0. Each time a fiducial is placed, its position is perturbed in three dimensions by this standard deviation. The expected absolute value of an FLE with a given standard deviation is calculated and is shown here.  
 
 The second text box contains the expected values TRE and FRE as derived by [Fitzpatrick1998]_.
 
