@@ -15,7 +15,7 @@ Upon completion of this section, the student will be able to:
 Introduction
 ------------
 
-As mentioned in papers like [PetersCleary2010]_, CAS system normally comprises
+As mentioned in papers like [PetersCleary2010]_, a CAS system normally comprises:
 
 * Imaging
 * Segmentation
@@ -65,16 +65,20 @@ In this course we will cover:
 * Optical tracking
 * Electro-magnetic (EM) tracking
 
-in depth.
-
 
 Registration
 ------------
 
+Registration is the process of aligning coordinate systems. In Medical Image Computing,
+registration is normally between two 3D images, for example, registering an MR scan to a CT scan of
+the same patient. However, in CAS systems, the challenge is often registering to the
+physical space of the patient, which is constantly changing (e.g breathing), or deforming (soft tissues).
+
+
 .. figure:: smart_liver_vis_1.png
   :width: 50%
 
-  Registration is aligning various images. Here a pre-operative model is aligned to intra-operative laparoscopic video.
+  Registration is aligning various images. Here a pre-operative model is aligned to intra-operative laparoscopic video, see [Thompson2015]_.
 
 
 Visualisation
@@ -96,7 +100,11 @@ User Interface
 .. figure:: smart_liver_gui_v2.png
   :width: 50%
 
-  Examples of User Interfaces from the SmartLiver project. (top) Desktop application was not very suitable for the OR. (bottom) Complexity was reduced over time to improve usability, and to work on a touchscreen.
+  Examples of User Interfaces from the SmartLiver project. (top) Desktop application was not very suitable for the OR. (bottom) Complexity was reduced over time to improve usability, and to work on a touchscreen [Thompson2018]_.
+
+Developing effective visualisations is an on-going area of research. It's not just a case of pretty graphics.
+The challenge is to present the most useful information, at the correct point in a procedure, without distracting
+the surgeon and causing attention blindness.
 
 
 A System-Wide Approach
