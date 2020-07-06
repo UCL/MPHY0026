@@ -112,6 +112,7 @@ What the text boxes mean
 ------------------------
 
 SciKitSurgery-FRED has four text boxes that list six metrics, this is what they mean and how they should behave.
+Except for the number of fiducial markers the units are in pixels, so any physical interpretation will depend on the anatomy and size of the image, for example the brain image used in the figures 1 pixel is approximately 0.7 mm. In any case the absolute magnitude of the values is not important for the tutorial, it is only the relationships between the metrics that we are interested in.
 
 The first text box contains:
 
