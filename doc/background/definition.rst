@@ -62,7 +62,7 @@ Interventional Radiologists
 
 Interventional Radiologists, or Vascular and Interventional Radiologists perform
 their procedures in an Interventional Radiology Suite, or Vascular Suite, that is
-equiped with built-in large imaging devices.
+equiped with built-in large imaging devices, like a Siemens Zeego.
 
 The :ref:`bookMauro` book, comes from the perspective of Interventional Radiology.
 Interventional Radiologists have been using image-guidance for decades to perform
@@ -100,7 +100,7 @@ Summary
 
 Therefore, we define:
 
-* Surgery - `a procedure involving cutting, or joining together a persons tissues`_ (Wikipedia).
+* Surgery - `a procedure involving cutting, or joining together a person's tissues`_ (Wikipedia).
 * Therapy - treating a medical condition, e.g. radio-frequency ablation
 * Interventions - broader term, encapsulating both surgical procedures and therapies
 * Computer Assisted - using an additional computational system, above and beyond that provided by the manufacturer of an imaging device
