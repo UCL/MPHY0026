@@ -117,17 +117,17 @@ Except for the number of fiducial markers the units are in pixels, so any physic
 The first text box contains:
 
 * "Number of Fids" is the number of fiducial markers placed, which should increase by one each time you click on the image.
-* "Expected FLE" is the expected absolute value of the Fiducial Localisation Error. SciKit-SurgeryFRED models the FLE as a two dimensional isotropic normally distributed random variable. Each time a new registration is started (by starting the application or by pressing 'r') the standard deviation of the FLE is randomly selected from a uniform distribution between 0.5 and 5.0. Each time a fiducial is placed, its position is perturbed in two dimensions by this standard deviation. The expected absolute value of an FLE with a given standard deviation is calculated and is shown here.  
+* "Expected FLE" is the expected value of the squared Fiducial Localisation Error (equivalent to the variance or RMS squared). SciKit-SurgeryFRED models the FLE as a two dimensional isotropic normally distributed random variable. Each time a new registration is started (by starting the application or by pressing 'r') the standard deviation of the FLE is randomly selected from a uniform distribution between 0.5 and 5.0. Each time a fiducial is placed, its position is perturbed in two dimensions by this standard deviation. The expected absolute value of an FLE with a given standard deviation is calculated and is shown here.  
 
 The second text box contains the expected values TRE and FRE as derived by [Fitzpatrick1998]_.
 
-* "Expected FRE" is the expected value of the Fiducial Registration Error. This the expected absolute value of the Fiducial Registration Error as defined in equation 10 of [Fitzpatrick1998]_. FRE is a function of the expected FLE and the number of fiducial markers. FRE should increase slightly as the number of fiducial markers increases.
+* "Expected FRE" is the expected value of the squared Fiducial Registration Error (variance or RMS squared). This the expected absolute value of the Fiducial Registration Error as defined in equation 10 of [Fitzpatrick1998]_. FRE is a function of the expected FLE and the number of fiducial markers. FRE should increase slightly as the number of fiducial markers increases.
 
 .. _fred_fre:
 .. figure:: registration_demo/fre_equation_10.png
   :width: 50%
 
-* "Expected TRE" is the expected value of the target registration error. This the expected absolute value of he target registration error as defined in equation 46 of [Fitzpatrick1998]_. TRE is a function of the FLE and the number and geometry of the fiducial markers. Although it should reduce gradually as more fiducial markers are placed, it can be greatly altered by where you place the markers. Try this many times and see what happens to the expected TRE for different marker configurations.
+* "Expected TRE" is the expected value of the squared target registration error (variance or RMS squared). This the expected absolute value of he target registration error as defined in equation 46 of [Fitzpatrick1998]_. TRE is a function of the FLE and the number and geometry of the fiducial markers. Although it should reduce gradually as more fiducial markers are placed, it can be greatly altered by where you place the markers. Try this many times and see what happens to the expected TRE for different marker configurations.
 
 .. _fred_tre:
 .. figure:: registration_demo/tre_equation_46.png
