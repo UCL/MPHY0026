@@ -22,10 +22,10 @@ In this section, we have a free-form discussion, based on the following material
 Common Modalities
 ^^^^^^^^^^^^^^^^^
 
-* MR/CT/PET/SPECT - 3D, pre-op. Need registering together. Plan.
-* Ultrasound, X-ray (low-dose flouroscopy), video - 2D, intra-op. Registration? Real-time updates.
-* Cone-beam CT, Robotic (Siemens Zeego) C-arm, 3D, intra-op.
-* Hybrid OR - typicall MR or CT.
+* MR/CT/PET/SPECT - 3D, taken pre-operatively. They typically need registering together. Used to plan surgery.
+* Ultrasound, X-ray (low-dose flouroscopy), video - 2D, taken intra-operatively. Provides real-time updates. How to register together, or register to pre-operative images is an ongoing research question.
+* Cone-beam CT, Robotic (Siemens Zeego) C-arm, 3D, taken intra-operatively. Not-so-real-time, but represents current state of patient anatomy intra-operatively.
+* Hybrid OR - typically MR or CT. Mostly only at large research institutions.
 * Advantages/Disadvantages of Hybrid OR?
 
 
