@@ -121,30 +121,31 @@ coordinates of the tag centre and four corners, as shown here:
   757	    17.5	8.75	0	10.25	1.5	0	24.75	1.5	0	24.75	16	0	10.25	16	0
 
 
-When you start SciKit-SurgeryBARD you need to define the location of pointer.txt in the `config.json`_ file, as shown below.
+SciKit-SurgeryBARD uses a configuration file to set various parameters and the location of the pointer.txt file. You can download a suitable file here (`config.json`_) or copy and paste from below.
 
 ::
 
-  {
+    {
     "camera": {
         "source": 0,
-        "width": 640,
-        "height": 480,
+        "window size": [640, 480],
         "grab": 33,
         "clock": 15,
         "fullscreen": false,
         "calibration directory": "data/calibration/matts_mbp_640_x_480"
     },
-
     "pointerData": {
         "pointer_tag_file": "data/pointer.txt",
         "tag_width" : 32
     },
-
+    "interaction": {
+        "keyboard": true,
+    },
     "out path" : "pointer_positions"
-  }
+    }
 
-Ignoring the camera section, which is covered in the `camera calibration tutorial`_, we see that the pointer tag file is defined with the "pointer_tag_file" entry. Underneath that is "tag_width". If you printed your tags out 
+You will need to change the camera section, based on your results from the `camera calibration tutorial`_. The pointer tag file is defined with the "pointer_tag_file" entry.
+Underneath that is "tag_width". If you printed your tags out 
 they should be 32 mm wide, however if you are using a screen to show your tags it may be harder to control the tag width. Looking at :numref:`reg_pointerwithcale` you'll notice the horizontal line above the tags. You can measure the length of this line on your screen and enter the length into the configuration file. This enables to scale your tags without having to change `pointer.txt`_.
 
 If you run SciKit-SurgeryBARD now with something like
