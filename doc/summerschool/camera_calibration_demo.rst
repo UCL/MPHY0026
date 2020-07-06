@@ -130,11 +130,17 @@ or if you are a Windows user
     tox
     .tox/py36/Scripts/activate
 
-The calibration program can be run with the command:
+The calibration program can be run with the following command:
 
 ::
 
-    bardVideoCalibration -c doc/summerschool/camera_calibration/video_calib_chessboard.json
+    bardVideoCalibration -c doc/summerschool/camera_calibration/video_calib_chessboard.json -s ./calibration_output -p calibration_01
+
+The -s and -p arguments are optional, for when you want to save your calibration results to disk:
+
+  - 'c': config file location (required)
+  - 's': directory to save calibration results to.
+  - 'p': filename prefix - Calibration generates ~30 files, which will all share a common prefix.
 
 The calibration process is best explained via a video:
 
@@ -146,8 +152,7 @@ Controls:
 
   - 'q': quit
   - 'c': capture an image
-  - 's': directory to save calibration results to.
-  - 'p': filename prefix
+
 
 
 Exercises
@@ -203,7 +208,11 @@ So, in this section we will try to assess the quality of the calibration, measur
 actual physical movements. In other words, if we move the chessboard by 5mm, does
 the camera measure the movement as a 5mm shift, or something else?
 
-First, do a good calibration, saving the data to a specific folder:
+First, do a good calibration, saving the data to a specific folder.
+
+**N.B.** Keep note of where you have saved this data, and the contents of your config file, as you will re-use these later for the `Overlay`_ section.
+
+Then run:
 
 ::
 
@@ -307,3 +316,4 @@ Here's some development suggestions:
 .. _`scikit-surgerycalibration`: https://github.com/UCL/scikit-surgerycalibration
 .. _`in this folder`: https://github.com/UCL/scikit-surgerycalibration/tree/master/sksurgerycalibration/video
 .. _`unit tests`: https://github.com/UCL/scikit-surgerycalibration/tree/master/tests/video
+.. _`Overlay`: https://mphy0026.readthedocs.io/en/latest/summerschool/overlay_demo.html
