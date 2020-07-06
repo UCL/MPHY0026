@@ -51,7 +51,8 @@ Course Principles
 
 * *Research led*: Closely linked to academic literature, and research at UCL and world-wide.
 * *A systems approach*: A researcher may only work on one component, but to achieve the clinical goal, we must understand the total system performance.
-* *Learn by doing*: Code examples, often using the `SciKit-Surgery`_ libraries, referenced in `The SciKit-Surgery Paper`_.
+* *Learn by doing*: Code examples, often using the `SciKit-Surgery`_ libraries, referenced in `The SciKit-Surgery Paper`_,
+and described in this `IPCAI 2020 presentation`_.
 
 
 Sessions
@@ -128,3 +129,4 @@ Contents
 .. _`Issue Tracker`: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026
 .. _`SciKit-Surgery`: https://github.com/UCL/scikit-surgery/wiki
 .. _`The SciKit-Surgery Paper`: https://doi.org/10.1007/s11548-020-02180-5
+.. _`IPCAI 2020 presentation`: https://www.youtube.com/watch?v=0z8eIjqAbzQ&t=10s
