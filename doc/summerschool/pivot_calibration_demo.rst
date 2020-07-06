@@ -49,6 +49,9 @@ and the source code can be installed with
     git clone https://github.com/UCL/scikit-surgerybard
 
 
+See `Python setup`_ for a fuller description of how to set up your Python environment to run these demos. The commands given in this tutorial assume you have used pip to install SciKit-SurgeryBARD or that you are running in a suitable virtual environment with MPHY0026.
+
+
 Related Tutorials
 -----------------
 
@@ -148,17 +151,11 @@ You will need to change the camera section, based on your results from the `came
 Underneath that is "tag_width". If you printed your tags out 
 they should be 32 mm wide, however if you are using a screen to show your tags it may be harder to control the tag width. Looking at :numref:`reg_pointerwithcale` you'll notice the horizontal line above the tags. You can measure the length of this line on your screen and enter the length into the configuration file. This enables to scale your tags without having to change `pointer.txt`_.
 
-If you run SciKit-SurgeryBARD now with something like
+If you run SciKit-SurgeryBARD now with;
 
 ::
 
     sksurgerybard -c config/pointer_markers.json
-
-or 
-
-:: 
-    
-    python sksurgerybard.py -c config/pointer_markers.json
 
 you should be able to see that the tags are being tracked by the presence of silver spheres overlaid on the
 tag centres, something like :numref:`reg_pointer_tracking`. Double check that you've set tag_width right, an incorrect value will make the next step (calibration) very difficult.
@@ -213,12 +210,6 @@ Performing the pivot calibration involves finding the offset between the measure
 
     bardPivotCalibration -i pointer_positions/bard_pointer_matrices/
 
-or
-
-::
-
-    python bardPivotCalibration.py -i pointer_positions/bard_pointer_matrices/
-
 You should see output like:
 
 ::
@@ -257,13 +248,6 @@ then rerun pivot calibration with your configuration file.
 
     bardPivotCalibration -i pointer_positions/bard_pointer_matrices/ -c your_config.json
 
-or
-
-:: 
-    
-    python bardPivotCalibration.py -i pointer_positions/bard_pointer_matrices/ -c your_config.json
-
-
 What happens? It is likely you'll need to change in the initial parameters for sphere fitting. The first three parameters are the estimated pivot location, and the last is the sphere radius. You could use the output from the algebraic one step method for this.
 
 If time permits repeat this process (acquisition and calibration) several times and save your results in separate directories. How much do the results vary? What happens to the residual errors?
@@ -294,12 +278,6 @@ Now run SciKit-SurgeryBARD with;
 ::
 
     sksurgerybard -c config/pointer_markers.json
-
-or 
-
-:: 
-    
-    python sksurgerybard.py -c config/pointer_markers.json
 
 When your tags are visible you should now see an extra sphere, somewhere near the tip of the pointer.
 
@@ -361,3 +339,4 @@ Write up your results and share. That is the end of the tutorial, thank you.
 .. _`for sphere fitting`:  https://github.com/UCL/scikit-surgerycalibration/raw/master/config/sphere_conf.json
 .. _`for RANSAC`: https://github.com/UCL/scikit-surgerycalibration/raw/master/config/ransac_conf.json
 .. _`registration tutorial`: https://mphy0026.readthedocs.io/en/latest/summerschool/registration_demo.html
+.. _`Python setup`: https://mphy0026.readthedocs.io/en/latest/setup/setup.html
