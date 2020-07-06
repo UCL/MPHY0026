@@ -49,6 +49,8 @@ and the source code can be installed with
 
     git clone https://github.com/UCL/scikit-surgeryfred
 
+See `Python setup`_ for a fuller description of how to set up your Python environment to run these demos. The commands given in this tutorial assume you have used pip to install SciKit-SurgeryFRED or that you are running in a suitable virtual environment with MPHY0026.
+
 
 Related Tutorials
 -----------------
@@ -64,20 +66,6 @@ Start scikit-surgeryfred. If you've installed it via pip you should be able to r
 :: 
 
     sksurgeryfred https://github.com/UCL/scikit-surgeryfred/raw/master/data/brain512.png
-
-or 
-
-:: 
-
-    python -m sksurgeryfred https://github.com/UCL/scikit-surgeryfred/raw/master/data/brain512.png
-
-If you've cloned the scikit-surgeryfred repository you should be able to run.
-
-::
-
-    tox
-    source .tox/py37/bin/activate
-    python sksurgeryfred.py data/brain512.png
 
 The first argument should point to a png image. We've supplied a MRI of a brain, but other images are possible.
 
@@ -181,12 +169,6 @@ There is a time stamp and name, followed by 6 comma separated numbers. In order 
 
 You should be able to parse this data into the data analysis software of your choice and investigate what if any correlations exist between the different data. For convenience SciKit-SurgeryFRED comes with a basic plotting tool, which you can try as a start.
 
-::
-    
-    python sksurgeryfred_plotter.py fred_results.log
-
-or 
-
 :: 
     
     sksurgeryfred_plotter fred_results.log
@@ -262,4 +244,5 @@ usefulness of this tutorial.
 .. _`MPHY0026`: https://mphy0026.readthedocs.io/en/latest/
 .. _`SciKit-SurgeryBARD`: https://scikit-surgerybard.readthedocs.io/en/latest/02_4_Register_And_Ovelay.html
 .. _`emailing me`: s.thompson@ucl.ac.uk
+.. _`Python setup`: https://mphy0026.readthedocs.io/en/latest/setup/setup.html
 
