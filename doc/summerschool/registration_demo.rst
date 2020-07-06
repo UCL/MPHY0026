@@ -188,8 +188,10 @@ Take some time now to interrogate this data. Some questions to consider;
 * If you were trying to estimate the actual target registration error, which statistic is of most use?
 * What level of uncertainty would there be in an individual registration?
 * What are the practical implications of using these statistics? For example, while the actual FRE and the number of fiducial markers can always be determined, the other statistics require a prior knowledge of the expected FLE.
-* If your results are similar to mine, why is there no correlation between FLE and actual TRE?
-* Are there conditions when you might expect to see correlation between FLE and TRE?
+* If your results are similar to mine, why is there no correlation between FRE and actual TRE?
+* Are there conditions when you might expect to see correlation between FRE and TRE?
+* If your results are similar to mine, why is there limited correlation between FLE and actual TRE?
+* Are there conditions when you might expect to see more correlation between FLE and TRE?
 
 Have a deeper dive through the data. What sort of probability distributions do the data fit? Are the assumptions used in our simulation valid in practice?
 
