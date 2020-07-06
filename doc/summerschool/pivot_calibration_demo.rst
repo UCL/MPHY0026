@@ -149,7 +149,7 @@ SciKit-SurgeryBARD uses a configuration file to set various parameters and the l
 
 You will need to change the camera section, based on your results from the `camera calibration tutorial`_. Check that the window size matches the images you used for calibration, which should have been saved as png images in the calibration directory. The pointer tag file is defined with the "pointer_tag_file" entry.
 Underneath that is "tag_width". If you printed your tags out 
-they should be 32 mm wide, however if you are using a screen to show your tags it may be harder to control the tag width. Looking at :numref:`reg_pointerwithcale` you'll notice the horizontal line above the tags. You can measure the length of this line on your screen and enter the length into the configuration file. This enables to scale your tags without having to change `pointer.txt`_.
+they should be 32 mm wide, however if you are using a screen to show your tags it may be harder to control the tag width. Looking at :numref:`reg_pointerwithscale` you'll notice the horizontal line above the tags. You can measure the length of this line on your screen and enter the length into the configuration file. This enables to scale your tags without having to change `pointer.txt`_.
 
 If you run SciKit-SurgeryBARD now with;
 
@@ -169,9 +169,9 @@ tag centres, something like :numref:`reg_pointer_tracking`. Double check that yo
 Assembly of Your Tracker
 ------------------------
 
-Now you're tracking your markers, assemble the pointer to your tracker markers. I've used gaffer tape to stick a skewer to the back of my phone ( :numref:`reg_ass_poonter` ). It is important that the assembly is rigid, you do not want the pointer tip to move relative to the markers.
+Now you're tracking your markers, assemble the pointer to your tracker markers. I've used gaffer tape to stick a skewer to the back of my phone ( :numref:`reg_ass_pointer` ). It is important that the assembly is rigid, you do not want the pointer tip to move relative to the markers.
 
-.. _reg_ass_pointer
+.. _reg_ass_pointer:
 .. figure:: pivot_calibration/pointer.png
   :width: 80%
 
@@ -281,7 +281,7 @@ Now run SciKit-SurgeryBARD with;
 
 When your tags are visible you should now see an extra sphere, somewhere near the tip of the pointer.
 
-.. _reg_pointer
+.. _reg_pointer:
 .. figure:: pivot_calibration/pointer_with_tip.png
   :width: 100%
 
@@ -303,7 +303,7 @@ This will use a 5 frame rolling average to reduce the random tracking noise.
 
 Now you can see where your calibration places the pointer tip and where it actually is you can make some estimates of the calibration accuracy. This will be easier with some sort of measuring device (a ruler for example, see :numref:`reg_pointer_measure`).
 
-.. _reg_pointer_measure
+.. _reg_pointer_measure:
 .. figure:: pivot_calibration/pointer_measurement.png
   :width: 100%
 
