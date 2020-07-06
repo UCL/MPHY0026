@@ -144,7 +144,7 @@ SciKit-SurgeryBARD uses a configuration file to set various parameters and the l
     "out path" : "pointer_positions"
     }
 
-You will need to change the camera section, based on your results from the `camera calibration tutorial`_. The pointer tag file is defined with the "pointer_tag_file" entry.
+You will need to change the camera section, based on your results from the `camera calibration tutorial`_. Check that the window size matches the images you used for calibration, which should have been saved as png images in the calibration directory. The pointer tag file is defined with the "pointer_tag_file" entry.
 Underneath that is "tag_width". If you printed your tags out 
 they should be 32 mm wide, however if you are using a screen to show your tags it may be harder to control the tag width. Looking at :numref:`reg_pointerwithcale` you'll notice the horizontal line above the tags. You can measure the length of this line on your screen and enter the length into the configuration file. This enables to scale your tags without having to change `pointer.txt`_.
 
