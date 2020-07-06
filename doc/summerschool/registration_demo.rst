@@ -14,7 +14,7 @@ as applied to image guided interventions, and are more broadly applicable to
 other registration and calibrations where a good understanding of residual errors 
 is required. 
 
-The tutorial makes used the Python application `SciKit-SurgeryFRED`_.
+The tutorial makes use of the Python application `SciKit-SurgeryFRED`_.
 The tutorial is divided into four sections:
 
 * Familiarisation with the software and the relevant statistics (45 minutes)
@@ -28,7 +28,7 @@ Learning Objectives
 After completing the tutorial students should be able to:
 
 * Explain what is meant by the terms Fiducial Localisation Error (FLE), Target Registration Error (TRE) and Fiducial Registration Error (FRE)
-* Be familiar derivation of statistics for the expected value of the TRE and FRE.
+* Be familiar with the derivation of statistics for the expected value of the TRE and FRE.
 * Produce data showing how different statistics may be used to estimate the likely TRE for a single registration.
 * Explain why FRE may be used to assess registration accuracy.
 * Explain why FRE may not be a useful predictor of TRE.
@@ -43,11 +43,13 @@ Assumed Knowledge
 
     pip install scikit-surgeryfred
 
-and the source code installed with
+and the source code can be installed with
 
 :: 
 
     git clone https://github.com/UCL/scikit-surgeryfred
+
+See `Python setup`_ for a fuller description of how to set up your Python environment to run these demos. The commands given in this tutorial assume you have used pip to install SciKit-SurgeryFRED or that you are running in a suitable virtual environment with MPHY0026.
 
 
 Related Tutorials
@@ -59,33 +61,19 @@ This tutorial was designed to replace the point based registration session of th
 Part 1 Introduction to Registration with SciKit-SurgeryFRED
 -----------------------------------------------------------
 
-Start scikit-surgeryfred, if you've installed it via pip you should be able to run 
+Start scikit-surgeryfred. If you've installed it via pip you should be able to run
 
 :: 
 
     sksurgeryfred https://github.com/UCL/scikit-surgeryfred/raw/master/data/brain512.png
 
-or 
-
-:: 
-
-    python -m sksurgeryfred https://github.com/UCL/scikit-surgeryfred/raw/master/data/brain512.png
-
-If you've cloned the repository you should be able to run.
-
-::
-
-    tox
-    source .tox/py37/bin/activate
-    python sksurgeryfred.py data/brain512.png
-
-The first argument should point to a png image. We've supplied a MRI of a brain, but it other images are possible.
+The first argument should point to a png image. We've supplied a MRI of a brain, but other images are possible.
 
 .. _fred_0:
 .. figure:: registration_demo/scikit-surgeryfred_0.png
   :width: 100%
 
-  SciKit-SurgeryFRED opens a window with two scenes, at left is the preoperative image (MRI) with a target point marked in red. At right is the intra-operative scene where only the patient outline is visible. We will use fiducial based registration to locate the target point on the intraoperative scene.
+  SciKit-SurgeryFRED opens a window with two scenes, on the left is the preoperative image (MRI) with a target point marked in red. On the right is the intra-operative scene where only the patient outline is visible. We will use fiducial based registration to locate the target point on the intraoperative scene.
 
 You can watch the SciKit-SurgeryFRED video:
 
@@ -93,8 +81,8 @@ You can watch the SciKit-SurgeryFRED video:
 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/t_6CH5uroYo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-On staring SciKit-SurgeryFRED you should see two images side by side as in :numref:`fred_0` . The pre-operative image at
-left has a target identified in red. The idea is to locate the target on the intraoperative image at right, where we can only see the patient's outline. Locating the target in the intraoperative image is done here using fiducial marker based registration. Mouse clicking on either image will place a fiducial marker on each image, defining a point correspondence between the two images.
+On starting SciKit-SurgeryFRED you should see two images side by side as in :numref:`fred_0` . The pre-operative image on
+the left has a target identified in red. The idea is to locate the target on the intra-operative image on the right, where we can only see the patient's outline. Locating the target in the intra-operative image is done here using fiducial marker based registration. Mouse clicking on either image will place a fiducial marker at the same location (plus a randomly sampled fiducial localisation error) on each image, defining a point correspondence between the two images.
 
 .. _fred_1:
 .. figure:: registration_demo/scikit-surgeryfred_1.png
@@ -115,7 +103,7 @@ Point based registration requires at least three points to work. So keep adding 
 .. figure:: registration_demo/scikit-surgeryfred_3.png
   :width: 100%
 
-  With 3 or more fiducial markers place, SciKit-SurgeryFRED is able to peform a point-based "Procrustes" registration between the two images. Note that the target is now present in the intraoperative together with a cross hair. Similarly to :numref:`fred_1z`, the cross hair represents the actual position of the target, whereas the red circle is the estimated position using point based registration. The difference between the two centres if the Target Registration Error (TRE), in this case 2.18 mm ("Actual TRE").
+  With 3 or more fiducial markers place, SciKit-SurgeryFRED is able to peform a point-based "Procrustes" registration between the two images. Note that the target is now present in the intraoperative image together with a cross hair. Similarly to :numref:`fred_1z`, the cross hair represents the actual position of the target, whereas the red circle is the estimated position using point based registration. The difference between the two centres is the Target Registration Error (TRE), in this case 2.18 mm ("Actual TRE").
 
 
 You can add as many marker points as you like (SciKit-Surgery-FRED currently crashes after around 65 markers are placed) and see how the six measures (defined below) in the text boxes change. Placed markers cannot be deleted, but you can restart the registration with a new target by pressing 'r'. 
@@ -123,22 +111,23 @@ You can add as many marker points as you like (SciKit-Surgery-FRED currently cra
 What the text boxes mean
 ------------------------
 
-SciKitSurgery-FRED has four text boxes list six metrics, this is what they mean and how they should behave.
+SciKitSurgery-FRED has four text boxes that list six metrics, this is what they mean and how they should behave.
+Except for the number of fiducial markers the units are in pixels, so any physical interpretation will depend on the anatomy and size of the image, for example the brain image used in the figures 1 pixel is approximately 0.7 mm. In any case the absolute magnitude of the values is not important for the tutorial, it is only the relationships between the metrics that we are interested in.
 
 The first text box contains:
 
 * "Number of Fids" is the number of fiducial markers placed, which should increase by one each time you click on the image.
-* "Expected FLE" is the expected absolute value of the Fiducial Localisation Error. SciKit-SurgeryFRED models the FLE as a two dimensional isotropic normally distributed random variable. Each time a new registration is started (by starting the application or by pressing 'r') the standard deviation of the FLE is randomly selected from a uniform distribution between 0.5 and 5.0. Each time a fiducial is placed, its position is perturbed in two dimensions by this standard deviation. The expected absolute value of an FLE with a given standard deviation is calculated and is shown here.  
+* "Expected FLE" is the expected value of the squared Fiducial Localisation Error (equivalent to the variance or RMS squared). SciKit-SurgeryFRED models the FLE as a two dimensional isotropic normally distributed random variable. Each time a new registration is started (by starting the application or by pressing 'r') the standard deviation of the FLE is randomly selected from a uniform distribution between 0.5 and 5.0. Each time a fiducial is placed, its position is perturbed in two dimensions by this standard deviation. The expected absolute value of an FLE with a given standard deviation is calculated and is shown here.  
 
 The second text box contains the expected values TRE and FRE as derived by [Fitzpatrick1998]_.
 
-* "Expected FRE" is the expected value of the fiducial localisation error. This the expected absolute value of he fiducial registration error as defined in equation 10 of [Fitzpatrick1998]_. FRE is a function of the expected FLE and the number of fiducial markers. FLE should increase slightly as the number of fiducial markers increases.
+* "Expected FRE" is the expected value of the squared Fiducial Registration Error (variance or RMS squared). This the expected absolute value of the Fiducial Registration Error as defined in equation 10 of [Fitzpatrick1998]_. FRE is a function of the expected FLE and the number of fiducial markers. FRE should increase slightly as the number of fiducial markers increases.
 
 .. _fred_fre:
 .. figure:: registration_demo/fre_equation_10.png
   :width: 50%
 
-* "Expected TRE" is the expected value of the target registration error. This the expected absolute value of he target registration error as defined in equation 46 of [Fitzpatrick1998]_. TRE is a function of the FLE and the number and geometry of the fiducial markers. Although it should reduce gradually as more fiducial markers are placed, it can be greatly altered by where you place the markers. Try this many times and see what happens to expected TRE for different marker configurations.
+* "Expected TRE" is the expected value of the squared target registration error (variance or RMS squared). This the expected absolute value of he target registration error as defined in equation 46 of [Fitzpatrick1998]_. TRE is a function of the FLE and the number and geometry of the fiducial markers. Although it should reduce gradually as more fiducial markers are placed, it can be greatly altered by where you place the markers. Try this many times and see what happens to the expected TRE for different marker configurations.
 
 .. _fred_tre:
 .. figure:: registration_demo/tre_equation_46.png
@@ -179,13 +168,7 @@ There is a time stamp and name, followed by 6 comma separated numbers. In order 
 
     actual TRE, actual FRE, expected TRE, expected FRE, expected FLE, number of fiducial markers
 
-You should be able to parse this data into the data analyse software of your choice and investigate what if any correlations exist between the different data. For convenience SciKit-SurgeryFRED comes with a basic plotting tool, which you can try as a start.
-
-::
-    
-    python sksurgeryfred_plotter.py fred_results.log
-
-or 
+You should be able to parse this data into the data analysis software of your choice and investigate what if any correlations exist between the different data. For convenience SciKit-SurgeryFRED comes with a basic plotting tool, which you can try as a start.
 
 :: 
     
@@ -205,8 +188,10 @@ Take some time now to interrogate this data. Some questions to consider;
 * If you were trying to estimate the actual target registration error, which statistic is of most use?
 * What level of uncertainty would there be in an individual registration?
 * What are the practical implications of using these statistics? For example, while the actual FRE and the number of fiducial markers can always be determined, the other statistics require a prior knowledge of the expected FLE.
-* If your results are similar to mine, why is there no correlation between FLE and actual TRE?
-* Are there conditions when you might expect to see correlation between FLE and TRE?
+* If your results are similar to mine, why is there no correlation between FRE and actual TRE?
+* Are there conditions when you might expect to see correlation between FRE and TRE?
+* If your results are similar to mine, why is there limited correlation between FLE and actual TRE?
+* Are there conditions when you might expect to see more correlation between FLE and TRE?
 
 Have a deeper dive through the data. What sort of probability distributions do the data fit? Are the assumptions used in our simulation valid in practice?
 
@@ -242,13 +227,13 @@ The rules are:
 * Throughout the game you will be shown different statistics to help you make your decision. 
 * For the first 4 ablations you are shown the actual TRE (this is for training purposes, you could not 
   know this during an actual ablation). Knowing the TRE makes it easy to set the margin, the margin just needs to 
-  bigger than the TRE to ensure 100% treatment.
+  be bigger than the TRE to ensure 100% treatment.
 * You can then perform 16 more ablations, being shown different combinations of statistics that could be available 
   during an actual ablation. Your job is to use your knowledge of the predictive power of these statistics (gained 
   during part 1 and 2) to set the minimum effective margin. 
 * Keep going until you get to the game over screen.
 
-When you've finished have a look at the file 'fred_game.log'. It should contain a record of your scores together with 
+When you've finished, have a look at the file 'fred_game.log'. It should contain a record of your scores together with
 a record of what statistics were visible for each score. Is there a link between the visible statistics and your scores?
 Does it correspond to the correlations you might have found in part 2?
 
@@ -262,4 +247,5 @@ usefulness of this tutorial.
 .. _`MPHY0026`: https://mphy0026.readthedocs.io/en/latest/
 .. _`SciKit-SurgeryBARD`: https://scikit-surgerybard.readthedocs.io/en/latest/02_4_Register_And_Ovelay.html
 .. _`emailing me`: s.thompson@ucl.ac.uk
+.. _`Python setup`: https://mphy0026.readthedocs.io/en/latest/setup/setup.html
 
