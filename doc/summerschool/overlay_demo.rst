@@ -10,11 +10,12 @@ This is the `SciKit-Surgery`_ tutorial on augmented reality image overlay.
 It was developed as a tutorial for online delivery during the 2020
 `Medical Imaging Computing Summer School`_ hosted by UCL.
 
-The tutorial is divided into three sections:
+The tutorial is divided into four sections:
 
 * Background material (30 mins)
-* Exercise 1 - 3D Model Alignment (75 minutes)
+* Exercise 1 - 3D Model Alignment (15 minutes)
 * Exercise 2 - 3D & 2D overlay on video feed (15 minutes)
+* Exercise 3 - AR Demo (10 minutes)
 
 
 Learning Objectives
@@ -125,8 +126,35 @@ The two sliders can be used to control the position of the 2D slice. The model/s
 * What are the potential drawbacks of this approach for surgical applications?
 * Which of the two views - 3D or 2D, do you think could provide the most useful information to a surgeon?
 
+Exercise 3
+^^^^^^^^^^
+
+The final application will demonstrate a more realistic use case, where we will combine some of the work done in previous chapters, to visualise our own 'probe'.
+This exercise requires you to have completed the `Camera Calibration`_ workshop, and have access to the config file and saved calibration data.
+
+Using a calibrated camera and a chessboard, it is possible to estimate the pose (position & orientation) of an object in 3D space. We can use this pose information to overlay
+data in the correct position in 3D space:
+
+    python mphy0026_slice_overlay.py -c doc/summerschool/camera_calibration/video_calib_chessboard.json -d CALIB_DIR
+
+Here, we have overlaid the video feed back onto the chessboard pattern. As you move/rotate the chessboard, the overlay should remain in the same position.
+
+.. image:: overlay/chessboard_ar.PNG
+
+An application of this approach would be to display ultrasound information eminating from the tip of an ultrasound probe. We can emulate this by imagining that the probe tip is
+located at the edge of the mobile phone. To do this correctly, it is necessary to know the location of the probe tip (phone edge), relative to the tracking markers (chessboard).
+In practice, this would be acheived using an appropriate calibration method (e.g. pivot or hand-eye calibration). For now, we can simply specify the distance that the image should
+be offset from the chessboard centre, as a command line arugment:
+
+    python mphy0026_slice_overlay.py -c doc/summerschool/camera_calibration/video_calib_chessboard.json -d CALIB_DIR -o 90
+
+I have used an offset value of 90, but you should adjust this value to get the best results on whichever phone/chessboard you are using.
+
+.. image:: overlay/phone_ar.gif
+
 .. _`SciKit-Surgery`: https://github.com/UCL/scikit-surgery/wikis/home
 .. _`Medical Imaging Computing Summer School`: https://medicss.cs.ucl.ac.uk/
 .. _`MPHY0026`: https://mphy0026.readthedocs.io/en/latest/
 .. _`Augmented Reality`: https://mphy0026.readthedocs.io/en/latest/augmented/augmented_reality.html
 .. _`Graphics`: https://mphy0026.readthedocs.io/en/latest/graphics/graphics.html
+.. _`Camera Calibration`: https://mphy0026.readthedocs.io/en/latest/summerschool/camera_calibration_demo.html
