@@ -10,6 +10,10 @@ This process is called calibration and finds the parameters that are not known b
 The calibration process can provide a rigid (translation and rotation) or affine (scaling, rotation and translation) transformation relating two coordinate systems, by measuring the relation indirectly. 
 A good calibration process will depend on the instruments being tracked, the tracking system chosen and the accuracy needed for a specific clinical application.
 
+
+Exercise: Refresh your knowledge of `Coordinate systems <../notebooks/coordinate_systems.html>`_.
+
+
 Types of calibration in surgery
 -------------------------------
 
@@ -17,7 +21,7 @@ Calibration processes can be grouped as follows:
 
 * **Pivot calibration**: Finds the transformation between a tracking system and the tip of a tool using a stationary point.
 * **Template-based tool calibration**: Finds the transformation between a tracking system and the tip of a tool using a rigid template.
-* **Hand-eye calibration**: Finds the transformation between a tracking system and a camera.
+* **Hand-eye calibration**: Finds the transformation between a tracking marker and a camera.
 * **Intrinsic camera parameters calibration**: Finds the intrinsic camera parameters.
 
 
