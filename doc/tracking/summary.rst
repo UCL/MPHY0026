@@ -3,7 +3,7 @@
 Summary
 =======
 
-- Tracking devices are an important component of image-guided systems as they allow to track the position of different devices during a surgical procedure.
+- Tracking devices are an important component of image-guided systems as they allow us to track the position of different devices during a surgical procedure.
 - There are three main types of tracking used in surgical room: mechanical, optical and electromagnetic. 
 - Mechanical digitisers transform a mechanical movement into a digital measurement. Widely used in the robotics field (e.g., DaVinci's kinematic tracking).
 - Optical tracking requires a line-of-sight between the camera and the object tracked but provides a high accuracy and precision (approx. 0.25 mm accuracy).

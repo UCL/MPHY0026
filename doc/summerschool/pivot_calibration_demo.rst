@@ -9,7 +9,7 @@ Introduction
 This is the `SciKit-Surgery`_ tutorial on making a tracked pointer and the 
 calibration of the pointer. 
 It was developed as a two hour tutorial for online delivery during the 2020
-`Medical Imaging Summer School`_ hosted by UCL. Tracked pointers are an essential
+`Medical Image Computing Summer School`_ hosted by UCL. Tracked pointers are an essential
 tool for image guided interventions, but are useful in a variety of 
 applications.
 
@@ -321,7 +321,7 @@ Estimate the calibration error over a range of pointer poses. Make a note of it,
 Write up your results and share. That is the end of the tutorial, thank you.
 
 .. _`SciKit-Surgery`: https://github.com/UCL/scikit-surgery/wikis/home
-.. _`Medical Imaging Summer School`: https://medicss.cs.ucl.ac.uk/
+.. _`Medical Image Computing Summer School`: https://medicss.cs.ucl.ac.uk/
 .. _`MPHY0026`: https://mphy0026.readthedocs.io/en/latest/
 .. _`SciKit-SurgeryBARD`: https://scikit-surgerybard.readthedocs.io/en/latest/02_4_Register_And_Ovelay.html
 .. _`Pivot Calibration with RANSAC`: https://mphy0026.readthedocs.io/en/latest/notebooks/RANSAC.html

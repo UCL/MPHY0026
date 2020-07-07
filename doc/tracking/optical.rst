@@ -6,13 +6,13 @@ Optical tracking
 Introduction
 ------------
 
-Optical tracking involve the use of cameras (usually in a fixed position) to localise markers fixed in a rigid body shape (moving object) that is tracked in real-time. The cameras and tracked markers need to be in line-of-sight.
-This system is the most popular so far in surgical interventions mainly due to its accuracy and reliability (0.25 mm accuracy with an NDI optical tracker), however, the required line-of-sight between cameras and markers make this technology not adequate for  interventions where the object of interest is inside the human body (e.g., endoscope, catheter, etc.).
+Optical tracking involve the use of cameras (usually in a fixed position) to localise markers fixed in a rigid arrangement that are tracked in real-time. The tracked markers need to be in the line-of-sight of the camera.
+This system is the most popular so far in surgical interventions mainly due to its accuracy and reliability (e.g. 0.25 mm accuracy with an NDI Polaris Spectra optical tracker), however, the required line-of-sight between cameras and markers make this technology not suitable for interventions where the object of interest is inside the human body (e.g., endoscope, catheter, etc.).
 
 Types of systems
 ----------------
 
-Optical tracking systems used in surgery can be divided in to main groups: video tracking and IR-based tracking. The following sections describe these types of optical tracking.
+Optical tracking systems used in surgery can be divided in to main groups: video tracking and Infra-Red (IR) -based tracking. The following sections describe these types of optical tracking.
 
 Video tracking systems
 ^^^^^^^^^^^^^^^^^^^^^^
@@ -23,14 +23,43 @@ Video tracking systems track a fiducial marker with a printed pattern on it (e.g
   :alt: Aruco marker
   :width: 300
   
-  Aruco marker
+  ArUco marker, also called a 'tag'. Other tag libraries exist (AprilTags, ARTag etc).
+
+In a tag based system, basic image processing can be used to identify the tag and
+locate the 4 corners in the 2D image. The patterns are rotationally invariant,
+which means the 4 corners can be uniquely identified. You can track
+1 tag, via just its 4 corners, but it can more accurate to calculate
+the middle of each tag by intersection of the tag's diagonals,
+and use multiple tags. With N or more tag centres, or N 3D points, and
+their corresponding 2D locations, a tracking transformation of the
+markers relative to the camera coordinate system can be deduced via
+the `Perspective N Point algorithm`_, for example `implemented in OpenCV`_.
+Such systems can work with Mono cameras.
+
+Take a look at the :ref:`SummerSchoolPivotCalibration` demonstration to
+see this in action for yourself by making a tracked pointer!
+
+An alternative, is something like the `Claron Microntracker`_, which
+has a big market presence in dentistry.
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/2Mj7mgkvEbY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+The above video, from the ClaronTechnology channel on YouTube shows the use of Navident for dental surgery.
+
+The Claron Microntracker tracks multiple non-unique markers. Each tool has an arrangement of 3 or more markers,
+and the software can work out which tool is which, based on the unique arrangement of markers, use triangulation
+to determine the 3D points, and then use point-based registration to compute the pose of the tracked tool relative to
+the camera coordinate system. This is similar in principle to the IR trackers shown below.
+
 
 Infra-red-based tracking systems
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Infra-red cameras are used as optical markers can be tracked easier due to the elimination of ambient light. There systems can be divided in two types:
+Infra-red cameras are used as optical markers can be tracked easier due to the elimination of ambient light. The systems can be divided in two types:
 
-* **Active optical trackers**: Markers (usually LEDs) emit infra-reds using different firing sequences that are activated by an electrical current (including wireless). The system has a central unit that detects the markers from each camera and employs triangulation in order to find a 6 DOF position.
+* **Active optical trackers**: Markers (usually LEDs) emit infra-reds using different firing sequences that are activated by an electrical current (including wireless). The system has a central unit that detects the markers from each camera and employs triangulation in order to find the 3D location of each marker, and then matches to the known geometrical arrangement of each tool in the system to determine the pose of the tool relative to the tracking device.
 
 * **Passive optical trackers**: Retro-reflective spheres are illuminated and detected by the infra-red cameras. The spheres are attached to a rigid body with a unique geometry for each tracked device.
 
@@ -46,9 +75,9 @@ System components
 
 The system components of an optical tracking system are: 
 
-* One or multiple cameras: The camera capture range defines the tracking volume where the markers can move and be tracked
+* One or multiple cameras: The camera capture range defines the tracking volume where the markers can move and be tracked.
 * A system unit: The system units performs all the processing of the images captures by the camera and provides the 3D position of the markers.
-* Markers: Will be fixed to the tools that need to be tracked. Each tool must have a uniquely identifiable marker
+* Markers: Will be fixed to the tools that need to be tracked. Each tool must have a uniquely identifiable marker.
 * A computer: Takes the processed tracked data from the system unit in order to provide assistance to the surgical procedure.
 
 The following picture show how the different components are connected.
@@ -99,7 +128,7 @@ Similar to the human eye, 2 or more stereo cameras are used to image the markers
 The 3D position of the markers is found by doing triangulation as the position of the two cameras is known.
 By comparing the two images, and doing a triangulation the 3D position of the marker can be obtained. 
 However depth calculation can have errors, due to the so-called disparity (difference between the same point projected on the two images).
-Errors in disparity are inversely proportional to the depth, meaning that errors in disparity calculation will increase quadratically the depth measurement from the camera. 
+Errors in disparity are inversely proportional to the depth, meaning that errors in disparity calculation will increase quadratically with the depth measurement from the camera.
 
 Furthermore, tracking errors propagate from 2D errors in pixels from the tracking cameras to 3D positional errors through triangulation. 
 This results in substantially anisotropic errors (errors normal to the camera lens are typically 3 times those parallel). 
@@ -109,3 +138,8 @@ Limitations of optical trackers
 -------------------------------
 The main limitation of optical trackers is the requirement to keep a line-of-sight between cameras and markers. In an operating room, where multiple devices and several people are working and moving at the same time, it may be difficult to keep a line-of-sight at all times.
 Optical tracking is usually not the best option to track flexible or small instruments (e.g., needles).
+
+
+.. _`Perspective N Point algorithm`: https://en.wikipedia.org/wiki/Perspective-n-Point
+.. _`implemented in OpenCV`: https://docs.opencv.org/2.4/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html#solvepnp
+.. _`Claron Microntracker`: https://www.claronav.com/microntracker/

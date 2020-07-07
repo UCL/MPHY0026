@@ -13,7 +13,7 @@ There is no need no maintain a line-of-sight between the sensors and the field g
 AC-driven
 ^^^^^^^^^
 
-First EM tracking systems used alternate current. 
+The first EM tracking systems used alternating current.
 These systems consist of several coils aligned in a specific geometry that emit the magnetic field. 
 Small sensors (coils) measure the voltage from each coil and this is used to find the position of the sensor inside the EM field.  
 
@@ -27,6 +27,7 @@ Passive systems
 
 Passive systems track the position of permanent magnets. 
 
+A comprehensive overview is made by [Franz2014]_.
 
 System components
 -----------------
@@ -34,7 +35,7 @@ System components
 The system components of an electromagnetic tracking system are: 
 
 * One field generator: Generates a magnetic field where the sensors can move and be tracked.
-* A system unit which may be comprised of other units (e.g., sensor unit): Takes the readings from the sensors in the field and returns the 3D position.
+* A system unit which may be comprised of other units (e.g., sensor unit): Takes the readings from the sensors in the field and returns the 3D position and orientation.
 * One or multiple sensors: Sensors will be attached to the tool that needs to be tracked and connected to the system unit (or sensor unit). They can be very small (0.3 mm).
 * A computer: Takes the processed tracked data from the system unit in order to provide assistance to the surgical procedure.
 
