@@ -29,13 +29,14 @@ The most common tracking systems used in surgery can be grouped as follows:
 
 * **Ultrasonic transducers**: Measures the time of an ultrasonic pulse from 3 sources into 3 microphones attached to a rigid body in order to calculate distances [Roberts1986]_.
 
-* **Optical tracking**: Most popular tracking used in surgical interventions. Several cameras track several markers in a fixed geometry. See next sections for more details.
+* **Optical tracking**: Most popular tracking used in surgical interventions. Several cameras track several markers in a fixed geometry. See :ref:`Optical`.
 
-* **Electromagnetic tracking**: Electromagnetically-tracked sensors can be tracked within an electromagnetic field. See next sections for more details.
+* **Electromagnetic tracking**: Electromagnetically-tracked sensors can be tracked within an electromagnetic field. See :ref:`EM`.
 
 * **Fiber-optic ultrasound**: Used in ultrasound interventions for research mainly. A fiber-optic ultrasound receiver communicates with an external ultrasound probe and allows us to localise needles during ultrasound interventions.
 
 The video below shows an example from MICCAI 2016.
+
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/GutD3Cc6LxA?start=2705" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
