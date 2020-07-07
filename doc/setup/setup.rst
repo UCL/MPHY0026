@@ -94,7 +94,7 @@ or, if you are on Windows, replace the last line with
 
 ::
 
-    .tox/py36/Scripts/activate
+    .tox\py36\Scripts\activate
 
 This option 2 actually creates another virtualenv (in a hidden folder called .tox),
 and install all dependencies into that. It may seem a bit over-the-top to create a virtualenv,
