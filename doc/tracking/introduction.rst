@@ -3,22 +3,23 @@
 Introduction
 ============
 
-Tracking systems are fundamental for CAI as they allow to track the position of a tool or device (e.g., laparoscope, endoscope, needle, ultrasoudn probe, camera, ...) relative to the patient anatomy during a surgical procedure in 3D space and is a key technology in CAI. 
+Tracking systems are fundamental for CAI as they allow us to track the position of a tool or device (e.g., laparoscope, endoscope, needle, ultrasound probe, video camera, ...) relative to the patient anatomy during a surgical procedure in 3D space and is a key enabling technology in CAI.
 
 History
 -------
-* **1900s**: A tracking system is used for the first time in humans. It is a mechanical sterotactic frame and is used for neurological applications. This frame has 3-dimensional coordinate system and allows to place instruments at a specific location by manually selecting the position at each coordinate [HorsleyClarke1908]_, [Heller2006]_.
+
+* **1908**: A tracking system is used for the first time in humans. It is a mechanical sterotactic frame and is used for neurological applications. This frame has a 3-dimensional coordinate system and allows us to place instruments at a specific location by manually selecting the position of each coordinate [HorsleyClarke1908]_, [Heller2006]_. See :numref:`HorsleyClarkeStereotacticFrame`.
 * **1960s**: The benefits and accuracy of the stereotactic device becomes a standard practice.
 * **1980s**: Mechanical digitizers become popular due to their use in CAS, especially in neurosurgery. 
-* **1990s**: Optical trackers are introduced in order to overcome clinical problems of previous tracking systems such as the ability to track multiple devices and sterilisation issues, evolving to very accurate devices. On of the main limitations of optical trackers is the line-of-sight requirement between the tracked markers and the camera.
-* **Late 1990s, early 2000s**: The introduction of electromagnetic trackers allows to track devices without requiring a line-of-sight.
+* **1990s**: Optical trackers are introduced in order to overcome clinical problems of previous tracking systems such as the ability to track multiple devices and sterilisation issues, evolving to very accurate devices. On of the main limitations of optical trackers is the line-of-sight requirement between the tracked markers and the camera. See :numref:`OpticalTrackersAtWEISS`.
+* **Late 1990s, early 2000s**: The introduction of electromagnetic trackers allows to track devices without requiring a line-of-sight. See :numref:`EMTrackersAtWEISS`.
 
 Types of tracking
 -----------------
 
 The most common tracking systems used in surgery can be grouped as follows:
 
-* **Mechanical digitizers**: Transform a mechanical movement to a digital measurement. These digitizers are widely used in robotics, in order to move robot arms but also in other clinical applications such as prostate interventions (see picutre below):
+* **Mechanical digitizers**: Transform a mechanical movement to a digital measurement. These digitizers are widely used in robotics, in order to move robot arms but also in other clinical applications such as prostate interventions (see picture below):
 
 .. figure:: mechanical_digitiser.jpg
   :alt: Example of a mechanic digitizer to hold an ultrasound probe for prostate interventions, with a prostate phantom.
@@ -26,13 +27,15 @@ The most common tracking systems used in surgery can be grouped as follows:
   
   Example of a mechanical digitizer to hold an ultrasound probe for prostate interventions, with a prostate phantom.
 
-* **Ultrasonic transducers**: Measures the time of an ultrasonic pulse from 3 sources into 3 microphones attached to a rigid body in order to calculate distances.
+* **Ultrasonic transducers**: Measures the time of an ultrasonic pulse from 3 sources into 3 microphones attached to a rigid body in order to calculate distances [Roberts1986]_.
 
-* **Optical tracking**: Most popular tracking used in surgical interventions. Several cameras track several markers in a fixed geometry. See next sections for more details.
+* **Optical tracking**: Most popular tracking used in surgical interventions. Several cameras track several markers in a fixed geometry. See :ref:`Optical`.
 
-* **Electromagnetic tracking**: Electromagnetically-tracked sensors can be tracked within an electromagnetic field. See next sections for more details.
+* **Electromagnetic tracking**: Electromagnetically-tracked sensors can be tracked within an electromagnetic field. See :ref:`EM`.
 
-* **Fiber-optic ultrasound**: Used in ultrasound interventions for research mainly. A fiber-optic ultrasound receiver communicates with a external ultrasound probe and allows to localise needles during ultrasound interventions.
+* **Fiber-optic ultrasound**: Used in ultrasound interventions for research mainly. A fiber-optic ultrasound receiver communicates with an external ultrasound probe and allows us to localise needles during ultrasound interventions.
+
+The video below shows an example from MICCAI 2016.
 
 .. raw:: html
 

@@ -126,14 +126,17 @@ The two sliders can be used to control the position of the 2D slice. The model/s
 * What are the potential drawbacks of this approach for surgical applications?
 * Which of the two views - 3D or 2D, do you think could provide the most useful information to a surgeon?
 
+
 Exercise 3
-^^^^^^^^^^
+----------
 
 The final application will demonstrate a more realistic use case, where we will combine some of the work done in previous chapters, to visualise our own 'probe'.
 This exercise requires you to have completed the `Camera Calibration`_ workshop, and have access to the config file and saved calibration data.
 
 Using a calibrated camera and a chessboard, it is possible to estimate the pose (position & orientation) of an object in 3D space. We can use this pose information to overlay
 data in the correct position in 3D space:
+
+::
 
     python mphy0026_slice_overlay.py -c doc/summerschool/camera_calibration/video_calib_chessboard.json -d CALIB_DIR
 
@@ -145,6 +148,8 @@ An application of this approach would be to display ultrasound information emina
 located at the edge of the mobile phone. To do this correctly, it is necessary to know the location of the probe tip (phone edge), relative to the tracking markers (chessboard).
 In practice, this would be acheived using an appropriate calibration method (e.g. pivot or hand-eye calibration). For now, we can simply specify the distance that the image should
 be offset from the chessboard centre, as a command line arugment:
+
+::
 
     python mphy0026_slice_overlay.py -c doc/summerschool/camera_calibration/video_calib_chessboard.json -d CALIB_DIR -o 90
 
