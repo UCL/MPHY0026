@@ -50,11 +50,13 @@ In this course we will cover:
 Tracking / Calibration
 ----------------------
 
+.. _OpticalTrackersAtWEISS:
 .. figure:: optical_trackers.jpg
   :width: 50%
 
   Atracsys (top) and NDI Polaris Veiga (bottom) optical trackers.
 
+.. _EMTrackersAtWEISS:
 .. figure:: em_tracker.jpg
   :width: 50%
 
