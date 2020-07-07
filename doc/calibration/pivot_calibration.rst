@@ -63,11 +63,11 @@ When pivoting the tool on a stationary point on a flat surface, if the tip is no
 One solutions is to use a soft surface to pivot the tool, however by doing that, the tip will be at the centre of the rotation instead of exactly at the tip.
 
 
-Make Your Own
--------------
+Make Your Own!
+--------------
 
 As part of our `Medical Image Computing Summer School`_ we wrote a new tutorial
-where you can make your own pointer and calibrate it!
+where you can make your own pointer and calibrate it.
 
 Follow this link: :ref:`SummerSchoolPivotCalibration`.
 
