@@ -46,6 +46,8 @@ Where
 	
 
 This can be easily solved using Python or MATLAB functions, among others libraries.
+For example, `SciKit-Surgery implements Pivot Calibration`_ using the above spherical
+method, an algebraic one-step, and also using `RANSAC`_ to reduce outliers.
 
 In the following video Dr. Clarkson explains and demonstrates how to do a pivot calibration:
 
@@ -71,3 +73,5 @@ Follow this link: :ref:`SummerSchoolPivotCalibration`.
 
 
 .. _`Medical Image Computing Summer School`: https://medicss.cs.ucl.ac.uk/
+.. _`SciKit-Surgery implements Pivot Calibration`: https://github.com/UCL/scikit-surgerycalibration/blob/master/sksurgerycalibration/algorithms/pivot.py
+.. _`RANSAC`: https://en.wikipedia.org/wiki/Random_sample_consensus#:~:text=Random%20sample%20consensus%20(RANSAC)%20is,the%20values%20of%20the%20estimates.
