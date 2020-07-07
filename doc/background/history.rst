@@ -49,6 +49,7 @@ Stereotactic Surgery
 "Stereo" - meaning *solid*, and "taxis" meaning *ordered*.
 
 
+.. _HorsleyClarkeStereotacticFrame:
 .. figure:: https://s3-eu-west-1.amazonaws.com/smgco-images/images/331/large_1981_1688__0001_.jpg
   :alt: Stereotaxic apparatus used by Sir Victor Horsley and Richard Clarke. Made by Swift and Son, London, c1905
   :width: 600
