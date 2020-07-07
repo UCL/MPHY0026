@@ -59,3 +59,15 @@ Errors
 The accuracy of this method depends on the shape of the tip of the tool, the length of the tool and the noise on the pivoting data.
 When pivoting the tool on a stationary point on a flat surface, if the tip is not sharp enough(which very often is not sharp to avoid tissue damage) may lead to inaccuracies on the measurements.
 One solutions is to use a soft surface to pivot the tool, however by doing that, the tip will be at the centre of the rotation instead of exactly at the tip.
+
+
+Make Your Own
+-------------
+
+As part of our `Medical Image Computing Summer School`_ we wrote a new tutorial
+where you can make your own pointer and calibrate it!
+
+Follow this link: :ref:`SummerSchoolPivotCalibration`.
+
+
+.. _`Medical Image Computing Summer School`: https://medicss.cs.ucl.ac.uk/
