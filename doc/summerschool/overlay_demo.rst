@@ -49,7 +49,7 @@ Overlaying data on a video feed is commonly used to:
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/zzcdPA6qYAU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-    Illustration of text overlay on a video image, taken from the Terminator movies.
+Figure 1. Illustration of text overlay on a video image, taken from the Terminator movies, available on `YouTube <https://youtu.be/zzcdPA6qYAU>`_.
 
 Head mounted systems for overlay, such as the Microsoft Hololens, allow for overlay directly in the user's field of view.
 
@@ -57,7 +57,7 @@ Head mounted systems for overlay, such as the Microsoft Hololens, allow for over
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/loGxO3L7rFE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-    Illustration of proposed medical application of Microsoft Hololens see through head up display.
+Figure 2. Illustration of proposed medical application of Microsoft Hololens see through head up display, available on `Microsoft's Hololens channel on YouTube <https://youtu.be/loGxO3L7rFE>`_.
 
 For surgical applications, specific use cases include:
 
@@ -80,13 +80,14 @@ Additional information
 Further learning material can be found in the following sections of this course.
 
 * `Augmented Reality`_ - examples of different systems and use cases.
-* `Graphics`_ - Techcnical details on different rendering methods and algorithms.
+* `Graphics`_ - Technical details on different rendering methods and algorithms.
 
 
 Exercise 1
 ----------
 
-Running the overlay application will allow you to try manual alignment of 2D/3D objects. From the root MPHY0026 folder, run:
+Running the overlay application will allow you to try manual alignment of 2D/3D objects. Once
+you have followed the :ref:`PythonSetup`, then from the root MPHY0026 folder, run:
 
 ::
 
@@ -144,18 +145,43 @@ Here, we have overlaid the video feed back onto the chessboard pattern. As you m
 
 .. image:: overlay/chessboard_ar.PNG
 
-An application of this approach would be to display ultrasound information eminating from the tip of an ultrasound probe. We can emulate this by imagining that the probe tip is
-located at the edge of the mobile phone. To do this correctly, it is necessary to know the location of the probe tip (phone edge), relative to the tracking markers (chessboard).
-In practice, this would be acheived using an appropriate calibration method (e.g. pivot or hand-eye calibration). For now, we can simply specify the distance that the image should
-be offset from the chessboard centre, as a command line arugment:
+As with the ":ref:`SummerSchoolPivotCalibration`" tutorial, tracking a tag, or a chessboard computes
+the position of the tag/chessboard with respect to the camera. This is similar to the process
+of positioning a CT scan in front of a virtual camera, as described in the
+`tutorial on coordinate systems <../notebooks/coordinate_systems.html>`_.
+
+Such approaches can be used with an ultrasound probe, that is either external
+to the body, and tracked by optical tracking for example, or internal to the body and tracked
+by computer vision from a surgical video feed like a laparoscope. In both cases, the ultrasound
+image can be displayed relative to the tracked probe.
+
+This is illustrated below, but using a mobile phone as a pretend probe. The probe is tracked by a laptop
+webcam. So, the position of the "probe" (i.e. phone) is known relative to the camera by computing
+the pose of the chessboard relative to the video camera. If we know the position of the "ultrasound"
+image relative to the same chessboard, we can display the ultrasound in situ. This is achieved by
+the process of :ref:`Handeye`. In the example below,
+instead of using actual ultrasound, we just re-use the same video feed.
 
 ::
 
     python mphy0026_slice_overlay.py -c doc/summerschool/camera_calibration/video_calib_chessboard.json -d CALIB_DIR -o 90
 
-I have used an offset value of 90, but you should adjust this value to get the best results on whichever phone/chessboard you are using.
+Here the offset of the ultrasound relative to the origin of the tracked marker (a chessboard), is 90mm in
+the x direction. You can adjust this value to get the best results on whichever phone/chessboard you are using.
 
 .. image:: overlay/phone_ar.gif
+
+In practice, instead of an offset of 90mm in one axis, you would provide a full 6DOF transformation (rotation about x, y, z axis,
+and translation along x, y, z mm), and potentially a scaling transformation (scaling in x, y) to get the right pixel
+size of the "ultrasound" image, via :ref:`Handeye`.
+
+How Does The Overlay Window Work?
+---------------------------------
+
+There are very few examples of a Python/VTK render window on the internet.
+The usage of scikit-surgeryvtk's VTKOverlayWindow is documented `here <https://scikit-surgeryvtk.readthedocs.io/en/latest/overlay_widget.html>`_,
+with links through to the actual code.
+
 
 .. _`SciKit-Surgery`: https://github.com/UCL/scikit-surgery/wikis/home
 .. _`Medical Imaging Computing Summer School`: https://medicss.cs.ucl.ac.uk/
