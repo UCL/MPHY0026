@@ -175,6 +175,14 @@ In practice, instead of an offset of 90mm in one axis, you would provide a full 
 and translation along x, y, z mm), and potentially a scaling transformation (scaling in x, y) to get the right pixel
 size of the "ultrasound" image, via :ref:`Handeye`.
 
+How Does The Overlay Window Work?
+---------------------------------
+
+There are very few examples of a Python/VTK render window on the internet.
+The usage of scikit-surgeryvtk's VTKOverlayWindow is documented `here <https://scikit-surgeryvtk.readthedocs.io/en/latest/overlay_widget.html>`_,
+with links through to the actual code.
+
+
 .. _`SciKit-Surgery`: https://github.com/UCL/scikit-surgery/wikis/home
 .. _`Medical Imaging Computing Summer School`: https://medicss.cs.ucl.ac.uk/
 .. _`MPHY0026`: https://mphy0026.readthedocs.io/en/latest/
