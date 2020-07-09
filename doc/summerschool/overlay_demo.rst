@@ -139,7 +139,7 @@ data in the correct position in 3D space:
 
 ::
 
-    python mphy0026_slice_overlay.py -c doc/summerschool/camera_calibration/video_calib_chessboard.json -d CALIB_DIR
+    python mphy0026_chessboard_overlay.py -c doc/summerschool/camera_calibration/video_calib_chessboard.json -d CALIB_DIR
 
 Here, we have overlaid the video feed back onto the chessboard pattern. As you move/rotate the chessboard, the overlay should remain in the same position.
 
@@ -164,7 +164,7 @@ instead of using actual ultrasound, we just re-use the same video feed.
 
 ::
 
-    python mphy0026_slice_overlay.py -c doc/summerschool/camera_calibration/video_calib_chessboard.json -d CALIB_DIR -o 90
+    python mphy0026_chessboard_overlay.py -c doc/summerschool/camera_calibration/video_calib_chessboard.json -d CALIB_DIR -o 90
 
 Here the offset of the ultrasound relative to the origin of the tracked marker (a chessboard), is 90mm in
 the x direction. You can adjust this value to get the best results on whichever phone/chessboard you are using.
