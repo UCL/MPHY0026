@@ -145,7 +145,7 @@ Here, we have overlaid the video feed back onto the chessboard pattern. As you m
 
 .. image:: overlay/chessboard_ar.PNG
 
-As with the ":ref:`SummerSchoolPivotCalibration`" tutorial, tracking a tag, or a chessboard computes
+As with the `SummerSchoolPivotCalibration`_ tutorial, tracking a tag, or a chessboard computes
 the position of the tag/chessboard with respect to the camera. This is similar to the process
 of positioning a CT scan in front of a virtual camera, as described in the
 `tutorial on coordinate systems <../notebooks/coordinate_systems.html>`_.
@@ -159,7 +159,7 @@ This is illustrated below, but using a mobile phone as a pretend probe. The prob
 webcam. So, the position of the "probe" (i.e. phone) is known relative to the camera by computing
 the pose of the chessboard relative to the video camera. If we know the position of the "ultrasound"
 image relative to the same chessboard, we can display the ultrasound in situ. This is achieved by
-the process of :ref:`Handeye`. In the example below,
+the process of `Handeye`_. In the example below,
 instead of using actual ultrasound, we just re-use the same video feed.
 
 ::
@@ -173,7 +173,7 @@ the x direction. You can adjust this value to get the best results on whichever 
 
 In practice, instead of an offset of 90mm in one axis, you would provide a full 6DOF transformation (rotation about x, y, z axis,
 and translation along x, y, z mm), and potentially a scaling transformation (scaling in x, y) to get the right pixel
-size of the "ultrasound" image, via :ref:`Handeye`.
+size of the "ultrasound" image, via `Handeye`_.
 
 How Does The Overlay Window Work?
 ---------------------------------
@@ -189,3 +189,5 @@ with links through to the actual code.
 .. _`Augmented Reality`: https://mphy0026.readthedocs.io/en/latest/augmented/augmented_reality.html
 .. _`Graphics`: https://mphy0026.readthedocs.io/en/latest/graphics/graphics.html
 .. _`Camera Calibration`: https://mphy0026.readthedocs.io/en/latest/summerschool/camera_calibration_demo.html
+.. _`Handeye`: https://mphy0026.readthedocs.io/en/latest/calibration/handeye_calibration.html
+.. _`SummerSchoolPivotCalibration`: https://mphy0026.readthedocs.io/en/latest/summerschool/pivot_calibration_demo.html
