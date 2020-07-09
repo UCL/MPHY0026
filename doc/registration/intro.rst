@@ -8,7 +8,7 @@ Learning Objectives
 
 It is essential to understand the key registration methods for CAS,
 and also have an understanding of some of the large body of work done
-in quantifying the likely error of registration.
+in quantifying the likely error of a registration.
 
 Upon completion of this section, the student will be able to:
 
@@ -41,17 +41,19 @@ Like in this example:
 Computer Assisted Surgery
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In CAS, the problem also exists in intra-device or inter-device terms:
+In CAS, the problem also exists in intra-device, inter-device terms or image-device:
 
-* **intra-device**: registering 2 poses of a camera at subsequent time points
+* **image-device**: registering a pre-operative volume image to a tracker
 * **inter-device**: registering a camera coordinate system to a tracker
+* **intra-device**: registering 2 poses of a camera at subsequent time points
 
-For example, aligning pre-operative data (CT/MR) scans to patient (tracker/world) space, to:
+For example:
 
-* display the physical location of the tip of a tracked pointer in the MR/CT scan
-* overlay MR/CT scan data on top of a laparoscopic video feed
+* **image-device**: registering pre-operative data (CT/MR) scans to patient (tracker/world) space, to display the physical location of the tip of a tracked pointer in the MR/CT scan.
+* **inter-device**: registering pre-operative data (CT/MR) scans to a laparoscopic video feed. This can be done directly, by matching the CT/MR coordinates to the video camera coordinates, or indirectly by registering CT/MR to tracker space, and then using tracking and calibration information to work out where the camera is, and hence where the CT/MR is relative to the camera.
+* **intra-device**: registering feature points in one video frame to the next, and working out the difference in camera position which would enable triangulating those points.
 
-See :ref:`Notebooks`, for more on Coordinate Systems, and transformation notation.
+See :ref:`Notebooks`, for more on Coordinate Systems and transformation notation.
 
 
 Methods
@@ -66,7 +68,7 @@ Typically, methods in CAS, are sub-divided (e.g. in :ref:`bookPeters`) into:
 * Calibration-based, covered earlier as examples [Feuerstein2008]_, [Kang2014]_.
 
 These are covered in the next sections. Coordinate transformations are covered more in the workshops
-and their accompanying :ref:`Notebooks`.
+and the accompanying :ref:`Notebooks`.
 
 
 A Note on Coordinate Systems and Rotations
@@ -97,12 +99,15 @@ A Note on VTK Coordinate Systems
 * Several pieces of software, including `Slicer`_, `MITK`_, `PLUS`_, `NifTK`_, `SNAPPY`_ all use VTK.
 * Look in `vtkProp3D <https://gitlab.kitware.com/vtk/vtk/blob/master/Rendering/Core/vtkProp3D.cxx#L163>`_, and at ``SetOrientation()`` which says *"Orientation is specified as X,Y and Z rotations in that order, but they are performed as RotateZ, RotateX, and finally RotateY"*.
 * vtkProp3D therefore suggests that VTK uses *"Tait–Bryan angles"*, specifically the z-x-y option, which are therefore **intrinsic** rotations meaning, they move with the object being moved.
-* In `vtkTransform <https://gitlab.kitware.com/vtk/vtk/blob/master/Common/Transforms/vtkTransform.h#L92>`_, there is a method ``RotateWXYZ()`` which sets the rotation as an angle about a world axis. Internally, this uses quaternions and converts the world axis to a homogeneous matrix. This is an **extrinsic** rotation.
 
 This has been implemented in the `SNAPPY`_ platform, specifically:
 
 * This matrix construction has been implemented in `scikit-surgerycore <https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/scikit-surgerycore/blob/master/sksurgerycore/transforms/matrix.py>`_
 * The *standard* VTK ordering has been implemented in `scikit-surgeryvtk <https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/scikit-surgeryvtk/blob/master/sksurgeryvtk/utils/matrix_utils.py#L47>`_.
+
+In addition:
+
+* In `vtkTransform <https://gitlab.kitware.com/vtk/vtk/blob/master/Common/Transforms/vtkTransform.h#L92>`_, there is a method ``RotateWXYZ()`` which sets the rotation as an angle about a world axis. Internally, this uses quaternions and converts the world axis to a homogeneous matrix. This is an **extrinsic** rotation.
 
 
 A Note on Homogeneous Coordinate Conventions
