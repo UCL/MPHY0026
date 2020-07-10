@@ -104,11 +104,12 @@ Contents
   graphics/graphics.rst
   augmented/augmented_reality.rst
   references.rst
-  additional_resources.rst
   setup/setup.rst
   notebooks.rst
-  coursework/system_simulation.rst
+  workshops/workshop.rst
   summerschool/summerschool.rst
+  coursework/system_simulation.rst
+  additional_resources.rst
 
 .. raw:: html
 

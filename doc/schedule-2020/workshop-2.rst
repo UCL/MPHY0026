@@ -1,7 +1,8 @@
-.. _Workshop2:
+.. _Workshop2CameraCalib:
 
-Workshop 2
-==========
+Workshop 2 - Camera Calibration
+===============================
+
 Workshop on optical and "hand-eye" calibration of surgical
 laparoscopes.
 
@@ -10,5 +11,4 @@ laparoscopes.
 * 60 minutes - Transfer data to students laptops, and analyse the results.
 * 60 minutes - Compare the accuracy and usability of different calibration methods.
 
-
-Calibration workshop
+Import the data into Jupyter Notebook on `Camera Calibration <../notebooks/calibration_and_tracking.html>`_.
