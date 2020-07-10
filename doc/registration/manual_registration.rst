@@ -10,7 +10,7 @@ Use a mouse or gesture device to manually rotate/translate/scale a pre-operative
 so that it aligns with the intra-operative scene, e.g. live video.
 
 * To get a feel for this `try manipulating this model, provided on-line by Kitware <https://kitware.github.io/vtk-js/examples/VolumeContour.html>`_.
-* To overlay a 3D liver CT model over a 2D video image, giving an augmented reality feel, try:
+* To overlay a 3D liver CT model over a 2D video image, giving an augmented reality feel, follow the :ref:`PythonSetup`, then try:
 
 .. code-block:: language
 
@@ -27,7 +27,9 @@ Or, see Manual Alignment done with SmartLiver:
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/-12OjjU2i9E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Discussion - how usable is it?
+Discussion
+    - how usable is it?
+    - Which is better or worse: Manual alignment, but reliable or Automatic alignment, but only semi-reliable?
 
 
 Papers
@@ -53,12 +55,12 @@ Cons:
 
 * Not suitable for non-rigid alignment
 * Normally inaccurate
-* Time consuming
+* Time consuming for the user
 * Highly user dependent
 * How to interact with the device? who? is the user sterile?
-* Hard to re-register, due to time and user variability for instance
+* Hard to re-register, due to the above mentioned time and user variability for instance
 
 Accuracy:
 
 * Depends on anatomy and user interface, and user
-* e.g. 10-20mm is not uncommon with deformable anatomy, maybe < 5 with neuro?
+* e.g. 10-20mm is not uncommon with deformable anatomy, maybe < 1-3mm with neuro?

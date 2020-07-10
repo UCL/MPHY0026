@@ -401,4 +401,4 @@ Papers on Evaluation of systems:
 
 SciKit-Surgery:
 
-.. [SciKitSurgery] S. Thomson, T. Dowrick, M. Ahmad, G. Xiao, B. Koo, E. Bonmati-Coll, K. Kahl, M. J. Clarkson, **"SciKit-Surgery: compact libraries for surgical navigation"**, https://doi.org/10.1007/s11548-020-02180-5
+.. [Thompson2020] S. Thomson, T. Dowrick, M. Ahmad, G. Xiao, B. Koo, E. Bonmati-Coll, K. Kahl, M. J. Clarkson, **"SciKit-Surgery: compact libraries for surgical navigation"**, https://doi.org/10.1007/s11548-020-02180-5
