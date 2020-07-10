@@ -1,7 +1,7 @@
 .. _Workshop5UserInteraction:
 
-Workshop 5 - User Interaction Methods
-=====================================
+User Interaction Methods
+========================
 
 Note: This workshops was impacted by the COVID-19 Pandemic.
 Steve had planned a wonderful workshop on usability and different interfaces.

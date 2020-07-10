@@ -128,7 +128,7 @@ or if you are a Windows user
 ::
 
     tox
-    .tox/py36/Scripts/activate
+    .tox\py36\Scripts\activate
 
 The calibration program can be run with the following command:
 

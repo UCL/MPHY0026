@@ -1,7 +1,7 @@
 .. _Workshop3TemplateVersusPivot:
 
-Workshop 3 - Pointer Calibration via Template or Pivot
-======================================================
+Pointer Calibration via Template or Pivot
+=========================================
 
 * Experiment: Comparison of Template Calibration with Pivot Calibration in the Mock OR
 

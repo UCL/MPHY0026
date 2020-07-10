@@ -1,10 +1,12 @@
 .. _Workshop3SSM:
 
-Workshop 3 - Statistical Shape Models
-=====================================
+Statistical Shape Models
+========================
 
 * `Yipeng's SSM workshop <https://weisslab.cs.ucl.ac.uk/WEISSTeaching/TaughtModule_ComputerAssistedSurgeryAndTherapy>`_
 
-  * So, please::
+So, please::
 
     git clone https://weisslab.cs.ucl.ac.uk/WEISSTeaching/TaughtModule_ComputerAssistedSurgeryAndTherapy.git
+
+and follow the instructions therein.

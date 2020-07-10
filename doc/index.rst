@@ -91,7 +91,7 @@ Contents
 
 .. toctree::
   :numbered:
-  :maxdepth: 2
+  :maxdepth: 1
 
   background/background.rst
   imaging/imaging.rst
@@ -104,12 +104,12 @@ Contents
   graphics/graphics.rst
   augmented/augmented_reality.rst
   references.rst
+  additional_resources.rst
   setup/setup.rst
   notebooks.rst
   workshops/workshop.rst
   summerschool/summerschool.rst
   coursework/system_simulation.rst
-  additional_resources.rst
 
 .. raw:: html
 

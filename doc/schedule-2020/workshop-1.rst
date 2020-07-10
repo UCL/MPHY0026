@@ -1,7 +1,7 @@
 .. _Workshop1PBR:
 
-Workshop 1: Point Based Registration
-====================================
+Point Based Registration
+========================
 
 Learning Objectives
 ^^^^^^^^^^^^^^^^^^^

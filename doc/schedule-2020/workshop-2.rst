@@ -1,10 +1,9 @@
 .. _Workshop2CameraCalib:
 
-Workshop 2 - Camera Calibration
-===============================
+Camera Calibration of Laparoscopes
+==================================
 
-Workshop on optical and "hand-eye" calibration of surgical
-laparoscopes.
+Workshop on optical and "hand-eye" calibration of surgical laparoscopes.
 
 * 20 minutes - Introduction to systems to be used (Viking laporoscope, different calibration patterns, NiftyIGI, SmartLiver)
 * 40 minutes - Students perform calibration on Viking laparoscope in pairs using different patterns and algorithms.
