@@ -153,3 +153,10 @@ Do Not Claim FRE as TRE
 * So, in practice you only have FLE and then FRE.
 * So you must report it as FRE. Not anything that sounds like TRE.
 * Don't say "The accuracy of my system is X" where X is in fact FRE.
+
+
+Fiducial Regsitration Educational Demo
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For an interactive demo and game to study the effects of fiducial location
+on metrics such as FRE and TRE, please work through the :ref:`FidRegistrationTutorial`.

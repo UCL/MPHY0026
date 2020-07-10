@@ -16,44 +16,45 @@ Upon completion of this section, the student will be able to:
 * Sketch the main coordinate systems in a CAS system
 * Implement coordinate conversions using 4x4 homogeneous transformations
 * Recall the main registration methods
-* Understand the challenges when registering to physical space
+* Understand some of the challenges when registering data to physical space
 
 
 Introduction
 ------------
 
-Registration is the process of aligning two Coordinate Systems.
+Registration is the process of aligning two `Coordinate Systems <../notebooks/coordinate_systems.html>`_.
 
 
 Medical Image Computing
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 This example may be more familiar to you if you have done the `IPMI`_ course.
-In medical imaging terms, registration is often done to align image-volumes, e.g. MR/CT
+In medical imaging terms, registration is often done to align image-volumes, e.g. align MR to CT
 
-Like in this example:
+Like in this example, shown on the `AnalyzeDirect channel on YouTube <https://www.youtube.com/channel/UCbHc7Ec9_SQ8j7RAXF3rO3A>`_:
 
 .. raw:: html
 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/PDgBxvi1GdQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
+Most medical image viewers provide similar functionality to align 3D volumes.
+
+
 Computer Assisted Surgery
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In CAS, the problem also exists in intra-device, inter-device terms or image-device:
+In CAS, the problem also exists in intra-device, inter-device or image-device scenarios:
 
-* **image-device**: registering a pre-operative volume image to a tracker
+* **image-device**: registering a pre-operative volume image to a tracker.
 * **inter-device**: registering a camera coordinate system to a tracker
 * **intra-device**: registering 2 poses of a camera at subsequent time points
 
 For example:
 
 * **image-device**: registering pre-operative data (CT/MR) scans to patient (tracker/world) space, to display the physical location of the tip of a tracked pointer in the MR/CT scan.
-* **inter-device**: registering pre-operative data (CT/MR) scans to a laparoscopic video feed. This can be done directly, by matching the CT/MR coordinates to the video camera coordinates, or indirectly by registering CT/MR to tracker space, and then using tracking and calibration information to work out where the camera is, and hence where the CT/MR is relative to the camera.
+* **inter-device**: registering pre-operative data (CT/MR) scans to a laparoscopic video feed. This can be done directly, by matching the CT/MR coordinates to the video camera coordinates [Espinel2020]_, or indirectly by registering CT/MR to tracker space, and then using tracking and calibration information to work out where the camera is, and hence where the CT/MR is relative to the camera [Thompson2015]_.
 * **intra-device**: registering feature points in one video frame to the next, and working out the difference in camera position which would enable triangulating those points.
-
-See :ref:`Notebooks`, for more on Coordinate Systems and transformation notation.
 
 
 Methods
@@ -64,15 +65,16 @@ Typically, methods in CAS, are sub-divided (e.g. in :ref:`bookPeters`) into:
 * Manual
 * Point-based
 * Surface-based (also called Shape-based)
-* Volume-based, (i.e. intra-op CT to pre-op CT, not covered, see [Octya2013]_.)
+* Volume-based, (i.e. intra-op CT to pre-op CT, not covered, see [Octay2013]_.)
 * Calibration-based, covered earlier as examples [Feuerstein2008]_, [Kang2014]_.
 
-These are covered in the next sections. Coordinate transformations are covered more in the workshops
-and the accompanying :ref:`Notebooks`.
+These are covered in the next sections.
 
 
 A Note on Coordinate Systems and Rotations
 ------------------------------------------
+
+A brief introduction to coordinate transformations is provided in the accompanying :ref:`Notebooks`.
 
 In 3D space, we typically consider 6 degrees-of-freedom (DOF):
 
@@ -100,10 +102,10 @@ A Note on VTK Coordinate Systems
 * Look in `vtkProp3D <https://gitlab.kitware.com/vtk/vtk/blob/master/Rendering/Core/vtkProp3D.cxx#L163>`_, and at ``SetOrientation()`` which says *"Orientation is specified as X,Y and Z rotations in that order, but they are performed as RotateZ, RotateX, and finally RotateY"*.
 * vtkProp3D therefore suggests that VTK uses *"Tait–Bryan angles"*, specifically the z-x-y option, which are therefore **intrinsic** rotations meaning, they move with the object being moved.
 
-This has been implemented in the `SNAPPY`_ platform, specifically:
+This has been implemented in the `SciKit-Surgery`_ platform, specifically:
 
-* This matrix construction has been implemented in `scikit-surgerycore <https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/scikit-surgerycore/blob/master/sksurgerycore/transforms/matrix.py>`_
-* The *standard* VTK ordering has been implemented in `scikit-surgeryvtk <https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/scikit-surgeryvtk/blob/master/sksurgeryvtk/utils/matrix_utils.py#L47>`_.
+* This matrix construction has been implemented in `scikit-surgerycore <https://github.com/UCL/scikit-surgerycore/blob/master/sksurgerycore/transforms/matrix.py>`_
+* The *standard* VTK ordering has been implemented in `scikit-surgeryvtk <https://github.com/UCL/scikit-surgeryvtk/blob/master/sksurgeryvtk/utils/matrix_utils.py#L50>`_.
 
 In addition:
 
@@ -133,5 +135,5 @@ This is not being facetious. It is good advice.
 .. _`MITK`: http://www.mitk.org
 .. _`PLUS`: https://plustoolkit.github.io/
 .. _`NifTK`: http://www.niftk.org
-.. _`SNAPPY`: https://weisslab.cs.ucl.ac.uk/WEISS/PlatformManagement/SNAPPY
+.. _`SciKit-Surgery`: https://github.com/UCL/scikit-surgery/wiki
 .. _`IPMI`: https://ucl.reportlab.com/modules/MPHY0025/pdf/

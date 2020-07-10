@@ -399,3 +399,6 @@ Papers on Evaluation of systems:
 .. [Balachandran2009] Ramya Balachandran, J. Michael Fitzpatrick, and Robert F. Labadie, **"Accuracy of Image-guided Surgical Systems at the Lateral Skull Base as Clinically Assessed Using Bone-Anchored Hearing Aid Posts as Surgical Targets"**, https://dx.doi.org/10.1097%2FMAO.0b013e3181859a08
 
 
+SciKit-Surgery:
+
+.. [Thompson2020] S. Thomson, T. Dowrick, M. Ahmad, G. Xiao, B. Koo, E. Bonmati-Coll, K. Kahl, M. J. Clarkson, **"SciKit-Surgery: compact libraries for surgical navigation"**, https://doi.org/10.1007/s11548-020-02180-5

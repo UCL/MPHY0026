@@ -77,7 +77,7 @@ be compatible with the concept of having a "closest point".
 Failure Modes
 ^^^^^^^^^^^^^
 
-Mainly discussion.
+Mainly a discussion:
 
 * Where can this go wrong?
 * What are obvious failure modes?
