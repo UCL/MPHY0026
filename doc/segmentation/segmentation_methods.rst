@@ -16,7 +16,7 @@ What is Segmentation?
   :alt: Segmentation of a meningioma
   :width: 600
 
-  Figure: Segmentation of a meningioma, visualised in `3D slicer <https://www.slicer.org/>`_, by RKikinis, is licensed under `CC BY-SA 3.0`_.
+  Figure: Segmentation of a meningioma, visualised in `3D slicer <https://www.slicer.org/>`_, by RKikinis on Wikimedia, is licensed under `CC BY-SA 3.0`_.
 
 Also called:
 
@@ -27,7 +27,7 @@ Also called:
   :alt: Software package Freesurfer identifies multiple regions of the brain from T1 MRI.
   :width: 600
 
-  Figure: The software package `FreeSurfer <https://surfer.nmr.mgh.harvard.edu/>`_ segments/labels many regions of the brain, by LarrabeeMGH, licensed under `CC BY-SA 4.0`_.
+  Figure: The software package `FreeSurfer <https://surfer.nmr.mgh.harvard.edu/>`_ segments/labels many regions of the brain, by LarrabeeMGH on Wikimedia, licensed under `CC BY-SA 4.0`_.
 
 
 From statistics/machine learning literature, also called "Classification", as you identify pixels
@@ -43,18 +43,22 @@ Representation:
 Its a BIG field
 ^^^^^^^^^^^^^^^
 
-* Many image types
-* Many things being imaged
-* Many artefacts
-* User dependent error
-* Hence: Many Many Many papers
-* Even review papers are split into sub-specialities
+There are:
+
+* many image types
+* many things being imaged
+* many artefacts
+
+Add in factors like, user dependent error, and hence:
+
+* There are many many research papers on segmentation.
+* Even review papers are split into sub-specialities.
 
 
-Tradditional Methods
-^^^^^^^^^^^^^^^^^^^^
+Traditional Methods
+^^^^^^^^^^^^^^^^^^^
 
-Impossible to cover here. Brief discussion?
+Impossible to cover here. Most covered in other courses at UCL. Brief discussion?
 
 * Thresholding
 * Region growing
@@ -70,7 +74,7 @@ The main categories of model-based methods are:
 
 * `Snakes - Parametric Deformable Models <https://en.wikipedia.org/wiki/Active_contour_model>`_
 * `Level Sets - Non-Parametric Deformable Models <https://en.wikipedia.org/wiki/Level-set_method>`_
-* Statistical Shape Models (SSM) (next page).
+* Statistical Shape Models (SSM) (next page and :ref:`Workshop3SSM`).
 
 
 More Recent Methods
@@ -84,10 +88,10 @@ More Recent Methods
 Difficult For CAS?
 ^^^^^^^^^^^^^^^^^^
 
-* Abnormal growths
-* Different shapes
-* Post-op, metal artefacts
+* Abnormal growths, so different shapes in training set compared to test set, or normal population
+* Post-op, metal artefacts, missing sections of anatomy
 * Low volume cases (one-by-one, each case different)
+* Class imbalance (lots of examples of good/healthy population, compared to few in diseased groups)
 * Often end up with manual post-processing
 
 
@@ -137,11 +141,15 @@ So, the use-cases pre-operatively, and intra-operatively are very different.
 Cautionary Tale
 ^^^^^^^^^^^^^^^
 
-* Many computer vision papers in deep learning
-* Huge interest in medical imaging
-* [Ronneberger2015]_ invented U-Net in 2015.
-* Many more medical imaging networks invented
-* The MICCAI `Medical Segmentation Decathlon <https://decathlon-10.grand-challenge.org/>`_, challenge wanted 1 algorithm to work well on multiple datasets.
+* There are many computer vision papers in deep learning
+* Additionally, there is a huge interest in segmentation in medical imaging
+* [Ronneberger2015]_ proposed U-Net in 2015, which is widely used
+* Many more medical imaging networks were subsequently developed
+* The MICCAI `Medical Segmentation Decathlon <https://decathlon-10.grand-challenge.org/>`_, challenge essentially wanted researchers to develop 1 algorithm to work well on multiple datasets.
 * [Isensee2018]_ created nnU-Net (No New Net), which embeds a UNet in a robust training scheme.
 * Current `leaderboard <https://decathlon-10.grand-challenge.org/evaluation/results/>`_.
 * Segmentation methods that work, normally do so becauses of large quantities of labelled data. The rest are still research projects.
+* Methods that work in computer vision, with datasets > 1 milion, or >10 million images etc., often do not translate to medical imaging, as datasets are often much smaller.
+
+.. _`CC BY-SA 3.0`: https://creativecommons.org/licenses/by-sa/3.0
+.. _`CC BY-SA 4.0`: https://creativecommons.org/licenses/by-sa/4.0

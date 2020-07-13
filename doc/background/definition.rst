@@ -114,7 +114,7 @@ Caveats
 * Prototype CAS systems may eventually become embeded in clinical practice and indistinguishable from imaging devices.
 
 .. _`Wikipedia`: https://en.wikipedia.org/
-.. _`CC BY-SA 4.0`: https://creativecommons.org/licenses/by-sa/4.0)
+.. _`CC BY-SA 4.0`: https://creativecommons.org/licenses/by-sa/4.0
 .. _`CC0`: https://creativecommons.org/publicdomain/zero/1.0/deed.en
 .. _`Cardiac surgery operating room`: https://upload.wikimedia.org/wikipedia/commons/2/2e/Cardiac_surgery_operating_room.jpg
 .. _`a procedure involving cutting, or joining together a person's tissues`: https://en.wikipedia.org/wiki/Surgery
