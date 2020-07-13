@@ -3,7 +3,7 @@
 Statistical Shape Models
 ========================
 
-(Pioneered in the medical domain by `Prof. Tim Cootes <https://personalpages.manchester.ac.uk/staff/timothy.f.cootes/>`_.)
+(Pioneered in the medical domain by `Prof. Tim Cootes <https://personalpages.manchester.ac.uk/staff/timothy.f.cootes/>`_ ).
 
 Model-based methods, such as `Snakes <https://en.wikipedia.org/wiki/Active_contour_model>`_
 and `Level Sets <https://en.wikipedia.org/wiki/Level-set_method>`_, typically have no way
@@ -16,20 +16,40 @@ So, we will study Statistical Shape Models (SSM):
 * can be used for registration
 * so are a useful, predictable, starting point for CAS/CAI applications
 
-(that said Deep Learning methods will probably overtake shortly).
+The reason to include them in a CAS course, is that they result in very few parameters
+to optimise during run-time, during surgery. While deep learning models can be
+used for segmentation very well, its not always obvious how well they can be used
+for registration, and how well parameterised the model is, and how well the
+deeply-learnt model can reflect anatomical variation. Use of deep learning
+for real-time registration is very much an ongoing research area.
 
 
 Model Formulation
 ^^^^^^^^^^^^^^^^^
 
-(Matt draws on whiteboard)
+.. figure:: https://upload.wikimedia.org/wikipedia/commons/f/f5/GaussianScatterPCA.svg
+  :alt: GaussianScatterPCA
+  :width: 600
 
-(example of 2 variables, scattered around a line)
+  A scatter plot of samples that are distributed according a multivariate (bivariate) Gaussian distribution. By Nicoguaro on Wikimedia, licenced under `CC BY-SA 4.0`_.
+
+Looking at the above examples:
+
+* The "raw data", is (x, y) pairs from two random variables.
+* But as a human we can see additional information.
+* There is a long diagonal, where most of the variation is.
+* There is also some width, as points spread out perpendicular to this diagonal.
+* There is also a mean (average) position, at the centroid of the data.
+
+So, Principal Component Analysis (PCA) gives us a way of expressing a dataset in terms
+of the main directions of variation.
+
+The procedure starts with:
 
 * Take a set of shapes, given by corresponding points
 * Align centroids, normalise scale
 
-(notation from :ref:`bookClearyPeters`)
+Then: (with notation from :ref:`bookClearyPeters`)
 
 Let a shape be represented by :math:`3n`-dimensional vector :math:`\overrightarrow{x}`
 where :math:`n` is the number of landmarks.
@@ -132,3 +152,5 @@ Of particular interest to CAS/IGI, SSM can be used for segmentation and registra
   :width: 600
 
   Animation depicting a shape model derived from MRI simulations to intra-operative Ultrasound, courtesy of Dr Yipeng Hu.
+
+.. _`CC BY-SA 4.0`: https://creativecommons.org/licenses/by-sa/4.0
