@@ -154,6 +154,17 @@ Controls:
   - 'c': capture an image
 
 
+Helpful Hint
+------------
+
+Never use a symmetrical chessboard, or symmetrical calibration pattern.
+
+All calibration software detects patterns, such as chessboard corners, in the captured 2D
+images. If your image processing routine gets confused and for some pictures swaps rows and columns
+in any way, you will get poor calibration results, and it's hard to spot!!!
+
+Points must be uniquely identifiable.
+
 
 Exercises
 ---------
