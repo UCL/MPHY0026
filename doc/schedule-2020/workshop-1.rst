@@ -16,9 +16,9 @@ On completion of this workshop, the student will be able to:
 System Demos
 ^^^^^^^^^^^^
 
-* 10 mins - Overview of SmartTarget system (Rachael Rodell, Mock OR)
+* 10 mins - Overview of SmartTarget system (Rachael Rodell, Ultrasound Lab)
 * 10 mins - Overview of Medtronic, point/surface based registration (Jonathan Shapey, Mock OR)
-* 10 mins - Overview of SmartLiver (Matt, if time)
+* 10 mins - Overview of SmartLiver (Matt, Mock OR)
 
 
 Overview
@@ -41,11 +41,11 @@ The general principles of the workshop are listed below.
 
 Then more specific instructions are given for
 
-* :ref:`Workshop1Pelvis`.
-* :ref:`Workshop1Lego`.
-* :ref:`Workshop1Head`.
+* :ref:`Workshop1Lego` using Lego.
+* :ref:`Workshop1Pelvis`, using a UCL pelvis phantom.
+* :ref:`Workshop1Head`, using a UCL head phantom.
 
 The main reason for providing 3 setups is to reduce waiting time.
 The workshop can also be repeated for each setup, and compared between groups.
 
-For the first real run-through: We best do the basic alignment first, and see how long it takes.
+Please report back the timings, so we can update the instructions above.

@@ -405,3 +405,8 @@ Papers on Evaluation of systems:
 SciKit-Surgery:
 
 .. [Thompson2020] S. Thomson, T. Dowrick, M. Ahmad, G. Xiao, B. Koo, E. Bonmati-Coll, K. Kahl, M. J. Clarkson, **"SciKit-Surgery: compact libraries for surgical navigation"**, https://doi.org/10.1007/s11548-020-02180-5
+
+
+Lego Tutorial:
+
+.. [Guler2012] Ozgur Guler and Ziv Yaniv, **"Image-guided navigation: A cost effective practical introduction using the image-guided surgery toolkit (IGSTK)"**, https://dx.doi.org/10.1109/EMBC.2012.6347375

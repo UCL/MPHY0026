@@ -3,6 +3,9 @@
 Workshop 1: UCL Pelvis Phantom, Optical Tracker, Windows
 ========================================================
 
+Required Software
+^^^^^^^^^^^^^^^^^
+
 Assumes you have installed
 
 * `gitbash.exe <https://git-scm.com/>`_.
