@@ -4,9 +4,15 @@ The Marching Cubes Algorithm
 ============================
 
 The Marching Cubes algorithm is used to create a surface from voxel data.
-We have already seen this above in the Surface Rendering example.
+We have already seen this above in the :ref:`SurfaceRenderingSection` videos.
 
-The Marching cubes [Lorensen1987]_ was published in 1987. The core of the algorithm is explained by the following diagram and video.
+The Marching cubes [Lorensen1987]_ was published in 1987. The core of the algorithm is explained in this following video.
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/NLsdLUbOvCY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+This figure is the one shown in the video, to illustrate 3 of the 15 originally proposed cases.
 
 .. figure:: MarchingCubesIllustration.png
   :alt: 3 Cases from The Marching Cubes Algorithm
@@ -14,15 +20,13 @@ The Marching cubes [Lorensen1987]_ was published in 1987. The core of the algori
 
   Three cases from the Marching Cubes Algorithm. Originally 15 cases proposed.
 
+The original paper [Lorensen1987]_ shows 15 cases. This was expanded to 33 by `E. V. Chernyaev <https://cds.cern.ch/record/292771/files/cn-95-017.pdf>`_, but the high
+level principal remains the same.
 
-and this video provides more explanation.
+Here's a simple example, shown in the above video, to illustrate how Marching Cubes
+can extract an iso-surface from a volume:
 
-.. raw:: html
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/NLsdLUbOvCY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
-Here's a simple example, just picking an iso-surface out from a volume:
+Have a play with it!
 
 .. raw:: html
 
@@ -63,8 +67,10 @@ and the system renders the result.
 Marching Cubes Video
 --------------------
 
-This video by Sebastian Lague is very helpful:
+Finally, this video by Sebastian Lague is very helpful:
 
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/M3iI2l0ltbE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+and on `Sebastian's YouTube channel <https://www.youtube.com/channel/UCmtyQOKKmrMVaKuRXz02jbQ>`_ are many awesome videos about graphics and game development.

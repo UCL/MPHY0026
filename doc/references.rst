@@ -10,7 +10,6 @@ that paper and understand how to apply the main findings.
 
 Reviews and Background
 ----------------------
-
 Essential
 ^^^^^^^^^
 

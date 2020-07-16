@@ -64,6 +64,7 @@ Websites
 --------
 
 .. [ZivYaniv] `Ziv Yaniv's homepage <http://yanivresearch.info/>`_.
+.. [ZivYanivCourse] `Ziv Yaniv's course on "Elements of Image-Guided Interventions" <https://yanivresearch.info/casCourse/>`_.
 .. [AndreGaschler] `Andre Gaschler's rotation converter <https://www.andre-gaschler.com/rotationconverter/>`_.
 .. [SciPyRotation] `Useful rotation converters in SciPy <https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.transform.Rotation.html>`_.
 
