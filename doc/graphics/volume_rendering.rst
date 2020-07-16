@@ -9,7 +9,7 @@ The following diagrams and video illustrate the basic concept of volume renderin
   :alt: Illustration of Ray Casting
   :width: 600
 
-  Volume Rendering in medical imaging, is implemented via Ray Casting. Imagine the reverse of a pinhole model. For each image pixel, project a ray into space, and evaluate the voxel intensity values along each step through the volume. See video.
+  Volume Rendering in medical imaging, is implemented via Ray Casting. Imagine the reverse of a pinhole camera model. For each image pixel, project a ray into space, and evaluate the voxel intensity values along each step through the volume. See video.
 
 
 .. figure:: VolumeRenderingCompositing.png

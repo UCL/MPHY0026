@@ -99,10 +99,10 @@ Contents
   tracking/tracking.rst
   calibration/calibration.rst
   registration/registration.rst
-  interaction/visualisation_and_multimodal_interaction.rst
-  hci/hci.rst
   graphics/graphics.rst
   augmented/augmented_reality.rst
+  interaction/visualisation_and_multimodal_interaction.rst
+  hci/hci.rst
   references.rst
   additional_resources.rst
   setup/setup.rst

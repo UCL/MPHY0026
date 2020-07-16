@@ -10,7 +10,6 @@ that paper and understand how to apply the main findings.
 
 Reviews and Background
 ----------------------
-
 Essential
 ^^^^^^^^^
 
@@ -347,6 +346,10 @@ Extras
 
 .. [Espinel2020] Yamid Espinel, Erol Özgür, Lilian Calvet, Bertrand Le Roy, Emmanuel Buc & Adrien Bartoli, **"Combining Visual Cues with Interactions for 3D–2D Registration in Liver Laparoscopy"**, https://doi.org/10.1007/s10439-020-02479-z
 
+.. [Black2017] David Black, Christian Hansen, Arya Navabi, Ron Kikinis, Horst Hahn, **"A Survey of auditory display in image-guided interventions"**, https://dx.doi.org/10.1007/s11548-017-1547-z
+
+.. [Stetten2011] George Stetten, Bing Wu, Roberta Klatzky, John Galeotti, Mel Siegel, Randy Lee, Francis Mah, Andrew Eller, Joel Schuman, Ralph Hollis, **"Hand-Held Force Magnifier for Surgical Instruments"**, https://doi.org/10.1007/978-3-642-21504-9_9
+
 
 Others
 ------
@@ -402,3 +405,8 @@ Papers on Evaluation of systems:
 SciKit-Surgery:
 
 .. [Thompson2020] S. Thomson, T. Dowrick, M. Ahmad, G. Xiao, B. Koo, E. Bonmati-Coll, K. Kahl, M. J. Clarkson, **"SciKit-Surgery: compact libraries for surgical navigation"**, https://doi.org/10.1007/s11548-020-02180-5
+
+
+Lego Tutorial:
+
+.. [Guler2012] Ozgur Guler and Ziv Yaniv, **"Image-guided navigation: A cost effective practical introduction using the image-guided surgery toolkit (IGSTK)"**, https://dx.doi.org/10.1109/EMBC.2012.6347375

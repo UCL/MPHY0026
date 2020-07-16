@@ -39,12 +39,17 @@ Here we show some `VTK.js examples <https://kitware.github.io/vtk-js/examples/>`
 (Thank you Kitware!)
 
 The code is fairly similar to the `VTK Python or C++ Examples <https://lorensen.github.io/VTKExamples/site/>`_, and the same principles apply throughout.
+So, here we can play or experiment with a high-level API (VTK), provided in the web browser via javascript, and
+ignore the fact that at the lowest level, VTK.js is using WebGL to render using the graphics card GPU.
 
 
 Cone Example
 ------------
 
-Demonstrates:
+This VTK.js example gives you the opportunity to interact and experiment with some common
+rendering settings, just to see the immediate effects on a drawing of a simple cone.
+
+It demonstrates:
 
 * Fast rendering, browser uses WebGL, and hence hardware acceleration.
 * In surface rendering, everything is typically composed of triangles, points or lines. More complex shapes are made up of lots of triangles.

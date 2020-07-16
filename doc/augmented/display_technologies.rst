@@ -30,3 +30,12 @@ These examples can be found in [Sielforst2008]_, and [Nicolau2011]_, and describ
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/ilPIQQDLApY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+Other Technologies
+==================
+
+While visual augmentation is the dominant modality, there are others to consider:
+
+* Haptic augmentation: [Stetten2011]_
+* Auditory augmentation: [Black2017]_

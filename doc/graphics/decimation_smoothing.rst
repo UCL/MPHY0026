@@ -4,8 +4,17 @@ Mesh Decimation And Smoothing
 =============================
 
 Once a triangle mesh has been created, some post-processing is normally done to
-reduce size (decimation), and reduce noise (smoothing). These are briefly
-described below and in the accompanying video.
+reduce size (decimation), and reduce noise (smoothing).
+
+
+Mesh Decimation and Smoothing Video
+-----------------------------------
+
+An overview of decimation and smoothing can be found in this video:
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Dps_UGngAX8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 Mesh Decimation
@@ -27,7 +36,7 @@ Mesh Smoothing
 --------------
 
 In VTK, the `smoothing <https://vtk.org/doc/nightly/html/classvtkSmoothPolyDataFilter.html>`_, is based on a
-Laplacian smoothing Operator. I (Matt) found `these <http://graphics.stanford.edu/courses/cs468-12-spring/LectureSlides/06_smoothing.pdf>`_ notes helpful.
+Laplacian smoothing Operator. `These <http://graphics.stanford.edu/courses/cs468-12-spring/LectureSlides/06_smoothing.pdf>`_ notes are helpful.
 
 .. figure:: MeshSmoothingIllustration.jpg
   :alt: Illustration of Mesh Smoothing in VTK
@@ -36,11 +45,3 @@ Laplacian smoothing Operator. I (Matt) found `these <http://graphics.stanford.ed
   Mesh smoothing is implemented using the Laplacian Operator which can be thought of adding a displacement vector, computed as a weighted offset towards the mean of the neighborhood. See video.
 
 
-Mesh Decimation and Smoothing Video
------------------------------------
-
-More details describing the above decimation and smoothing diagram can be found in this video:
-
-.. raw:: html
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Dps_UGngAX8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

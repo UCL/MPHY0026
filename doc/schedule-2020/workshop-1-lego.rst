@@ -3,6 +3,21 @@
 Workshop 1: Lego Phantom, ArUco Tracker, Windows
 ================================================
 
+Acknowledgements
+^^^^^^^^^^^^^^^^
+
+For this tutorial, we give thanks and credit to Ozgur Guler and Ziv Yaniv, whose pioneering work in
+the education of Image-Guided Navigation led to `this tutorial <https://www.yanivresearch.info/igiTutorial/igiTutorial.html>`_,
+described in [Guler2012]_, and in chapter 10 of :ref:`bookPeters`.
+
+
+Most importantly, to do this at home, you'd need to build the Lego phantom,
+the plans for which are included in the above URL.
+
+
+Required Software
+^^^^^^^^^^^^^^^^^
+
 Assumes you have installed
 
 * `gitbash.exe <https://git-scm.com/>`_.
@@ -13,8 +28,9 @@ Note: all command line tools below respond to the ``--help`` argument to describ
 
 We will be tracking Aruco tags using a webcam. Before beginning, check the webcam positioning to ensure that the Aruco tag is visible when probing the phantom.
 
+
 1. Locate 5 fiducials in order in physical space
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Place the pointer on the first fiducial (The fiducial point is taken as the centre of the piece).
 
@@ -30,12 +46,13 @@ We will be tracking Aruco tags using a webcam. Before beginning, check the webca
 This will grab a frame every 5 seconds (fps of 0.2), allowing time to move the pointer to each fiducial in turn.
 
 N.B. The Pointer tip offset is at ``-154.43 -24.17 3.14``, and is stored in file ``tests\data\lego\aruco_pointer_offset.txt``. This has been obtained by pivot calibration, which will be covered in next week's materials.
+For now, you could just measure the offset with a ruler!
 
 
 2. Register Physical Space to Image Space
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The ct fiducial positions are provided in ``tests/data/lego/ct_fiducials.txt``
+The CT fiducial positions are provided in ``tests/data/lego/ct_fiducials.txt``
 
 You can compute a point based registration using Arun's method::
 

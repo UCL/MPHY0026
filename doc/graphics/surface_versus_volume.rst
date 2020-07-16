@@ -9,6 +9,7 @@ drawing a picture of data, so the terms "rendering" and "visualisation" are fair
 First, lets look at the two main types of rendering:
 
 
+.. _SurfaceRenderingSection:
 Surface Rendering
 -----------------
 

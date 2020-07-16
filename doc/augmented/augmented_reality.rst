@@ -9,4 +9,5 @@ Augmented Reality
   display_technologies.rst
   visual_perception.rst
   clinical_evidence.rst
+  workshop.rst
 

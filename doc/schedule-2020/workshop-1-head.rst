@@ -3,6 +3,9 @@
 Workshop 1: UCL Skull Phantom, EM Tracker, Windows
 ==================================================
 
+Required Software
+^^^^^^^^^^^^^^^^^
+
 Assumes you have installed
 
 * `gitbash.exe <https://git-scm.com/>`_.
