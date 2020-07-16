@@ -3,8 +3,7 @@
 Clinical Evidence
 =================
 
-Lastly, I wanted to just highlight the fact that much more work needs doing to validate
-if Augmented Reality is actually useful for surgery.
+Much more work needs doing to validate if Augmented Reality is actually useful for surgery.
 
 * There are papers that suggest how the technology is useful, e.g. [Guha2017]_ (Neurosurgery), [Bernhardt2017]_ (Laparoscopic Surgery)
 * There are papers that show the benefits of individual components, e.g. [McIntire2014]_ for 3D displays
