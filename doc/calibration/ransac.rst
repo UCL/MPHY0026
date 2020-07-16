@@ -89,10 +89,14 @@ which in the same example gives, a mean of 1.56, a SD of 0.9, so if we wanted me
 With poor data, say :math:`w = 0.5`, we'd need approx 16 iterations.
 
 
-Matt: With my reading of the paper, it sounds like you could terminate early the first
+From [FischlerBolles1981]_, you could terminate early the first
 time you get a consensus set larger than a minimum size, i.e. threshold :math:`t`,
 or if you don't get over :math:`t`, just pick the largest consensus set you found.
-It depends if you want to finish early, or fit the most data.
+
+It depends if you want to finish early, or fit the most data, so in practice, implementations may differ.
+
+For another explanation, see `Ziv Yaniv's example <https://yanivresearch.info/writtenMaterial/RANSAC.pdf>`_, which
+uses RANSAC to solve for parameters of a hyperplane and hypersphere, and discusses various implementation details.
 
 
 Widely Applicable
