@@ -56,7 +56,7 @@ For health technologies, this involves designing and evaluating systems for:
 
 We can think of this in terms of “quality layers”:
 
-.. figure:: SevenLessonsPyramid.jpg
+.. figure:: SevenLessonsPyramid.jpeg
   :alt: Diagram of Blandford 2018, Seven Lessons Pyramid
   :width: 600
 
