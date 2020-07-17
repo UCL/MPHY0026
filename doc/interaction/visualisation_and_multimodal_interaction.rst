@@ -86,11 +86,11 @@ with novel technologies. The steps are illustrated in the diagram below:
    - Importantly, that new system state is then evaluated against the goal (did I achieve what I intended? Am I moving closer to my goal? Did I get something wrong?)
    - In the light of this evaluation, the goal is revised, or a new goal is formed.
 
-.. figure:: NormansActionCycle.png
+.. figure:: NormansActionCycle.jpg
   :alt: Norman's Action Cycle summary
   :width: 600
 
-   Diagram illustrates Norman's Action Cycle [Norman1988]_.
+  Diagram illustrates Norman's Action Cycle [Norman1988]_
 
 
 **Wickens’ resources model considers modalities and codes**
@@ -202,7 +202,7 @@ developed before you gather data is that it helps to shape what data you gather 
 you look out for the kinds of things that you need to include in the model, so it
 provides a useful focus for data gathering.
 
-**SEIPS approach to work system design and analysis***
+**SEIPS approach to work system design and analysis** 
 
 A Systems Engineering Initiative for Patient Safety (SEIPS) model considers a
 work system in terms of the elements of the work system (the people, the tasks,
@@ -210,7 +210,7 @@ the environment, the organisation, and the technologies and tools that are used)
 the processes that those elements are involved in, and the outcomes, in terms of
 patient safety; patient care; employee experiences; and the impacts on the organisation.
 
-**Distributed Cognition approach***
+**Distributed Cognition approach**
 
 Whereas Norman’s action cycle (discussed earlier) focused on cognitive
 processing that takes place inside the head, viewing eyes, ears, hands, etc.
