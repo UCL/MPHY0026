@@ -249,15 +249,16 @@ Visualisation And Multi-Modal Interaction
 Essential
 ^^^^^^^^^
 
-.. [Tourancheau2012] Sylvain Tourancheau, Mårten Sjöström, Roger Olsson, Anders Persson, Thomas Ericson, Johan Rudling, Bengt Norén, **"Subjective evaluation of user experience in interactive 3D visualization in a medical context"**, https://doi.org/10.1117/12.910828
-
 .. [Norman1988] D. Norman, **"The design of everyday things."**, Basic Books.
 
 .. [Wickens2008] Wickens, C. D., **"Multiple resources and mental workload"**, https://doi.org/10.1518/001872008X288394
 
+.. [Blandford2010] Blandford, A., and Attfield, S., **"Interacting with information"**, https://doi.org/10.2200/S00227ED1V01Y200911HCI006
 
 Extras
 ^^^^^^
+
+.. [Hazelhurst2007] Hazlehurst, B., McMullen, C. K., & Gorman, P. N., **"Distributed cognition in the heart room: how situation awareness arises from coordinated communications during cardiac surgery."**, https://www.sciencedirect.com/science/article/pii/S1532046407000081
 
 .. [Bichlmeier2010] Christoph Bichlmeier, Felix Wimmer, Sandro Michael Heining and Nassir Navab, **"Contextual Anatomic Mimesis Hybrid In-Situ Visualization Method for Improving Multi-Sensory Depth Perception in Medical Augmented Reality"**, http://dx.doi.org/10.1109/ISMAR.2007.4538837
 
@@ -271,6 +272,8 @@ Extras
 
 .. [Marcus2015] Hani J Marcus, Philip Pratt, Archie Hughes-Hallett, Thomas P Cundy, Adam P Marcus, Guang-Zhong Yang, Ara Darzi, Dipankar Nandi, **"Comparative Effectiveness and Safety of Image Guidance Systems in Neurosurgery: A Preclinical Randomized Study"**, http://dx.doi.org/10.3171/2014.10.JNS141662
 
+.. [Berndt2015] Berndt, E., Furniss, D., & Blandford, A, **"Learning Contextual Inquiry and Distributed Cognition: a case study on technology use in anaesthesia"**, https://link.springer.com/article/10.1007/s10111-014-0314-y
+
 .. [Thompson2018] Stephen Thompson, Crispin Schneider, Michele Bosi, Kurinchi Gurusamy, Sébastien Ourselin, Brian Davidson, David Hawkes, Matthew J Clarkson, **"In vivo estimation of target registration errors during augmented reality laparoscopic surgery"**, https://dx.doi.org/10.1007/s11548-018-1761-3
 
 .. [Dilley2019] Dilley, James W. R., Hughes-Hallett, Archie, Pratt, Philip J., Pucher, Philip H., Camara, Mafalda, Darzi, Ara W., Mayer, Erik K., **"Perfect Registration Leads to Imperfect Performance A Randomized Trial of Multimodal Intraoperative Image Guidance"**. http://dx.doi.org/10.1097/SLA.0000000000002793
@@ -281,6 +284,8 @@ Human Computer Interaction
 
 Essential
 ^^^^^^^^^
+
+.. [Tourancheau2012] Sylvain Tourancheau, Mårten Sjöström, Roger Olsson, Anders Persson, Thomas Ericson, Johan Rudling, Bengt Norén, **"Subjective evaluation of user experience in interactive 3D visualization in a medical context"**, https://doi.org/10.1117/12.910828
 
 .. [BeyerHoltzblatt1999] Beyer, H., Holtzblatt, K., **"Contextual design. interactions"**, https://dl.acm.org/doi/fullHtml/10.1145/291224.291229
 
