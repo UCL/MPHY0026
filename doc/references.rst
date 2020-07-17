@@ -285,11 +285,13 @@ Human Computer Interaction
 Essential
 ^^^^^^^^^
 
-.. [Tourancheau2012] Sylvain Tourancheau, Mårten Sjöström, Roger Olsson, Anders Persson, Thomas Ericson, Johan Rudling, Bengt Norén, **"Subjective evaluation of user experience in interactive 3D visualization in a medical context"**, https://doi.org/10.1117/12.910828
-
 .. [BeyerHoltzblatt1999] Beyer, H., Holtzblatt, K., **"Contextual design. interactions"**, https://dl.acm.org/doi/fullHtml/10.1145/291224.291229
 
 .. [Hazelhurst2007] Hazlehurst, B., McMullen, C. K., Gorman, P. N, **" Distributed cognition in the heart room: how situation awareness arises from coordinated communications during cardiac surgery."**, https://doi.org/10.1016/j.jbi.2007.02.001
+
+.. [Tourancheau2012] Sylvain Tourancheau, Mårten Sjöström, Roger Olsson, Anders Persson, Thomas Ericson, Johan Rudling, Bengt Norén, **"Subjective evaluation of user experience in interactive 3D visualization in a medical context"**, https://doi.org/10.1117/12.910828
+
+.. [Blandford2016] Blandford, A., Furniss, D., & Makri, S., **"Qualitative HCI research: Going behind the scenes."**, https://doi.org/10.2200/S00706ED1V01Y201602HCI034
 
 
 Extras
@@ -304,6 +306,8 @@ Extras
 .. [Hatscher2019] Hatscher, B., Mewes, A., Pannicke, E. et al., **"Touchless scanner control to support MRI-guided interventions"**, https://dx.doi.org/10.1007/s11548-019-02058-1
 
 .. [Hart2006] Sandra G. Hart, **"NASA-Task Load Index (NASA-TLX); 20 Years Later"**, https://doi.org/10.1177/154193120605000909
+
+.. [Sharp2019] Sharp, H., Preece, J. & Rogers , **"Interaction Design"**, Wiley.
 
 
 Graphics

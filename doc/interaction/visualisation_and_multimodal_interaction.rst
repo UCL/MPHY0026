@@ -202,7 +202,7 @@ developed before you gather data is that it helps to shape what data you gather 
 you look out for the kinds of things that you need to include in the model, so it
 provides a useful focus for data gathering.
 
-**SEIPS approach to work system design and analysis** 
+**SEIPS approach to work system design and analysis**
 
 A Systems Engineering Initiative for Patient Safety (SEIPS) model considers a
 work system in terms of the elements of the work system (the people, the tasks,
