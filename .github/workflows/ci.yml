@@ -3,7 +3,6 @@ on: push
 jobs:
   test:
     runs-on: ${{ matrix.os }}
-    continue-on-error: ${{ matrix.experimental }}
 
     strategy:
       fail-fast: false
@@ -22,12 +21,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements-dev.txt
 
-          - name: Run tests
+      - name: Run tests
         run: |
           python -m pytests
 
       - name: Linting
-          pylint --rcfile=tests/pylintrc sksurgerycalibration tests
+        run: pylint --rcfile=tests/pylintrc sksurgerycalibration tests
 
   deploy:
     runs-on: ubuntu-18.04
