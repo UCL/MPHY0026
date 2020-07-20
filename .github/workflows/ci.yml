@@ -8,6 +8,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-18.04, macos-latest, windows-latest]
+        python-ver: [3.6, 3.7, 3.8]
 
     steps:
       - uses: actions/checkout@v2
@@ -23,7 +24,7 @@ jobs:
 
       - name: Run tests
         run: |
-          python -m pytests
+          python -m pytest
 
       - name: Linting
         run: pylint --rcfile=tests/pylintrc sksurgerycalibration tests
