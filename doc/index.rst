@@ -126,8 +126,8 @@ Contents
 .. _`Tom Dowrick`: https://iris.ucl.ac.uk/iris/browse/profile?upi=TMDOW59
 .. _`Yipeng Hu`: https://iris.ucl.ac.uk/iris/browse/profile?upi=YHUXX66
 .. _`Moodle`: https://moodle.ucl.ac.uk/
-.. _`Source code`: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026
-.. _`Issue Tracker`: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026
+.. _`Source code`: https://github.com/UCL/MPHY0026
+.. _`Issue Tracker`: https://github.com/UCL/MPHY0026
 .. _`SciKit-Surgery`: https://github.com/UCL/scikit-surgery/wiki
 .. _`The SciKit-Surgery Paper`: https://doi.org/10.1007/s11548-020-02180-5
 .. _`IPCAI 2020 presentation`: https://www.youtube.com/watch?v=0z8eIjqAbzQ&t=10s

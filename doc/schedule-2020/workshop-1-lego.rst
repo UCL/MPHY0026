@@ -22,7 +22,7 @@ Assumes you have installed
 
 * `gitbash.exe <https://git-scm.com/>`_.
 * `NiftyIGI.exe <https://github.com/NifTK/NifTK/releases>`_.
-* `MPHY0026 repo <https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026>`_.
+* `MPHY0026 repo <https://github.com/UCL/MPHY0026>`_.
 
 Note: all command line tools below respond to the ``--help`` argument to describe available options
 

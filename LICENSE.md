@@ -1,8 +1,8 @@
-This work is the copyright of its various contributors. 
+This work is the copyright of its various contributors.
 
-This collection of material is licensed under a Creative Commons - Attribution license. 
+This collection of material is licensed under a Creative Commons - Attribution license.
 
-The list of contributors can be found at https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026/-/graphs/master.
+The list of contributors can be found at https://github.com/UCL/MPHY0026/-/graphs/master.
 
 You are free:
 
