@@ -18,10 +18,10 @@ from sksurgerybard.algorithms.bard_config_algorithms import \
 from sksurgeryvtk.widgets.vtk_overlay_window import VTKOverlayWindow
 import sksurgeryvtk.camera.vtk_camera_model as cm
 
-# pylint: disable=too-many-branches
+# pylint: disable=too-many-branches, too-many-instance-attributes
 
 class ChessboardOverlay():
-
+    """Chessboard Overlay App"""
     def __init__(self, configuration, calib_dir, overlay_offset):
 
         source = configuration.get("source", 1)
@@ -62,7 +62,7 @@ class ChessboardOverlay():
         self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, window_size[1])
 
         print("Video feed set to ("
-            + str(window_size[0]) + " x " + str(window_size[1]) + ")")
+              + str(window_size[0]) + " x " + str(window_size[1]) + ")")
 
         self.vtk_overlay_window = VTKOverlayWindow()
         self.timer = None
@@ -80,6 +80,7 @@ class ChessboardOverlay():
         c_y = self.intrinsics[1, 2]
         width, height = window_size[0], window_size[1]
 
+        #pylint:disable=line-too-long
         cm.set_camera_intrinsics(self.vtk_overlay_window.get_foreground_renderer(),
                                  self.vtk_overlay_window.get_foreground_camera(),
                                  width,
@@ -90,7 +91,7 @@ class ChessboardOverlay():
                                  c_y,
                                  1,
                                  1000)
-                  
+
     def start(self):
         """Show the overlay widget and
         set a timer running"""
@@ -101,12 +102,12 @@ class ChessboardOverlay():
         self.timer.start(1000.0 / self.update_rate)
 
     def update(self):
-
-        captured_positions = np.zeros((0, 3))
+        """ QTimer Callback function. """
+        #captured_positions = np.zeros((0, 3))
 
         _, frame = self.cap.read()
-        undistorted = cv2.undistort(frame, self.intrinsics, self.distortion)
-        num_pts = self.corners[0] * self.corners[1]
+        #undistorted = cv2.undistort(frame, self.intrinsics, self.distortion)
+        #num_pts = self.corners[0] * self.corners[1]
 
         _, object_points, image_points = \
             self.detector.get_points(frame)
@@ -116,20 +117,19 @@ class ChessboardOverlay():
                                             self.num_pts)
 
             retval, rvec, tvec = cv2.solvePnP(object_points,
-                                            image_points,
-                                            self.intrinsics,
-                                            None)
+                                              image_points,
+                                              self.intrinsics,
+                                              None)
             if retval:
 
                 self.vtk_overlay_window.set_camera_matrix(self.intrinsics)
-                camera = self.vtk_overlay_window.get_foreground_camera()
 
                 rotation = cv2.Rodrigues(rvec)[0]
 
                 pos = -rotation.T @ tvec
                 pos[0] -= self.overlay_offset
 
-                mat = np.ones((4,4))
+                mat = np.ones((4, 4))
                 mat[:3, :3] = rotation.T
                 mat[:3, 3] = pos.T
 
@@ -148,9 +148,9 @@ class ChessboardOverlay():
             print("Failed to detect points")
             self.vtk_overlay_window.set_video_image(frame)
 
+        #pylint:disable=protected-access
         self.vtk_overlay_window._RenderWindow.Render()
 
-    
 def run_chessboard_overlay(config_file, calib_dir, overlay_offset):
     """
     Simple app that detects a calibration pattern, runs

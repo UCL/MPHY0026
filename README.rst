@@ -7,13 +7,9 @@ MPHY0026: Computer Assisted Surgery and Therapy
    :target: https://github.com/UCL/MPHY0026
    :alt: Logo
 
-.. image:: https://github.com/UCL/MPHY0026/badges/master/pipeline.svg
-   :target: https://github.com/UCL/MPHY0026/pipelines
-   :alt: GitLab-CI test status
-
-.. image:: https://github.com/UCL/MPHY0026/badges/master/coverage.svg
-    :target: https://github.com/UCL/MPHY0026/commits/master
-    :alt: Test coverage
+.. image:: https://github.com/UCL/MPHY0026/workflows/.github/workflows/ci.yml/badge.svg
+   :target: https://github.com/UCL/MPHY0026/actions
+   :alt: GitHub Actions CI status
 
 .. image:: https://readthedocs.org/projects/MPHY0026/badge/?version=latest
     :target: http://MPHY0026.readthedocs.io/en/latest/?badge=latest
