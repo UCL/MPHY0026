@@ -27,7 +27,7 @@ jobs:
           python -m pytest
 
       - name: Linting
-        run: pylint --rcfile=tests/pylintrc sksurgerycalibration tests
+        run: pylint --rcfile=tests/pylintrc mphy0026
 
   deploy:
     runs-on: ubuntu-18.04
