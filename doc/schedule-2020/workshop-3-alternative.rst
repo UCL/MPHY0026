@@ -7,7 +7,7 @@ Pointer Calibration via Template or Pivot
 
   * So, please::
 
-    git clone https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026.git
+    git clone https://github.com/UCL/MPHY0026.git
 
     (which is the repo that makes these notes, so you may already have it).
 

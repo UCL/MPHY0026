@@ -17,7 +17,7 @@ setup(
     description='MPHY0026: Computer Assisted Surgery and Therapy course',
     long_description=long_description,
     long_description_content_type='text/x-rst',
-    url='https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026',
+    url='https://github.com/UCL/MPHY0026',
     author='Matt Clarkson',
     author_email='m.clarkson@ucl.ac.uk',
     license='BSD-3 license',

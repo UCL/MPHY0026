@@ -1,19 +1,15 @@
 MPHY0026: Computer Assisted Surgery and Therapy
 ===============================================
 
-.. image:: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026/raw/master/project-icon.png
+.. image:: https://github.com/UCL/MPHY0026/raw/master/project-icon.png
    :height: 128px
    :width: 128px
-   :target: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026
+   :target: https://github.com/UCL/MPHY0026
    :alt: Logo
 
-.. image:: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026/badges/master/pipeline.svg
-   :target: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026/pipelines
-   :alt: GitLab-CI test status
-
-.. image:: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026/badges/master/coverage.svg
-    :target: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026/commits/master
-    :alt: Test coverage
+.. image:: https://github.com/UCL/MPHY0026/workflows/.github/workflows/ci.yml/badge.svg
+   :target: https://github.com/UCL/MPHY0026/actions
+   :alt: GitHub Actions CI status
 
 .. image:: https://readthedocs.org/projects/MPHY0026/badge/?version=latest
     :target: http://MPHY0026.readthedocs.io/en/latest/?badge=latest
@@ -40,7 +36,7 @@ you can do this to run examples:
 ::
 
     # Clone the repository
-    git clone https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026
+    git clone https://github.com/UCL/MPHY0026
     
     # Get inside the repository directory
     cd MPHY0026
@@ -71,7 +67,7 @@ You can clone the repository using the following command:
 
 ::
 
-    git clone https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026
+    git clone https://github.com/UCL/MPHY0026
 
 
 Running tests
@@ -115,14 +111,14 @@ Supported by `Wellcome`_ and `EPSRC`_.
 
 
 .. _`Wellcome EPSRC Centre for Interventional and Surgical Sciences`: http://www.ucl.ac.uk/weiss
-.. _`source code repository`: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026
+.. _`source code repository`: https://github.com/UCL/MPHY0026
 .. _`Documentation`: https://MPHY0026.readthedocs.io
 .. _`Read The Docs`: https://MPHY0026.readthedocs.io
-.. _`SNAPPY`: https://weisslab.cs.ucl.ac.uk/WEISS/PlatformManagement/SNAPPY/wikis/home
+.. _`SNAPPY`: https://github.com/UCL/scikit-surgery
 .. _`University College London (UCL)`: http://www.ucl.ac.uk/
 .. _`Wellcome`: https://wellcome.ac.uk/
 .. _`EPSRC`: https://www.epsrc.ac.uk/
-.. _`contributing guidelines`: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026/blob/master/CONTRIBUTING.rst
-.. _`license file`: https://weisslab.cs.ucl.ac.uk/WEISSTeaching/MPHY0026/blob/master/LICENSE
+.. _`contributing guidelines`: https://github.com/UCL/MPHY0026/blob/master/CONTRIBUTING.rst
+.. _`license file`: https://github.com/UCL/MPHY0026/blob/master/LICENSE
 .. _`SNAPPY Tutorial`: https://snappytutorial02.readthedocs.io/en/latest/
-.. _`Python Template`: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate
+.. _`Python Template`: https://github.com/UCL/PythonTemplate
