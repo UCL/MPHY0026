@@ -114,11 +114,11 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`source code repository`: https://github.com/UCL/MPHY0026
 .. _`Documentation`: https://MPHY0026.readthedocs.io
 .. _`Read The Docs`: https://MPHY0026.readthedocs.io
-.. _`SNAPPY`: https://weisslab.cs.ucl.ac.uk/WEISS/PlatformManagement/SNAPPY/wikis/home
+.. _`SNAPPY`: https://github.com/UCL/scikit-surgery
 .. _`University College London (UCL)`: http://www.ucl.ac.uk/
 .. _`Wellcome`: https://wellcome.ac.uk/
 .. _`EPSRC`: https://www.epsrc.ac.uk/
 .. _`contributing guidelines`: https://github.com/UCL/MPHY0026/blob/master/CONTRIBUTING.rst
 .. _`license file`: https://github.com/UCL/MPHY0026/blob/master/LICENSE
 .. _`SNAPPY Tutorial`: https://snappytutorial02.readthedocs.io/en/latest/
-.. _`Python Template`: https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/PythonTemplate
+.. _`Python Template`: https://github.com/UCL/PythonTemplate

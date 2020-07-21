@@ -98,7 +98,7 @@ However:
 A Note on VTK Coordinate Systems
 --------------------------------
 
-* Several pieces of software, including `Slicer`_, `MITK`_, `PLUS`_, `NifTK`_, `SNAPPY`_ all use VTK.
+* Several pieces of software, including `Slicer`_, `MITK`_, `PLUS`_, `NifTK`_, `scikit-surgery`_ all use VTK.
 * Look in `vtkProp3D <https://gitlab.kitware.com/vtk/vtk/blob/master/Rendering/Core/vtkProp3D.cxx#L163>`_, and at ``SetOrientation()`` which says *"Orientation is specified as X,Y and Z rotations in that order, but they are performed as RotateZ, RotateX, and finally RotateY"*.
 * vtkProp3D therefore suggests that VTK uses *"Tait–Bryan angles"*, specifically the z-x-y option, which are therefore **intrinsic** rotations meaning, they move with the object being moved.
 

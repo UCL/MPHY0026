@@ -112,16 +112,16 @@ Notebooks
 
 Have a play with the provided :ref:`Notebooks`.
 
-SNAPPY provides the main algorithms:
+scikit-surgery provides the main algorithms:
 
 .. code::
 
-    # Note that the SNAPPY libraries provide pivot and RANSAC.
+    # Note that the scikit-surgery libraries provide pivot and RANSAC.
     import sksurgerycore.algorithms.pivot as p   # AOS Pivot algorithm and a RANSAC version.
     import sksurgerycore.transforms.matrix as m  # For creating 4x4 matrices.
 
-so the algorithms are `here <https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/scikit-surgerycore/-/blob/master/sksurgerycore/algorithms/pivot.py>`_
-and the matrix utilities are `here <https://weisslab.cs.ucl.ac.uk/WEISS/SoftwareRepositories/SNAPPY/scikit-surgerycore/-/blob/master/sksurgerycore/transforms/matrix.py>`_.
+so the algorithms are `here <https://github.com/UCL/scikit-surgerycore/-/blob/master/sksurgerycore/algorithms/pivot.py>`_
+and the matrix utilities are `here <https://github.com/UCL/scikit-surgerycore/-/blob/master/sksurgerycore/transforms/matrix.py>`_.
 
 and can be installed with:
 

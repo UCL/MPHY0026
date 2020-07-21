@@ -99,7 +99,7 @@ SciKit-Surgery provides the main algorithms:
 
 .. code::
 
-    # Note that the SNAPPY libraries provide point-based registration using Arun's method and matrix utilities.
+    # Note that the scikit-surgery libraries provide point-based registration using Arun's method and matrix utilities.
     import sksurgerycore.algorithms.procrustes as pbr
     import sksurgerycore.transforms.matrix as mu
 
