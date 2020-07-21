@@ -11,7 +11,7 @@ Contribute To This Course
 We'd love you to contribute! Please check out the source code, and send pull requests.
 
 * `Source code`_ that generates this set of notes.
-* Contributors:
+* Contributors: `Ziv Yaniv <https://yanivresearch.info/>`_ ... (add your name here?).
 
 
 Course Details
