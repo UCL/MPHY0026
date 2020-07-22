@@ -87,13 +87,6 @@ The New Home-Based Tutorials
 However, in 2020, due to the pandemic, we developed a new series of tutorials
 with the aim of exploring each component of an AR system in turn.
 
-These tutorials are:
-
-  - :ref:`SummerSchoolCameraCalibration`
-  - :ref:`SummerSchoolPivotCalibration`
-  - :ref:`FidRegistrationTutorial`
-  - :ref:`SummerSchoolOverlay`
-
 As we can't actually do an overlay onto a physical object, due to everyone
 being at home, the overlay tutorial focuses on implementing something similar to
 `Pratt et al, 2015 <https://link.springer.com/article/10.1007/s11548-015-1279-x>`_
@@ -101,6 +94,13 @@ where the video camera itself is doing the tracking.
 
 Each tutorial should be fairly stand-alone, and suitable for completing at
 home, or for distance learning.
+
+These tutorials are:
+
+  - :ref:`SummerSchoolCameraCalibration`
+  - :ref:`SummerSchoolPivotCalibration`
+  - :ref:`FidRegistrationTutorial`
+  - :ref:`SummerSchoolOverlay`
 
 Have fun!
 
