@@ -17,7 +17,8 @@ Augmented Reality (AR) is where additional information is used
 to augment the visual display of a scene. In medical terms, this normally
 occurs in two guises:
 
-* **Video see through**: The "reality" is represented by a video image from a medical device such as a laparoscope or endoscope, which naturally displays on a monitor.
+* **Video see through**: The "reality" is represented by a video image from a medical
+device such as a laparoscope or endoscope, which naturally displays on a monitor.
 
 .. figure:: https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs11548-018-1761-3/MediaObjects/11548_2018_1761_Fig1_HTML.jpg?as=webp
   :alt: SmartLiver overlay.
@@ -29,7 +30,7 @@ The overlaid information could come from pre-operative MR/CT data as shown above
 Take a look at `this example <https://link.springer.com/article/10.1007/s00464-014-3433-x/figures/4>`_
 from Xin Kang ... Raj Shekhar and colleagues, from `this article <https://link.springer.com/article/10.1007%2Fs00464-014-3433-x>`_,
 where an ultrasound image is overlaid on the video.
-In this ultrasound example, the laparoscope and laparoscopic ultrasound is optically tracked.
+In this ultrasound example, the laparoscope and laparoscopic ultrasound are optically tracked.
 
 In another example, Pratt et al. provide a pure vision based system:
 
@@ -40,9 +41,9 @@ In another example, Pratt et al. provide a pure vision based system:
   Pratt et al. provide a vision based overlay, where the video camera itself tracks the position of the ultrasound probe. See `Pratt et al, 2015 <https://link.springer.com/article/10.1007/s11548-015-1279-x>`_.
 
 In the vision system, the video camera provides the means for sampling the real scene, working out the pose
-of the ultrasound probe relative to the video camrea, and the overlay itself.
+of the ultrasound probe relative to the video camera, and the AR overlay itself.
 
-* **Optical see through**: The "reality" is directly observed via a visor, or semi silvered mirror, onto which is projected additional information.
+* **Optical see through**: The "reality" is directly observed via a visor, or semi-silvered mirror, onto which is projected additional information.
 
 The most obvious example right now, is the Microsoft Hololens. See this example from ApoQlar, on the `ApoQlar YouTube channel <https://www.youtube.com/watch?v=JeqxBQERp7Q&feature=youtu.be>`_.
 
@@ -74,7 +75,7 @@ marker with a webcam and overlay the CT scan on the live video.
   :alt: The overlay of a CT scan ontop of the webcam video.
   :width: 600
 
-  The overlay of the CT scan of the phantom on the live webcam feed, achieved using `BARD`_.
+  The overlay of the CT scan of the phantom on the live webcam feed, achieved using `BARD`_, taken from a previous summer school.
 
 This demonstrates Augmented (adding the CT data), Reality (represented by webcam video)
 as an example of video see through AR.
