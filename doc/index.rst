@@ -108,7 +108,7 @@ Contents
   setup/setup.rst
   notebooks.rst
   workshops/workshop.rst
-  summerschool/summerschool.rst
+  summerschool/bard.rst
   coursework/system_simulation.rst
 
 .. raw:: html
