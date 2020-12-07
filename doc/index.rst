@@ -24,9 +24,13 @@ are the essential details:
 
  * Assessment:
 
-   * 1 pieces of coursework, worth 50%.
+   * 1 piece of coursework, worth 100%.
 
-   * 1 exam of 2 hours in the exam period after Easter, worth 50%.
+
+ * Sessions:
+
+   * Term 2, Thursdays, 10:00-13:00, not including reading week.
+   * Online for 2021.
 
 
 How This Course Is Run
@@ -53,37 +57,6 @@ Course Principles
 * *A systems approach*: A researcher may only work on one component, but to achieve the clinical goal, we must understand the total system performance.
 * *Learn by doing*: Code examples, often using the `SciKit-Surgery`_ libraries, referenced in `The SciKit-Surgery Paper`_,
 and described in this `IPCAI 2020 presentation`_.
-
-
-Sessions
---------
-
-* Morning: 10:00 - 13:00
-* Afternoon: 14:00 - 17:00
-
-+----------------+-----------------+-------------+-----------------+
-| Date           | Location        | Leader      | Topic(s)        |
-+================+=================+=============+=================+
-| 27/02/2020 am. | G04             | Matt        | :ref:`Lecture1` |
-+----------------+-----------------+-------------+-----------------+
-| 27/02/2020 pm. | G09 + Lab       | Matt        | :ref:`Workshop1`|
-+----------------+-----------------+-------------+-----------------+
-| 05/03/2020 am. | Rockefeller G42 | Ester/Steve | :ref:`Lecture2` |
-+----------------+-----------------+-------------+-----------------+
-| 05/03/2020 pm. | G09 + Lab       | Ester/Steve | :ref:`Workshop2`|
-+----------------+-----------------+-------------+-----------------+
-| 12/03/2020 am. | G04             | Matt        | :ref:`Lecture3` |
-+----------------+-----------------+-------------+-----------------+
-| 12/03/2020 pm. | G09 + Lab       | Yipeng/Matt | :ref:`Workshop3`|
-+----------------+-----------------+-------------+-----------------+
-| 19/03/2020 am. | Remote          | Ann         | :ref:`Lecture4` |
-+----------------+-----------------+-------------+-----------------+
-| 19/03/2020 pm. | Remote          | Matt        | :ref:`Workshop4`|
-+----------------+-----------------+-------------+-----------------+
-| 26/03/2020 am. | Remote          | Matt        | :ref:`Lecture5` |
-+----------------+-----------------+-------------+-----------------+
-| 26/03/2020 pm. | Remote          | Steve       | :ref:`Workshop5`|
-+----------------+-----------------+-------------+-----------------+
 
 
 Contents
