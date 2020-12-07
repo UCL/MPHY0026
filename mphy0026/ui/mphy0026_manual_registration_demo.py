@@ -21,7 +21,7 @@ class ManualRegistrationMainWidget(QtWidgets.QWidget):
                  model_file,
                  camera_file
                  ):
-        super(ManualRegistrationMainWidget, self).__init__()
+        super().__init__()
 
         if not background_file:
             raise ValueError("Background image must be specified")
