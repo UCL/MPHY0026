@@ -28,7 +28,7 @@ class PointerDrivenQuadViewer(rw.TrackedSliceViewer):
                  reference=None,
                  registration=None
                  ):
-        super(PointerDrivenQuadViewer, self).__init__(volume, tracker_device)
+        super().__init__(volume, tracker_device)
         self.tracker_type = tracker_type
         self.pointer = pointer
         self.pointer_offset = pointer_offset
@@ -82,7 +82,7 @@ class QuadViewMainWidget(QtWidgets.QWidget):
                  reference,
                  offset
                  ):
-        super(QuadViewMainWidget, self).__init__()
+        super().__init__()
 
         if not volume:
             raise ValueError("Volume image must be specified")
