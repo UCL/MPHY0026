@@ -5,12 +5,12 @@ Surface-Based Registration
 
 Watch videos:
 
-Examples - Surface Registration with Medtronic Stealthstation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Examples - Surface Registration with Medtronic Stealthstation ENT
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/s0HoK5J1_-g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/RRawad44lvA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 Examples - Surface Registration with Pathfinder

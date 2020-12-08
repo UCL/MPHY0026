@@ -103,7 +103,7 @@ SciKit-Surgery provides the main algorithms:
     import sksurgerycore.algorithms.procrustes as pbr
     import sksurgerycore.transforms.matrix as mu
 
-so Arun's algorithm is `here <<https://github.com/UCL/scikit-surgerycore/blob/master/sksurgerycore/algorithms/procrustes.py>>`_
+so Arun's algorithm is `here <https://github.com/UCL/scikit-surgerycore/blob/master/sksurgerycore/algorithms/procrustes.py>`_
 
 and can be installed with:
 
