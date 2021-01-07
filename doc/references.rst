@@ -284,6 +284,10 @@ Augmented Reality
 Others
 ------
 
+Unifying terminology
+
+.. [Giminez2020] M. Giminez et al., **"Definitions of Computer-Assisted Surgery and Intervention, Image-Guided Surgery and Intervention, Hybrid Operating Room, and Guidance Systems"**, https://dx.doi.org/10.1097/AS9.0000000000000021
+
 This study shows that the majority of bile duct injuries are due to the inability to identify anatomy. Can image guidance fix this?
 
 .. [Way2002] Lawrence W. Way, Lygia Stewart, Walter Gantert, Kingsway Liu, Crystine M. Lee, Karen Whang, John G. Hunter, **"Causes and Prevention of Laparoscopic Bile Duct Injuries Analysis of 252 Cases From a Human Factors and Cognitive Psychology Perspective"**, https://doi.org/10.1097/01.SLA.0000060680.92690.E9
@@ -337,3 +341,7 @@ SciKit-Surgery:
 Lego Tutorial:
 
 .. [Guler2012] Ozgur Guler and Ziv Yaniv, **"Image-guided navigation: A cost effective practical introduction using the image-guided surgery toolkit (IGSTK)"**, https://dx.doi.org/10.1109/EMBC.2012.6347375
+
+Surgineering:
+
+.. [Siewerdsen2020] J. H. Siewerdsen, et al, **"Surgineering: curriculum concept for experiential learning in upper‑level biomedical engineering"**, https://doi.org/10.1007/s11548-019-02094-x
