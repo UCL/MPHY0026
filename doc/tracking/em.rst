@@ -10,6 +10,13 @@ Electromagnetic (EM) tracking systems track EM sensors moving within an EM field
 The electromagnetic field varies over time and position, therefore the sensors can measure the local field (6 DOFs). 
 There is no need no maintain a line-of-sight between the sensors and the field generator, which makes them very suitable to track instruments inside the body such as endoscopes and needles.
 
+This shows an example from the NDI YouTube channel. EM sensors can be fitted into the tip of biopsy needles.
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/rN5-NDzZduE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 AC-driven
 ^^^^^^^^^
 
