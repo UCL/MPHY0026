@@ -69,7 +69,25 @@ Infra-red cameras are used as optical markers can be tracked easier due to the e
   
   Example of two images acquired with two infra-red cameras of a tracked tool.
   
-  
+
+Mono Versus Stereo
+^^^^^^^^^^^^^^^^^^
+
+So, mono and stereo may look similar to the untrained eye. But put them side by
+side and they are quite different.
+
+* **Mono**: Projects rays, in camera space, through 2D points, into lines in camera space. The `Perspective N Point algorithm`_ is used to fit 3D model points, to 3D rays in camera space. At no point is the 3D location of the fiducials computed in camera space. The end result is the best fit of the marker coordinate system to the camera coordinate system.
+* **Stereo**: Given 2 or more cameras, you calculate the 3D location in camera space of each fiducial. Then :ref:`PointBasedRegistration` is used to compute the rigid body transformation from the tracking marker (a.k.a. rigid body) coordinate system to the camera coordinate system.
+
+.. figure:: mono_versus_stereo.jpg
+  :alt: Side by side comparison of Mono and Stereo tracking methods.
+  :width: 600
+
+  Side by side comparison of Mono and Stereo tracking methods.
+
+So, both methods compute the transformation from the tracking marker coordinate system to the camera coordinate system.
+
+
 System components
 -----------------
 

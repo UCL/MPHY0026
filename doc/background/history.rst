@@ -90,8 +90,6 @@ Frameless Stereotaxy
 So, the advent of CT scanning in the 1970s and the modern PC in the 1980s led to the concept of frameless stereotaxy [PetersCleary2010]_,
 first in the operating microscope [Roberts1986]_ and then with a mechanical arm for a tracker, with the display using the a 4-quadrant view [Galloway1993]_.
 
-In this course, we will build a tracked pointer, 4 quadrant view for image-guided surgery in :ref:`Workshop1`.
-
 
 Surgical Planning
 -----------------

@@ -9,11 +9,11 @@ The RANSAC plgorithm was first introduced by Fischler and Bolles in [FischlerBol
 Video
 ^^^^^
 
-This is a nice explanation by Jianbo Shi of Penn State Robotics.
+This is a nice explanation by Behnam Asadi from YouTube.
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/BpOKB3OzQBQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/UKhh_MmGIjM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 RANSAC is Not Least Trimmed Squares

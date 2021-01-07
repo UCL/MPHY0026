@@ -8,9 +8,14 @@ Tracking systems are fundamental for CAI as they allow us to track the position 
 History
 -------
 
-* **1908**: A tracking system is used for the first time in humans. It is a mechanical sterotactic frame and is used for neurological applications. This frame has a 3-dimensional coordinate system and allows us to place instruments at a specific location by manually selecting the position of each coordinate [HorsleyClarke1908]_, [Heller2006]_. See :numref:`HorsleyClarkeStereotacticFrame`.
-* **1960s**: The benefits and accuracy of the stereotactic device becomes a standard practice.
-* **1980s**: Mechanical digitizers become popular due to their use in CAS, especially in neurosurgery. 
+We covered in the :ref:`History` section that stereotactic frames were developed
+to establish a coordinate system to work within the brain, which led
+to the field of stereotactic neurosurgery. Tracking systems typically refer to a
+device to provide spatial coordinates that are dynamically updated.
+
+So, key periods are:
+
+* **1980s**: Mechanical digitizers/trackers become popular due to their use in CAS, especially in neurosurgery.
 * **1990s**: Optical trackers are introduced in order to overcome clinical problems of previous tracking systems such as the ability to track multiple devices and sterilisation issues, evolving to very accurate devices. On of the main limitations of optical trackers is the line-of-sight requirement between the tracked markers and the camera. See :numref:`OpticalTrackersAtWEISS`.
 * **Late 1990s, early 2000s**: The introduction of electromagnetic trackers allows to track devices without requiring a line-of-sight. See :numref:`EMTrackersAtWEISS`.
 

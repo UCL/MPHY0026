@@ -113,6 +113,11 @@ Caveats
 
 * Prototype CAS systems may eventually become embeded in clinical practice and indistinguishable from imaging devices.
 
+Hot off The Press!
+------------------
+
+* See this paper, by [Giminez2020] and colleagues, a first go at clarifying terminology.
+
 .. _`Wikipedia`: https://en.wikipedia.org/
 .. _`CC BY-SA 4.0`: https://creativecommons.org/licenses/by-sa/4.0
 .. _`CC0`: https://creativecommons.org/publicdomain/zero/1.0/deed.en
