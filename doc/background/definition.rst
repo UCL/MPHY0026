@@ -116,7 +116,7 @@ Caveats
 Hot off The Press!
 ------------------
 
-* See this paper, by [Giminez2020] and colleagues, a first go at clarifying terminology.
+* See this paper, by [Giminez2020]_ and colleagues, a first go at clarifying terminology.
 
 .. _`Wikipedia`: https://en.wikipedia.org/
 .. _`CC BY-SA 4.0`: https://creativecommons.org/licenses/by-sa/4.0
