@@ -31,7 +31,7 @@ Tasks
 |            |       |   - What is main idea of the engineering solution?                                                            |
 |            |       |   - What is the criteria to determine if the system is a 'success'?                                           |
 +------------+-------+---------------------------------------------------------------------------------------------------------------+
-| 3          | 5     | What are the alternatives in the literature?                                                                  |
+| 3          |       | What are the alternatives in the literature?                                                                  |
 |            | - 1   |   - Identify alternative approaches                                                                           |
 |            | - 2   |   - Discuss at least 2 pro's                                                                                  |
 |            | - 2   |   - Discuss at least 2 con's                                                                                  |
@@ -74,16 +74,16 @@ Tasks
 |            |       |   - How many steps in the workflow can you identify?                                                          |
 |            |       |   - How much of an interruption to the normal workflow iw is?                                                 |
 +------------+-------+---------------------------------------------------------------------------------------------------------------+
-| 9          | 5     | Analyse Evaluation Methodology                                                                                |
+| 9          |       | Analyse Evaluation Methodology                                                                                |
 |            | - 2   |   - Describe how system was evaluated, e.g. accuracy?                                                         |
 |            | - 1   |   - Discuss limitations of e.g. phantom, animal study etc?                                                    |
 |            | - 1   |   - Does evaluation use FLE, FRE, TRE? Is methodology sufficient?                                             |
 |            | - 1   |   - How would evaluation transfer to the OR?                                                                  |
 +------------+-------+---------------------------------------------------------------------------------------------------------------+
-| 10         | 5     | Can the system be made into a product?                                                                        |
+| 10         |       | Can the system be made into a product?                                                                        |
 |            | - 3   |   - Do a brief citation search. How has the research progressed since this paper?                             |
 |            | - 2   |   - If the system has become a commercial product, identify a vendor, and comment on their claims.            |
-|            |       |   - OR                                                                                                        |
+|            | - 0   |   - OR                                                                                                        |
 |            | - 2   |   - Comment upon what would be the reasonable next steps achieve a minimum viable product.                    |
 +------------+-------+---------------------------------------------------------------------------------------------------------------+
 
