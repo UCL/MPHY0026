@@ -36,20 +36,13 @@ After completing the tutorial, students should be able to:
 Assumed Knowledge
 -----------------
 
-`SciKit-SurgeryBARD`_ is Python software, it is assumed that pupils have a working Python installation and are able to install packages. If this tutorial has been installed as part of the `MPHY0026`_ module, then `SciKit-SurgeryBARD`_ should have already been installed. If not you should be able to install `SciKit-SurgeryBARD`_ using:
-
-::
-
-    pip install scikit-surgerybard
-
-and the source code can be installed with
-
-::
-
-    git clone https://github.com/UCL/scikit-surgerybard
+`SciKit-SurgeryBARD`_ is Python software, it is assumed that pupils have a working Python installation and are able to install packages.
 
 
-See `Python setup`_ for a fuller description of how to set up your Python environment to run these demos. The commands given in this tutorial assume you have used pip to install SciKit-SurgeryBARD or that you are running in a suitable virtual environment with MPHY0026.
+Installation
+------------
+
+Follow the :ref:`PythonSetup` instructions, specifically using Option 2 of the installation instructions.
 
 
 Related Tutorials

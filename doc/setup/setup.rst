@@ -51,6 +51,9 @@ We suggest 2 options:
 
 Developers typically choose option 2, and option 2 is necessary if you want to run the Jupyter notebooks.
 
+Option 2 is the preferred choice.
+
+
 Option 1
 ^^^^^^^^
 
@@ -102,6 +105,7 @@ inside the original virtualenv, but for things like code development, its often 
 be able to quickly destroy your environment, and starting again if you mess things up.
 So developers usually prefer this second option, as you can just destroy the .tox folder, and re-run tox.
 
+
 Once you have activated the virtual environment inside the .tox folder, you would run
 programs from scikit-surgerybard, or scikit-surgeryfred just by typing the program name,
 as they are installed inside the current environment. But for programs in the top
@@ -112,6 +116,20 @@ level, root folder of *this* repository, you would always type:
   python program_name.py
 
 as *this* project itself has not been installed.
+
+
+A Note About Terminals
+----------------------
+
+Windows/Linux/Mac all have different terminals to run commands. Furthermore,
+people will often be familiar with running shell commands inside a terminal
+that is run within their code editor like PyCharm or VS Code.
+
+Here is a list of caveats and proposed work arounds:
+
+* Windows Powershell - restricts use to webcam. Use Anaconda shell, or simple cmd.exe
+* Mac OSX 10.15 and above - restricts access to webcam if using shells launched by PyCharm/VS Code. Use default Terminal application.
+
 
 Jupyter Notebooks
 -----------------
