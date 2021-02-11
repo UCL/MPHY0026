@@ -23,6 +23,7 @@ The tutorial is divided into four sections:
 * Estimating calibration and tracking accuracy (30 minutes)
 * Discussion and writing up results (20 minutes)
 
+
 Learning Objectives
 -------------------
 
@@ -32,6 +33,7 @@ After completing the tutorial, students should be able to:
 * Demonstrate the use of ArUco markers to track an object using SciKit-SurgeryBARD.
 * Perform a pivot calibration using SciKit-SurgeryBARD.
 * Estimate the accuracy of the calibrated tracked pointer.
+
 
 Assumed Knowledge
 -----------------
@@ -43,6 +45,32 @@ Installation
 ------------
 
 Follow the :ref:`PythonSetup` instructions, specifically using Option 2 of the installation instructions.
+
+
+Activate You Environment
+------------------------
+
+If you've followed the :ref:`PythonSetup` instructions, you should have 'activated'
+your python environment in the MPHY0026/.tox folder.
+
+As a reminder, these are the commands that 'activate' the environment
+when your current working direction is the top-level folder of the MPHY0026 repository.
+
+::
+
+    source .tox/py36/bin/activate
+
+
+or if you are a Windows user:
+
+::
+
+    .tox\py36\Scripts\activate
+
+
+This means that your terminal is running the python environment with all the
+right libraries installed. So, make sure you have 'activated' the right environment
+before continuing.
 
 
 Related Tutorials
