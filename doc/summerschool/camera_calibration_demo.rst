@@ -36,10 +36,37 @@ Assumed Knowledge
 
 `SciKit-SurgeryBARD`_ is Python software, it is assumed that pupils have a working Python installation and are able to install packages.
 
+
 Installation
 ------------
 
 Follow the :ref:`PythonSetup` instructions, specifically using Option 2 of the installation instructions.
+
+
+Activate You Environment
+------------------------
+
+If you've followed the :ref:`PythonSetup` instructions, you should have 'activated'
+your python environment in the MPHY0026/.tox folder.
+
+As a reminder, these are the commands that 'activate' the environment
+when your current working direction is the top-level folder of the MPHY0026 repository.
+
+::
+
+    source .tox/py36/bin/activate
+
+
+or if you are a Windows user:
+
+::
+
+    .tox\py36\Scripts\activate
+
+
+This means that your terminal is running the python environment with all the
+right libraries installed. So, make sure you have 'activated' the right environment
+before continuing.
 
 
 Related Tutorials
@@ -105,20 +132,6 @@ Then, check you have the correct parameters set in the configuration file.
   An `OpenCV calibration grid`_, from opencv.org, which is is BSD licensed, shows a 9 (wide) x 6 (high) grid, counting the internal corners.
 
   - Edit the config file to specify the "corners" and the "square size in mm" to match your chessboard.
-
-Now, we can run the main calibration program.
-
-If you've cloned the MPHY0026 repository you should be able to run the following
-command, to activate your virtual environment, assuming your current working
-directory is the root directory of the MPHY0026 repository.
-
-::
-    source .tox/py36/bin/activate
-
-or if you are a Windows user
-
-::
-    .tox\py36\Scripts\activate
 
 The calibration program can now be run with the following command:
 
