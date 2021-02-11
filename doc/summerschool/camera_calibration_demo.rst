@@ -35,18 +35,11 @@ Assumed Knowledge
 -----------------
 
 `SciKit-SurgeryBARD`_ is Python software, it is assumed that pupils have a working Python installation and are able to install packages.
-If this tutorial has been installed as part of the `MPHY0026`_ module, then `SciKit-SurgeryBARD`_ software should have already been installed.
-If not you should be able to install `SciKit-SurgeryBARD`_ using:
 
-::
+Installation
+------------
 
-    pip install scikit-surgerybard
-
-and the source code can be obtained with
-
-::
-
-    git clone https://github.com/UCL/scikit-surgerybard
+Follow the :ref:`PythonSetup` instructions, specifically using Option 2 of the installation instructions.
 
 
 Related Tutorials
@@ -115,22 +108,19 @@ Then, check you have the correct parameters set in the configuration file.
 
 Now, we can run the main calibration program.
 
-If you've cloned the repository you should be able to run the following commands,
-assuming your current working directory is the root directory of the repository.
+If you've cloned the MPHY0026 repository you should be able to run the following
+command, to activate your virtual environment, assuming your current working
+directory is the root directory of the MPHY0026 repository.
 
 ::
-
-    tox
     source .tox/py36/bin/activate
 
 or if you are a Windows user
 
 ::
-
-    tox
     .tox\py36\Scripts\activate
 
-The calibration program can be run with the following command:
+The calibration program can now be run with the following command:
 
 ::
 
