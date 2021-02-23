@@ -47,7 +47,7 @@ If this is not possible it also possible to run SciKit-SurgeryFRED locally with 
     cd scikit-surgeryfred
     tox -e py37
     source .tox/py37/bin/activate
-    pythin main.py
+    python main.py
 
 
 Related Tutorials
@@ -73,7 +73,7 @@ You can watch the SciKit-SurgeryFRED video (Note, this uses an old version of FR
 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/t_6CH5uroYo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-On starting SciKit-SurgeryFRED you should see two images side by side as in :numref:`fred_0` . The pre-operative image on
+On starting SciKit-SurgeryFRED you should see two images side by side as in the image above . The pre-operative image on
 the left has a target identified in red. The idea is to locate the target on the intra-operative image on the right, where we can only see the patient's outline. Locating the target in the intra-operative image is done here using fiducial marker based registration. Mouse clicking on either image will place a fiducial marker at the same location (plus a randomly sampled fiducial localisation error) on each image, defining a point correspondence between the two images.
 
 .. _fred_1:
@@ -95,7 +95,7 @@ Point based registration requires at least three points to work. So keep adding 
 .. figure:: registration_demo/scikit-surgeryfred_3.png
   :width: 100%
 
-  With 3 or more fiducial markers place, SciKit-SurgeryFRED is able to peform a point-based "Procrustes" registration between the two images. Note that the target is now present in the intraoperative image together with a cross hair. Similarly to :numref:`fred_1z`, the cross hair represents the actual position of the target, whereas the red circle is the estimated position using point based registration. The difference between the two centres is the Target Registration Error (TRE), in this case 3.68 mm ("Actual TRE").
+  With 3 or more fiducial markers place, SciKit-SurgeryFRED is able to peform a point-based "Procrustes" registration between the two images. Note that the target is now present in the intraoperative image together with a cross hair. Similarly to the previous zoomed in image, the cross hair represents the actual position of the target, whereas the red circle is the estimated position using point based registration. The difference between the two centres is the Target Registration Error (TRE), in this case 3.68 mm ("Actual TRE").
 
 
 You can add as many marker points as you like and see how the six measures (defined below) in the text boxes change. Placed markers cannot be deleted, but you can restart the registration with a new target by pressing the "New Target" button. 
@@ -128,7 +128,7 @@ Except for the number of fiducial markers the units are in pixels, so any physic
 Perform several registrations
 -----------------------------
 
-Now take around 20 minutes to perform multiple registrations. See what patterns of fiducial markers give low TREs and what patterns give high TREs. Observe how the statistics change as you add more fiducial markers. Each time a registration is performed SciKit-Surgery will store the results in your browser, so do not refresh or restart your browser. You can 
+Now take around 20 minutes to perform multiple registrations. See what patterns of fiducial markers give low TREs and what patterns give high TREs. Observe how the statistics change as you add more fiducial markers. Each time a registration is performed SciKit-SurgeryiFRED will store the results in your browser, so do not refresh or restart your browser. You can 
 download your results at any time by pressing the "Download Results" button. You can also plot them at any time by pressing the "Plot Results" button. Try and generate at least 200 registrations, the results of which will be used in the next section to look for correlations between the different statistics and the actual TRE.
 
 
@@ -149,7 +149,7 @@ There are 6 comma separated numbers. In order these are
 
     actual TRE, actual FRE, expected TRE, expected FRE, expected FLE, number of fiducial markers
 
-You should be able to parse this data and investigate what if any correlations exist between the different data. For convenience SciKit-SurgeryFRED comes with a basic plotting tool, which you can use by pressing the "Plot Results" button, giving you something like :numref:`fred_plots`.
+You should be able to parse this data and investigate what if any correlations exist between the different data. For convenience SciKit-SurgeryFRED comes with a basic plotting tool, which you can use by pressing the "Plot Results" button, giving you something like the image below.
 
 .. _fred_plots:
 .. figure:: registration_demo/plots.png
@@ -162,7 +162,7 @@ suitable test. You can find the Python script we used in the `SciKit-SurgeryFRED
 
 Take some time now to interrogate this data. Some questions to consider;
 
-* Are your results similar to those in :numref:`fred_plots`?
+* Are your results similar to those in the chart above?
 * If you were trying to estimate the actual target registration error, which statistic is of most use?
 * What level of uncertainty would there be in an individual registration?
 * What are the practical implications of using these statistics? For example, while the actual FRE and the number of fiducial markers can always be determined, the other statistics require a prior knowledge of the expected FLE.
@@ -184,11 +184,10 @@ interventions. Here the image guided intervention has been simplified, your job 
 minimise target registration error, then use the knowledge you developed in parts 1 and 2 to adjust the ablation 
 margin to maximise the treatment of the target and minimise damage to healthy tissue. Start by launching the game, by pressing the "Play Game" button. 
 
-You can watch me playing the game in the video below
+You can watch me playing the game in the video below (skip to 7 minutes and 25 seconds).
 
 .. raw:: html
   <iframe width="560" height="315" src="https://www.youtube.com/embed/PaXytDjojOI?t=445" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    
     
 The rules are:
 
