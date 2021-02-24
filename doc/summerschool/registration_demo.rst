@@ -188,7 +188,7 @@ You can watch me playing the game in the video below (skip to 7 minutes and 25 s
 
 .. raw:: html
 
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/PaXytDjojOI?t=445" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/PaXytDjojOI?start=440&end=580" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     
 The rules are:
 
