@@ -47,24 +47,129 @@ There are:
 
 * many image types
 * many things being imaged
-* many artefacts
+* many artifacts like `intensity inhomogeneity <https://core.ac.uk/download/pdf/192793342.pdf>`_, `beam hardening <https://radiopaedia.org/articles/beam-hardening?lang=gb>`_ and artifacts caused by metal.
 
-Add in factors like, user dependent error, and hence:
+In addition, add in factors like, user dependent error, and hence:
 
 * There are many many research papers on segmentation.
 * Even review papers are split into sub-specialities.
 
 
-Traditional Methods
+Pixel-Based Methods
 ^^^^^^^^^^^^^^^^^^^
 
-Impossible to cover here. Most covered in other courses at UCL. Brief discussion?
+While many methods have arguably been superseded in the medical domain
+by methods using machine learning, it is still worth spending
+some time investigating these classical methods, as it gives you an
+appreciation of all the things that can go wrong. Most of the same
+issue can go wrong with machine learning methods too. While machine
+learning can learn more complicated functions than you or I could
+explicitly program, it would be still be foolish to assume that machine
+learning is a panacea for all segmentation issues.
 
-* Thresholding
-* Region growing
-* Texture classification
-* K-Means, EM
-* Atlas based
+Image Thresholding
+~~~~~~~~~~~~~~~~~~
+
+Firsly, here is an introduction to Segmentation from a range of tutorials at
+`Bioimage Analysis <https://www.ibiology.org/techniques/bioimage-analysis/>`_.
+
+While this tutorial refers to biological images, rather than medical
+images, the concepts are the same.
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jLd2I2adQtw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+How does this work in practice for some medical imaging? Here, Dr Clarkson
+gives a short overview:
+
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7OoZDsdL8cA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+Once you start thinking about individual pixels in the image, it's important to
+appreciate the histogram of image intensities. This video from the `Udacity YouTube channel <https://www.youtube.com/watch?v=6pX3II2eVs0>`_,
+gives a useful introduction:
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6pX3II2eVs0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+Following from simple thresholding then, and your understanding of the image histogram,
+a method that seeks to automatically pick nice thresholds is `Otsu's method <https://en.wikipedia.org/wiki/Otsu%27s_method>`_.
+In the following video, Dr Clarkson gives an overview of how it might apply in medical imaging:
+
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6o-RxuCPNiI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+Region growing
+~~~~~~~~~~~~~~
+
+One of the problems with `image thresholding <https://en.wikipedia.org/wiki/Thresholding_(image_processing)>`_,
+is that it's a global method, with no concept of connectivity. In other words, the
+algorithms do not consider that if adjacent pixels have the same intensity, they
+are likely to be part of the same object. Region growing algorithms
+aim to start from a seed point, and iteratively add pixels to the segmented
+volume, based on connectivity, and various heuristics, like whether or
+not adjacent pixels are within a close enough intensity range.
+
+Here, is a demonstration of `region growing algorithms <https://en.wikipedia.org/wiki/Region_growing>`_:
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/T-iDHz2ZHzg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+K-Means
+~~~~~~~
+
+K-Means is a common method, not just in image-processing, but in data-clustering in general.
+Here is an introduction from the wonderful `Computerphile <https://www.youtube.com/user/Computerphile>`_ channel:
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yR7k19YBqiw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Most general descriptions of K-means illustrate the algorithm on a 2D scatter plot.
+In a 2D scatter plot, there are two variables of interest, so each of the K-means
+is a vector of length 2. However, when used in image segmentation, of a single image,
+a single variable is used to denote the image intensity of each pixel.
+In the 1D case, you are essentially doing K-means, looking for K values
+representing peaks on the histogram of image intensities.
+
+
+Atlas-Based methods
+^^^^^^^^^^^^^^^^^^^
+
+Another class of methods, fairly popular for a while in medical imaging, was that of
+atlas-based methods. An atlas is a reference image that has been accurately segmented,
+that you can consider to be a reference or template for all other segmentations. The
+atlas may be made from a single image, or from some process of averaging/combining
+a large number of scans and extracting an average image and segmenting that.
+The segmentation is often done manually, as this process is used to bootstrap
+the segmentation of a large database of other images.
+
+For a single image atlas, the general process could be something like:
+
+* Identify a reference image. e.g. a healthy control subject of average age.
+* Manually segment the image, as accurately as possible.
+* For a new image that needs to be segmented, first register (align) it to the atlas
+* Copy the atlas labels onto the image that needs segmenting
+
+As [Cabezas2011]_ shows, it was a big field a while ago. In the following video,
+`Prof. Paul Yushkevich <https://www.med.upenn.edu/apps/faculty/index.php/g275/p2693923>`_
+who worked on `ITK Snap <http://www.itksnap.org/pmwiki/pmwiki.php>`_, one of the most
+popular segmentation tools, gives an overview of Atlas Based Segmentation methods.
+
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XB1XKj5QdDc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 Model-Based Methods
