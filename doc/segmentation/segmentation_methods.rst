@@ -47,24 +47,131 @@ There are:
 
 * many image types
 * many things being imaged
-* many artefacts
+* many artifacts like `intensity inhomogeneity <https://core.ac.uk/download/pdf/192793342.pdf>`_, `beam hardening <https://radiopaedia.org/articles/beam-hardening?lang=gb>`_ and artifacts caused by metal.
 
-Add in factors like, user dependent error, and hence:
+In addition, add in factors like, user dependent error, and hence:
 
 * There are many many research papers on segmentation.
 * Even review papers are split into sub-specialities.
 
 
-Traditional Methods
+Pixel-Based Methods
 ^^^^^^^^^^^^^^^^^^^
 
-Impossible to cover here. Most covered in other courses at UCL. Brief discussion?
+While many methods have arguably been superseded in the medical domain
+by methods using machine learning, it is still worth spending
+some time investigating these classical methods, as it gives you an
+appreciation of all the things that can go wrong. Most of the same
+issue can go wrong with machine learning methods too. While machine
+learning can learn more complicated functions than you or I could
+explicitly program, it would be still be foolish to assume that machine
+learning is a panacea for all segmentation issues.
 
-* Thresholding
-* Region growing
-* Texture classification
-* K-Means, EM
-* Atlas based
+
+Image Thresholding
+~~~~~~~~~~~~~~~~~~
+
+Firsly, here is an introduction to Segmentation from a range of tutorials at
+`Bioimage Analysis <https://www.ibiology.org/techniques/bioimage-analysis/>`_.
+
+While this tutorial refers to biological images, rather than medical
+images, the concepts are the same.
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jLd2I2adQtw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+How does this work in practice for some medical imaging? Here, Dr Clarkson
+gives a short overview:
+
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7OoZDsdL8cA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+Once you start thinking about individual pixels in the image, it's important to
+appreciate the histogram of image intensities. This video from the `Udacity YouTube channel <https://www.youtube.com/watch?v=6pX3II2eVs0>`_,
+gives a useful introduction:
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6pX3II2eVs0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+Following from simple thresholding then, and your understanding of the image histogram,
+a method that seeks to automatically pick nice thresholds is `Otsu's method <https://en.wikipedia.org/wiki/Otsu%27s_method>`_.
+In the following video, Dr Clarkson gives an overview of how it might apply in medical imaging:
+
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/6o-RxuCPNiI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+Region growing
+~~~~~~~~~~~~~~
+
+One of the problems with `image thresholding <https://en.wikipedia.org/wiki/Thresholding_(image_processing)>`_,
+is that it's a global method, with no concept of connectivity. In other words, the
+algorithms do not consider that if adjacent pixels have the same intensity, they
+are likely to be part of the same object. Region growing algorithms
+aim to start from a seed point, and iteratively add pixels to the segmented
+volume, based on connectivity, and various heuristics, like whether or
+not adjacent pixels are within a close enough intensity range.
+
+Here, is a demonstration of `region growing algorithms <https://en.wikipedia.org/wiki/Region_growing>`_:
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/T-iDHz2ZHzg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+K-Means
+~~~~~~~
+
+K-Means is a common method, not just in image-processing, but in data-clustering in general.
+Here is an introduction from the wonderful `Computerphile <https://www.youtube.com/user/Computerphile>`_ channel:
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yR7k19YBqiw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Most general descriptions of K-means illustrate the algorithm on a 2D scatter plot.
+In a 2D scatter plot, there are two variables of interest, so each of the K-means
+is a vector of length 2. However, when used in image segmentation, of a single image,
+a single variable is used to denote the image intensity of each pixel.
+In the 1D case, you are essentially doing K-means, looking for K values
+representing peaks on the histogram of image intensities.
+
+
+Atlas-Based methods
+^^^^^^^^^^^^^^^^^^^
+
+Another class of methods, fairly popular for a while in medical imaging, was that of
+atlas-based methods. An atlas is a reference image that has been accurately segmented,
+that you can consider to be a reference or template for all other segmentations. The
+atlas may be made from a single image, or from some process of averaging/combining
+a large number of scans and extracting an average image and segmenting that.
+The segmentation is often done manually, as this process is used to bootstrap
+the segmentation of a large database of other images.
+
+For a single image atlas, the general process could be something like:
+
+* Identify a reference image. e.g. a healthy control subject of average age.
+* Manually segment the image, as accurately as possible.
+* For a new image that needs to be segmented, first register (align) it to the atlas
+* Copy the atlas labels onto the image that needs segmenting
+
+As [Cabezas2011]_ shows, it was a big field a while ago. In the following video,
+`Prof. Paul Yushkevich <https://www.med.upenn.edu/apps/faculty/index.php/g275/p2693923>`_
+who worked on `ITK Snap <http://www.itksnap.org/pmwiki/pmwiki.php>`_, one of the most
+popular segmentation tools, gives an overview of Atlas Based Segmentation methods.
+
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XB1XKj5QdDc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 Model-Based Methods
@@ -77,22 +184,68 @@ The main categories of model-based methods are:
 * Statistical Shape Models (SSM) (next page and :ref:`Workshop3SSM`).
 
 
-More Recent Methods
-^^^^^^^^^^^^^^^^^^^
+Neural Network Based Methods
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Supervised deep-learning
-* Unsupervised deep-learning
-* AI-assisted manual annotation (`MITK + NVidia Clara <https://www.youtube.com/watch?v=T0Pjki4vXx0>`_).
+In recent years, since the `2012 ImageNet competition <https://en.wikipedia.org/wiki/ImageNet>`_ for example,
+machine learning and specifically deep learning have had great success at many computer vision tasks,
+including image segmentation, which in the deep learning literature is called semantic segmentation.
+
+However, this simply cannot be a course on deep learning, or semantic segmentation. In
+this section of the notes, we just provide links to external resources that would give
+you an overview of how a neural network can be used to segment an image.
 
 
-Difficult For CAS?
-^^^^^^^^^^^^^^^^^^
+Convolutional Neural Networks
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+What to put in this section, as it could be a whole lifetime of study!
+
+Here follows a list of resources that are useful to get up-to-speed with using Neural Networks.
+
+* `A Keras tutorial from DataCamp <https://www.datacamp.com/community/tutorials/deep-learning-python>`_ illustrates what a neuron is.
+* `A Keras tutorial on semantic segmentation <https://divamgupta.com/image-segmentation/2019/06/06/deep-learning-semantic-segmentation-keras.html>`_ as an introduction to segmentation.
+* The `Deep Learning <https://www.deeplearningbook.org/>`_ book.
+* `Stanford University cs231n course is popular <http://cs231n.stanford.edu/>`_
+* `Coursera Deep Learning Specialization <https://www.coursera.org/specializations/deep-learning>`_
+* `TensorFlow tutorials <https://www.tensorflow.org/tutorials>`_
+* `MICCAI Education Challenge resources <http://www.miccai.org/education/material/>`_
+
+To get started with your first network is not too hard. For example,
+Dr Clarkson coded up a `UNet here <https://github.com/UCL/scikit-surgerytf/blob/master/sksurgerytf/models/rgb_unet.py>`_,
+as part of his own learning process. But the real trick to "getting good", is to practice on real problems.
+So, its not something you can just read. You need a project, and to be actively doing it.
+
+
+Combining Neural Networks and Manual Annotation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Medical Images are still difficult to segment, even with the power of Artificial Intelligence
+and Deep Neural Networks. This is mainly due to a relative lack of data. In computer vision
+for example, algorithms can be trained on millions of images, but in the medical community,
+we might be dealing with only 100's or at best 1000's of images.
+
+So, there is still a justification for training a neural network to partially segment
+things, and combining the network with manual input from the user for a
+manually-guided + AI hybrid.
+
+This is all a research topic at the moment, as even large vendors are
+grappling with how to deploy these clinical examples. But you can download
+and try `MITK with NVIDIA's Clara platform <https://www.youtube.com/watch?v=T0Pjki4vXx0>`_
+to get an understanding of the idea.
+
+
+Specific Challenges for CAS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Segmentation has additional problems that are specific to Computer Assisted Surgery (CAS):
 
 * Abnormal growths, so different shapes in training set compared to test set, or normal population
 * Post-op, metal artefacts, missing sections of anatomy
 * Low volume cases (one-by-one, each case different)
 * Class imbalance (lots of examples of good/healthy population, compared to few in diseased groups)
-* Often end up with manual post-processing
+
+As a consequence, you still often end up with manual post-processing
 
 
 What Tools Can I Use?
@@ -118,19 +271,23 @@ with much larger datasets?
 Segmentation of Pre-Op data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Once you have segmented/labelled/outlined:
+Once you have segmented/labelled/outlined, you can:
 
-* Measure size/volume/length pre-operatively
-* Plan operation
-* Intra-operatively, visualise where it is. (More on visualisation later).
+* Use segmented models to measure size/volume/length pre-operatively.
+* Plan operation in terms of what to target, and what to avoid.
+* Intra-operatively, visualise where the target is. (More on visualisation later).
 
 
 Segmentation of Intra-Op data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Video segmentation: e.g. Liver/Not-Liver, use to track specific objects
-* Used to filter points: e.g. surface reconstruction only on things that are liver
-* Ultrasound measurements: ??
+Segmentation can also be used intra-operatively, live, in real-time to aid
+things like computer vision based algorithms.
+
+For example:
+
+* Video segmentation: e.g. in laparoscopic video, identify Liver/Not-Liver, use to track specific objects
+* Used segmentation to filter points: e.g. having identified Liver/Not-Liver, only do surface reconstruction on things that are Liver.
 
 So, the use-cases pre-operatively, and intra-operatively are very different.
 

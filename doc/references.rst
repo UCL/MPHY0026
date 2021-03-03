@@ -63,6 +63,8 @@ Segmentation
 
 .. [Heimann2009] Tobias Heimann, Hans-Peter Meinzer, **"Statistical shape models for 3D medical image segmentation"**, http://dx.doi.org/10.1016/j.media.2009.05.004
 
+.. [Cabezas2011] Mariano Cabezasa, Arnau Oliver, Xavier Lladó, Jordi Freixenet, Meritxell Bach Cuadrab, **"A review of atlas-based segmentation for magnetic resonance brain images"**,  https://doi.org/10.1016/j.cmpb.2011.07.015
+
 .. [Shlens2014] Jonathon Schlens, **"A Tutorial on Principal Component Analysis"**, https://https://arxiv.org/abs/1404.1100
 
 .. [Ronneberger2015] Olaf Ronneberger, Philipp Fischer and Thomas Brox, **"U-Net: Convolutional Networks for Biomedical Image Segmentation"**, http://dx.doi.org/10.1007/978-3-319-24574-4_28
