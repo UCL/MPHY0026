@@ -67,6 +67,7 @@ learning can learn more complicated functions than you or I could
 explicitly program, it would be still be foolish to assume that machine
 learning is a panacea for all segmentation issues.
 
+
 Image Thresholding
 ~~~~~~~~~~~~~~~~~~
 
@@ -125,6 +126,7 @@ Here, is a demonstration of `region growing algorithms <https://en.wikipedia.org
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/T-iDHz2ZHzg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+
 K-Means
 ~~~~~~~
 
@@ -182,22 +184,68 @@ The main categories of model-based methods are:
 * Statistical Shape Models (SSM) (next page and :ref:`Workshop3SSM`).
 
 
-More Recent Methods
-^^^^^^^^^^^^^^^^^^^
+Neural Network Based Methods
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Supervised deep-learning
-* Unsupervised deep-learning
-* AI-assisted manual annotation (`MITK + NVidia Clara <https://www.youtube.com/watch?v=T0Pjki4vXx0>`_).
+In recent years, since the `2012 ImageNet competition <https://en.wikipedia.org/wiki/ImageNet>`_ for example,
+machine learning and specifically deep learning have had great success at many computer vision tasks,
+including image segmentation, which in the deep learning literature is called semantic segmentation.
+
+However, this simply cannot be a course on deep learning, or semantic segmentation. In
+this section of the notes, we just provide links to external resources that would give
+you an overview of how a neural network can be used to segment an image.
 
 
-Difficult For CAS?
-^^^^^^^^^^^^^^^^^^
+Convolutional Neural Networks
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+What to put in this section, as it could be a whole lifetime of study!
+
+Here follows a list of resources that are useful to get up-to-speed with using Neural Networks.
+
+* `A Keras tutorial from DataCamp <https://www.datacamp.com/community/tutorials/deep-learning-python>`_ illustrates what a neuron is.
+* `A Keras tutorial on semantic segmentation <https://divamgupta.com/image-segmentation/2019/06/06/deep-learning-semantic-segmentation-keras.html>`_ as an introduction to segmentation.
+* The `Deep Learning <https://www.deeplearningbook.org/>`_ book.
+* `Stanford University cs231n course is popular <http://cs231n.stanford.edu/>`_
+* `Coursera Deep Learning Specialization <https://www.coursera.org/specializations/deep-learning>`_
+* `TensorFlow tutorials <https://www.tensorflow.org/tutorials>`_
+* `MICCAI Education Challenge resources <http://www.miccai.org/education/material/>`_
+
+To get started with your first network is not too hard. For example,
+Dr Clarkson coded up a `UNet here <https://github.com/UCL/scikit-surgerytf/blob/master/sksurgerytf/models/rgb_unet.py>`_,
+as part of his own learning process. But the real trick to "getting good", is to practice on real problems.
+So, its not something you can just read. You need a project, and to be actively doing it.
+
+
+Combining Neural Networks and Manual Annotation
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Medical Images are still difficult to segment, even with the power of Artificial Intelligence
+and Deep Neural Networks. This is mainly due to a relative lack of data. In computer vision
+for example, algorithms can be trained on millions of images, but in the medical community,
+we might be dealing with only 100's or at best 1000's of images.
+
+So, there is still a justification for training a neural network to partially segment
+things, and combining the network with manual input from the user for a
+manually-guided + AI hybrid.
+
+This is all a research topic at the moment, as even large vendors are
+grappling with how to deploy these clinical examples. But you can download
+and try `MITK with NVIDIA's Clara platform <https://www.youtube.com/watch?v=T0Pjki4vXx0>`_
+to get an understanding of the idea.
+
+
+Specific Challenges for CAS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Segmentation has additional problems that are specific to Computer Assisted Surgery (CAS):
 
 * Abnormal growths, so different shapes in training set compared to test set, or normal population
 * Post-op, metal artefacts, missing sections of anatomy
 * Low volume cases (one-by-one, each case different)
 * Class imbalance (lots of examples of good/healthy population, compared to few in diseased groups)
-* Often end up with manual post-processing
+
+As a consequence, you still often end up with manual post-processing
 
 
 What Tools Can I Use?
@@ -223,19 +271,23 @@ with much larger datasets?
 Segmentation of Pre-Op data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Once you have segmented/labelled/outlined:
+Once you have segmented/labelled/outlined, you can:
 
-* Measure size/volume/length pre-operatively
-* Plan operation
-* Intra-operatively, visualise where it is. (More on visualisation later).
+* Use segmented models to measure size/volume/length pre-operatively.
+* Plan operation in terms of what to target, and what to avoid.
+* Intra-operatively, visualise where the target is. (More on visualisation later).
 
 
 Segmentation of Intra-Op data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-* Video segmentation: e.g. Liver/Not-Liver, use to track specific objects
-* Used to filter points: e.g. surface reconstruction only on things that are liver
-* Ultrasound measurements: ??
+Segmentation can also be used intra-operatively, live, in real-time to aid
+things like computer vision based algorithms.
+
+For example:
+
+* Video segmentation: e.g. in laparoscopic video, identify Liver/Not-Liver, use to track specific objects
+* Used segmentation to filter points: e.g. having identified Liver/Not-Liver, only do surface reconstruction on things that are Liver.
 
 So, the use-cases pre-operatively, and intra-operatively are very different.
 
