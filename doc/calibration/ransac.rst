@@ -117,15 +117,15 @@ scikit-surgery provides the main algorithms:
 .. code::
 
     # Note that the scikit-surgery libraries provide pivot and RANSAC.
-    import sksurgerycore.algorithms.pivot as p   # AOS Pivot algorithm and a RANSAC version.
+    import sksugerycalibration.algorithms.pivot as p   # AOS Pivot algorithm and a RANSAC version.
     import sksurgerycore.transforms.matrix as m  # For creating 4x4 matrices.
 
-so the algorithms are `here <https://github.com/UCL/scikit-surgerycore/-/blob/master/sksurgerycore/algorithms/pivot.py>`_
+so the algorithms are `here <https://github.com/UCL/scikit-surgerycalibration/blob/master/sksurgerycalibration/algorithms/pivot.py>`_
 and the matrix utilities are `here <https://github.com/UCL/scikit-surgerycore/-/blob/master/sksurgerycore/transforms/matrix.py>`_.
 
 and can be installed with:
 
 .. code::
 
-    pip install scikit-surgerycore
+    pip install scikit-surgerycalibration
 
