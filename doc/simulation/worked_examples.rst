@@ -14,12 +14,12 @@ Notebooks
 
 In this course, we have the following Jupyter Notebooks as code examples:
 
-* `How to run our notebooks <notebooks/running_notebooks.html>`_
-* `Understand coordinate systems <notebooks/coordinate_systems.html>`_
-* `A simple Point-Based Registration example <notebooks/point_based_registration.html>`_
-* `How to simulate or understand the performance of optical tracking <notebooks/simulation_optical_tracking.html>`_
-* `An example of a simulation of laparoscopic liver surgery <notebooks/lap_liver_sim.html>`_.
-* To check your understanding, try completing this `TRE Worksheet <notebooks/TRE_Worksheet>`_.
+* `How to run our notebooks <../notebooks/running_notebooks.html>`_
+* `Understand coordinate systems <../notebooks/coordinate_systems.html>`_
+* `A simple Point-Based Registration example <../notebooks/point_based_registration.html>`_
+* `How to simulate or understand the performance of optical tracking <../notebooks/simulation_optical_tracking.html>`_
+* `An example of a simulation of laparoscopic liver surgery <../notebooks/lap_liver_sim.html>`_.
+* To check your understanding, try completing this `TRE Worksheet <../notebooks/TRE_Worksheet>`_.
 
 These notebooks provide examples of different ways of simulating the performance of different components.
 
@@ -97,7 +97,7 @@ laparoscope camera coordinate system, you could just ignore projection geometry 
 the camera coordinate system is aligned with the marker coordinate system, therefore the hand-eye
 transformation is just a translation of 50cm. Then you can treat the laparoscope like a pointer.
 
-See: `How to simulate or understand the performance of optical tracking <notebooks/simulation_optical_tracking.html>`_
+See: `How to simulate or understand the performance of optical tracking <../notebooks/simulation_optical_tracking.html>`_
 
 You could do similarly for the ultrasound. Effectively, this would give you two separate measures
 for two separate devices. It would not include the effect of combining tracking errors.
@@ -135,7 +135,7 @@ The above example, where you take a point in the LUS image, and project it onto 
 requires a complete simulation of all system parameters. It is probably beyond the scope
 of the coursework, but would definitely be worth doing if that is your area of research.
 
-See: `An example of a simulation of laparoscopic liver surgery <notebooks/lap_liver_sim.html>`_.
+See: `An example of a simulation of laparoscopic liver surgery <../notebooks/lap_liver_sim.html>`_.
 
 
 [Hu2016]_: Freehand Ultrasound Prostate Biopsy
@@ -169,7 +169,7 @@ Then imagine that once the MR is registered to the US 3D reference volume, the u
 US probe around, and needs to locate a target point that is a certain distance from the
  US handle. This would then US probe analagous to a pointer.
 
-See: `How to simulate or understand the performance of optical tracking <notebooks/simulation_optical_tracking.html>`_
+See: `How to simulate or understand the performance of optical tracking <../notebooks/simulation_optical_tracking.html>`_
 
 * Or additionally asses the Hand-Eye calibration of US probe
 
