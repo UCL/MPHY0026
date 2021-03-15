@@ -19,7 +19,7 @@ In this course, we have the following Jupyter Notebooks as code examples:
 * `A simple Point-Based Registration example <../notebooks/point_based_registration.html>`_
 * `How to simulate or understand the performance of optical tracking <../notebooks/simulation_optical_tracking.html>`_
 * `An example of a simulation of laparoscopic liver surgery <../notebooks/lap_liver_sim.html>`_.
-* To check your understanding, try completing this `TRE Worksheet <../notebooks/TRE_Worksheet>`_.
+* To check your understanding, try completing this `TRE Worksheet <../notebooks/TRE_Worksheet.html>`_.
 
 These notebooks provide examples of different ways of simulating the performance of different components.
 
