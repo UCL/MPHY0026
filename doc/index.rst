@@ -75,6 +75,7 @@ Contents
   augmented/augmented_reality.rst
   interaction/visualisation_and_multimodal_interaction.rst
   hci/hci.rst
+  simulation/simulation.rst
   references.rst
   additional_resources.rst
   setup/setup.rst
