@@ -1,3 +1,5 @@
+.. _CalibrationSection:
+
 Calibration
 ===========
 
