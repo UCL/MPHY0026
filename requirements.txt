@@ -5,6 +5,7 @@
 numpy
 scipy
 ipykernel
+jupyter
 nbsphinx
 matplotlib
 opencv-contrib-python
