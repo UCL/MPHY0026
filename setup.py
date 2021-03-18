@@ -55,6 +55,7 @@ setup(
         'numpy>=1.11',
         'scipy',
         'ipykernel',
+        'jupyter',
         'nbsphinx',
         'matplotlib',
         'opencv-contrib-python',
@@ -65,7 +66,8 @@ setup(
         'scikit-surgerypclcpp',
         'scikit-surgeryopencvcpp',
         'scikit-surgeryfred',
-        'scikit-surgerybard'
+        'scikit-surgerybard',
+        'scikit-surgerycalibration'
     ],
 
     entry_points={
