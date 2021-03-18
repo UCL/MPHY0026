@@ -45,5 +45,4 @@ def test_pcl_icp():
                                                    'tests/data/pelvis/Tracker_Surface_Scan.txt',
                                                    initialise_4x4_file='tests/data/pelvis/Tracker_to_pelvis_cropped.txt')
 
-    assert fre3 < fre1
     assert np.allclose(transform2, transform3, rtol=0.1, atol=0.1)
