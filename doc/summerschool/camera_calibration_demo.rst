@@ -321,7 +321,7 @@ Here's some development suggestions:
 .. _`Medical Image Computing Summer School`: https://medicss.cs.ucl.ac.uk/
 .. _`MPHY0026`: https://mphy0026.readthedocs.io/en/latest/
 .. _`Matlab Tutorial`: https://www.mathworks.com/help/vision/ug/camera-calibration.html
-.. _`OpenCV Tutorial`: https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_calib3d/py_calibration/py_calibration.html
+.. _`OpenCV Tutorial`: https://medium.com/vacatronics/3-ways-to-calibrate-your-camera-using-opencv-and-python-395528a51615
 .. _`Zhang's method`: http://dx.doi.org/10.1109/34.888718
 .. _`Pinhole Camera Model`: https://en.wikipedia.org/wiki/Pinhole_camera_model
 .. _`6mm calibration target`: https://github.com/UCL/scikit-surgerybard/blob/master/data/calibrationGrids/calibrationgrid-6mm.pdf
