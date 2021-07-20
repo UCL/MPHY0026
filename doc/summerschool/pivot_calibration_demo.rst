@@ -163,7 +163,7 @@ SciKit-SurgeryBARD uses a configuration file to set various parameters and the l
         "tag_width" : 32
     },
     "interaction": {
-        "keyboard": true,
+        "keyboard": true
     },
     "out path" : "pointer_positions"
     }
