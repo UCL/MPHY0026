@@ -30,7 +30,7 @@ are the essential details:
  * Sessions:
 
    * Term 2, Thursdays, 10:00-13:00, not including reading week.
-   * Online for 2021.
+   * Essentially, aiming for Face-to-Face in 2022, COVID permitting.
 
 
 How This Course Is Run
