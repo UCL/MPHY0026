@@ -51,6 +51,11 @@ Application Examples
 
 .. [Prevost2019] Gian Andrea Prevost, Benjamin Eigl, Iwan Paolucci, Tobias Rudolph, Matthias Peterhans, Stefan Weber, Guido Beldi, Daniel Candinas, Anja Lachenmayer, **"Efficiency, Accuracy and Clinical Applicability of a New Image-Guided Surgery System in 3D Laparoscopic Liver Surgery"**, https://doi.org/10.1007/s11605-019-04395-7
 
+.. [Luo2020] Huoling Luo, Dalong Yin, Shugeng Zhang, Deqiang Xiao, Baochun He, Fanzheng Meng, Yanfang Zhang, Wei Cai, Shenghao He, Wenyu Zhang, Qingmao Hu, Hongrui Guo, Shuhang Liang, Shuo Zhou, Shuxun Liu, Linmao Sun, Xiao Guo, Chihua Fang, Lianxin Liu, Fucang Jia, **"Augmented reality navigation for liver resection with a stereoscopic laparoscope"**, https://doi.org/10.1016/j.cmpb.2019.105099
+
+.. [Pelanis2021] Egidijus Pelanis, Andrea Teatini, Benjamin Eigl, Alois Regensburger, Amilcar Alzaga, Rahul Prasanna Kumar, Tobias Rudolph, Davit L. Aghayan, Carina Riediger, Niclas Kvarnström, Ole Jakob Elle, Bjørn Edwin, **"Evaluation of a novel navigation platform for laparoscopic liver surgery with organ deformation compensation using injected fiducials"**, https://doi.org/10.1016/j.media.2020.101946
+
+.. [Ivashchenko2021] Oleksandra V. Ivashchenko, Koert F.D. Kuhlmann, Ruben van Veen, Bas Pouw, Niels F. M. Kok, Nikie J. Hoetjes, Jasper N. Smit, Elisabeth G. Klompenhouwer, Jasper Nijkamp, Theodoor J. M.Ruers, **"CBCT-based navigation system for open liver surgery: Accurate guidance toward mobile and deformable targets with a semi-rigid organ approximation and electromagnetic tracking of the liver"**, https://doi.org/10.1002/mp.14825
 
 Imaging
 -------
