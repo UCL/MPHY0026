@@ -7,13 +7,12 @@ Papers
 ^^^^^^
 
 We studied two examples earlier. The point is, that by the time you have
-done the system calibration, the necessary image modalities are aligned.
+done the system calibration, the necessary image modalities are aligned by
+definition, or by the design of the calibration process. For example,
+this means that there is no user interaction necessary in the operating room.
 
 * Intra-op CT to laparoscopic video, as in [Feuerstein2008]_.
 * Intra-op US, to laparoscopic video, as in [Kang2014]_.
-
-For the sake of brevity, we will omit this for now, and you may revisit it after
-the lectures on calibration.
 
 
 Examples - Brainlab, Intra-op to Pre-op imaging using calibration device
