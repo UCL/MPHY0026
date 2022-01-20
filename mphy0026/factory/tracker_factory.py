@@ -31,7 +31,7 @@ def create_tracker(tracker_type, pointer, reference):
         tracker = at.ArUcoTracker({})
         tracker.start_tracking()
     else:
-        tracker_config = dict()
+        tracker_config = {}
         tracker_config['tracker type'] = tracker_type
         tracker_config['use quaternions'] = False
 
