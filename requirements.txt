@@ -9,6 +9,7 @@ jupyter
 nbsphinx
 matplotlib
 opencv-contrib-python
+scikit-surgeryimage<=0.9.1
 scikit-surgerycore
 scikit-surgeryvtk
 scikit-surgerynditracker
