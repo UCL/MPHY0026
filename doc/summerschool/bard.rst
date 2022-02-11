@@ -97,10 +97,14 @@ home, or for distance learning.
 
 These tutorials are:
 
-  - :ref:`SummerSchoolCameraCalibration`
-  - :ref:`SummerSchoolPivotCalibration`
-  - :ref:`FidRegistrationTutorial`
-  - :ref:`SummerSchoolOverlay`
+.. toctree::
+  :numbered:
+  :maxdepth: 1
+
+  camera_calibration_demo.rst
+  pivot_calibration_demo.rst
+  registration_demo.rst
+  overlay_demo.rst
 
 Have fun!
 
