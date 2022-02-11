@@ -9,28 +9,18 @@ This process consists in placing the surgical instrument in a tracked template w
 Then the spatial relationship can be found by acquiring one or more sets of tracking data, tracking both objects at the same time.
 
 .. figure:: cascination_template_1.jpg
-  :alt: Template-based calibration on the CAScination system. Position 1.
+  :alt: Template-based calibration on the CAScination system.
   :width: 300
-  
-  Template-based calibration on the `CAScination <https://www.cascination.com/>`_ system. Position 1. In this picture the CASCination template does not have silver tracking balls on, but you can still see the pins.
 
-.. figure:: cascination_template_2.jpg
-  :alt: Template-based calibration on the CAScination system. Position 2.
-  :width: 300
-  
-  Template-based calibration on the `CAScination <https://www.cascination.com/>`_ system. Position 2. In this picture the CASCination template does not have silver tracking balls on, but you can still see the pins.
+  Template-based calibration on the `CAScination <https://www.cascination.com/>`_ system.
+
 
 .. figure:: medtronic_template_1.jpg
-  :alt: Template-based calibration on the Medtronic Bucholz Freehand system. Position 1.
+  :alt: Template-based calibration on the Medtronic Bucholz Freehand system.
   :width: 300
-  
-  Template-based calibration on the `Medtronic Bucholz Freehand <https://www.medtronic.com/uk-en/index.html>`_ system. Position 1.
 
-.. figure:: medtronic_template_2.jpg
-  :alt: Template-based calibration on the Medtronic Bucholz Freehand system. Position 2.
-  :width: 300
-  
-  Template-based calibration on the `Medtronic Bucholz Freehand <https://www.medtronic.com/uk-en/index.html>`_. Position 2.
+  Template-based calibration on the `Medtronic Bucholz Freehand <https://www.medtronic.com/uk-en/index.html>`_ system, position 1.
+
 
 The following video shows how the calibration in the CAScination system is performed:
 
