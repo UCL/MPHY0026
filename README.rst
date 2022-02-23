@@ -11,8 +11,8 @@ MPHY0026: Computer Assisted Surgery and Therapy
    :target: https://github.com/UCL/MPHY0026/actions
    :alt: GitHub Actions CI status
 
-.. image:: https://readthedocs.org/projects/MPHY0026/badge/?version=latest
-    :target: http://MPHY0026.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/mphy0026/badge/?version=latest
+    :target: http://mphy0026.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
 
 
@@ -87,11 +87,11 @@ Supported by `Wellcome`_ and `EPSRC`_.
 .. _`source code repository`: https://github.com/UCL/MPHY0026
 .. _`Documentation`: https://MPHY0026.readthedocs.io
 .. _`Read The Docs`: https://MPHY0026.readthedocs.io
-.. _`SNAPPY`: https://github.com/UCL/scikit-surgery
+.. _`SNAPPY`: https://github.com/SciKit-Surgery
 .. _`University College London (UCL)`: http://www.ucl.ac.uk/
 .. _`Wellcome`: https://wellcome.ac.uk/
 .. _`EPSRC`: https://www.epsrc.ac.uk/
 .. _`contributing guidelines`: https://github.com/UCL/MPHY0026/blob/master/CONTRIBUTING.rst
 .. _`license file`: https://github.com/UCL/MPHY0026/blob/master/LICENSE
-.. _`SNAPPY Tutorial`: https://snappytutorial02.readthedocs.io/en/latest/
-.. _`Python Template`: https://github.com/UCL/PythonTemplate
+.. _`SNAPPY Tutorial`: https://scikit-surgerytutorial02.readthedocs.io/en/latest/
+.. _`Python Template`: https://github.com/SciKit-Surgery/PythonTemplate

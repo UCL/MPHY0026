@@ -43,7 +43,7 @@ If this is not possible it also possible to run SciKit-SurgeryFRED locally with 
 
 :: 
 
-    git clone https://github.com/UCL/scikit-surgeryfred
+    git clone https://github.com/SciKit-Surgery/scikit-surgeryfred
     cd scikit-surgeryfred
     tox -e py37
     source .tox/py37/bin/activate
@@ -213,7 +213,7 @@ I would be grateful for any comments on the game or tutorial. You can `email me`
  
 .. _`SciKit-Surgery`: http:/scikit-surgery.org/
 .. _`Medical Image Computing Summer School`: https://medicss.cs.ucl.ac.uk/
-.. _`SciKit-SurgeryFRED`: https://github.com/UCL/scikit-surgeryfred
+.. _`SciKit-SurgeryFRED`: https://github.com/SciKit-Surgery/scikit-surgeryfred
 .. _`MPHY0026`: https://mphy0026.readthedocs.io/en/latest/
 .. _`SciKit-SurgeryBARD`: https://scikit-surgerybard.readthedocs.io/en/latest/02_4_Register_And_Ovelay.html
 .. _`email me`: s.thompson@ucl.ac.uk
