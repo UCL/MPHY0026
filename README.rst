@@ -11,8 +11,8 @@ MPHY0026: Computer Assisted Surgery and Therapy
    :target: https://github.com/UCL/MPHY0026/actions
    :alt: GitHub Actions CI status
 
-.. image:: https://readthedocs.org/projects/MPHY0026/badge/?version=latest
-    :target: http://MPHY0026.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/mphy0026/badge/?version=latest
+    :target: http://mphy0026.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
 
 
