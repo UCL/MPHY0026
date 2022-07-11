@@ -93,7 +93,6 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
         self.vtk_overlay_window._Iren.AddObserver("EndInteractionEvent",
                                                   interactionChange)
 
-    # pylint:disable=no-self-use
     def show_controls_dialog(self):
         """."""
         dialog = QtWidgets.QMessageBox()

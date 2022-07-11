@@ -18,8 +18,8 @@ from sksurgerybard.algorithms.bard_config_algorithms import \
 from sksurgeryvtk.widgets.vtk_overlay_window import VTKOverlayWindow
 import sksurgeryvtk.camera.vtk_camera_model as cm
 
-# pylint: disable=too-many-branches, too-many-instance-attributes
-
+# pylint: disable=too-many-branches, too-many-instance-attributes, no-member
+# pylint:disable=too-many-function-args, unbalanced-tuple-unpacking
 class ChessboardOverlay():
     """Chessboard Overlay App"""
     def __init__(self, configuration, calib_dir, overlay_offset):
