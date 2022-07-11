@@ -11,6 +11,7 @@ import sksurgeryvtk.widgets.vtk_overlay_window as ow
 import sksurgeryvtk.models.vtk_surface_model as sm
 
 # pylint:disable=no-member, too-many-instance-attributes, invalid-name
+# pylint:disable=no-self-use
 class OverlaywMainWindow(QtWidgets.QMainWindow):
     """
     OverlayMainWindow.
