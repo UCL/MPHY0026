@@ -9,6 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
+
 def _read_csv_text(csvfile):
     skip_comments = lambda row: row[0] != '#'
     return csv.reader(filter(skip_comments, csvfile), delimiter=" ")
