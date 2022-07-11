@@ -8,7 +8,7 @@ Python language. However, even for people wanting to run the example
 applications, and experiment with the notebooks, some familiarity is required
 with how to setup the Python 3 environment.
 
-**Python 3.6 or 3.7 is required. Higher versions are not supported.**
+**Python 3.7 is required. Higher versions are not supported and may not function correctly.**
 
 The steps are shown below.
 
