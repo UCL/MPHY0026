@@ -11,7 +11,7 @@
 		 {
                             "name" : "modelreference",
                             "filename" : "data/pointer.txt",
-                            "aruco dictionary" : "DICT_ARUCO_ORIGINAL"
+                            "aruco dictionary" : "DICT_4X4_50"
                     },
 
              {
