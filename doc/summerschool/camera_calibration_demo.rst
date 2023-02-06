@@ -236,7 +236,7 @@ Then, you can evaluate the quality of the registration using:
 
 ::
 
-    bardVideoCalibrationChecker -c doc/summerschool/camera_calibration/video_calib_chessboard.json -d some_folder_name
+    bardVideoCalibrationChecker -c doc/summerschool/camera_calibration/video_calib_chessboard.json -d some_folder_name -p calib
 
 where the '-d' option specifies the directory where you stored your calibration data in the step before.
 
