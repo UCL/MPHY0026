@@ -30,8 +30,8 @@ class ChessboardOverlay():
         window_size = configuration.get("window size")
         self.overlay_offset = overlay_offset
 
-        _, self.intrinsics, self.distortion, _ = \
-            configure_camera(configuration, calib_dir)
+        _, self.intrinsics, self.distortion, _, _ = \
+            configure_camera(configuration)
 
         if corners is None:
             raise ValueError("You must specify the number of internal corners")
