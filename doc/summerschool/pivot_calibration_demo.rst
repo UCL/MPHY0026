@@ -153,15 +153,25 @@ SciKit-SurgeryBARD uses a configuration file to set various parameters and the l
     "camera": {
         "source": 0,
         "window size": [640, 480],
-        "grab": 33,
-        "clock": 15,
-        "fullscreen": false,
-        "calibration directory": "data/calibration/matts_mbp_640_x_480"
+        "calibration directory": "data/example_camera_calib"
     },
-    "pointerData": {
-        "pointer_tag_file": "data/pointer.txt",
-        "tag_width" : 32
+    "tracker":{
+        "type" : "sksaruco",
+        "rigid bodies" : [
+             {
+                 "name" : "modelreference",
+                 "filename" : "data/reference.txt",
+                 "aruco dictionary" : "DICT_ARUCO_ORIGINAL"
+             },
+             {
+                  "name" : "pointerref",
+                  "filename" : "data/pointer.txt",
+                  "aruco dictionary" : "DICT_ARUCO_ORIGINAL",
+                  "tag_width" : 32
+             }
+            ]
     },
+
     "interaction": {
         "keyboard": true
     },
@@ -288,9 +298,7 @@ Then add "pointer_tag_to_tip" entry to the BARD configuration file like:
 
 ::
 
-    "pointerData": {
-        "pointer_tag_file": "data/pointer.txt",
-        "tag_width": 38
+    "pointer": {
         "pointer_tag_to_tip": "data/pointer_tip.txt"
     },
 
@@ -310,15 +318,15 @@ When your tags are visible you should now see an extra sphere, somewhere near th
 
 At this point the you may notice that the sphere marking the pointer tip is very jittery. This due to the 
 small tracking errors at the markers being magnified by the lever arm of the pointer. A longer pointer should
-be more jittery. You can reduce the jitter by adding some tracking averaging to the pointer with the "smoothing_buffer" entry.
+be more jittery. You can reduce the jitter by adding some tracking averaging with "smoothing buffer" entry in the 
+tracker configuration like:
 
 ::
 
-   "pointerData": {
-        "pointer_tag_file": "data/pointer.txt",
-        "tag_width": 38,
-        "pointer_tag_to_tip": "data/pointer_tip.txt",
-        "smoothing_buffer" : 5
+    "tracker": {
+	    "type" : "sksaruco",
+        "smoothing buffer" : 5,
+        etc ...
   
 This will use a 5 frame rolling average to reduce the random tracking noise. 
 
@@ -341,7 +349,7 @@ Estimate the calibration error over a range of pointer poses. Make a note of it,
 
 Write up your results and share. That is the end of the tutorial, thank you.
 
-.. _`SciKit-Surgery`: https://github.com/UCL/scikit-surgery/wikis/home
+.. _`SciKit-Surgery`: https://github.com/SciKit-Surgery
 .. _`Medical Image Computing Summer School`: https://medicss.cs.ucl.ac.uk/
 .. _`MPHY0026`: https://mphy0026.readthedocs.io/en/latest/
 .. _`SciKit-SurgeryBARD`: https://scikit-surgerybard.readthedocs.io/en/latest/02_4_Register_And_Ovelay.html
