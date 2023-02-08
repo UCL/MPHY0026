@@ -1,0 +1,29 @@
+{
+"camera": {
+    "source": 0,
+    "window size": [640, 480],
+    "calibration directory": "data/example_camera_calib"
+},
+"tracker":{
+    "type" : "sksaruco",
+    "rigid bodies" : [
+	     {
+                 "name" : "modelreference",
+                 "filename" : "data/reference.txt",
+                 "aruco dictionary" : "DICT_ARUCO_ORIGINAL"
+             },
+
+             {
+              "name" : "pointerref",
+              "filename" : "data/pointer.txt",
+              "aruco dictionary" : "DICT_ARUCO_ORIGINAL",
+              "tag_width" : 32
+             }
+        ]
+},
+
+"interaction": {
+    "keyboard": true
+},
+"out path" : "pointer_positions"
+}
