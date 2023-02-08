@@ -9,9 +9,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
-# pylint: disable=unspecified-encoding
+
 def _read_csv_text(csvfile):
-    # pylint: disable=unnecessary-lambda-assignment
     skip_comments = lambda row: row[0] != '#'
     return csv.reader(filter(skip_comments, csvfile), delimiter=" ")
 
@@ -263,7 +262,6 @@ class InteractiveMeasure:
         self.cid = fig.canvas.mpl_connect('button_press_event', self)
 
     def __call__(self, event):
-        # pylint: disable=consider-using-f-string
         print('%s click: xdata=%f, ydata=%f' %
               ('double' if event.dblclick else 'single',
                event.xdata, event.ydata))
