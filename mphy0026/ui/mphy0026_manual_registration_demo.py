@@ -12,6 +12,7 @@ import sksurgeryvtk.models.vtk_surface_model as sm
 import sksurgeryvtk.widgets.vtk_overlay_window as ow
 
 
+#pylint:disable=no-member
 class ManualRegistrationMainWidget(QtWidgets.QWidget):
     """
     ManualRegistrationMainWidget to just enable a VTK window and interactor.

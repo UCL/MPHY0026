@@ -92,7 +92,6 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
         # pylint:disable=protected-access
         self.vtk_overlay_window._Iren.AddObserver("EndInteractionEvent",
                                                   interactionChange)
-
     # pylint:disable=no-self-use
     def show_controls_dialog(self):
         """."""
@@ -288,7 +287,7 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
         model_scale = self.model.actor.GetScale()[0]
         if self.mode == "circle":
             model_in_taget_space = 100 * model_scale * 3 / 2
-            diff = (model_in_taget_space - self.circle_radius)
+            diff = model_in_taget_space - self.circle_radius
 
         elif self.mode == "liver":
             target_scale = self.target_actor.GetScale()[0]

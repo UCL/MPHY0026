@@ -137,7 +137,7 @@ The calibration program can now be run with the following command:
 
 ::
 
-    bardVideoCalibration -c doc/summerschool/camera_calibration/video_calib_chessboard.json -s ./calibration_output -p calibration_01
+    bardVideoCalibration -c doc/summerschool/camera_calibration/video_calib_chessboard.json -s ./calibration_output -p calib
 
 The -s and -p arguments are optional, for when you want to save your calibration results to disk:
 
@@ -236,7 +236,7 @@ Then, you can evaluate the quality of the registration using:
 
 ::
 
-    bardVideoCalibrationChecker -c doc/summerschool/camera_calibration/video_calib_chessboard.json -d some_folder_name
+    bardVideoCalibrationChecker -c doc/summerschool/camera_calibration/video_calib_chessboard.json -d some_folder_name -p calib
 
 where the '-d' option specifies the directory where you stored your calibration data in the step before.
 

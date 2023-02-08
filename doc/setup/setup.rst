@@ -8,7 +8,7 @@ Python language. However, even for people wanting to run the example
 applications, and experiment with the notebooks, some familiarity is required
 with how to setup the Python 3 environment.
 
-We assume Python 3 throughout, typically version 3.6.
+**Python 3.7 is required. Higher versions are not supported and may not function correctly.**
 
 The steps are shown below.
 
@@ -91,13 +91,13 @@ Option 2
     cd MPHY0026
     pip install tox
     tox
-    source .tox/py36/bin/activate
+    source .tox/py37/bin/activate
 
 or, if you are on Windows, replace the last line with
 
 ::
 
-    .tox\py36\Scripts\activate
+    .tox\py37\Scripts\activate
 
 This option 2 actually creates another virtualenv (in a hidden folder called .tox),
 and install all dependencies into that. It may seem a bit over-the-top to create a virtualenv,

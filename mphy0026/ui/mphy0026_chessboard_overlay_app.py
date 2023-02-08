@@ -18,11 +18,11 @@ from sksurgerybard.algorithms.bard_config_algorithms import \
 from sksurgeryvtk.widgets.vtk_overlay_window import VTKOverlayWindow
 import sksurgeryvtk.camera.vtk_camera_model as cm
 
-# pylint: disable=too-many-branches, too-many-instance-attributes
-
+# pylint: disable=too-many-branches, too-many-instance-attributes, no-member
+# pylint:disable=too-many-function-args, unbalanced-tuple-unpacking
 class ChessboardOverlay():
     """Chessboard Overlay App"""
-    def __init__(self, configuration, calib_dir, overlay_offset):
+    def __init__(self, configuration, overlay_offset):
 
         source = configuration.get("source", 1)
         corners = configuration.get("corners")
@@ -30,8 +30,8 @@ class ChessboardOverlay():
         window_size = configuration.get("window size")
         self.overlay_offset = overlay_offset
 
-        _, self.intrinsics, self.distortion, _ = \
-            configure_camera(configuration, calib_dir)
+        _, self.intrinsics, self.distortion, _, _ = \
+            configure_camera(configuration)
 
         if corners is None:
             raise ValueError("You must specify the number of internal corners")
@@ -151,7 +151,7 @@ class ChessboardOverlay():
         #pylint:disable=protected-access
         self.vtk_overlay_window._RenderWindow.Render()
 
-def run_chessboard_overlay(config_file, calib_dir, overlay_offset):
+def run_chessboard_overlay(config_file, overlay_offset):
     """
     Simple app that detects a calibration pattern, runs
     solvePnP, and overlays VTK models.
@@ -161,8 +161,6 @@ def run_chessboard_overlay(config_file, calib_dir, overlay_offset):
 
     if config_file is None or len(config_file) == 0:
         raise ValueError("Config file must be provided.")
-    if calib_dir is None or len(calib_dir) == 0:
-        raise ValueError("Calibration directory must be specified")
 
     # Need this for all the Qt magic.
     app = QtWidgets.QApplication([])
@@ -170,7 +168,7 @@ def run_chessboard_overlay(config_file, calib_dir, overlay_offset):
     configurer = ConfigurationManager(config_file)
     configuration = configurer.get_copy()
 
-    window = ChessboardOverlay(configuration, calib_dir, overlay_offset)
+    window = ChessboardOverlay(configuration, overlay_offset)
     window.start()
 
     # Start event loop.
