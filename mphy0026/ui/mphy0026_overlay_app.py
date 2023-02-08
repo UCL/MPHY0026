@@ -11,7 +11,6 @@ import sksurgeryvtk.widgets.vtk_overlay_window as ow
 import sksurgeryvtk.models.vtk_surface_model as sm
 
 # pylint:disable=no-member, too-many-instance-attributes, invalid-name
-# pylint:disable=no-self-use
 class OverlaywMainWindow(QtWidgets.QMainWindow):
     """
     OverlayMainWindow.
@@ -288,7 +287,7 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
         model_scale = self.model.actor.GetScale()[0]
         if self.mode == "circle":
             model_in_taget_space = 100 * model_scale * 3 / 2
-            diff = (model_in_taget_space - self.circle_radius)
+            diff = model_in_taget_space - self.circle_radius
 
         elif self.mode == "liver":
             target_scale = self.target_actor.GetScale()[0]

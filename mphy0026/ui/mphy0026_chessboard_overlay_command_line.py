@@ -22,11 +22,6 @@ def main(args=None):
                         type=str,
                         help="Configuration file containing the parameters.")
 
-    parser.add_argument("-d", "--calib_dir",
-                        required=True,
-                        type=str,
-                        help="Directory containing calibration data.")
-
     parser.add_argument("-o", "--overlay_offset",
                         required=False,
                         type=int,
@@ -42,4 +37,4 @@ def main(args=None):
 
     args = parser.parse_args(args)
 
-    run_chessboard_overlay(args.config, args.calib_dir, args.overlay_offset)
+    run_chessboard_overlay(args.config, args.overlay_offset)
