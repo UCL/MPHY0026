@@ -360,8 +360,8 @@ Write up your results and share. That is the end of the tutorial, thank you.
 .. _`ArUco`: https://docs.opencv.org/trunk/d5/dae/tutorial_aruco_detection.html
 .. _`perspective n point`: https://en.wikipedia.org/wiki/Perspective-n-Point
 .. _`OpenCV`: https://docs.opencv.org/2.4/modules/calib3d/doc/camera_calibration_and_3d_reconstruction.html#solvepnp
-.. _`pointer.txt`: https://github.com/UCL/scikit-surgerybard/raw/master/data/pointer.txt
-.. _`config.json`: https://github.com/UCL/scikit-surgerybard/raw/master/config/pointer_markers.json 
+.. _`pointer.txt`: https://raw.githubusercontent.com/UCL/MPHY0026/master/data/pointer.txt
+.. _`config.json`: https://raw.githubusercontent.com/UCL/MPHY0026/master/data/pointer.json
 .. _`camera calibration tutorial`: https://mphy0026.readthedocs.io/en/latest/summerschool/camera_calibration_demo.html
 .. _`Yanniv 2015`: https://dx.doi.org/10.1117/12.2081348
 .. _`RANSAC`: https://doi.org/10.1145%2F358669.358692
