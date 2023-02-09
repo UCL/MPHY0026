@@ -17,5 +17,5 @@ scikit-surgeryarucotracker
 scikit-surgerypclcpp
 scikit-surgeryopencvcpp
 scikit-surgeryfred
-scikit-surgerybard
+scikit-surgerybard==0.1.3
 scikit-surgerycalibration
