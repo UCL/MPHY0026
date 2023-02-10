@@ -14,8 +14,6 @@ scikit-surgerycore
 scikit-surgeryvtk
 scikit-surgerynditracker
 scikit-surgeryarucotracker
-scikit-surgerypclcpp
-scikit-surgeryopencvcpp
 scikit-surgeryfred
 scikit-surgerybard
 scikit-surgerycalibration
