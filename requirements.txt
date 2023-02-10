@@ -9,11 +9,11 @@ jupyter
 nbsphinx
 matplotlib
 opencv-contrib-python
-scikit-surgeryimage<=0.9.1
+scikit-surgeryimage
 scikit-surgerycore
 scikit-surgeryvtk
 scikit-surgerynditracker
 scikit-surgeryarucotracker
 scikit-surgeryfred
-scikit-surgerybard
-scikit-surgerycalibration
+scikit-surgerybard==0.2.1
+scikit-surgerycalibration==0.2.1
