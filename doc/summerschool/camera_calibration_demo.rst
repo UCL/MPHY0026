@@ -137,7 +137,7 @@ The calibration program can now be run with the following command:
 
 ::
 
-    bardVideoCalibration -c doc/summerschool/camera_calibration/video_calib_chessboard.json -s ./calibration_output -p calib
+    bardVideoCalibration -c doc/summerschool/camera_calibration/video_calib_chessboard.json -o ./calibration_output -p calib
 
 The -s and -p arguments are optional, for when you want to save your calibration results to disk:
 
