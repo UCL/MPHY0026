@@ -6,7 +6,7 @@ numpy
 scipy
 ipykernel
 jupyter
-nbsphinx
+nbsphinx<=0.8.8
 matplotlib
 opencv-contrib-python
 scikit-surgeryimage
