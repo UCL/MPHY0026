@@ -9,7 +9,7 @@ mock
 pyfakefs
 parameterized
 pylint==2.7.2
-sphinx>=2.2.1
+sphinx<=4.4.0
 sphinx_rtd_theme>=0.4.3
 pyinstaller
 pytest
