@@ -41,6 +41,27 @@ Or you can use conda environments.
 
 Conda manages where to put each new environment, so Conda is probably easier.
 
+For Apple M1 users:
+Referring to the issue #12206 in the conda GitHub repository, there are no conda build for python 3.7 for Apple Silicon.
+
+You can use the following steps to create a conda environment with python 3.7 on M1:
+::
+  ## create empty environment
+  conda create -n mphy0026
+
+  ## activate environment
+  conda activate mphy0026
+
+  ## use x86_64 architecture 
+  conda config --env --set subdir osx-64
+
+  ## install python 3.7
+  conda install python=3.7
+
+  ## After this, you can follow the rest of the instructions in the option 2
+
+See `Env creation from python 3.7 not working M1 Apple Silicon Mac (Miniconda 3)`_ for more details.
+
 Setup This Project
 ------------------
 
@@ -143,3 +164,4 @@ require Option 2 described above. This is another reason to prefer Option 2.
 .. _`how to create and activate a virtual env`: https://docs.python.org/3/tutorial/venv.html#creating-virtual-environments
 .. _`how to create and activate a conda env`: https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html
 .. _`these instructions for Jupyter Notebooks`: https://mphy0026.readthedocs.io/en/latest/notebooks/running_notebooks.html
+.. _`Env creation from python 3.7 not working M1 Apple Silicon Mac (Miniconda 3)`: https://github.com/conda/conda/issues/12206
