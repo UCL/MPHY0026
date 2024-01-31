@@ -163,7 +163,7 @@ For a single image atlas, the general process could be something like:
 * For a new image that needs to be segmented, first register (align) it to the atlas
 * Copy the atlas labels onto the image that needs segmenting
 
-As [Cabezas2011]_ shows, it was a big field a while ago. In the following video,
+In the following video,
 `Prof. Paul Yushkevich <https://www.med.upenn.edu/apps/faculty/index.php/g275/p2693923>`_
 who worked on `ITK Snap <http://www.itksnap.org/pmwiki/pmwiki.php>`_, one of the most
 popular segmentation tools, gives an overview of Atlas Based Segmentation methods.
@@ -205,14 +205,17 @@ Here follows a list of resources that are useful to get up-to-speed with using N
 
 * `A Keras tutorial from DataCamp <https://www.datacamp.com/community/tutorials/deep-learning-python>`_ illustrates what a neuron is.
 * `A Keras tutorial on semantic segmentation <https://divamgupta.com/image-segmentation/2019/06/06/deep-learning-semantic-segmentation-keras.html>`_ as an introduction to segmentation.
-* The `Deep Learning <https://www.deeplearningbook.org/>`_ book.
 * `Stanford University cs231n course is popular <http://cs231n.stanford.edu/>`_
 * `Coursera Deep Learning Specialization <https://www.coursera.org/specializations/deep-learning>`_
 * `TensorFlow tutorials <https://www.tensorflow.org/tutorials>`_
 * `MICCAI Education Challenge resources <http://www.miccai.org/education/material/>`_
+* The `Deep Learning <https://www.deeplearningbook.org/>`_ book.
+* Simon Prince's new `Understanding Deep Learning <https://udlbook.github.io/udlbook/>`_ book.
+* Dr. Yipeng Hu's `tutorials <https://github.com/YipengHu/MPHY0041/tree/main/tutorials>`_ from the course "Machine Learning in Medical Imaging (`MPHY0041 <https://www.ucl.ac.uk/module-catalogue/modules/machine-learning-in-medical-imaging/MPHY0041>`_)" at UCL.
+* Dr. Yipeng Hu's `tutorials on segmentation <https://github.com/YipengHu/MPHY0043/tree/main/tutorials/segmentation>`_ from the course "Artificial Intelligence for Surgery and Intervention (`MPHY0043 <https://www.ucl.ac.uk/module-catalogue/modules/artificial-intelligence-for-surgery-and-intervention-MPHY0043>`_)" at UCL.
 
 To get started with your first network is not too hard. For example,
-Dr Clarkson coded up a `UNet here <https://github.com/UCL/scikit-surgerytf/blob/master/sksurgerytf/models/rgb_unet.py>`_,
+(Even!) Prof. Clarkson coded up a `UNet here <https://github.com/UCL/scikit-surgerytf/blob/master/sksurgerytf/models/rgb_unet.py>`_,
 as part of his own learning process. But the real trick to "getting good", is to practice on real problems.
 So, its not something you can just read. You need a project, and to be actively doing it.
 
@@ -228,11 +231,6 @@ we might be dealing with only 100's or at best 1000's of images.
 So, there is still a justification for training a neural network to partially segment
 things, and combining the network with manual input from the user for a
 manually-guided + AI hybrid.
-
-This is all a research topic at the moment, as even large vendors are
-grappling with how to deploy these clinical examples. But you can download
-and try `MITK with NVIDIA's Clara platform <https://www.youtube.com/watch?v=T0Pjki4vXx0>`_
-to get an understanding of the idea.
 
 
 Specific Challenges for CAS
@@ -293,20 +291,6 @@ So, the use-cases pre-operatively, and intra-operatively are very different.
 
 * Different time constraints
 * Non-real time versus real time etc.
-
-
-Cautionary Tale
-^^^^^^^^^^^^^^^
-
-* There are many computer vision papers in deep learning
-* Additionally, there is a huge interest in segmentation in medical imaging
-* [Ronneberger2015]_ proposed U-Net in 2015, which is widely used
-* Many more medical imaging networks were subsequently developed
-* The MICCAI `Medical Segmentation Decathlon <https://decathlon-10.grand-challenge.org/>`_, challenge essentially wanted researchers to develop 1 algorithm to work well on multiple datasets.
-* [Isensee2018]_ created nnU-Net (No New Net), which embeds a UNet in a robust training scheme.
-* Current `leaderboard <https://decathlon-10.grand-challenge.org/evaluation/results/>`_.
-* Segmentation methods that work, normally do so becauses of large quantities of labelled data. The rest are still research projects.
-* Methods that work in computer vision, with datasets > 1 milion, or >10 million images etc., often do not translate to medical imaging, as datasets are often much smaller.
 
 .. _`CC BY-SA 3.0`: https://creativecommons.org/licenses/by-sa/3.0
 .. _`CC BY-SA 4.0`: https://creativecommons.org/licenses/by-sa/4.0
