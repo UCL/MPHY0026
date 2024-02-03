@@ -8,7 +8,7 @@ Python language. However, even for people wanting to run the example
 applications, and experiment with the notebooks, some familiarity is required
 with how to setup the Python 3 environment.
 
-**This project has been tested with Python 3.9-3.11. Higher versions are not supported and may not function correctly.**
+**This project has been tested with Python 3.9-3.11 (Windows/Mac), and 3.9-3.10 (Linux). Higher versions are not supported and may not function correctly.**
 
 The steps are shown below.
 
