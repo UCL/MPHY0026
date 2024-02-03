@@ -58,14 +58,14 @@ when your current working direction is the top-level folder of the MPHY0026 repo
 
 ::
 
-    source .tox/py36/bin/activate
+    source .tox/test/bin/activate
 
 
 or if you are a Windows user:
 
 ::
 
-    .tox\py36\Scripts\activate
+    .tox\test\Scripts\activate
 
 
 This means that your terminal is running the python environment with all the
@@ -115,13 +115,13 @@ or you can display them on your mobile phone screen using the
 QR tag (:numref:`reg_pointerqr`).
 
 .. _reg_pointerwithscale:
-.. figure:: https://github.com/UCL/scikit-surgerybard/raw/master/data/pointer_withscale.png
+.. figure:: https://github.com/SciKit-Surgery/scikit-surgerybard/raw/master/data/pointer_withscale.png
   :width: 20%
 
   The patten of six unique tags we will use for pointer tracking. 
 
 .. _reg_pointerqr:
-.. figure:: https://github.com/UCL/scikit-surgerybard/raw/master/data/qrtags/pointer_qr.png
+.. figure:: https://github.com/SciKit-Surgery/scikit-surgerybard/raw/master/data/qrtags/pointer_qr.png
   :width: 20%
   
   Scan this with your phone to open the tag image.

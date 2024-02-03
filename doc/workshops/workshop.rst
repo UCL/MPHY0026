@@ -36,7 +36,7 @@ be provided by a university or lab environment.
 The Basic Augmented Reality Demo (BARD)
 ---------------------------------------
 
-These were written for the UCL `MediCSS Summer School <https://www.ucl.ac.uk/medical-image-computing/ucl-medical-image-computing-summer-school-medicss>`_,
+These were written for the 2020, UCL `MediCSS Summer School <https://www.ucl.ac.uk/medical-image-computing/ucl-medical-image-computing-summer-school-medicss>`_,
 and includes topics on Camera Calibration, Pivot Calibration, Fiducial Registration and Augmented Reality.
 
   - :ref:`SummerSchoolIntro`
