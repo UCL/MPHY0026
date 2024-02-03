@@ -54,14 +54,14 @@ when your current working direction is the top-level folder of the MPHY0026 repo
 
 ::
 
-    source .tox/py36/bin/activate
+    source .tox/test/bin/activate
 
 
 or if you are a Windows user:
 
 ::
 
-    .tox\py36\Scripts\activate
+    .tox\test\Scripts\activate
 
 
 This means that your terminal is running the python environment with all the
