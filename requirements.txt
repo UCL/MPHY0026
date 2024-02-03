@@ -11,9 +11,9 @@ matplotlib
 opencv-contrib-python
 scikit-surgeryimage
 scikit-surgerycore
-scikit-surgeryvtk
+scikit-surgeryvtk==2.0.1
 scikit-surgerynditracker
 scikit-surgeryarucotracker
 scikit-surgeryfred
-scikit-surgerybard==0.2.1
-scikit-surgerycalibration==0.2.1
+scikit-surgerybard==1.0.0
+scikit-surgerycalibration==0.2.4
