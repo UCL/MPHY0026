@@ -8,12 +8,12 @@ ipykernel
 jupyter
 nbsphinx<=0.8.8
 matplotlib
-opencv-contrib-python
-scikit-surgeryimage
 scikit-surgerycore
+scikit-surgeryimage
 scikit-surgeryvtk==2.0.1
 scikit-surgerynditracker
 scikit-surgeryarucotracker
-scikit-surgeryfred
-scikit-surgerybard==1.0.0
 scikit-surgerycalibration==0.2.4
+scikit-surgerybard==1.0.0
+scikit-surgeryfred
+
