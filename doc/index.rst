@@ -30,7 +30,7 @@ are the essential details:
  * Sessions:
 
    * Term 2, Thursdays, 10:00-13:00, not including reading week.
-   * Essentially, aiming for Face-to-Face in 2022, COVID permitting.
+   * Post-COVID, we are back to Face-to-Face lectures!!
 
 
 How This Course Is Run
@@ -81,7 +81,6 @@ Contents
   setup/setup.rst
   notebooks.rst
   workshops/workshop.rst
-  summerschool/bard.rst
   coursework/system_simulation.rst
 
 .. raw:: html
@@ -92,15 +91,15 @@ Contents
 
 .. _`University College London (UCL)`: http://www.ucl.ac.uk/
 .. _`UCL`: http://www.ucl.ac.uk/
-.. _`Matt Clarkson`: https://iris.ucl.ac.uk/iris/browse/profile?upi=MJCLA42
-.. _`Steve Thompson`: https://iris.ucl.ac.uk/iris/browse/profile?upi=SATHO57
-.. _`Ester Bonmati`: https://iris.ucl.ac.uk/iris/browse/profile?upi=EBONM94
-.. _`Ann Blandford`: https://iris.ucl.ac.uk/iris/browse/profile?upi=AEBLA22
-.. _`Tom Dowrick`: https://iris.ucl.ac.uk/iris/browse/profile?upi=TMDOW59
-.. _`Yipeng Hu`: https://iris.ucl.ac.uk/iris/browse/profile?upi=YHUXX66
+.. _`Matt Clarkson`: https://profiles.ucl.ac.uk/6821-matt-clarkson
+.. _`Steve Thompson`: https://profiles.ucl.ac.uk/23126-stephen-thompson
+.. _`Ester Bonmati`: https://profiles.ucl.ac.uk/40231-ester-bonmati-coll
+.. _`Ann Blandford`: https://profiles.ucl.ac.uk/838-ann-blandford
+.. _`Tom Dowrick`: https://www.linkedin.com/in/thomasdowrick/
+.. _`Yipeng Hu`: https://profiles.ucl.ac.uk/5178-yipeng-hu
 .. _`Moodle`: https://moodle.ucl.ac.uk/
 .. _`Source code`: https://github.com/UCL/MPHY0026
 .. _`Issue Tracker`: https://github.com/UCL/MPHY0026
-.. _`SciKit-Surgery`: https://github.com/UCL/scikit-surgery/wiki
+.. _`SciKit-Surgery`: https://github.com/SciKit-Surgery
 .. _`The SciKit-Surgery Paper`: https://doi.org/10.1007/s11548-020-02180-5
 .. _`IPCAI 2020 presentation`: https://www.youtube.com/watch?v=0z8eIjqAbzQ&t=10s

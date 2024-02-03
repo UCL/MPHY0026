@@ -8,7 +8,7 @@ Python language. However, even for people wanting to run the example
 applications, and experiment with the notebooks, some familiarity is required
 with how to setup the Python 3 environment.
 
-**Python 3.7 is required. Higher versions are not supported and may not function correctly.**
+**This project has been tested with Python 3.9-3.11. Higher versions are not supported and may not function correctly.**
 
 The steps are shown below.
 
@@ -66,7 +66,7 @@ Given you are inside, (i.e. you have activated) your clean environment, type:
 
 
 This should download all the dependencies and other projects, such as scikit-surgerybard used in
-the :ref:`SummerSchoolCameraCalibration`, or scikit-surgeryfred used in the :ref:`FidRegistrationTutorial`
+the :ref:`SummerSchoolCameraCalibration` tutorial, or scikit-surgeryfred used in the :ref:`FidRegistrationTutorial`
 should now be available to use. Programs that are included in *this* project can either be run with:
 
 ::
@@ -91,13 +91,13 @@ Option 2
     cd MPHY0026
     pip install tox
     tox
-    source .tox/py37/bin/activate
+    source .tox/test/bin/activate
 
 or, if you are on Windows, replace the last line with
 
 ::
 
-    .tox\py37\Scripts\activate
+    .tox\test\Scripts\activate
 
 This option 2 actually creates another virtualenv (in a hidden folder called .tox),
 and install all dependencies into that. It may seem a bit over-the-top to create a virtualenv,

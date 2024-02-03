@@ -29,7 +29,14 @@ These require more preparation, or phantoms, or things that would
 be provided by a university or lab environment.
 
   - :ref:`Workshop1PBR`
-  - :ref:`Workshop2CameraCalib`, or try this one at home: :ref:`SummerSchoolCameraCalibration`
-  - :ref:`Workshop3TemplateVersusPivot` or try this one at home: :ref:`SummerSchoolPivotCalibration`
-  - :ref:`Workshop4Usability`
-  - :ref:`Workshop5UserInteraction`
+  - :ref:`Workshop2CameraCalib`
+  - :ref:`Workshop3TemplateVersusPivot`
+
+
+The Basic Augmented Reality Demo (BARD)
+---------------------------------------
+
+These were written for the UCL `MediCSS Summer School <https://www.ucl.ac.uk/medical-image-computing/ucl-medical-image-computing-summer-school-medicss>`_,
+and includes topics on Camera Calibration, Pivot Calibration, Fiducial Registration and Augmented Reality.
+
+  - :ref:`SummerSchoolIntro`
