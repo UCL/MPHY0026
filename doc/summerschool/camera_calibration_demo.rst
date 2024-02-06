@@ -137,12 +137,12 @@ The calibration program can now be run with the following command:
 
 ::
 
-    bardVideoCalibration -c doc/summerschool/camera_calibration/video_calib_chessboard.json -o ./calibration_output -p calib
+    bardVideoCalibration -c doc/summerschool/camera_calibration/video_calib_chessboard.json -o data/calibration -p calib
 
-The -s and -p arguments are optional, for when you want to save your calibration results to disk:
+The -o and -p arguments are optional, for when you want to save your calibration results to disk:
 
   - 'c': config file location (required)
-  - 's': directory to save calibration results to.
+  - 'o': directory to save calibration results to.
   - 'p': filename prefix - Calibration generates ~30 files, which will all share a common prefix.
 
 The calibration process is best explained via a video:
@@ -222,21 +222,21 @@ So, in this section we will try to assess the quality of the calibration, measur
 actual physical movements. In other words, if we move the chessboard by 5mm, does
 the camera measure the movement as a 5mm shift, or something else?
 
-First, do a good calibration, saving the data to a specific folder.
-
-**N.B.** Keep note of where you have saved this data, and the contents of your config file, as you will re-use these later for the `Overlay`_ section.
-
-Then run:
+First, do a good calibration, saving the data to a specific folder:
 
 ::
 
-    bardVideoCalibration -c doc/summerschool/camera_calibration/video_calib_chessboard.json -s some_folder_name
+    bardVideoCalibration -c doc/summerschool/camera_calibration/video_calib_chessboard.json -o <some_folder_name>
+
+
+**N.B.** Keep note of where you have saved this data, and the contents of your config file, as you will re-use these later for the `Overlay`_ section.
+
 
 Then, you can evaluate the quality of the registration using:
 
 ::
 
-    bardVideoCalibrationChecker -c doc/summerschool/camera_calibration/video_calib_chessboard.json -d some_folder_name -p calib
+    bardVideoCalibrationChecker -c doc/summerschool/camera_calibration/video_calib_chessboard.json -d <some_folder_name> -p calib
 
 where the '-d' option specifies the directory where you stored your calibration data in the step before.
 
