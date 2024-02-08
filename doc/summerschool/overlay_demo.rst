@@ -93,6 +93,11 @@ you have followed the :ref:`PythonSetup`, then from the root MPHY0026 folder, ru
 
     python mphy0026_overlay.py 
 
+Controls for controlling the model:
+* Moving model: Shift + click + move mouse about
+* Change model scale: zoom in/out OR control + click + move mouse up/down
+* Free body rotation: click + move mouse about
+
 Two cases are presented, a 2D alignment of a circle, and a more realistic example where a liver model needs to be aligned to a background shape.
 
 In each case, try to minimise both the size error and the alignment error. Alignment error in this case in an arbitrary measure that considers both rotation and position.  
@@ -139,7 +144,9 @@ data in the correct position in 3D space:
 
 ::
 
-    python mphy0026_chessboard_overlay.py -c doc/summerschool/camera_calibration/video_calib_chessboard.json -d CALIB_DIR
+    python mphy0026_chessboard_overlay.py -c doc/summerschool/camera_calibration/video_calib_chessboard.json
+
+Remember to change the "calibration directory" and "calibration prefix" in the config file to what you have set for your camera calibration.
 
 Here, we have overlaid the video feed back onto the chessboard pattern. As you move/rotate the chessboard, the overlay should remain in the same position.
 
@@ -164,7 +171,9 @@ instead of using actual ultrasound, we just re-use the same video feed.
 
 ::
 
-    python mphy0026_chessboard_overlay.py -c doc/summerschool/camera_calibration/video_calib_chessboard.json -d CALIB_DIR -o 90
+    python mphy0026_chessboard_overlay.py -c doc/summerschool/camera_calibration/video_calib_chessboard.json -o 90
+
+Once again, remember to change the "calibration directory" and "calibration prefix" in the config file to where you have saved your camera calibration.
 
 Here the offset of the ultrasound relative to the origin of the tracked marker (a chessboard), is 90mm in
 the x direction. You can adjust this value to get the best results on whichever phone/chessboard you are using.
