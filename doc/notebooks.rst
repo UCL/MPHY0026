@@ -10,3 +10,4 @@ Jupyter Notebooks
 * `Pivot Calibration With and Without RANSAC <notebooks/RANSAC.html>`_
 * `Laparoscopic Liver Surgery Simulator <notebooks/lap_liver_sim.html>`_
 * `Using FLE to Compute TRE <notebooks/TRE_Worksheet.html>`_
+* `Monte Carlo Simulation example <notebooks/monte_carlo_demo.html>`_
