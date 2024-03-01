@@ -10,7 +10,7 @@ nbsphinx<=0.8.8
 matplotlib
 scikit-surgerycore
 scikit-surgeryimage
-scikit-surgeryvtk==2.0.1
+scikit-surgeryvtk>=2.1.1
 scikit-surgerynditracker
 scikit-surgeryarucotracker
 scikit-surgerycalibration==0.2.4
