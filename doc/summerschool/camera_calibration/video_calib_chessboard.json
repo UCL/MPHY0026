@@ -4,7 +4,7 @@
     "window size": [640, 480],
     "corners": [14, 10],
     "square size in mm": 6,
-    "minimum number of views": 5
+    "minimum number of views": 5,
     "calibration directory": "data/calibration",
     "calibration prefix": "calib",
     "roi": [0, 0, 640, 480]
