@@ -2,18 +2,18 @@
 # It is used by pip to manage software dependencies. It is not to be
 # confused with the software requirements, which are listed in
 # doc/requirements.rst
-numpy
+numpy<2.0.0
 scipy
 ipykernel
-jupyter
+notebook
 nbsphinx<=0.8.8
 matplotlib
 scikit-surgerycore
 scikit-surgeryimage
-scikit-surgeryvtk>=2.1.1
+scikit-surgeryvtk>=2.2.2
 scikit-surgerynditracker
 scikit-surgeryarucotracker
-scikit-surgerycalibration==0.2.4
-scikit-surgerybard==1.0.0
+scikit-surgerycalibration>=0.2.5
+scikit-surgerybard>=1.1.2
 scikit-surgeryfred
 
