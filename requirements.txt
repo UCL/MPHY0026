@@ -6,7 +6,7 @@ numpy<2.0.0
 scipy
 ipykernel
 notebook
-nbsphinx<=0.8.8
+nbsphinx
 matplotlib
 scikit-surgerycore
 scikit-surgeryimage

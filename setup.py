@@ -55,7 +55,7 @@ setup(
         'scipy',
         'ipykernel',
         'notebook',
-        'nbsphinx<=0.8.8',
+        'nbsphinx',
         'matplotlib',
         'scikit-surgerycore',
         'scikit-surgeryimage'
@@ -63,7 +63,7 @@ setup(
         'scikit-surgerynditracker',
         'scikit-surgeryarucotracker',
         'scikit-surgerycalibration>=0.2.5',
-        'scikit-surgerybard>=1.1.0',
+        'scikit-surgerybard>=1.1.2',
         'scikit-surgeryfred'
     ],
 
