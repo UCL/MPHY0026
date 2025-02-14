@@ -71,7 +71,7 @@ class ChessboardOverlay():
         self.ultrasound_actor = vtk.vtkImageActor()
         self.ultrasound_actor.SetInputData(
             self.vtk_overlay_window.image_importer.GetOutput())
-        self.vtk_overlay_window.foreground_renderer.AddActor(
+        self.vtk_overlay_window.get_renderer(layer=1).AddActor(
             self.ultrasound_actor)
 
         f_x = self.intrinsics[0, 0]
@@ -81,8 +81,10 @@ class ChessboardOverlay():
         width, height = window_size[0], window_size[1]
 
         #pylint:disable=line-too-long
-        cm.set_camera_intrinsics(self.vtk_overlay_window.get_foreground_renderer(),
-                                 self.vtk_overlay_window.get_foreground_camera(),
+        ren = self.vtk_overlay_window.get_renderer(layer=1)
+        cam = ren.GetActiveCamera()
+        cm.set_camera_intrinsics(ren,
+                                 cam,
                                  width,
                                  height,
                                  f_x,
