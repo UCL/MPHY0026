@@ -7,8 +7,8 @@ import sys
 import numpy as np
 import cv2
 import vtk
-from PySide2.QtCore import QTimer
-from PySide2 import QtWidgets
+from PySide6.QtCore import QTimer
+from PySide6 import QtWidgets
 
 from sksurgerycore.configuration.configuration_manager import \
     ConfigurationManager
