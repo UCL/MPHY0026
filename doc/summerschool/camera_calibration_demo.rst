@@ -40,7 +40,7 @@ Assumed Knowledge
 Installation
 ------------
 
-Follow the :ref:`PythonSetup` instructions, specifically using Option 2 of the installation instructions.
+Follow the :ref:`PythonSetup` instructions.
 
 
 Activate You Environment
@@ -90,7 +90,7 @@ camera calibration, which is used to map the colour values to standard scales.
 For the remainder of this tutorial, we will use the term "camera calibration",
 to refer to "geometric camera calibration".
 
-For a simple overview, please read:
+For a simple overview, there are also some excellent online tutorials. Please read:
 
   - `Matlab Tutorial`_
   - `OpenCV Tutorial`_
@@ -321,12 +321,12 @@ Here's some development suggestions:
 .. _`Medical Image Computing Summer School`: https://medicss.cs.ucl.ac.uk/
 .. _`MPHY0026`: https://mphy0026.readthedocs.io/en/latest/
 .. _`Matlab Tutorial`: https://www.mathworks.com/help/vision/ug/camera-calibration.html
-.. _`OpenCV Tutorial`: https://medium.com/vacatronics/3-ways-to-calibrate-your-camera-using-opencv-and-python-395528a51615
+.. _`OpenCV Tutorial`: https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html
 .. _`Zhang's method`: http://dx.doi.org/10.1109/34.888718
 .. _`Pinhole Camera Model`: https://en.wikipedia.org/wiki/Pinhole_camera_model
 .. _`6mm calibration target`: https://github.com/UCL/scikit-surgerybard/blob/master/data/calibrationGrids/calibrationgrid-6mm.pdf
 .. _`OpenCV calibration grid`: https://docs.opencv.org/2.4/_images/fileListImage.jpg
-.. _`video_calibration_app.py`: https://github.com/UCL/scikit-surgerycalibration/blob/master/sksurgerycalibration/ui/video_calibration_app.py
+.. _`video calibration app`: https://github.com/SciKit-Surgery/scikit-surgeryutils/blob/master/sksurgeryutils/ui/sksurgeryvideocalibration_app.py
 .. _`scikit-surgerycalibration`: https://github.com/UCL/scikit-surgerycalibration
 .. _`in this folder`: https://github.com/UCL/scikit-surgerycalibration/tree/master/sksurgerycalibration/video
 .. _`unit tests`: https://github.com/UCL/scikit-surgerycalibration/tree/master/tests/video

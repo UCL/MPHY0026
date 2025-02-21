@@ -30,7 +30,6 @@ be provided by a university or lab environment.
 
   - :ref:`Workshop1PBR`
   - :ref:`Workshop2CameraCalib`
-  - :ref:`Workshop3TemplateVersusPivot`
 
 
 The Basic Augmented Reality Demo (BARD)

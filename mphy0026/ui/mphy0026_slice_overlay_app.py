@@ -5,7 +5,7 @@
 import sys
 import os
 import vtk
-from PySide2 import QtWidgets
+from PySide6 import QtWidgets
 import sksurgeryvtk.models.vtk_surface_model as sm
 import sksurgeryutils.common_overlay_apps as coa
 

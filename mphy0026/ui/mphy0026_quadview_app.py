@@ -4,8 +4,8 @@
 
 import sys
 import numpy as np
-from PySide2 import QtWidgets, QtGui
-from PySide2.QtWidgets import QSizePolicy
+from PySide6 import QtWidgets, QtGui
+from PySide6.QtWidgets import QSizePolicy
 import sksurgeryvtk.widgets.vtk_reslice_widget as rw
 import mphy0026.factory.tracker_factory as tf
 import mphy0026.algorithms.compute_tracked_pointer_posn as pp

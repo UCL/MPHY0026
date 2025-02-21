@@ -81,7 +81,6 @@ Contents
   setup/setup.rst
   notebooks.rst
   workshops/workshop.rst
-  coursework/system_simulation.rst
 
 .. raw:: html
 

@@ -6,7 +6,7 @@ import sys
 import random
 import vtk
 import numpy as np
-from PySide2 import QtWidgets, QtGui, QtCore
+from PySide6 import QtWidgets, QtGui, QtCore
 import sksurgeryvtk.widgets.vtk_overlay_window as ow
 import sksurgeryvtk.models.vtk_surface_model as sm
 
@@ -66,8 +66,8 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
 
         self.reset_text_labels()
 
-        self.vtk_overlay_window.foreground_renderer.AddActor(self.txtScale)
-        self.vtk_overlay_window.foreground_renderer.AddActor(self.txtPosition)
+        self.vtk_overlay_window.get_renderer(layer=2).AddActor(self.txtScale)
+        self.vtk_overlay_window.get_renderer(layer=2).AddActor(self.txtPosition)
 
         self.setup_target()
         self.setup_overlay()
@@ -140,7 +140,7 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
     def setup_overlay(self):
         """Setup overlays"""
         if self.model:
-            self.vtk_overlay_window.foreground_renderer.RemoveActor(
+            self.vtk_overlay_window.get_renderer(layer=1).RemoveActor(
                 self.model.actor)
 
         if self.mode == "circle":
@@ -199,7 +199,7 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
         """ Do some setup for the targets. """
         # Clear previously drawn circles
         if self.target_actor:
-            self.vtk_overlay_window.foreground_renderer.RemoveActor(
+            self.vtk_overlay_window.get_renderer(layer=1).RemoveActor(
                 self.target_actor)
 
         if self.mode == "circle":
@@ -210,7 +210,7 @@ class OverlaywMainWindow(QtWidgets.QMainWindow):
 
         print(f'Circle: {self.target_actor.GetCenter()}')
 
-        self.vtk_overlay_window.foreground_renderer.AddActor(self.target_actor)
+        self.vtk_overlay_window.get_renderer(layer=1).AddActor(self.target_actor)
 
         self.reset_text_labels()
         self.update()
