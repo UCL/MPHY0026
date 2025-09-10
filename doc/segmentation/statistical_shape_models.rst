@@ -118,9 +118,10 @@ We shall see PCA in action, and visualise shape models of the prostate.
 
   A shape model of the prostate, courtesy of Dr Yipeng Hu.
 
-The code is here::
+The code to generate an SSM is here::
 
-  git clone https://weisslab.cs.ucl.ac.uk/WEISSTeaching/TaughtModule_ComputerAssistedSurgeryAndTherapy.git
+  git clone https://github.com/YipengHu/MPHY0030.git
+  cd MPHY0030/tutorials/statistical_motion_model
 
 
 Active Shape Models
