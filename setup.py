@@ -51,20 +51,19 @@ setup(
     ),
 
     install_requires=[
-        'numpy<2.0.0',
+        'numpy>=2.0.0',
         'scipy',
         'ipykernel',
         'notebook',
         'nbsphinx',
         'matplotlib',
-        'scikit-surgerycore',
-        'scikit-surgeryimage'
-        'scikit-surgeryvtk>=2.2.2',
+        'scikit-surgerycore>=0.6.10',
+        'scikit-surgeryimage>=1.0.0'
+        'scikit-surgeryvtk>=2.3.0',
         'scikit-surgerynditracker',
-        'scikit-surgeryarucotracker',
-        'scikit-surgerycalibration>=0.2.5',
-        'scikit-surgerybard>=1.1.2',
-        'scikit-surgeryfred'
+        'scikit-surgeryarucotracker>=1.1.0',
+        'scikit-surgerycalibration>=1.0.0',
+        'scikit-surgerybard>=1.2.0'
     ],
 
     entry_points={
