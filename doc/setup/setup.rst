@@ -6,7 +6,7 @@ Python Setup
 This course assumes some familiarity with Python, and does not teach the
 Python language. You do need to have some familiarity in managing Python environments.
 
-**This project has been tested with Python 3.9-3.11 (Windows/Linux/Mac). Higher versions are not supported and may not function correctly.**
+**This project has been tested with Python 3.9-3.13 (Windows/Linux/Mac). Higher versions are not supported and may not function correctly.**
 
 To setup this project, to be able to run the code, please follow the steps below.
 
@@ -39,8 +39,8 @@ At a terminal window:
     # Change directory, to ensure the current working directory is the root folder of the MPHY0026 project
     cd MPHY0026
 
-    # Create a new environment, called MPHY0026, running python version 3.10.
-    conda create -n MPHY0026 python=3.10
+    # Create a new environment, called MPHY0026, running python version 3.13.
+    conda create -n MPHY0026 python=3.13
 
     # Activate this environment, so that all future pip installs only install into this environment.
     conda activate MPHY0026
